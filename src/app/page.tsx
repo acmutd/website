@@ -1,6 +1,5 @@
-import Link from "next/link";
-import React from "react";
-import HomePlaceholder from "../../components/Home/HomePlaceholder";
+import HomePlaceholder from '@/components/Home/HomePlaceholder';
+import React from 'react';
 
 function Home() {
   return (
