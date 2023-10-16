@@ -3,7 +3,7 @@ import React from "react";
 
 function HomePlaceholder() {
   return (
-    <div>
+    <>
       <h1 className="text-primaryDark text-4xl font-bold md:text-6xl">
         ACM Chapter at UTD
       </h1>
@@ -13,7 +13,7 @@ function HomePlaceholder() {
       >
         Join Us
       </Link>
-    </div>
+    </>
   );
 }
 
