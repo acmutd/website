@@ -1,6 +1,6 @@
 import React from 'react';
 import Divisions from '@/components/about/divisions';
-import { aboutPageData } from '../../../data/about.config';
+import { aboutPageData } from '../../../config/about.config';
 
 export default function page() {
   const { pageDescription, divisions } = aboutPageData;
