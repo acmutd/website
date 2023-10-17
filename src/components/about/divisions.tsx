@@ -1,16 +1,19 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Divisions({ data, description }: any) {
   console.log(`/assets/about/${data[0]}/${data[0]}.png`);
   const imageElements = data.map((division: string, index: number) => {
     const isLast = index === data.length - 1;
     return (
-      <img
-        src={`/assets/about/${division}/${division}.png`}
-        alt={division}
-        key={division}
-        className="h-20"
-      />
+      <div className="relative h-20 w-72" key={division}>
+        <Image
+          src={`/assets/about/${division}/${division}.png`}
+          alt={division}
+          fill
+          className="object-contain"
+        />
+      </div>
     );
   });
 
