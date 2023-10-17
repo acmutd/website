@@ -10,7 +10,7 @@ export const aboutPageData = {
       'education',
       'media',
       'hackutd',
-      'industry',
+      // 'industry',
       'community',
       'dev',
     ],
