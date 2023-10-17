@@ -6,6 +6,16 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'bg-acm-gradient',
+    'bg-media-gradient',
+    'bg-research-gradient',
+    'bg-education-gradient',
+    'bg-projects-gradient',
+    'bg-development-gradient',
+    'bg-community-gradient',
+    'bg-hackutd-gradient',
+  ],
   theme: {
     extend: {
       fontFamily: {
