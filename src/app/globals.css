@@ -1,4 +1,4 @@
-@import url("/fonts/gilroy/gilroy.css");
+@import url('/fonts/gilroy/gilroy.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,5 +6,5 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
 }

@@ -11,9 +11,9 @@ const navigation = [
   { name: 'contact', href: '/contact', current: false },
 ];
 
-export default function Example() {
+export default function Navbar() {
   return (
-    <Disclosure as="nav">
+    <Disclosure as="nav" className="fixed z-10 w-full">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
