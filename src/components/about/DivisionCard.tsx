@@ -25,7 +25,7 @@ export default function DivisionCard({ data, titleImage }: any) {
               <Link
                 href={`${obj.link}`}
                 key={index}
-                className={`bg-${data.section}-gradient px-14 py-1`}
+                className={`bg-${data.section}-gradient px-14 py-1 font-bold text-xl`}
               >
                 {obj.name}
               </Link>
