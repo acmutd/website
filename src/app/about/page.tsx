@@ -1,8 +1,8 @@
 import React from 'react';
 import { aboutPageData } from '../../../config/about.config';
-import Divisions from '@/components/Divisions';
-import DivisionCard from '@/components/DivisionCard';
-import AboutHeader from '@/components/AboutHeader';
+import Divisions from '@/components/About/Divisions';
+import DivisionCard from '@/components/About/DivisionCard';
+import AboutHeader from '@/components/About/AboutHeader';
 import { AboutPageData, Division } from '../../../lib/types';
 
 export default function About() {

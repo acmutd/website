@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-import { Division, DivisionLink } from '../../lib/types';
+import { Division, DivisionLink } from '../../../lib/types';
 
 interface DivisionCardProps {
   data: Division;
