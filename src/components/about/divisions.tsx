@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 
 export default function Divisions({ data, description }: any) {
-  console.log(`/assets/about/${data[0]}/${data[0]}.png`);
   const imageElements = data.map((division: string, index: number) => {
     const isLast = index === data.length - 1;
     return (
@@ -18,10 +17,16 @@ export default function Divisions({ data, description }: any) {
   });
 
   return (
-    <div className="flex flex-col items-center text-primary">
-      <div className="text-5xl font-medium">Divisions</div>
-      <div className="max-w-4xl text-xl">{description}</div>
-      <div className="grid w-fit grid-cols-2 gap-4">{imageElements}</div>
+    <div className="flex h-full items-center justify-center bg-[url(/assets/about/about-divisions-bg.png)] bg-contain bg-center bg-no-repeat">
+      <div className="mx-auto w-full max-w-[120rem]">
+        <div className="flex flex-col items-start p-6 text-primary md:items-center md:p-0">
+          <h1 className="mb-2 text-5xl font-medium">Divisions</h1>
+          <p className="mb-10 max-w-4xl text-start text-xl md:text-center">{description}</p>
+          <div className="grid w-fit grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {imageElements}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

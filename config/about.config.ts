@@ -52,8 +52,8 @@ export const aboutPageData = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
       links: [
-        { name: 'website?', link: '/about' },
-        { name: 'hackutd instagram', link: '/about' },
+        { name: 'website', link: 'hackutd.co' },
+        { name: 'instagram', link: 'instagram.com/hackutd' },
       ],
     },
     industry: {
