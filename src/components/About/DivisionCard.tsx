@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Division, DivisionLink } from '../../../lib/types';
 
 interface DivisionCardProps {
-  data: Division
+  data: Division;
 }
 
 export default function DivisionCard({ data }: DivisionCardProps) {

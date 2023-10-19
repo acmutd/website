@@ -6,7 +6,7 @@ import AboutHeader from '@/components/About/AboutHeader';
 import { AboutPageData, Division } from '../../../lib/types';
 
 export default function About() {
-  const { pageDescription, divisionDescription, divisions } : AboutPageData = aboutPageData;
+  const { pageDescription, divisionDescription, divisions }: AboutPageData = aboutPageData;
   const keys = Object.keys(divisions);
   const values = Object.values(divisions);
 
