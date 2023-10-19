@@ -3,7 +3,7 @@ import { aboutPageData } from '../../../config/about.config';
 import Divisions from '@/components/About/Divisions';
 import DivisionCard from '@/components/About/DivisionCard';
 import AboutHeader from '@/components/About/AboutHeader';
-import { AboutPageData } from '../../../lib/types';
+import { AboutPageData, Division } from '../../../lib/types';
 
 export default function About() {
   const { pageDescription, divisionDescription, divisions } : AboutPageData = aboutPageData;
@@ -16,7 +16,7 @@ export default function About() {
       <div className="mt-28 flex flex-col gap-y-36">
         <Divisions data={keys} description={divisionDescription} />
         <div className="flex flex-col gap-y-9">
-          {values.map((data: any, index: number) => {
+          {values.map((data: Division, index: number) => {
             return <DivisionCard data={data} key={index} />;
           })}
         </div>

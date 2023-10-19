@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-import { Division } from '../../../lib/types';
+import { Division, DivisionLink } from '../../../lib/types';
 
 interface DivisionCardProps {
   data: Division
@@ -37,7 +37,7 @@ export default function DivisionCard({ data }: DivisionCardProps) {
             </div>
             <h1 className="max-w-lg text-start">{data.description}</h1>
             <div className="mt-4 grid w-full max-w-lg grid-cols-2 gap-4">
-              {data.links.map((obj: any, index: number) => {
+              {data.links.map((obj: DivisionLink, index: number) => {
                 return (
                   <Link
                     href={`${obj.link.startsWith('/') ? obj.link : `https://${obj.link}`}`}

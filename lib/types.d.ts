@@ -1,4 +1,4 @@
-export type Link = {
+export type DivisionLink = {
   name: string;
   link: string;
 };
