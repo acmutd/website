@@ -1,4 +1,6 @@
-export const aboutPageData = {
+import type { AboutPageData } from "../lib/types";
+
+export const aboutPageData: AboutPageData = {
   pageDescription:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
   divisionDescription:

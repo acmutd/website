@@ -1,8 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
+import { Division } from '../../../lib/types';
 
-export default function DivisionCard({ data }: any) {
+interface DivisionCardProps {
+  data: Division
+}
+
+export default function DivisionCard({ data }: DivisionCardProps) {
   return (
     <div
       className={`bg-[url(/assets/about/${data.section}/${data.section}-bg.png)] bg-cover bg-center bg-no-repeat`}

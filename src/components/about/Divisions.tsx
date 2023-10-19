@@ -1,7 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Link } from '../../../lib/types';
 
-export default function Divisions({ data, description }: any) {
+interface DivisionsProps {
+  data: string[],
+  description: string,
+}
+
+export default function Divisions({ data, description }: DivisionsProps) {
   const imageElements = data.map((division: string, index: number) => {
     return (
       <div className="relative h-20 w-72" key={division}>
