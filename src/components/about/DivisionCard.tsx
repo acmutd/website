@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 
-export default function DivisionCard({ data, titleImage }: any) {
+export default function DivisionCard({ data }: any) {
   return (
     <div
       className={`bg-[url(/assets/about/${data.section}/${data.section}-bg.png)] bg-cover bg-center bg-no-repeat`}
