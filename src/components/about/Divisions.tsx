@@ -3,7 +3,6 @@ import Image from 'next/image';
 
 export default function Divisions({ data, description }: any) {
   const imageElements = data.map((division: string, index: number) => {
-    const isLast = index === data.length - 1;
     return (
       <div className="relative h-20 w-72" key={division}>
         <Image
