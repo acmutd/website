@@ -1,6 +1,7 @@
 'use client';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const navigation = [
@@ -32,7 +33,13 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
                 <Link href="/" className="flex flex-shrink-0 items-center">
-                  <img className="h-10 w-auto" src="/assets/chapter-logo.png" alt="Your Company" />
+                  <Image
+                    className="h-10 w-auto"
+                    src="/assets/chapter-logo.png"
+                    alt="Your Company"
+                    width={405}
+                    height={114}
+                  />
                 </Link>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-10">
