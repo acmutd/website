@@ -1,3 +1,4 @@
+// About page types
 export type DivisionLink = {
   name: string;
   link: string;
@@ -16,4 +17,16 @@ export type AboutPageData = {
   divisions: {
     [key: string]: Division;
   };
+};
+
+// Apply page types
+export type ProgramInfo = {
+  division: string;
+  program: string;
+  programImage: string;
+  link: string;
+};
+
+export type ApplyPageData = {
+  programs: ProgramInfo[];
 };

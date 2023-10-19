@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import ApplyProgramCard from './ApplyProgramCard';
+import { applyPageData } from '../../../config/apply.config';
+import type { ProgramInfo } from '../../../lib/types';
 
 function ApplyPrograms() {
   return (
@@ -19,26 +21,14 @@ function ApplyPrograms() {
         </Link>
       </div>
       <div className="mt-10 grid md:grid-cols-2">
-        <ApplyProgramCard
-          title="ACM Projects"
-          image="/assets/apply/apply-projects.png"
-          link="https://portal.acmutd.co/applications"
-        />
-        <ApplyProgramCard
-          title="ACM Education"
-          image="/assets/apply/apply-interview.png"
-          link="https://portal.acmutd.co/applications"
-        />
-        <ApplyProgramCard
-          title="ACM Research"
-          image="/assets/apply/apply-research.png"
-          link="https://portal.acmutd.co/applications"
-        />
-        <ApplyProgramCard
-          title="ACM Education"
-          image="/assets/apply/apply-mentor.png"
-          link="https://portal.acmutd.co/applications"
-        />
+        {applyPageData.programs.map((data: ProgramInfo, index: number) => {
+           return <ApplyProgramCard
+             title="ACM Projects"
+             image={`/assets/apply/programs/${data.programImage}.png`}
+             link={data.link}
+             key={index}
+           />;
+        })}
       </div>
     </div>
   );
