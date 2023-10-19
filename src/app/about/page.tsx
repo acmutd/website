@@ -4,7 +4,7 @@ import Divisions from '@/components/About/Divisions';
 import DivisionCard from '@/components/About/DivisionCard';
 import AboutHeader from '@/components/About/AboutHeader';
 
-export default function page() {
+export default function About() {
   const { pageDescription, divisionDescription, divisions } = aboutPageData;
   const keys = Object.keys(divisions);
   const values = Object.values(divisions);
