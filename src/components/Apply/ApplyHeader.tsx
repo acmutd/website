@@ -22,7 +22,7 @@ function ApplyHeader() {
             width={500}
             height={500}
             alt="apply"
-            className="w-full max-w-xs lg:max-w-lg object-cover"
+            className="w-full max-w-xs object-cover lg:max-w-lg"
           />
         </div>
       </div>
