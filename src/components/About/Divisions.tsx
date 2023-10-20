@@ -2,8 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 
 interface DivisionsProps {
-  data: string[],
-  description: string,
+  data: string[];
+  description: string;
 }
 
 export default function Divisions({ data, description }: DivisionsProps) {
@@ -11,7 +11,7 @@ export default function Divisions({ data, description }: DivisionsProps) {
     return (
       <div className="relative h-20 w-72" key={division}>
         <Image
-          src={`/assets/about/${division}/${division}.png`}
+          src={`/assets/divisions/${division}.png`}
           alt={division}
           fill
           className="object-contain"

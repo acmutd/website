@@ -29,7 +29,7 @@ export default function DivisionCard({ data }: DivisionCardProps) {
           <div className="flex w-full flex-col items-start md:items-center">
             <div className="relative h-36 w-full">
               <Image
-                src={`/assets/about/${data.section}/${data.section}.png`}
+                src={`/assets/divisions/${data.section}.png`}
                 alt=""
                 className="object-contain"
                 fill
