@@ -20,14 +20,17 @@ function ApplyPrograms() {
           apply now
         </Link>
       </div>
-      <div className="mt-10 grid md:grid-cols-2">
+      <div className="mt-10 grid gap-4 lg:grid-cols-2">
         {applyPageData.programs.map((data: ProgramInfo, index: number) => {
-           return <ApplyProgramCard
-             title="ACM Projects"
-             image={`/assets/apply/programs/${data.programImage}.png`}
-             link={data.link}
-             key={index}
-           />;
+          return (
+            <ApplyProgramCard
+              key={index}
+              division={data.division}
+              title={data.title}
+              image={`/assets/apply/programs/${data.programImage}.png`}
+              link={data.link}
+            />
+          );
         })}
       </div>
     </div>
