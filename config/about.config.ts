@@ -1,4 +1,4 @@
-import type { AboutPageData } from "../lib/types";
+import type { AboutPageData } from '../lib/types';
 
 export const aboutPageData: AboutPageData = {
   pageDescription:
@@ -16,6 +16,13 @@ export const aboutPageData: AboutPageData = {
         { name: 'utdgrades', link: '/about' },
         { name: 'github', link: '/about' },
       ],
+      linkStyles: '',
+    },
+    community: {
+      section: 'community',
+      description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
+      links: [{ name: 'outreach', link: '/about' }],
       linkStyles: '',
     },
     research: {
