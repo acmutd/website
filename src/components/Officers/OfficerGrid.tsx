@@ -66,7 +66,7 @@ const titleMap: Record<Layout, ReactNode> = {
       height={75}
     />
   ),
-  hackutd: <Image src="/assets/about/hackutd/hackutd.png" alt="ACM Hack" width={186} height={75} />,
+  hackutd: <Image src="/assets/about/hackutd/hackutd.png" alt="HackUTD" width={186} height={75} />,
   industry: (
     <Image src="/assets/about/industry/industry.png" alt="ACM Industry" width={186} height={75} />
   ),
