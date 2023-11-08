@@ -5,7 +5,7 @@ import Image from 'next/image';
 function Apply() {
   return (
     <div className="relative h-screen w-full bg-cover bg-center py-20">
-      <div className="absolute right-20 top-28 h-[105rem] w-0 flex-shrink-0 text-center text-[0.625rem] font-bold leading-[99.99%] tracking-[-0.01875rem] text-[#8A8A8A]">
+      <div className="absolute right-20 top-28 hidden h-[105rem] w-0 flex-shrink-0 text-center text-[0.625rem] font-bold leading-[99.99%] tracking-[-0.01875rem] text-[#8A8A8A] md:block">
         <p>
           0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0
           0 1 0 0 1 0 0 1 1 1 1 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1 0 0 0 1
@@ -28,7 +28,7 @@ function Apply() {
           0 0 1 1 0 1 0 1 0 1 0 0 0 1 0 1 0 0 1 1
         </p>
       </div>
-      <div className="absolute right-24 top-72">
+      <div className="absolute right-24 top-72 hidden md:block">
         <Image src="/assets/officer/divisions.png" alt="Division" width={40} height={463} />
       </div>
       <OfficerHeader />

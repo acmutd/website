@@ -74,7 +74,7 @@ const titleMap: Record<Layout, ReactNode> = {
 
 const OfficerGrid = (props: GridProps) => {
   return (
-    <div className="flex flex-col px-[11.5rem] pb-32">
+    <div className="flex flex-col p-16 lg:px-[11.5rem] lg:pb-32">
       <div className="text-[#cacaca]">{titleMap[props.type]}</div>
       <div className="flex flex-wrap pt-8">
         {Array.from({ length: props.count }, (_, i) => (
@@ -87,9 +87,15 @@ const OfficerGrid = (props: GridProps) => {
 
 const OfficerPill = ({ officer }: PillProps) => (
   <div className="m-3 flex justify-center align-middle text-[#cacaca]">
-    <Image src={officer.image} alt={officer.name} width={80} height={80} className="mx-10" />
+    <Image
+      src={officer.image}
+      alt={officer.name}
+      width={80}
+      height={80}
+      className="mx-6 lg:mx-10"
+    />
     <div className="flex-col self-center">
-      <h1 className="text-xl">{officer.name}</h1>
+      <h1 className="md:text-xl">{officer.name}</h1>
       <p>{officer.position}</p>
     </div>
   </div>
