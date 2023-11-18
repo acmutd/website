@@ -1,0 +1,41 @@
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+type Props = {
+  year: number;
+  month: number;
+};
+
+export default function CalendarBody({ year, month }: Props) {
+  const firstDayOfMonth = new Date(year, month, 1);
+  const lastDayOfMonth = new Date(year, month + 1, 0);
+
+  const firstDayIndex = firstDayOfMonth.getDay();
+  const lastDayIndex = lastDayOfMonth.getDay();
+  const lastDay = lastDayOfMonth.getDate();
+
+  const daysInMonth = Array.from({ length: lastDay }, (_, i) => i + 1);
+
+  return (
+    <div className="grid grid-cols-7 gap-1">
+      {daysOfWeek.map((day) => (
+        <div key={day} className="text-center text-xs uppercase text-white">
+          {day}
+        </div>
+      ))}
+      {Array.from({ length: firstDayIndex }).map((_, i) => (
+        <div key={i} className="rounded-lg bg-white py-2" />
+      ))}
+      {daysInMonth.map((day) => (
+        <div
+          key={day}
+          className="relative h-20 w-20 rounded-lg bg-white py-2 text-center text-slate-700"
+        >
+          <p className="absolute right-2 top-2">{day}</p>
+        </div>
+      ))}
+      {Array.from({ length: 6 - lastDayIndex }).map((_, i) => (
+        <div key={i + lastDay} className="rounded-lg bg-white py-2" />
+      ))}
+    </div>
+  );
+}
