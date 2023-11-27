@@ -30,3 +30,10 @@ export type ProgramInfo = {
 export type ApplyPageData = {
   programs: ProgramInfo[];
 };
+
+// Event Page Types
+export type Event = {
+  id: string;
+  title: string;
+  day: number;
+};

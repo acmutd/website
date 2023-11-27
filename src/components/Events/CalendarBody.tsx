@@ -1,15 +1,10 @@
+import type { Event } from '../../../lib/types';
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 type Props = {
   year: number;
   month: number;
   events: Event[];
-};
-
-type Event = {
-  id: string;
-  title: string;
-  day: number;
 };
 
 export default function CalendarBody({ year, month, events }: Props) {

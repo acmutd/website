@@ -2,6 +2,7 @@
 
 import { useReducer } from 'react';
 import CalendarBody from './CalendarBody';
+import type { Event } from '../../../lib/types';
 
 const monthNames = [
   'January',
@@ -18,11 +19,6 @@ const monthNames = [
   'December',
 ];
 
-type Event = {
-  id: string;
-  title: string;
-  day: number;
-};
 type Action = { type: 'NEXT_MONTH' } | { type: 'PREV_MONTH' };
 type State = { currentYear: number; currentMonth: number; events: Event[] };
 
