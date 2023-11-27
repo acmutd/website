@@ -1,9 +1,8 @@
 'use client';
 
-import { useReducer, useState } from 'react';
+import { useReducer } from 'react';
 import CalendarBody from './CalendarBody';
 
-const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const monthNames = [
   'January',
   'February',
@@ -47,13 +46,13 @@ function Calendar() {
   });
 
   return (
-    <div className="rounded-lg bg-gray-800 p-5 shadow-md">
-      <div className="mb-5 flex items-center justify-center space-x-4 text-white">
-        <button onClick={() => dispatch({ type: 'PREV_MONTH' })}>{`<`}</button>
-        <span className="w-20 text-center text-2xl font-semibold">
+    <div className="rounded-3xl border border-[#ffffff82] bg-gradient-to-tr from-[#ffffff1f] from-[3.07%] to-[#ffffff08] to-[96.39%] p-5 shadow-md backdrop-blur-xl">
+      <div className="mb-5 flex items-center justify-between text-white">
+        <button className="w-10" onClick={() => dispatch({ type: 'PREV_MONTH' })}>{`<`}</button>
+        <span className="w-32 text-center text-2xl font-semibold">
           {monthNames[state.currentMonth]}
         </span>
-        <button onClick={() => dispatch({ type: 'NEXT_MONTH' })}>{`>`}</button>
+        <button className="w-10" onClick={() => dispatch({ type: 'NEXT_MONTH' })}>{`>`}</button>
       </div>
       <CalendarBody month={state.currentMonth} year={state.currentYear} />
     </div>
