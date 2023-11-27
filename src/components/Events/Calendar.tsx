@@ -24,9 +24,10 @@ type State = { currentYear: number; currentMonth: number; events: Event[] };
 
 function reducer(state: State, action: Action): State {
   const newEvent: Event = {
-    day: 27,
+    date: new Date(state.currentYear, state.currentMonth, 27),
     title: 'Projects Presentation Night',
     id: '1',
+    location: '',
   };
   switch (action.type) {
     case 'NEXT_MONTH':
@@ -50,7 +51,7 @@ function Calendar() {
   const [state, dispatch] = useReducer(reducer, {
     currentYear: new Date().getFullYear(),
     currentMonth: new Date().getMonth(),
-    events: [{ day: 27, title: 'Projects Presentation Night', id: '1' }],
+    events: [{ date: new Date(), title: 'Projects Presentation Night', id: '1', location: '' }],
   });
 
   return (

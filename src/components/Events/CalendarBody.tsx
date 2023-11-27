@@ -33,16 +33,18 @@ export default function CalendarBody({ year, month, events }: Props) {
           className="relative h-20 w-20 rounded-lg bg-white py-2 text-center text-slate-700"
         >
           <p className="absolute right-2 top-2">{day}</p>
-          {events.map((event) => {
-            if (event.day !== day) return;
-            return (
-              <div key={event.id} className="h-4 w-full bg-green-300 first:mt-5">
-                <p className="overflow-hidden text-ellipsis whitespace-nowrap text-center text-xs">
-                  {event.title}
-                </p>
-              </div>
-            );
-          })}
+          <div>
+            {events.map((event) => {
+              if (event.date.getDate() !== day) return;
+              return (
+                <div key={event.id} className="h-4 w-full bg-green-300 first:mt-5">
+                  <p className="overflow-hidden text-ellipsis whitespace-nowrap text-center text-xs">
+                    {event.title}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       ))}
       {Array.from({ length: 6 - lastDayIndex }).map((_, i) => (

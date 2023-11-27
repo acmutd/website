@@ -1,4 +1,5 @@
 import Calendar from '@/components/Events/Calendar';
+import UpcomingEvents from '@/components/Events/UpcomingEvents';
 
 export default function Events() {
   return (
@@ -6,6 +7,7 @@ export default function Events() {
       <div className="mx-20 flex justify-between pt-16">
         <div className="flex flex-col">
           <h1 className="text-4xl text-white">Upcoming Events</h1>
+          <UpcomingEvents />
         </div>
         <Calendar />
       </div>

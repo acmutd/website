@@ -35,5 +35,6 @@ export type ApplyPageData = {
 export type Event = {
   id: string;
   title: string;
-  day: number;
+  date: Date;
+  location: string;
 };
