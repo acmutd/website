@@ -21,7 +21,11 @@ const events: Event[] = [
   },
 ];
 
-const colors = ['red-600', 'green-600', 'blue-600'];
+const colors = [
+  { from: 'from-[#008CF1]', to: 'to-[#00ECEC]' },
+  { from: 'from-[#EA7F01]', to: 'to-[#FFC700]' },
+  { from: 'from-[#78DFCD]', to: 'to-[#E1EE93]' },
+];
 
 export default function UpcomingEvents() {
   return (
@@ -29,7 +33,7 @@ export default function UpcomingEvents() {
       {events.map((event, i) => (
         <div
           key={event.id}
-          className={`my-2 flex h-20 w-full flex-col justify-center bg-gradient-to-r from-${colors[i]} from-[7.24%] to-slate-300 to-[95.11%] p-5 text-left font-sans`}
+          className={`my-2 flex h-20 w-full flex-col justify-center bg-gradient-to-r ${colors[i].from} from-[7.24%] ${colors[i].to} to-[95.11%] p-5 text-left font-sans`}
         >
           <h2 className="text-xl font-bold lowercase">{event.title}</h2>
           <p className="text-sm font-medium">
