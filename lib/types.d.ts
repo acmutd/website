@@ -38,3 +38,10 @@ export type Event = {
   date: Date;
   location: string;
 };
+
+export type WorkShopLink = { type: 'github' | 'video'; link: string };
+export type PastWorkshop = {
+  title: string;
+  description: string;
+  links: WorkShopLink[];
+};

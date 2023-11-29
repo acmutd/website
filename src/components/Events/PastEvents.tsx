@@ -15,7 +15,7 @@ export default function PastEvents() {
     <div className="flex flex-wrap items-center justify-center">
       {events.map((event) => (
         <div
-          className="m-14 flex max-h-80 max-w-7xl flex-col items-center justify-center rounded-3xl border border-[#ffffff82] bg-gradient-to-br from-[#ffffff1f] from-[3.07%] to-[#ffffff08] to-[96.39%] backdrop-blur-xl"
+          className="m-8 flex h-[22rem] w-[20rem] flex-col items-center justify-center rounded-3xl border border-[#ffffff82] bg-gradient-to-br from-[#ffffff1f] from-[3.07%] to-[#ffffff08] to-[96.39%] backdrop-blur-xl"
           key={event.name}
         >
           <p className="w-52 self-start pb-7 pl-9 pt-9 font-semibold text-[#CACACA]">

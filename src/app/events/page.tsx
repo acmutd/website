@@ -1,5 +1,6 @@
 import Calendar from '@/components/Events/Calendar';
 import PastEvents from '@/components/Events/PastEvents';
+import PastWorkshops from '@/components/Events/PastWorkshops';
 import UpcomingEvents from '@/components/Events/UpcomingEvents';
 
 export default function Events() {
@@ -21,6 +22,13 @@ export default function Events() {
           <div className="h-[1px] w-28 bg-[#cacacab0]" />
         </div>
         <PastEvents />
+      </div>
+      <div className="mx-40 flex flex-col justify-between pt-16">
+        <div className="relative">
+          <h1 className="text-4xl text-white">past events</h1>
+          <div className="h-[1px] w-28 bg-[#cacacab0]" />
+        </div>
+        <PastWorkshops />
       </div>
     </div>
   );
