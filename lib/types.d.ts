@@ -30,3 +30,18 @@ export type ProgramInfo = {
 export type ApplyPageData = {
   programs: ProgramInfo[];
 };
+
+// Event Page Types
+export type Event = {
+  id: string;
+  title: string;
+  date: Date;
+  location: string;
+};
+
+export type WorkShopLink = { type: 'github' | 'video'; link: string };
+export type PastWorkshop = {
+  title: string;
+  description: string;
+  links: WorkShopLink[];
+};
