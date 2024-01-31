@@ -2,14 +2,15 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { type Division } from './divisionUtil';
 
-type CarouselImage = {
+export type CarouselImage = {
   imageLink: string;
   title: string;
   date: Date;
 };
 
-const images: CarouselImage[] = [
+const proj_images: CarouselImage[] = [
   {
     imageLink: '/assets/projects/ProjectNight.jpeg',
     title: 'Projects Presentation Night 1',
@@ -26,8 +27,18 @@ const images: CarouselImage[] = [
     date: new Date(2022, 5, 29, 16, 7),
   },
 ];
+const image_dict: Record<Division, CarouselImage[]> = {
+  projects: proj_images,
+  research: [],
+  education: [],
+};
 
-export default function ProjCarousel() {
+type CarouselProps = {
+  division: Division;
+};
+
+export default function Carousel({ division }: CarouselProps) {
+  const images = image_dict[division];
   const [index, setIndex] = useState(0);
 
   const next = () => setIndex((prev) => (prev + 1) % images.length);
@@ -60,7 +71,9 @@ export default function ProjCarousel() {
           ))}
         </div>
       </div>
-      <div className="flex w-[66rem] justify-between bg-[#a1d8ff36] pl-9 pr-4 text-[#A1D8FF]">
+      <div
+        className={`flex w-[66rem] justify-between bg-${division}-gradient pl-9 pr-4 text-black`}
+      >
         <p>{images[index].title}</p>
         <p>
           Shot{' '}
