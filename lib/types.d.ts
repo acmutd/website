@@ -45,3 +45,25 @@ export type PastWorkshop = {
   description: string;
   links: WorkShopLink[];
 };
+
+// Home Page Types
+export type HomePageData = {
+  orgStatement: string;
+  community: CommunityIconsData;
+  cards: HomeCard[];
+  sponsors: string[];
+}
+
+export type CommunityIconsData = {
+  linkedin: string;
+  instagram: string;
+  discord: string;
+  github: string;
+  youtube: string;
+};
+
+export type HomeCard = {
+  description: string,
+  link: string,
+  linkText: string,
+}
