@@ -67,3 +67,15 @@ export type HomeCard = {
   link: string,
   linkText: string,
 }
+
+// Footer Types
+export type Footer = {
+  links: FooterLink[],
+  contact: string,
+  community: CommunityIconsData
+}
+
+export type FooterLink = {
+  text: string;
+  link: string;
+}

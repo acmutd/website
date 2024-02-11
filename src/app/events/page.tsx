@@ -5,7 +5,7 @@ import UpcomingEvents from '@/components/Events/UpcomingEvents';
 
 export default function Events() {
   return (
-    <div className="h-screen w-full bg-[url(/assets/apply/apply-bg.png)] bg-cover bg-center py-20">
+    <div className="h-fit w-full bg-[url(/assets/apply/apply-bg.png)] bg-cover bg-center py-20">
       <div className="mx-40 flex justify-between pt-16">
         <div className="flex flex-col">
           <div className="relative">

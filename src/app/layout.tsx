@@ -1,6 +1,7 @@
 import Navbar from '@/components/Home/Navbar';
 import './globals.css';
 import type { Metadata } from 'next';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'ACM UTD',
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="bg-background">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
