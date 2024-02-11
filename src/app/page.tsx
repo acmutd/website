@@ -35,30 +35,21 @@ function Home() {
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-y-10">
-          <div className="flex max-w-sm flex-col items-start rounded-2xl border-primary/50 bg-gray-300/10 py-6 pl-28 pr-3">
-            <p className="text-xl">
-              join our mailing list to stay updated with our events and programs!
-            </p>
-            <div className="mt-2 self-end">
-              <Link
-                href="/"
-                className="flex h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl"
-              >
-                apply
-              </Link>
-            </div>
-          </div>
-          <div className="flex max-w-sm flex-col items-start rounded-2xl border-primary/50 bg-gray-300/10 py-6 pl-28 pr-3">
-            <p className="text-xl">acm applications now open for fall 2023!</p>
-            <div className="mt-2 self-end">
-              <Link
-                href="/"
-                className="flex h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl"
-              >
-                apply
-              </Link>
-            </div>
-          </div>
+          {homePageData.cards.map((card, idx) => {
+            return (
+              <div className="flex max-w-sm flex-col items-start rounded-2xl border-primary/50 bg-gray-300/10 py-6 pl-28 pr-3" key={idx}>
+                <p className="text-xl">{card.description}</p>
+                <div className="mt-2 self-end">
+                  <Link
+                    href={card.link}
+                    className="flex h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl"
+                  >
+                    {card.linkText}
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="ml-auto flex max-w-5xl flex-col gap-y-10 rounded-l-2xl border-y border-l border-primary/50 bg-gray-300/10 p-14 text-center">

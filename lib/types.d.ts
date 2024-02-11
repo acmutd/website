@@ -50,6 +50,7 @@ export type PastWorkshop = {
 export type HomePageData = {
   orgStatement: string;
   community: CommunityIconsData;
+  cards: HomeCard[];
   sponsors: string[];
 }
 
@@ -60,3 +61,9 @@ export type CommunityIconsData = {
   github: string;
   youtube: string;
 };
+
+export type HomeCard = {
+  description: string,
+  link: string,
+  linkText: string,
+}

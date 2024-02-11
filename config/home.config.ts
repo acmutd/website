@@ -10,6 +10,18 @@ export const homePageData: HomePageData = {
     github: '/',
     youtube: '/',
   },
+  cards: [
+    {
+      description: 'join our mailing list to stay updated with our events and programs!',
+      linkText: 'apply',
+      link: '/',
+    },
+    {
+      description: 'acm applications now open for fall 2023!',
+      linkText: 'apply',
+      link: '/',
+    },
+  ],
   sponsors: [
     'americanairlines',
     'goldmansachs',
