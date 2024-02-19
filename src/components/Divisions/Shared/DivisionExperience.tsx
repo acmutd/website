@@ -8,7 +8,10 @@ type Props = {
 type ExperienceMap = Record<Division, Array<string>>;
 
 const EXPERIENCE_MAP: ExperienceMap = {
-  education: [],
+  education: [
+    'It was an amazing experience and gave me all of the resources I needed to start full stack development.',
+    'I not only learned so much in terms of technical skills, but I also met some wonderful people along the way',
+  ],
   projects: [
     'It was an amazing experience and gave me all of the resources I needed to start full stack development.',
     'I not only learned so much in terms of technical skills, but I also met some wonderful people along the way',

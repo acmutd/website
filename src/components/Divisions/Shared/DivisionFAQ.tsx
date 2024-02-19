@@ -10,7 +10,18 @@ type Questions = {
 type QuestionMap = Record<Division, Array<Questions>>;
 
 const QUESTION_MAP: QuestionMap = {
-  education: [],
+  education: [
+    {
+      question: 'What is the application process like?',
+      answer:
+        'The first step is to fill out our application. Our application consists of general questions intended to give us insight into your previous development and leadership experience. From these applications, we select the most promising candidates for one-on-one interviews. The interview is the last step of the application process. Based on the application and interview, we select the very best candidates to create around 8 teams of 5 people.',
+    },
+    {
+      question: 'How do I stand out during the application process?',
+      answer:
+        'Be genuine! We want to see your passion for technology and desire to learn. We can only judge your experience and character based on what we see in the application, so fill all of the questions out! Leaving questions blank is a lost opportunity for us to learn more about you.',
+    },
+  ],
   research: [],
   projects: [
     {

@@ -27,18 +27,46 @@ const proj_images: CarouselImage[] = [
     date: new Date(2022, 5, 29, 16, 7),
   },
 ];
-const image_dict: Record<Division, CarouselImage[]> = {
+
+const mentor_images: CarouselImage[] = [
+  {
+    imageLink: '/assets/research/ResearchCarousel.png',
+    title: 'Projects Presentation Night 1',
+    date: new Date(2022, 5, 29, 16, 7),
+  },
+  {
+    imageLink: '/assets/research/ResearchCarousel.png',
+    title: 'Projects Presentation Night 2',
+    date: new Date(2022, 5, 29, 16, 7),
+  },
+  {
+    imageLink: '/assets/research/ResearchCarousel.png',
+    title: 'Projects Presentation Night 3',
+    date: new Date(2022, 5, 29, 16, 7),
+  },
+];
+
+const image_dict = {
   projects: proj_images,
+  education: {
+    mentor: mentor_images,
+    tip: mentor_images,
+  },
   research: [],
-  education: [],
 };
 
-type CarouselProps = {
-  division: Division;
-};
+type CarouselProps =
+  | { division: Exclude<Division, 'education'> }
+  | {
+      division: 'education';
+      sub: 'mentor' | 'tip';
+    };
 
-export default function Carousel({ division }: CarouselProps) {
-  const images = image_dict[division];
+export default function Carousel(props: CarouselProps) {
+  let images = [];
+  if (props.division === 'education') images = image_dict[props.division][props.sub];
+  else images = image_dict[props.division];
+
   const [index, setIndex] = useState(0);
 
   const next = () => setIndex((prev) => (prev + 1) % images.length);
@@ -72,7 +100,7 @@ export default function Carousel({ division }: CarouselProps) {
         </div>
       </div>
       <div
-        className={`flex w-[66rem] justify-between bg-${division}-gradient pl-9 pr-4 text-black`}
+        className={`flex w-[66rem] justify-between bg-${props.division}-gradient pl-9 pr-4 text-black`}
       >
         <p>{images[index].title}</p>
         <p>
