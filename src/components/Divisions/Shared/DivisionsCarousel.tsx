@@ -32,17 +32,17 @@ const research_images: CarouselImage[] = [
   {
     date: new Date(2022, 5, 29, 16, 7),
     imageLink: '/assets/research/ResearchCarousel.png',
-    title: 'Reasearch Social',
+    title: 'Research Social',
   },
   {
     date: new Date(2022, 5, 29, 16, 7),
     imageLink: '/assets/research/ResearchCarousel.png',
-    title: 'Reasearch Social',
+    title: 'Research Social',
   },
   {
     date: new Date(2022, 5, 29, 16, 7),
     imageLink: '/assets/research/ResearchCarousel.png',
-    title: 'Reasearch Social',
+    title: 'Research Social',
   },
 ];
 const image_dict: Record<Division, CarouselImage[]> = {
