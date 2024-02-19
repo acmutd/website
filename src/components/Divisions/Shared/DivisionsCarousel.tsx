@@ -28,6 +28,24 @@ const proj_images: CarouselImage[] = [
   },
 ];
 
+const research_images: CarouselImage[] = [
+  {
+    date: new Date(2022, 5, 29, 16, 7),
+    imageLink: '/assets/research/ResearchCarousel.png',
+    title: 'Research Social',
+  },
+  {
+    date: new Date(2022, 5, 29, 16, 7),
+    imageLink: '/assets/research/ResearchCarousel.png',
+    title: 'Research Social',
+  },
+  {
+    date: new Date(2022, 5, 29, 16, 7),
+    imageLink: '/assets/research/ResearchCarousel.png',
+    title: 'Research Social',
+  },
+];
+
 const mentor_images: CarouselImage[] = [
   {
     imageLink: '/assets/research/ResearchCarousel.png',
@@ -52,7 +70,7 @@ const image_dict = {
     mentor: mentor_images,
     tip: mentor_images,
   },
-  research: [],
+  research: research_images,
 };
 
 type CarouselProps =

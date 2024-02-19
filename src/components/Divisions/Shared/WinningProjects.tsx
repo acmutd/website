@@ -19,46 +19,48 @@ type Projects = {
 
 type ProjectMap = Record<'projects' | 'research', Projects[]>;
 
+const defaultProjects: Projects[] = [
+  {
+    placement: 'SP22 1st Place',
+    image: '/assets/divisions/shared/proj_image.png',
+    name: 'project name',
+    desc: 'app that blah blah blah',
+    members: ['Vy Lam', 'Nhi Hunyh', 'Neha Thomas', 'Vyshnavi Nalla'],
+    links: [
+      {
+        link: '',
+        type: 'github',
+      },
+      {
+        link: '',
+        type: 'video',
+      },
+    ],
+    manager: 'Vy Lam',
+  },
+  {
+    placement: 'F22 1st Place',
+    image: '/assets/divisions/shared/proj_image.png',
+    name: 'project name',
+    desc: 'app that blah blah blah',
+    members: ['Vy Lam', 'Nhi Hunyh', 'Neha Thomas', 'Vyshnavi Nalla'],
+    links: [
+      {
+        link: '',
+        type: 'github',
+      },
+      {
+        link: '',
+        type: 'video',
+      },
+    ],
+    manager: 'Vy Lam',
+  },
+];
+
 const PROJECTS_MAP: ProjectMap = {
-  projects: [
-    {
-      placement: 'SP22 1st Place',
-      image: '/assets/divisions/shared/proj_image.png',
-      name: 'project name',
-      desc: 'app that blah blah blah',
-      members: ['Vy Lam', 'Nhi Hunyh', 'Neha Thomas', 'Vyshnavi Nalla'],
-      links: [
-        {
-          link: '',
-          type: 'github',
-        },
-        {
-          link: '',
-          type: 'video',
-        },
-      ],
-      manager: 'Vy Lam',
-    },
-    {
-      placement: 'F22 1st Place',
-      image: '/assets/divisions/shared/proj_image.png',
-      name: 'project name',
-      desc: 'app that blah blah blah',
-      members: ['Vy Lam', 'Nhi Hunyh', 'Neha Thomas', 'Vyshnavi Nalla'],
-      links: [
-        {
-          link: '',
-          type: 'github',
-        },
-        {
-          link: '',
-          type: 'video',
-        },
-      ],
-      manager: 'Vy Lam',
-    },
-  ],
-  research: [],
+  projects: defaultProjects,
+  research: defaultProjects,
 };
 
 export default function WinningProjects({ division }: { division: 'projects' | 'research' }) {
