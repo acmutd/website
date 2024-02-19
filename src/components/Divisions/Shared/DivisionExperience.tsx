@@ -13,7 +13,10 @@ const EXPERIENCE_MAP: ExperienceMap = {
     'It was an amazing experience and gave me all of the resources I needed to start full stack development.',
     'I not only learned so much in terms of technical skills, but I also met some wonderful people along the way',
   ],
-  research: [],
+  research: [
+    'It was an amazing experience and gave me all of the resources I needed to start full stack development.',
+    'I not only learned so much in terms of technical skills, but I also met some wonderful people along the way',
+  ],
 };
 
 export default function DivisionExperience({ division }: Props) {
