@@ -1,15 +1,32 @@
 import Link from 'next/link';
 import { Division } from './divisionUtil';
 
-const links = ['directors', 'experience', 'workshops', 'faq'];
+const mentorLinks = ['directors', 'experience', 'workshops', 'faq'];
 const altLinks = ['directors', 'experience', 'winning projects', 'faq'];
+const tipLinks = ['directors', 'experience', 'structure', 'faq'];
 
-type Props = {
-  division: Division;
-};
+const LINK_DICT = {
+  research: altLinks,
+  projects: altLinks,
+  education: {
+    mentor: mentorLinks,
+    tip: tipLinks,
+  },
+} as const;
 
-export default function Navigator({ division }: Props) {
-  const routeLinks = division === 'research' || division === 'projects' ? altLinks : links;
+type Props =
+  | {
+      division: Exclude<Division, 'education'>;
+    }
+  | {
+      division: 'education';
+      sub: 'mentor' | 'tip';
+    };
+
+export default function Navigator(props: Props) {
+  let routeLinks = [];
+  if (props.division === 'education') routeLinks = LINK_DICT.education[props.sub];
+  else routeLinks = LINK_DICT[props.division];
   return (
     <div className="sticky right-5 top-1/3 z-50 flex h-full w-full flex-col space-y-5 pr-10 text-right">
       {routeLinks.map((link) => (
