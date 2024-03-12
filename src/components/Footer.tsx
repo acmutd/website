@@ -7,7 +7,7 @@ export default function Footer() {
   const iconLinks = Object.values(footerData.community);
 
   return (
-    <footer className="mt-16 grid grid-cols-4 border-t-2 px-32 py-20 text-white">
+    <footer className="grid grid-cols-4 border-t-2 px-32 py-20 text-white">
       <Image
         src="/assets/footer/logo.png"
         alt=""

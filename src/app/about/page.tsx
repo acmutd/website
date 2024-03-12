@@ -11,7 +11,7 @@ export default function About() {
   const values = Object.values(divisions);
 
   return (
-    <div className="py-20 text-center">
+    <div className="py-0 text-center">
       <AboutHeader pageDescription={pageDescription} />
       <div className="mt-28 flex flex-col gap-y-36">
         <Divisions data={keys} description={divisionDescription} />
