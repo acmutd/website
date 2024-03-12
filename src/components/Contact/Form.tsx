@@ -1,8 +1,8 @@
 'use client';
 
 export default function Form() {
-  const handleSend = (e) => {
-    e.preventDefault()
+  const handleSend = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
 
     console.log('Send email');
   };
