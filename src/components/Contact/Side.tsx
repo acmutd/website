@@ -5,7 +5,7 @@ export default function Side() {
     <div className="flex flex-col gap-y-8 text-center text-primary">
       <h1 className="text-3xl font-semibold lg:text-4xl">contact us</h1>
       <Image
-        src={`/assets/contact/contact-img.png`}
+        src={`/assets/contact/contact.png`}
         alt=""
         className="mb-10 object-contain"
         width={500}
