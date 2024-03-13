@@ -7,7 +7,7 @@ export default function Footer() {
   const iconLinks = Object.values(footerData.community);
 
   return (
-    <footer className="grid grid-cols-4 border-t-2 px-32 py-20 text-white">
+    <footer className="mt-16 grid grid-cols-1 gap-y-8 border-t-2 px-32 py-20 text-white md:grid-cols-2 lg:grid-cols-4">
       <Image
         src="/assets/footer/logo.png"
         alt=""
@@ -33,7 +33,7 @@ export default function Footer() {
       </div>
       <div>
         <h3 className="text-xl">connect with us</h3>
-        <div className="grid grid-cols-3 w-fit gap-x-6 gap-y-3">
+        <div className="grid w-fit grid-cols-3 gap-x-6 gap-y-3">
           {icons.map((icon: string, idx: number) => {
             return (
               <a href={iconLinks[idx]} key={idx}>
