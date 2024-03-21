@@ -1,25 +1,5 @@
-import { Event } from '../../../lib/types';
-
-const events: Event[] = [
-  {
-    date: new Date(2023, 4, 27, 20),
-    title: 'Projects Presentation Night',
-    id: '1',
-    location: 'SCI 1.220',
-  },
-  {
-    date: new Date(2023, 5, 2, 20, 30),
-    title: 'Research Symposium',
-    id: '2',
-    location: 'TI Auditorium',
-  },
-  {
-    date: new Date(2023, 5, 4, 18),
-    title: 'End of Semester Celebration',
-    id: '3',
-    location: 'SCI 1.210',
-  },
-];
+import type { Event } from '@/../lib/types';
+import { GET as getUpcoming } from '@/app/api/events/route';
 
 const colors = [
   { from: 'from-[#008CF1]', to: 'to-[#00ECEC]' },
@@ -27,29 +7,46 @@ const colors = [
   { from: 'from-[#78DFCD]', to: 'to-[#E1EE93]' },
 ];
 
-export default function UpcomingEvents() {
+export default async function UpcomingEvents() {
+  const res = await getUpcoming().then((res) => res.json());
+  const events: Event[] = res.map((item: any) => {
+    const event: Event = {
+      id: item.id,
+      title: item.title,
+      start: item.start ? new Date(item.start) : undefined,
+      location: item.location,
+    };
+    return event;
+  });
+
   return (
-    <div className="flex h-full w-80 flex-col items-center justify-center">
-      {events.map((event, i) => (
+    <div className="flex h-full w-full flex-col items-center justify-center p-4 md:w-96">
+      {events.slice(0, 3).map((event, i) => (
         <div
           key={event.id}
-          className={`my-2 flex h-20 w-full flex-col justify-center bg-gradient-to-r ${colors[i].from} from-[7.24%] ${colors[i].to} to-[95.11%] p-5 text-left font-sans`}
+          className={`my-4 flex h-auto w-full flex-col justify-center bg-gradient-to-r ${
+            colors[i % 3].from
+          } ${colors[i % 3].to} rounded-lg p-1 shadow-lg`}
         >
-          <h2 className="text-xl font-bold lowercase">{event.title}</h2>
-          <p className="text-sm font-medium">
-            {event.date.toLocaleDateString('en-US', {
-              weekday: 'long',
-              month: 'long',
-              day: 'numeric',
-            })}{' '}
-            at{' '}
-            {event.date.toLocaleTimeString('en-US', {
-              hour: 'numeric',
-              minute: event.date.getMinutes() > 0 ? 'numeric' : undefined,
-              timeZoneName: 'short',
-            })}{' '}
-            in {event.location}
-          </p>
+          <div className="rounded-lg p-4 backdrop-blur-sm backdrop-filter">
+            <h2 className="text-lg font-bold lowercase text-gray-900 md:text-xl">{event.title}</h2>
+            {event.start && (
+              <p className="mt-2 text-sm font-medium text-gray-700 md:text-base">
+                {event.start.toLocaleDateString('en-US', {
+                  weekday: 'long',
+                  month: 'long',
+                  day: 'numeric',
+                })}{' '}
+                at{' '}
+                {event.start?.toLocaleTimeString('en-US', {
+                  hour: 'numeric',
+                  minute: event.start.getMinutes() > 0 ? 'numeric' : undefined,
+                  timeZoneName: 'short',
+                })}{' '}
+                in {event.location}
+              </p>
+            )}
+          </div>
         </div>
       ))}
     </div>
