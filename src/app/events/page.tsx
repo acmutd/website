@@ -3,7 +3,16 @@ import PastEvents from '@/components/Events/PastEvents';
 import PastWorkshops from '@/components/Events/PastWorkshops';
 import UpcomingEvents from '@/components/Events/UpcomingEvents';
 
-export default function Events() {
+type Params = {
+  month: string | null;
+  year: string | null;
+};
+
+export default function Events({ searchParams }: { searchParams: Params }) {
+  const today = new Date();
+  const month = parseInt(searchParams.month || today.getMonth().toString());
+  const year = parseInt(searchParams.year || today.getFullYear().toString());
+
   return (
     <div className="h-fit w-full bg-[url(/assets/apply/apply-bg.png)] bg-cover bg-center py-20">
       <div className="mx-40 flex justify-between pt-16">
@@ -14,7 +23,7 @@ export default function Events() {
           </div>
           <UpcomingEvents />
         </div>
-        <Calendar />
+        <Calendar month={month} year={year} />
       </div>
       <div className="mx-40 flex flex-col justify-between pt-16">
         <div className="relative">
