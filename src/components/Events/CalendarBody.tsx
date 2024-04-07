@@ -1,4 +1,4 @@
-import type { Event } from '../../../lib/types';
+import type { Event } from '@/../lib/types.d.ts';
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
 type Props = {
@@ -35,7 +35,8 @@ export default function CalendarBody({ year, month, events }: Props) {
           <p className="absolute right-2 top-2">{day}</p>
           <div>
             {events.map((event) => {
-              if (event.date.getDate() !== day) return;
+              if (!event.start || event.start.getDate() !== day || event.start.getMonth() !== month)
+                return;
               return (
                 <div key={event.id} className="h-4 w-full bg-green-300 first:mt-5">
                   <p className="overflow-hidden text-ellipsis whitespace-nowrap text-center text-xs">
