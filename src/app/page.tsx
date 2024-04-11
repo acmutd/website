@@ -8,7 +8,7 @@ function Home() {
   const iconLinks = Object.values(homePageData.community)
 
   return (
-    <main className="flex h-fit flex-col gap-y-56 bg-[url(/assets/apply/apply-bg.png)] bg-cover pt-24 text-white">
+    <main className="flex h-fit flex-col gap-y-56 bg-[url(/assets/apply/apply-bg.png)] bg-cover py-20 text-white">
       <div className="flex flex-col gap-x-11 md:flex-col   lg:flex-row">
         <div className="flex max-w-3xl flex-col gap-y-4 rounded-r-2xl border-y border-r border-primary/50 bg-gray-300/10 px-24 py-14">
           <h1 className="text-4xl font-semibold md:text-5xl lg:text-7xl">

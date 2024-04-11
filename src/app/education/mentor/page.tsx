@@ -7,7 +7,7 @@ import WorkShops from '@/components/Divisions/Shared/WorkShops';
 
 export default function Page() {
   return (
-    <div className="relative w-full bg-[url(/assets/projects/proj-bg.png)] bg-cover bg-center py-20">
+    <div className="relative w-full bg-[url(/assets/about/about-header-bg.png)] bg-cover bg-center py-20">
       <Navigator division="education" sub="mentor" />
       <DivisionCarousel division="education" sub="mentor" />
       <div className="pl-28">
