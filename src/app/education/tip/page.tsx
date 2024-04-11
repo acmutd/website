@@ -12,9 +12,9 @@ export default function Page() {
       <DivisionCarousel division="education" sub="tip" />
       <div className="pl-28">
         <DivisionOfficers division="education" />
-        <DivisionExperience division="education" />
+        <DivisionExperience division="education" sub="tip" />
         <WorkShops sub="tip" />
-        <DivisionFAQ division="education" />
+        <DivisionFAQ division="education" sub="tip" />
       </div>
     </div>
   );

@@ -79,3 +79,20 @@ export type FooterLink = {
   text: string;
   link: string;
 };
+
+export type Division = 'projects' | 'research' | 'education';
+export type ExtendedDivisions = Exclude<
+  Division | 'education.mentor' | 'education.tip',
+  'education'
+>;
+
+export type Testimony = {
+  quote: string;
+  name: string;
+};
+
+export type Question = {
+  question: string;
+  answer: string;
+  images?: string[];
+};

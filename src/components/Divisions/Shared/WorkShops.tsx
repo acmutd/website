@@ -1,31 +1,5 @@
 import Image from 'next/image';
-type Quote = {
-  quote: string;
-  images: string[];
-};
-
-const Quotes: Record<'tip' | 'mentor', Quote[]> = {
-  mentor: [
-    {
-      quote:
-        'The first step is to fill out our application. Our application consists of general questions intended to give us insight into your previous development and leadership experience. From these applications, we select the most promising candidates for one-on-one interviews. The interview is the last step of the application process. Based on the application and interview, we select the very best candidates to create around 8 teams of 5 people.',
-      images: [
-        '/assets/divisions/shared/proj_faq_0.png',
-        '/assets/divisions/shared/proj_faq_1.png',
-      ],
-    },
-  ],
-  tip: [
-    {
-      quote:
-        'The first step is to fill out our application. Our application consists of general questions intended to give us insight into your previous development and leadership experience. From these applications, we select the most promising candidates for one-on-one interviews. The interview is the last step of the application process. Based on the application and interview, we select the very best candidates to create around 8 teams of 5 people.',
-      images: [
-        '/assets/divisions/shared/proj_faq_0.png',
-        '/assets/divisions/shared/proj_faq_1.png',
-      ],
-    },
-  ],
-};
+import { workshops } from '../../../../config/education.config';
 
 type Props = {
   sub: 'mentor' | 'tip';
@@ -33,7 +7,7 @@ type Props = {
 
 export default function WorkShops({ sub }: Props) {
   const header = sub === 'mentor' ? 'workshops' : 'structure';
-  const quotes = Quotes[sub];
+  const quotes = workshops[sub];
   return (
     <div id={header} className="pt-12 text-[#CACACA]">
       <h1 className="text-4xl">{header}</h1>
