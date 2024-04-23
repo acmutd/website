@@ -1,8 +1,10 @@
 'use client';
+
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 const navigation = [
   { name: 'about', href: '/about', current: true },
@@ -13,8 +15,25 @@ const navigation = [
 ];
 
 export default function Navbar() {
+  const [top, setTop] = useState(true);
+  useEffect(() => {
+    const handleScroll = () => {
+      setTop(window.scrollY === 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const navStyles = top ? 'bg-opacity-0 bg-none' : 'bg-black bg-opacity-90';
   return (
-    <Disclosure as="nav" className="fixed z-10 w-full">
+    <Disclosure
+      as="nav"
+      className={`fixed z-10 w-full transition duration-200 ease-in ${navStyles}`}
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
