@@ -1,7 +1,12 @@
 import { Question, Testimony } from '../lib/types';
 
 type SubDivision = 'tip' | 'mentor';
-export const directors = [
+export type Director = {
+  name: string;
+  description: string;
+};
+
+export const directors: Array<Director> = [
   {
     name: 'Kanishk Garg',
     description: 'TIP(Technical Interview Prep) Director.',

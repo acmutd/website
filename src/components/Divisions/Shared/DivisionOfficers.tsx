@@ -1,12 +1,19 @@
 import Image from 'next/image';
 import { Division } from './divisionUtil';
-import { directors } from '@/../config/education.config';
+import { directors as educationDirectors, type Director } from '@/../config/education.config';
 
 type Props = {
   division: Division;
 };
 
-export default function DivisionOfficers({}: Props) {
+const directorMap: Record<Division, Array<Director>> = {
+  education: educationDirectors,
+  projects: [],
+  research: [],
+};
+
+export default function DivisionOfficers({ division }: Props) {
+  const directors = directorMap[division];
   return (
     <div className="pt-12 text-[#CACACA]" id="directors">
       <h1 className="text-4xl">meet the directors</h1>
