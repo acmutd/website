@@ -31,7 +31,7 @@ export default function DivisionOfficers({ division }: Props) {
             />
             <div className="pl-12">
               <h2 className="pb-7 text-xl">{director.name}</h2>
-              <p className="text-lg">{director.description}</p>
+              <p className="text-lg">{director.position}</p>
             </div>
           </div>
         ))}

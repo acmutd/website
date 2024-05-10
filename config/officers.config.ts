@@ -1,3 +1,4 @@
+import { directors as educationDirectors } from './education.config';
 export type Officer = {
   name: string;
   position: string;
@@ -25,7 +26,7 @@ export const divisionOfficerMap: Record<Divisions, Officer[]> = {
   board: Array.from({ length: 12 }, () => defaultOfficer),
   community: Array.from({ length: 12 }, () => defaultOfficer),
   development: Array.from({ length: 12 }, () => defaultOfficer),
-  education: Array.from({ length: 12 }, () => defaultOfficer),
+  education: educationDirectors,
   hackutd: Array.from({ length: 12 }, () => defaultOfficer),
   industry: Array.from({ length: 12 }, () => defaultOfficer),
   media: Array.from({ length: 12 }, () => defaultOfficer),

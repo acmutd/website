@@ -3,17 +3,20 @@ import { Question, Testimony } from '../lib/types';
 type SubDivision = 'tip' | 'mentor';
 export type Director = {
   name: string;
-  description: string;
+  position: string;
+  image: string;
 };
 
 export const directors: Array<Director> = [
   {
     name: 'Kanishk Garg',
-    description: 'TIP(Technical Interview Prep) Director.',
+    position: 'TIP(Technical Interview Prep) Director.',
+    image: '/assets/officer/OfficerImage.png',
   },
   {
     name: 'Aarian Ahsan',
-    description: 'Mentor/Mentee Director',
+    position: 'Mentor/Mentee Director',
+    image: '/assets/officer/OfficerImage.png',
   },
 ];
 
