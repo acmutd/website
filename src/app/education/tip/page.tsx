@@ -7,14 +7,14 @@ import WorkShops from '@/components/Divisions/Shared/WorkShops';
 
 export default function Page() {
   return (
-    <div className="relative w-full bg-[url(/assets/about/about-header-bg.png)] bg-cover bg-center py-20">
-      <Navigator division="education" sub="mentor" />
-      <DivisionCarousel division="education" sub="mentor" />
+    <div className="relative w-full bg-[url(/assets/projects/proj-bg.png)] bg-cover bg-center py-20">
+      <Navigator division="education" sub="tip" />
+      <DivisionCarousel division="education" sub="tip" />
       <div className="pl-28">
         <DivisionOfficers division="education" />
-        <DivisionExperience division="education" sub="mentor" />
-        <WorkShops sub="mentor" />
-        <DivisionFAQ division="education" sub="mentor" />
+        <DivisionExperience division="education" sub="tip" />
+        <WorkShops sub="tip" />
+        <DivisionFAQ division="education" sub="tip" />
       </div>
     </div>
   );

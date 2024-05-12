@@ -1,13 +1,9 @@
 import Image from 'next/image';
 import { Division } from './divisionUtil';
+import { Question } from '../../../../lib/types';
+import { educationFAQ } from '../../../../config/education.config';
 
-type Questions = {
-  question: string;
-  answer: string;
-  images?: string[];
-};
-
-type QuestionMap = Record<Division, Array<Questions>>;
+type QuestionMap = Record<Division, Array<Question>>;
 
 const QUESTION_MAP: QuestionMap = {
   education: [
@@ -86,12 +82,20 @@ const QUESTION_MAP: QuestionMap = {
   ],
 };
 
-type Props = {
-  division: Division;
-};
+type Props =
+  | {
+      division: Exclude<Division, 'education'>;
+    }
+  | {
+      division: 'education';
+      sub: 'tip' | 'mentor';
+    };
 
-export default function DivisionFAQ({ division }: Props) {
-  const questions = QUESTION_MAP[division];
+export default function DivisionFAQ(props: Props) {
+  let questions: Question[] = [];
+  if (props.division === 'education') questions = educationFAQ[props.sub];
+  else questions = QUESTION_MAP[props.division];
+
   return (
     <div id="faq" className="pt-12 text-[#CACACA]">
       <h1 className="text-4xl ">frequently asked questions</h1>
@@ -105,7 +109,13 @@ export default function DivisionFAQ({ division }: Props) {
             {faq.images && (
               <div className="flex py-10">
                 {faq.images.map((image, i) => (
-                  <Image alt={`${division}_${i}`} src={image} key={i} height="178" width="278" />
+                  <Image
+                    alt={`${props.division}_${i}`}
+                    src={image}
+                    key={i}
+                    height="178"
+                    width="278"
+                  />
                 ))}
               </div>
             )}
