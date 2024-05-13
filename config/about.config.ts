@@ -35,8 +35,8 @@ export const aboutPageData: AboutPageData = {
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
       links: [
-        { name: 'TIP', link: '/about' },
-        { name: 'mentor program', link: '/about' },
+        { name: 'TIP', link: '/education/tip' },
+        { name: 'mentor program', link: '/education/mentor' },
       ],
     },
     media: {
