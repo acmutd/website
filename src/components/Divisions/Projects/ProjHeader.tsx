@@ -3,9 +3,11 @@ import DivisionHeader from '../Shared/DivisionHeader';
 export function ProjHeader() {
   return (
     <DivisionHeader division="projects">
-      ACM Projects is a semester-long guided projects initiative for those new to software
-      development, teaching collaborative tools, new technologies, and core development principles
-      complimentary to curriculum.
+      Looking to land your first internship? Kickstart your hunt with ACM Projects wherein
+      you&apos;ll be placed on an application development team under the guidance of a project
+      manager and an industry mentor (member of Industry). After the near semester long program you
+      will present your fully fledged application in front of a panel of judges during presentation
+      night!
     </DivisionHeader>
   );
 }

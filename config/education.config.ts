@@ -1,21 +1,18 @@
 import { Question, Testimony } from '../lib/types';
+import { Director } from './divisions.config';
+import { Officer } from './officers.config';
 
 type SubDivision = 'tip' | 'mentor';
-export type Director = {
-  name: string;
-  position: string;
-  image: string;
-};
 
-export const directors: Array<Director> = [
+export const educationDirectors: Array<Director> = [
   {
     name: 'Kanishk Garg',
-    position: 'TIP(Technical Interview Prep) Director.',
+    position: 'TIP Director',
     image: '/assets/officer/OfficerImage.png',
   },
   {
     name: 'Aarian Ahsan',
-    position: 'Mentor/Mentee Director',
+    position: 'Mentor Director',
     image: '/assets/officer/OfficerImage.png',
   },
 ];
@@ -66,3 +63,42 @@ export const educationFAQ: Record<SubDivision, Question[]> = {
   ],
   mentor: [],
 };
+
+export const educationOfficers: Officer[] = [
+  ...educationDirectors,
+  {
+    name: 'Agastya Bose',
+    position: 'TIP Officer',
+    image: '/assets/officer/OfficerImage.png',
+  },
+  {
+    name: 'Michael Zhao',
+    position: 'TIP Officer',
+    image: '/assets/officer/OfficerImage.png',
+  },
+  {
+    name: 'Abhay Iyer',
+    position: 'TIP Officer',
+    image: '/assets/officer/OfficerImage.png',
+  },
+  {
+    name: 'Ben Wowo',
+    position: 'TIP Officer',
+    image: '/assets/officer/OfficerImage.png',
+  },
+  {
+    name: 'JC Garza',
+    position: 'TIP Officer',
+    image: '/assets/officer/OfficerImage.png',
+  },
+  {
+    name: 'Om Badhe',
+    position: 'TIP Officer',
+    image: '/assets/officer/OfficerImage.png',
+  },
+  {
+    name: 'Sisi Aarukapalli',
+    position: 'Mentor Program Lead',
+    image: '/assets/officer/OfficerImage.png',
+  },
+];
