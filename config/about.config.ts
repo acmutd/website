@@ -28,7 +28,7 @@ export const aboutPageData: AboutPageData = {
       section: 'projects',
       description:
         'ACM Projects is a semester-long guided projects initiative for those new to software development, teaching collaborative tools, new technologies, and core development principles complimentary to curriculum.',
-      links: [{ name: 'apply today', link: '/projects' }],
+      links: [{ name: 'learn more', link: '/projects' }],
     },
     education: {
       section: 'education',
