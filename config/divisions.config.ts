@@ -67,6 +67,6 @@ export function getCarouselImages(section: Division): CarouselImage[] {
     case 'projects':
       return projectImages;
     case 'research':
-      return [];
+      return projectImages;
   }
 }
