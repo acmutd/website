@@ -1,5 +1,5 @@
 import { Question, Testimony } from '../lib/types';
-import { Director } from './divisions.config';
+import { CarouselImage, Director } from './divisions.config';
 import { Officer } from './officers.config';
 
 type SubDivision = 'tip' | 'mentor';
@@ -102,3 +102,43 @@ export const educationOfficers: Officer[] = [
     image: '/assets/officer/OfficerImage.png',
   },
 ];
+
+export const educationImages: {
+  mentor: CarouselImage[];
+  tip: CarouselImage[];
+} = {
+  mentor: [
+    {
+      imageLink: '/assets/research/ResearchCarousel.png',
+      title: 'Projects Presentation Night 1',
+      date: new Date(2022, 5, 29, 16, 7),
+    },
+    {
+      imageLink: '/assets/research/ResearchCarousel.png',
+      title: 'Projects Presentation Night 2',
+      date: new Date(2022, 5, 29, 16, 7),
+    },
+    {
+      imageLink: '/assets/research/ResearchCarousel.png',
+      title: 'Projects Presentation Night 3',
+      date: new Date(2022, 5, 29, 16, 7),
+    },
+  ],
+  tip: [
+    {
+      imageLink: '/assets/research/ResearchCarousel.png',
+      title: 'Projects Presentation Night 1',
+      date: new Date(2022, 5, 29, 16, 7),
+    },
+    {
+      imageLink: '/assets/research/ResearchCarousel.png',
+      title: 'Projects Presentation Night 2',
+      date: new Date(2022, 5, 29, 16, 7),
+    },
+    {
+      imageLink: '/assets/research/ResearchCarousel.png',
+      title: 'Projects Presentation Night 3',
+      date: new Date(2022, 5, 29, 16, 7),
+    },
+  ],
+};

@@ -3,75 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { type Division } from './divisionUtil';
-
-export type CarouselImage = {
-  imageLink: string;
-  title: string;
-  date: Date;
-};
-
-const proj_images: CarouselImage[] = [
-  {
-    imageLink: '/assets/projects/ProjectNight.jpeg',
-    title: 'Projects Presentation Night 1',
-    date: new Date(2022, 5, 29, 16, 7),
-  },
-  {
-    imageLink: '/assets/projects/ProjectNight.jpeg',
-    title: 'Projects Presentation Night 2',
-    date: new Date(2022, 5, 29, 16, 7),
-  },
-  {
-    imageLink: '/assets/projects/ProjectNight.jpeg',
-    title: 'Projects Presentation Night 3',
-    date: new Date(2022, 5, 29, 16, 7),
-  },
-];
-
-const research_images: CarouselImage[] = [
-  {
-    date: new Date(2022, 5, 29, 16, 7),
-    imageLink: '/assets/research/ResearchCarousel.png',
-    title: 'Research Social',
-  },
-  {
-    date: new Date(2022, 5, 29, 16, 7),
-    imageLink: '/assets/research/ResearchCarousel.png',
-    title: 'Research Social',
-  },
-  {
-    date: new Date(2022, 5, 29, 16, 7),
-    imageLink: '/assets/research/ResearchCarousel.png',
-    title: 'Research Social',
-  },
-];
-
-const mentor_images: CarouselImage[] = [
-  {
-    imageLink: '/assets/research/ResearchCarousel.png',
-    title: 'Projects Presentation Night 1',
-    date: new Date(2022, 5, 29, 16, 7),
-  },
-  {
-    imageLink: '/assets/research/ResearchCarousel.png',
-    title: 'Projects Presentation Night 2',
-    date: new Date(2022, 5, 29, 16, 7),
-  },
-  {
-    imageLink: '/assets/research/ResearchCarousel.png',
-    title: 'Projects Presentation Night 3',
-    date: new Date(2022, 5, 29, 16, 7),
-  },
-];
-
-const image_dict = {
-  projects: proj_images,
-  education: {
-    mentor: mentor_images,
-    tip: mentor_images,
-  },
-  research: research_images,
-};
+import { getCarouselImages } from '../../../../config/divisions.config';
 
 type CarouselProps =
   | { division: Exclude<Division, 'education'> }
@@ -81,59 +13,60 @@ type CarouselProps =
     };
 
 export default function Carousel(props: CarouselProps) {
-  let images = [];
-  if (props.division === 'education') images = image_dict[props.division][props.sub];
-  else images = image_dict[props.division];
+  const images = getCarouselImages(props);
 
   const [index, setIndex] = useState(0);
 
-  const next = () => setIndex((prev) => (prev + 1) % images.length);
   useEffect(() => {
     const interval = setInterval(() => {
-      next();
-    }, 5000);
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 10000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images]);
 
   return (
     <>
-      <div className="relative h-96 w-[66rem]">
+      <div className="relative h-96 w-full max-w-4xl overflow-hidden rounded-lg shadow-lg">
         <Image
           src={images[index].imageLink}
           alt={images[index].title}
-          className="object-cover"
+          className="h-full w-full object-cover"
           fill
         />
-        <div className="absolute bottom-0 right-0 flex">
+        <div className="absolute bottom-4 right-4 flex space-x-2">
           {images.map((_, i) => (
             <div
               key={i}
-              className={`m-1 h-2 w-2 rounded-full transition ${
-                i === index ? 'scale-105 bg-white' : 'bg-[#D9D9D9]'
-              }`}
+              className={`h-3 w-3 rounded-full transition ${
+                i === index ? 'scale-110 bg-white' : 'bg-gray-400'
+              } cursor-pointer`}
               onClick={() => setIndex(i)}
             ></div>
           ))}
         </div>
       </div>
       <div
-        className={`flex w-[66rem] justify-between bg-${props.division}-gradient pl-9 pr-4 text-black`}
+        className={`flex w-full max-w-4xl justify-between rounded-b-lg bg-${props.division}-gradient p-4 text-white`}
       >
-        <p>{images[index].title}</p>
-        <p>
+        <p className="font-semibold">{images[index].title}</p>
+        <p className="text-sm">
           Shot{' '}
           {images[index].date.toLocaleDateString('en-US', {
             weekday: 'long',
             month: 'long',
             day: 'numeric',
-          })}{' '}
-          at{' '}
-          {images[index].date.toLocaleTimeString('en-US', {
-            hour: 'numeric',
-            minute: images[index].date.getMinutes() > 0 ? 'numeric' : undefined,
-            timeZoneName: 'short',
-          })}{' '}
+          })}
+          {images[index].date.getHours() !== 0 || images[index].date.getMinutes() !== 0 ? (
+            <>
+              {' at '}
+              {images[index].date.toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: images[index].date.getMinutes() > 0 ? 'numeric' : undefined,
+                timeZoneName: 'short',
+              })}
+            </>
+          ) : null}
         </p>
       </div>
     </>

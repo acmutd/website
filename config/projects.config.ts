@@ -1,5 +1,5 @@
 import { Question, Testimony } from '../lib/types';
-import { Director } from './divisions.config';
+import { CarouselImage, Director } from './divisions.config';
 
 export const projectDirectors: Array<Director> = [
   {
@@ -107,4 +107,17 @@ export const projectsOfficers = [
       image: '/assets/officer/OfficerImage.png',
     },
   ],
+];
+
+export const projectImages: CarouselImage[] = [
+  {
+    imageLink: '/assets/projects/proj_1.jpg',
+    title: 'Projects carrying the ACM President Farhan at Activate (both physically and literally)',
+    date: new Date(2024, 1, 21),
+  },
+  {
+    imageLink: '/assets/projects/proj_2.jpg',
+    title: 'Projects Presentation Night Fall 2023',
+    date: new Date(2023, 11, 30),
+  },
 ];

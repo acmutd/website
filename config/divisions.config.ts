@@ -1,6 +1,11 @@
 import { Question, Testimony } from '../lib/types';
-import { educationDirectors, educationFAQ, educationTestimony } from './education.config';
-import { projectDirectors, projectsFAQ, projectsTestimony } from './projects.config';
+import {
+  educationDirectors,
+  educationFAQ,
+  educationImages,
+  educationTestimony,
+} from './education.config';
+import { projectDirectors, projectImages, projectsFAQ, projectsTestimony } from './projects.config';
 
 type Division =
   | {
@@ -14,6 +19,12 @@ export type Director = {
   name: string;
   position: string;
   image: string;
+};
+
+export type CarouselImage = {
+  imageLink: string;
+  title: string;
+  date: Date;
 };
 
 export function getDirectors(division: Division['division']): Director[] {
@@ -44,6 +55,17 @@ export function getFAQ(section: Division): Question[] {
       return educationFAQ[section.sub];
     case 'projects':
       return projectsFAQ;
+    case 'research':
+      return [];
+  }
+}
+
+export function getCarouselImages(section: Division): CarouselImage[] {
+  switch (section.division) {
+    case 'education':
+      return educationImages[section.sub];
+    case 'projects':
+      return projectImages;
     case 'research':
       return [];
   }
