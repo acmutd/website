@@ -2,7 +2,7 @@ import type { AboutPageData } from '../lib/types';
 
 export const aboutPageData: AboutPageData = {
   pageDescription:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
+    'We are the Association for Computing Machinery at UT Dallas. Fueled by creativity, passion, and professionalism, we are a dynamic force helping shape the future of the engineering community here at UT Dallas. With diverse divisions spanning Media, Projects, Research, Development, Education, Industry, Community, and HackUTD, you are sure to find your place among us.',
   divisionDescription:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
   divisions: {
@@ -42,11 +42,15 @@ export const aboutPageData: AboutPageData = {
     media: {
       section: 'media',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
+        'ACM Media is the lively mix of creative minds and dedicated members behind all our campaigns. Composed of talented marketing specialists, gifted designers, and polished videographers, we are the amplified voice of our divisions. Together, we craft engaging content and foster an environment where our community thrives.',
       links: [
-        { name: 'instagram', link: '/about' },
-        { name: 'medium', link: '/about' },
-        { name: 'newsletter?', link: '/about' },
+        { name: 'linkedIn', link: 'www.linkedin.com/company/acmutd' },
+        { name: 'instagram', link: 'www.instagram.com/acmutd/' },
+        { name: 'youtube', link: 'www.youtube.com/@acmutdallas4256' },
+        {
+          name: 'newsletter',
+          link: 'https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0',
+        },
       ],
     },
     hackutd: {
