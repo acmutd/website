@@ -9,7 +9,7 @@ export const mediaOfficers: Officer[] = [
   {
     image: '/assets/officer/OfficerImage.png',
     name: 'Shaz Kumar',
-    position: 'Media Officer',
+    position: 'Director of Media',
   },
   {
     image: '/assets/officer/OfficerImage.png',
