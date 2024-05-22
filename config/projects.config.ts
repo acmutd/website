@@ -36,10 +36,6 @@ export const projectsFAQ: Array<Question> = [
     question: 'Do I need to have prior development experience?',
     answer:
       "ACM Projects is designed for those new to software development. Although some experience is great, we're looking for passionate and committed candidates who have a desire to learn and grow in software development",
-    images: [
-      '/assets/divisions/shared/research_faq_0.png',
-      '/assets/divisions/shared/research_faq_1.png',
-    ],
   },
   {
     question: 'How is ACM Projects structured?',
