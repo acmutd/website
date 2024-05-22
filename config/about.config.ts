@@ -67,14 +67,14 @@ export const aboutPageData: AboutPageData = {
         { name: 'meet the team', link: '/about' },
       ],
     },
-    outreach: {
-      section: 'outreach',
+    community: {
+      section: 'community',
       description:
         'Our purpose is to increase STEM involvement & engagement in K-12 students by providing access to meaningful STEM-related opportunities in low-income communities/schools.',
       links: [
         {
           name: 'learn more',
-          link: 'https://discord.com/channels/692266201644007424/1022696200429895710',
+          link: 'discord.com/channels/692266201644007424/1022696200429895710',
         },
       ],
     },

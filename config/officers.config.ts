@@ -1,3 +1,4 @@
+import { communityOfficers } from './community.config';
 import { directors as educationDirectors } from './education.config';
 export type Officer = {
   name: string;
@@ -24,7 +25,7 @@ type Divisions =
 
 export const divisionOfficerMap: Record<Divisions, Officer[]> = {
   board: Array.from({ length: 12 }, () => defaultOfficer),
-  community: Array.from({ length: 12 }, () => defaultOfficer),
+  community: communityOfficers,
   development: Array.from({ length: 12 }, () => defaultOfficer),
   education: educationDirectors,
   hackutd: Array.from({ length: 12 }, () => defaultOfficer),

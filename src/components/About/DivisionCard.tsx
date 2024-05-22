@@ -19,8 +19,8 @@ export default function DivisionCard({ data }: DivisionCardProps) {
           {/* Replace png with 'cover.png' */}
           <div className="h-fit w-full lg:max-w-max">
             <Image
-              src="/assets/about/about.jpg"
-              alt="ACM UTD"
+              src={`/assets/about/${data.section}/cover.jpg`}
+              alt={data.section + ' officers'}
               width={1000}
               height={1000}
               className="object-contain"
