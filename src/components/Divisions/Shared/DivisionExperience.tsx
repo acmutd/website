@@ -23,7 +23,7 @@ export default function DivisionExperience(props: Props) {
           <div className="relative flex flex-col space-y-5" key={i}>
             <QuoteMarks division={props.division}>
               <p className="text-lg">{exp.quote}</p>
-              <p className="text-right text-sm text-[#cacaca]">- {exp.name}</p>
+              {exp.name && <p className="text-right text-sm text-[#cacaca]">- {exp.name}</p>}
             </QuoteMarks>
           </div>
         ))}

@@ -14,7 +14,12 @@ export const projectDirectors: Array<Director> = [
   },
 ];
 
-export const projectsTestimony: Testimony[] = [];
+export const projectsTestimony: Testimony[] = [
+  { quote: 'It helped me land my first internship!' },
+  { quote: 'I was able to join a community!' },
+  { quote: 'I made lots of friends and networked with industry professionals' },
+  { quote: 'An invaluable/great/wonderful program to gain real world experience' },
+];
 
 export const projectsFAQ: Array<Question> = [
   {
