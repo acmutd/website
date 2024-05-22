@@ -31,7 +31,7 @@ export default function Carousel(props: CarouselProps) {
         <Image
           src={images[index].imageLink}
           alt={images[index].title}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           fill
         />
         <div className="absolute bottom-4 right-4 flex space-x-2">
