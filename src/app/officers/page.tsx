@@ -32,15 +32,15 @@ function Apply() {
         <Image src="/assets/officer/divisions.png" alt="Division" width={40} height={463} />
       </div>
       <OfficerHeader />
-      <OfficerGrid type="board" count={12} />
-      <OfficerGrid type="media" count={6} />
-      <OfficerGrid type="research" count={12} />
-      <OfficerGrid type="development" count={12} />
-      <OfficerGrid type="projects" count={12} />
-      <OfficerGrid type="education" count={12} />
-      <OfficerGrid type="community" count={12} />
-      <OfficerGrid type="hackutd" count={21} />
-      <OfficerGrid type="industry" count={12} />
+      <OfficerGrid type="board" />
+      <OfficerGrid type="media" />
+      <OfficerGrid type="research" />
+      <OfficerGrid type="development" />
+      <OfficerGrid type="projects" />
+      <OfficerGrid type="education" />
+      <OfficerGrid type="community" />
+      <OfficerGrid type="hackutd" />
+      <OfficerGrid type="industry" />
     </div>
   );
 }

@@ -88,7 +88,7 @@ export type ExtendedDivisions = Exclude<
 
 export type Testimony = {
   quote: string;
-  name: string;
+  name?: string;
 };
 
 export type Question = {
