@@ -1,4 +1,5 @@
 import { educationOfficers } from './education.config';
+import { mediaOfficers } from './media.config';
 import { projectsOfficers } from './projects.config';
 export type Officer = {
   name: string;
@@ -30,7 +31,7 @@ export const divisionOfficerMap: Record<Divisions, Officer[]> = {
   education: educationOfficers,
   hackutd: Array.from({ length: 12 }, () => defaultOfficer),
   industry: Array.from({ length: 12 }, () => defaultOfficer),
-  media: Array.from({ length: 12 }, () => defaultOfficer),
+  media: mediaOfficers,
   research: Array.from({ length: 12 }, () => defaultOfficer),
   projects: projectsOfficers,
 };
