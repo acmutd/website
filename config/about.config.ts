@@ -1,4 +1,4 @@
-import type { AboutPageData } from "../lib/types";
+import type { AboutPageData } from '../lib/types';
 
 export const aboutPageData: AboutPageData = {
   pageDescription:
@@ -27,16 +27,16 @@ export const aboutPageData: AboutPageData = {
     projects: {
       section: 'projects',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
-      links: [{ name: 'apply today', link: '/about' }],
+        'ACM Projects is a semester-long guided projects initiative for those new to software development, teaching collaborative tools, new technologies, and core development principles complimentary to curriculum.',
+      links: [{ name: 'learn more', link: '/projects' }],
     },
     education: {
       section: 'education',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
       links: [
-        { name: 'TIP', link: '/about' },
-        { name: 'mentor program', link: '/about' },
+        { name: 'TIP', link: '/education/tip' },
+        { name: 'mentor program', link: '/education/mentor' },
       ],
     },
     media: {

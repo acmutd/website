@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { type ReactNode } from 'react';
+import { divisionOfficerMap } from '../../../config/officers.config';
 
 type Layout =
   | 'board'
@@ -14,7 +15,6 @@ type Layout =
 
 type GridProps = {
   type: Layout;
-  count: number;
 };
 
 type Officer = {
@@ -25,12 +25,6 @@ type Officer = {
 
 type PillProps = {
   officer: Officer;
-};
-
-const defaultOfficer: Officer = {
-  name: 'Saksham Sangrula',
-  position: 'President',
-  image: '/assets/officer/OfficerImage.png',
 };
 
 const titleMap: Record<Layout, ReactNode> = {
@@ -73,12 +67,13 @@ const titleMap: Record<Layout, ReactNode> = {
 };
 
 const OfficerGrid = (props: GridProps) => {
+  const officers = divisionOfficerMap[props.type];
   return (
     <div className="flex flex-col p-16 lg:px-[11.5rem] lg:pb-32">
       <div className="text-[#cacaca]">{titleMap[props.type]}</div>
-      <div className="flex flex-wrap pt-8">
-        {Array.from({ length: props.count }, (_, i) => (
-          <OfficerPill key={i} officer={defaultOfficer} />
+      <div className="flex flex-wrap justify-center gap-8 pt-8">
+        {officers.map((officer) => (
+          <OfficerPill key={officer.name} officer={officer} />
         ))}
       </div>
     </div>
@@ -86,17 +81,11 @@ const OfficerGrid = (props: GridProps) => {
 };
 
 const OfficerPill = ({ officer }: PillProps) => (
-  <div className="m-3 flex justify-center align-middle text-[#cacaca]">
-    <Image
-      src={officer.image}
-      alt={officer.name}
-      width={80}
-      height={80}
-      className="mx-6 lg:mx-10"
-    />
-    <div className="flex-col self-center">
-      <h1 className="md:text-xl">{officer.name}</h1>
-      <p>{officer.position}</p>
+  <div className="m-2 flex rounded-lg p-2 text-[#cacaca]">
+    <Image src={officer.image} alt={officer.name} width={80} height={80} className="rounded-full" />
+    <div className="ml-4 flex flex-col justify-center">
+      <h1 className="text-xl font-semibold">{officer.name}</h1>
+      <p className="text-sm">{officer.position}</p>
     </div>
   </div>
 );
