@@ -182,7 +182,7 @@ export const hackOfficers: Officer[] = [
     image: '/assets/officer/OfficerImage.png',
   },
   {
-    name: 'Michael :D',
+    name: 'Michael Zhao',
     position: 'Advisor',
     image: '/assets/officer/OfficerImage.png',
   },
