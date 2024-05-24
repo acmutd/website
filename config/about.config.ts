@@ -64,12 +64,8 @@ export const aboutPageData: AboutPageData = {
     },
     industry: {
       section: 'industry',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
-      links: [
-        { name: 'events', link: '/about' },
-        { name: 'meet the team', link: '/about' },
-      ],
+      description: `Welcome to ACM Industry!! Our team has the pleasure of acting as the bridge between companies and the ACM community; we do this by introducing more companies to ACM and its members, as well as involving our current sponsors through the various events and workshops we host with them. If there's a technology you would like to learn, a challenge in the college-to-corporate transition you would like to overcome, or if you just want to network with industry professionals, check out ACM Industry!`,
+      links: [],
     },
     community: {
       section: 'community',
