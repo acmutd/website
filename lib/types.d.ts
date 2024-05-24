@@ -51,8 +51,10 @@ export type HomePageData = {
   orgStatement: string;
   community: CommunityIconsData;
   cards: HomeCard[];
-  sponsors: string[];
+  sponsors: Record<SponsorType, string[]>;
 };
+
+type SponsorType = 'gold' | 'silver' | 'bronze' | 'custom';
 
 export type CommunityIconsData = {
   linkedin: string;

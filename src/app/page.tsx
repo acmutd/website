@@ -92,24 +92,39 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row">
-        <div className="flex flex-col gap-y-4 rounded-r-2xl border-y border-r border-primary/50 bg-gray-300/10 p-14 text-center">
-          <h3 className="text-2xl font-semibold lg:text-3xl">our sponsors</h3>
-          <div className="grid grid-cols-3 place-items-center gap-x-11 gap-y-16">
-            {homePageData.sponsors.map((sponsor, idx) => {
-              return (
-                <div key={idx} className="flex items-center justify-center">
-                  <Image
-                    src={`/assets/home/sponsors/${sponsor}.png`}
-                    alt={sponsor.toUpperCase()}
-                    className="object-contain"
-                    width={250}
-                    height={250}
-                  />
-                </div>
-              );
-            })}
-          </div>
+      <div className="flex flex-row py-10">
+        <div className="flex flex-col gap-y-8 rounded-r-2xl border-y border-r border-primary/50 bg-gray-300/10 p-10 text-center shadow-lg lg:p-14">
+          <h3 className="mb-6 text-2xl font-semibold text-primary lg:text-3xl">Our Sponsors</h3>
+          {Object.values(homePageData.sponsors).map((tier, idx) => (
+            <div key={idx} className="mb-8">
+              <h1
+                className={`mb-4 text-xl font-bold lg:text-2xl ${
+                  idx === 0
+                    ? 'text-yellow-600'
+                    : idx === 1
+                    ? 'text-slate-300'
+                    : idx === 2
+                    ? 'text-amber-600'
+                    : 'text-green-600'
+                }`}
+              >
+                {Object.keys(homePageData.sponsors)[idx]}
+              </h1>
+              <div className="grid grid-cols-1 place-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {tier.map((sponsor) => (
+                  <div key={sponsor} className="flex items-center justify-center rounded-lg p-4">
+                    <Image
+                      src={`/assets/home/sponsors/${sponsor}.png`}
+                      alt={sponsor.toUpperCase()}
+                      className="object-contain"
+                      width={idx === 0 ? 350 : idx === 1 ? 300 : 250}
+                      height={idx === 0 ? 350 : idx === 1 ? 300 : 250}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </main>
