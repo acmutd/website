@@ -22,12 +22,5 @@ export const homePageData: HomePageData = {
       link: '/',
     },
   ],
-  sponsors: [
-    'americanairlines',
-    'goldmansachs',
-    'statefarm',
-    'capitalone',
-    'eogresources',
-    'paycom',
-  ],
+  sponsors: ['statefarm', 'paycom', 'eogresources', 'CBRE', 'VISA', 'geico', 'jpmc', 'corelogic'],
 };
