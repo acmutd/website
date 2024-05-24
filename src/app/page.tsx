@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { homePageData } from '../../config/home.config';
 
 function Home() {
-  const icons = Object.keys(homePageData.community)
-  const iconLinks = Object.values(homePageData.community)
+  const icons = Object.keys(homePageData.community);
+  const iconLinks = Object.values(homePageData.community);
 
   return (
     <main className="flex h-fit flex-col gap-y-56 bg-[url(/assets/apply/apply-bg.png)] bg-cover py-20 text-white">
@@ -37,7 +37,10 @@ function Home() {
         <div className="mt-12 flex flex-col gap-y-10">
           {homePageData.cards.map((card, idx) => {
             return (
-              <div className="flex max-w-sm flex-col items-start rounded-2xl border-primary/50 bg-gray-300/10 py-6 pl-28 pr-3" key={idx}>
+              <div
+                className="flex max-w-sm flex-col items-start rounded-2xl border-primary/50 bg-gray-300/10 py-6 pl-28 pr-3"
+                key={idx}
+              >
                 <p className="text-xl">{card.description}</p>
                 <div className="mt-2 self-end">
                   <Link
@@ -92,13 +95,13 @@ function Home() {
       <div className="flex flex-row">
         <div className="flex flex-col gap-y-4 rounded-r-2xl border-y border-r border-primary/50 bg-gray-300/10 p-14 text-center">
           <h3 className="text-2xl font-semibold lg:text-3xl">our sponsors</h3>
-          <div className="grid grid-cols-3 gap-x-11 gap-y-16">
+          <div className="grid grid-cols-3 place-items-center gap-x-11 gap-y-16">
             {homePageData.sponsors.map((sponsor, idx) => {
               return (
-                <div key={idx}>
+                <div key={idx} className="flex items-center justify-center">
                   <Image
                     src={`/assets/home/sponsors/${sponsor}.png`}
-                    alt=""
+                    alt={sponsor.toUpperCase()}
                     className="object-contain"
                     width={250}
                     height={250}
