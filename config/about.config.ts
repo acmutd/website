@@ -56,7 +56,7 @@ export const aboutPageData: AboutPageData = {
     hackutd: {
       section: 'hackutd',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
+        'HackUTD is an annual 24-hour hackathon that attracts a wide variety of sponsors and participants to come together to solve various problems. During our last iteration (HackUTD X), we had over 1000 participants and 230 project submissions, making us the 2nd largest 24 hour hackathon in the US! None of this would have been possible without the amazing, dedicated team of organizers we had on our side.',
       links: [
         { name: 'website', link: 'hackutd.co' },
         { name: 'instagram', link: 'instagram.com/hackutd' },
