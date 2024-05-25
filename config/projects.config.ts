@@ -127,7 +127,7 @@ export const projectsWinners: Projects[] = [
   {
     name: 'SAGE',
     desc: 'Have you ever asked your advisor a question only to wait weeks for a response? Many times, advisors get flooded with questions that have simple answers or problems that are easy to resolve. SAGE is an advisor chatbot that can answer your questions quickly and efficiently, so you don’t have to worry about it. On top of this, SAGE can view your profile to help you make decisions about future classes and even generate personalized degree plans. Take the stress out of the logistics and just ask SAGE for help with your inquiries and classes!',
-    image: '/assets/divisions/shared/proj_image.png',
+    image: '/assets/projects/SAGE.jpg',
     links: [
       { type: 'github', link: 'https://github.com/acm-projects/Sage' },
       { type: 'video', link: 'https://www.youtube.com/live/QEibawPAbCc?feature=shared&t=3570' },
@@ -139,7 +139,7 @@ export const projectsWinners: Projects[] = [
   {
     name: 'RPG',
     desc: 'RPG is a game with endless maps to explore and enemies to slice through. Through procedural generation, no map will look the same as you explore and find the final boss room. Although the backstory and setting of the game will be decided by the participants, it will be a 2D Top Down RPG hack and slash roguelike.',
-    image: '/assets/divisions/shared/proj_image.png',
+    image: '/assets/projects/RPG.jpg',
     members: ['Aendri Singh', 'Faizaan Siddiqui', 'Jose Garcia', 'Lana Barakat'],
     manager: 'Kacie Yee',
     links: [
