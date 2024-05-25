@@ -5,7 +5,13 @@ import {
   educationImages,
   educationTestimony,
 } from './education.config';
-import { projectDirectors, projectImages, projectsFAQ, projectsTestimony } from './projects.config';
+import {
+  projectDirectors,
+  projectImages,
+  projectsFAQ,
+  projectsTestimony,
+  projectsWinners,
+} from './projects.config';
 
 type Division =
   | {
@@ -25,6 +31,21 @@ export type CarouselImage = {
   imageLink: string;
   title: string;
   date: Date;
+};
+
+type ProjectLink = {
+  type: 'github' | 'video';
+  link: string;
+};
+
+export type Projects = {
+  placement: string;
+  name: string;
+  desc: string;
+  image: string;
+  members: string[];
+  links: ProjectLink[];
+  manager: string;
 };
 
 export function getDirectors(division: Division['division']): Director[] {
@@ -68,5 +89,16 @@ export function getCarouselImages(section: Division): CarouselImage[] {
       return projectImages;
     case 'research':
       return projectImages;
+  }
+}
+
+type WinningProjectSelector = 'projects' | 'research';
+
+export function getWinningProjects(selector: WinningProjectSelector): Projects[] {
+  switch (selector) {
+    case 'projects':
+      return projectsWinners;
+    case 'research':
+      return [];
   }
 }
