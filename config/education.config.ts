@@ -18,7 +18,12 @@ export const educationDirectors: Array<Director> = [
 ];
 
 export const educationTestimony: Record<SubDivision, Array<Testimony>> = {
-  mentor: [],
+  mentor: [
+    {
+      quote: 'ACM Mentor program is 10/10',
+      name: 'Nirranjan Akilan',
+    },
+  ],
   tip: [
     {
       quote:
@@ -34,7 +39,13 @@ type Quote = {
 };
 
 export const workshops: Record<SubDivision, Quote[]> = {
-  mentor: [],
+  mentor: [
+    {
+      quote:
+        'Need a helping hand? The ACM mentor program is here for you! Our mentee/mentor pairs are matched between those who share similar interests and aspirations. Our mentorship model fosters a supportive environment akin to a “big brother” relationship, where mentees can benefit from the guidance and wisdom of their more experienced counterparts.',
+      images: [],
+    },
+  ],
   tip: [
     {
       quote:
@@ -61,7 +72,37 @@ export const educationFAQ: Record<SubDivision, Question[]> = {
         'Arrays/Strings, Linked Lists, Hashing, Queues + Stacks, Trees, Graphs, Behavioral(Internship Panel), Advanced Graphs, DP',
     },
   ],
-  mentor: [],
+  mentor: [
+    {
+      question: 'What is defined as an under or upperclassmen?',
+      answer:
+        'Underclassmen are students who are in their Freshman or Sophomore year at UTD. Upperclassmen are students who are in their Junior or Senior year at UTD. There may be a few exceptions* (Please refer to: “What if I am a transfer student?“)',
+    },
+    {
+      question: 'How long are you paired with your mentor/mentee for?',
+      answer:
+        'An academic year (fall to spring semester), although you both will have the choice to stay paired if all conditions still apply (For example: The mentor is not graduating, the mentee is still an underclassmen, you both wish to stay paired, etc)',
+    },
+    {
+      question: 'Who can I contact if I have any questions?',
+      answer: 'Feel free to email us at education@acmutd.co',
+    },
+    {
+      question: 'How are pairs matched?',
+      answer:
+        'We make our mentee/mentor pairs based on what experience and interests the mentor has, match a mentee with similar interests accordingly.',
+    },
+    {
+      question: 'What if I am a transfer student?',
+      answer:
+        'It is up to the transfer student if they wish to be considered as an ‘underclassmen’ or ‘upperclassmen’',
+    },
+    {
+      question: 'Can I switch mentors if the relationship isn’t working out?',
+      answer:
+        'Yes, absolutely. If for any reason it is not working out, please email us at education@acmutd.co',
+    },
+  ],
 };
 
 export const educationOfficers: Officer[] = [
@@ -109,18 +150,18 @@ export const educationImages: {
 } = {
   mentor: [
     {
-      imageLink: '/assets/research/ResearchCarousel.png',
-      title: 'Projects Presentation Night 1',
+      imageLink: '/assets/education/mentor-1.png',
+      title: 'Mentor Program',
       date: new Date(2022, 5, 29, 16, 7),
     },
     {
-      imageLink: '/assets/research/ResearchCarousel.png',
-      title: 'Projects Presentation Night 2',
+      imageLink: '/assets/education/mentor-2.png',
+      title: 'Mentor Program',
       date: new Date(2022, 5, 29, 16, 7),
     },
     {
-      imageLink: '/assets/research/ResearchCarousel.png',
-      title: 'Projects Presentation Night 3',
+      imageLink: '/assets/education/mentor-3.png',
+      title: 'Mentor Program',
       date: new Date(2022, 5, 29, 16, 7),
     },
   ],

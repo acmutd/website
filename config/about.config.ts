@@ -33,7 +33,7 @@ export const aboutPageData: AboutPageData = {
     education: {
       section: 'education',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
+        'ACM Education runs the Technical Interview Prep (TIP) program, the Mentor program, as well as organizing workshops throughout the semester.',
       links: [
         { name: 'TIP', link: '/education/tip' },
         { name: 'mentor program', link: '/education/mentor' },
