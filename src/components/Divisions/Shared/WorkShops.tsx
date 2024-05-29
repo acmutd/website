@@ -15,7 +15,7 @@ export default function WorkShops({ sub }: Props) {
 
       <div className="w-[50rem] text-[#CACACA]">
         {quotes.map((faq, i) => (
-          <div className="space-y-2 pb-10" key={i}>
+          <div className="space-y-2" key={i}>
             <p>{faq.quote}</p>
             {faq.images && (
               <div className="flex py-10">
