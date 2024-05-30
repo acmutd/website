@@ -27,11 +27,11 @@ export default function Carousel(props: CarouselProps) {
 
   return (
     <>
-      <div className="relative h-96 w-full max-w-4xl overflow-hidden rounded-lg shadow-lg">
+      <div className="relative h-96 w-full max-w-4xl overflow-hidden rounded-t-lg">
         <Image
           src={images[index].imageLink}
           alt={images[index].title}
-          className="h-full w-full object-contain"
+          className={`h-full w-full object-contain bg-${props.division}-gradient pt-3`}
           fill
         />
         <div className="absolute bottom-4 right-4 flex space-x-2">

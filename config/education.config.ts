@@ -151,18 +151,18 @@ export const educationImages: {
   mentor: [
     {
       imageLink: '/assets/education/mentor-1.png',
-      title: 'Mentor Program',
-      date: new Date(2022, 5, 29, 16, 7),
+      title: 'Mentor Program Social #1',
+      date: new Date(2024, 2, 22, 19, 17),
     },
     {
       imageLink: '/assets/education/mentor-2.png',
-      title: 'Mentor Program',
-      date: new Date(2022, 5, 29, 16, 7),
+      title: 'Mentor Program Social #1',
+      date: new Date(2024, 2, 22, 19, 17),
     },
     {
       imageLink: '/assets/education/mentor-3.png',
-      title: 'Mentor Program',
-      date: new Date(2022, 5, 29, 16, 7),
+      title: 'ACM x SWE x AWS Hackathon',
+      date: new Date(2024, 2, 2, 17, 5),
     },
   ],
   tip: [
