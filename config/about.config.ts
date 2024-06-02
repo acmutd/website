@@ -9,12 +9,11 @@ export const aboutPageData: AboutPageData = {
     development: {
       section: 'development',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Leo vel fringilla est ullamcorper. Sagittis id consectetur purus ut faucibus pulvinar elementum.',
+        'ACM Development mainly focuses on maintaining web applications and infrastructures used by ACM to interact with its members such as Member Portal and UTD Grades.',
       links: [
-        { name: 'acm portal', link: '/about' },
-        { name: 'hackportal', link: '/about' },
-        { name: 'utdgrades', link: '/about' },
-        { name: 'github', link: '/about' },
+        { name: 'acm portal', link: 'https://github.com/acmutd/portal-next' },
+        { name: 'utdgrades', link: 'https://github.com/acmutd/utd-grades' },
+        { name: 'github', link: 'https://github.com/acmutd' },
       ],
       linkStyles: '',
     },
