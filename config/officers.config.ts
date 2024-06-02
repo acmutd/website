@@ -1,4 +1,6 @@
+import { boardOfficers } from './board.config';
 import { communityOfficers } from './community.config';
+import { developmentOfficers } from './development.config';
 import { educationOfficers } from './education.config';
 import { hackOfficers } from './hack.config';
 import { industryOfficers } from './industry.config';
@@ -28,9 +30,9 @@ type Divisions =
   | 'industry';
 
 export const divisionOfficerMap: Record<Divisions, Officer[]> = {
-  board: Array.from({ length: 12 }, () => defaultOfficer),
+  board: boardOfficers, 
   community: communityOfficers,
-  development: Array.from({ length: 12 }, () => defaultOfficer),
+  development: developmentOfficers, 
   education: educationOfficers,
   hackutd: hackOfficers,
   industry: industryOfficers,
