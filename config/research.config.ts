@@ -1,5 +1,6 @@
 import type { Question, Testimony } from '../lib/types';
 import type { CarouselImage, Director, Projects } from './divisions.config';
+import { projectDirectors } from './projects.config';
 
 export const researchDirectors: Array<Director> = [
   {
@@ -69,3 +70,5 @@ export const researchWinners: Projects[] = [
     links: [],
   },
 ];
+
+export const researchOfficers = [...projectDirectors];
