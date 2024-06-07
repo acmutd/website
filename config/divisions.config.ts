@@ -12,6 +12,12 @@ import {
   projectsTestimony,
   projectsWinners,
 } from './projects.config';
+import {
+  researchDirectors,
+  researchFAQ,
+  researchTestimony,
+  researchWinners,
+} from './research.config';
 
 type Division =
   | {
@@ -53,7 +59,7 @@ export function getDirectors(division: Division['division']): Director[] {
     case 'projects':
       return projectDirectors;
     case 'research':
-      return [];
+      return researchDirectors;
     case 'education':
       return educationDirectors;
   }
@@ -64,7 +70,7 @@ export function getTestimony(section: Division): Testimony[] {
     case 'projects':
       return projectsTestimony;
     case 'research':
-      return [];
+      return researchTestimony;
     case 'education':
       return educationTestimony[section.sub];
   }
@@ -77,7 +83,7 @@ export function getFAQ(section: Division): Question[] {
     case 'projects':
       return projectsFAQ;
     case 'research':
-      return [];
+      return researchFAQ;
   }
 }
 
@@ -99,6 +105,6 @@ export function getWinningProjects(selector: WinningProjectSelector): Projects[]
     case 'projects':
       return projectsWinners;
     case 'research':
-      return [];
+      return researchWinners;
   }
 }
