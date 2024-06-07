@@ -66,9 +66,33 @@ export const researchWinners: Projects[] = [
     desc: 'Streamlining Fingerspelling-to-Text Using a Conformer',
     manager: 'Oscar Lay',
     members: ['Leon Zhang', 'Sahas Sharma', 'Maunika Achanta', 'Sohan Vidiyala'],
-    image: '/assets/research/FingerTip.png',
+    image: '/assets/divisions/shared/proj_image.png',
     links: [],
   },
 ];
 
-export const researchOfficers = [...projectDirectors];
+export const researchOfficers = [
+  ...projectDirectors,
+  { name: 'Aaryaa  Moharir', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  { name: 'Aba Onumah', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  { name: 'Abbas Khawaja', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  { name: 'Arjun Junghare', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  { name: 'Ermina Ashraf', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  { name: 'Kenneth Myers', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  { name: 'Rushi Trivedi', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  { name: 'Sahas Sharma', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  { name: 'Sriram Sendhil', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  {
+    name: 'Vaishnavi Pasumarthi',
+    position: 'Research Lead',
+    image: '/assets/officer/OfficerImage.png',
+  },
+];
+
+export const researchCarousel: CarouselImage[] = [
+  {
+    title: 'Research Symposium Presentation',
+    imageLink: '/assets/research/FingerTip.png',
+    date: new Date(2024, 4, 3),
+  },
+];

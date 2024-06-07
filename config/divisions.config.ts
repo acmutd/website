@@ -13,6 +13,7 @@ import {
   projectsWinners,
 } from './projects.config';
 import {
+  researchCarousel,
   researchDirectors,
   researchFAQ,
   researchTestimony,
@@ -94,7 +95,7 @@ export function getCarouselImages(section: Division): CarouselImage[] {
     case 'projects':
       return projectImages;
     case 'research':
-      return projectImages;
+      return researchCarousel;
   }
 }
 
