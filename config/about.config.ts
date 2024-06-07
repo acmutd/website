@@ -21,7 +21,7 @@ export const aboutPageData: AboutPageData = {
       section: 'research',
       description:
         'ACM Research is an undergraduate-only research initiative that introduces students to the world of research, equipping them with the skills, resources, and mentorship necessary to formulate nuanced ideas and prepare them for possible future publications. Our goal is to guide you through the holistic research process, starting with the generation of engaging research questions and ending at the presentation of findings to industry and academic professionals in a symposium format.',
-      links: [{ name: 'apply today', link: '/about' }],
+      links: [{ name: 'learn more', link: '/research' }],
     },
     projects: {
       section: 'projects',
