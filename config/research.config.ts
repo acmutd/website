@@ -1,6 +1,5 @@
 import type { Question, Testimony } from '../lib/types';
 import type { CarouselImage, Director, Projects } from './divisions.config';
-import { projectDirectors } from './projects.config';
 
 export const researchDirectors: Array<Director> = [
   {
@@ -66,13 +65,13 @@ export const researchWinners: Projects[] = [
     desc: 'Streamlining Fingerspelling-to-Text Using a Conformer',
     manager: 'Oscar Lay',
     members: ['Leon Zhang', 'Sahas Sharma', 'Maunika Achanta', 'Sohan Vidiyala'],
-    image: '/assets/divisions/shared/proj_image.png',
+    image: '/assets/research/FingerTip.png',
     links: [],
   },
 ];
 
 export const researchOfficers = [
-  ...projectDirectors,
+  ...researchDirectors,
   { name: 'Aaryaa  Moharir', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
   { name: 'Aba Onumah', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
   { name: 'Abbas Khawaja', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
