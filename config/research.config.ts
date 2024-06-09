@@ -90,8 +90,44 @@ export const researchOfficers = [
 
 export const researchCarousel: CarouselImage[] = [
   {
-    title: 'Research Symposium Presentation',
-    imageLink: '/assets/research/FingerTip.png',
+    imageLink: '/assets/research/research-1.JPG',
+    title: 'Introduction of judges for the Spring 2024 symposium.',
     date: new Date(2024, 4, 3),
+  },
+  {
+    imageLink: '/assets/research/research-2.JPG',
+    title: 'Judging of research project during the Spring 2024 symposium.',
+    date: new Date(2024, 4, 3),
+  },
+  {
+    imageLink: '/assets/research/research-3.JPG',
+    title: 'Members of the DriverWatch team proudly presenting their poster, Spring 2024.',
+    date: new Date(2024, 4, 3),
+  },
+  {
+    imageLink: '/assets/research/research-4.webp',
+    title:
+      'The directors of Spring and Fall 2024 ACM Research celebrating another successful symposium.',
+    date: new Date(2024, 4, 3),
+  },
+  {
+    imageLink: '/assets/research/research-5.JPG',
+    title: 'First social of Fall 2023!',
+    date: new Date(2023, 9, 20),
+  },
+  {
+    imageLink: '/assets/research/research-6.JPG',
+    title: 'A typical build night at the Blackstone Launchpad.',
+    date: new Date(2023, 9, 25),
+  },
+  {
+    imageLink: '/assets/research/research-7.JPG',
+    title: 'Team Auditory Unveil during a Fall 2023 build night.',
+    date: new Date(2023, 9, 25),
+  },
+  {
+    imageLink: '/assets/research/research-8.jpg',
+    title: 'The directors of Fall 2023 and Spring 2024 getting a quick nap in at HackUTD 2023.',
+    date: new Date(2023, 9, 25),
   },
 ];
