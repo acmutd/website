@@ -6,7 +6,7 @@ type SubDivision = 'tip' | 'mentor';
 
 export const educationDirectors: Array<Director> = [
   {
-    name: 'Kanishk Garg',
+    name: 'Agastya Bose',
     position: 'TIP Director',
     image: '/assets/officer/OfficerImage.png',
   },
