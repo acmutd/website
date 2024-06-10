@@ -3,9 +3,12 @@ import DivisionHeader from '../Shared/DivisionHeader';
 export function ResearchHeader() {
   return (
     <DivisionHeader division="research">
-      ACM Research is a semester-long, research-based initiative for students who want to explore
-      various subfields in computer science. You will be guided by a research lead and faculty
-      advisor throughout the semester to successfully create a tangible research project.
+      Interested in diving into research? Join ACM Research, an exclusive undergraduate program
+      designed to introduce you to the world of research. You&apos;ll gain essential skills, access
+      valuable resources, and receive mentorship from experienced researchers. Throughout the
+      program, you&apos;ll develop sophisticated research ideas and work towards potential
+      publication. Your journey will start with crafting compelling research questions and culminate
+      in presenting your findings to industry and academic professionals at our symposium!
     </DivisionHeader>
   );
 }

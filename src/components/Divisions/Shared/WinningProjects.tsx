@@ -35,10 +35,15 @@ export default function WinningProjects({ division }: { division: 'projects' | '
                 <div className="flex space-x-1">
                   <p>members:</p>
                   {project.members.map((member, i) => (
-                    <p key={i}>{member}</p>
+                    <p key={i}>
+                      {member}
+                      {i !== project.members.length - 1 ? ',' : ''}
+                    </p>
                   ))}
                 </div>
-                <p>project manager: {project.manager}</p>
+                <p>
+                  {division === 'projects' ? 'project manager' : 'research lead'} {project.manager}
+                </p>
               </div>
             </div>
           </div>

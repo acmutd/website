@@ -6,6 +6,7 @@ import { hackOfficers } from './hack.config';
 import { industryOfficers } from './industry.config';
 import { mediaOfficers } from './media.config';
 import { projectsOfficers } from './projects.config';
+import { researchOfficers } from './research.config';
 export type Officer = {
   name: string;
   position: string;
@@ -30,13 +31,13 @@ type Divisions =
   | 'industry';
 
 export const divisionOfficerMap: Record<Divisions, Officer[]> = {
-  board: boardOfficers, 
+  board: boardOfficers,
   community: communityOfficers,
-  development: developmentOfficers, 
+  development: developmentOfficers,
   education: educationOfficers,
   hackutd: hackOfficers,
   industry: industryOfficers,
   media: mediaOfficers,
-  research: Array.from({ length: 12 }, () => defaultOfficer),
+  research: researchOfficers,
   projects: projectsOfficers,
 };
