@@ -3,7 +3,7 @@ import { CarouselImage, Director, Projects } from './divisions.config';
 
 export const projectDirectors: Array<Director> = [
   {
-    name: 'David Tepeneu',
+    name: 'Abis Naqvi',
     position: 'Projects Director',
     image: '/assets/officer/OfficerImage.png',
   },
@@ -58,22 +58,12 @@ export const projectsOfficers = [
       image: '/assets/officer/OfficerImage.png',
     },
     {
-      name: 'Abis Naqvi',
-      position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
-    },
-    {
       name: 'Avanthi Reddy',
       position: 'Project Lead',
       image: '/assets/officer/OfficerImage.png',
     },
     {
-      name: 'Clara Conner',
-      position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
-    },
-    {
-      name: 'Harper Wood',
+      name: 'Jason Luu',
       position: 'Project Lead',
       image: '/assets/officer/OfficerImage.png',
     },
@@ -88,7 +78,7 @@ export const projectsOfficers = [
       image: '/assets/officer/OfficerImage.png',
     },
     {
-      name: 'Muaaz Abed',
+      name: 'Ethan Varghese',
       position: 'Project Lead',
       image: '/assets/officer/OfficerImage.png',
     },
@@ -98,12 +88,22 @@ export const projectsOfficers = [
       image: '/assets/officer/OfficerImage.png',
     },
     {
-      name: 'Ridwan Amin',
+      name: 'Lerich Osay',
       position: 'Project Lead',
       image: '/assets/officer/OfficerImage.png',
     },
     {
-      name: 'Safa Mohammed',
+      name: 'Shraddha Subash',
+      position: 'Project Lead',
+      image: '/assets/officer/OfficerImage.png',
+    },
+    {
+      name: 'Shreya Ramani',
+      position: 'Project Lead',
+      image: '/assets/officer/OfficerImage.png',
+    },
+    {
+      name: 'Noel Emmanuel',
       position: 'Project Lead',
       image: '/assets/officer/OfficerImage.png',
     },
