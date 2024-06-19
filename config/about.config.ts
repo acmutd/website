@@ -69,7 +69,7 @@ export const aboutPageData: AboutPageData = {
     community: {
       section: 'community',
       description:
-        'Our purpose is to increase STEM involvement & engagement in K-12 students by providing access to meaningful STEM-related opportunities in low-income communities/schools.',
+        'Our purpose is to increase STEM involvement & engagement in K-12 students by providing access to meaningful STEM-related opportunities in low-income communities/schools. In addition, our dedicated events team organizes various social events for students of all majors. These events create a vibrant campus atmosphere by encouraging collaboration, fostering creativity, and enhancing student engagement.',
       links: [
         {
           name: 'learn more',

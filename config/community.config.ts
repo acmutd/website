@@ -8,6 +8,11 @@ export const communityOfficers: Officer[] = [
   },
   {
     image: '/assets/officer/OfficerImage.png',
+    name: 'Amulya Rayabhagi',
+    position: 'Co-Director of Community',
+  },
+  {
+    image: '/assets/officer/OfficerImage.png',
     name: 'Shannon Carter',
     position: 'Community Officer',
   },
@@ -24,6 +29,21 @@ export const communityOfficers: Officer[] = [
   {
     image: '/assets/officer/OfficerImage.png',
     name: 'Nidhi Majoju',
+    position: 'Community Officer',
+  },
+  {
+    image: '/assets/officer/OfficerImage.png',
+    name: 'Aaryaa Moharir',
+    position: 'Community Officer',
+  },
+  {
+    image: '/assets/officer/OfficerImage.png',
+    name: 'Khushi Dubey',
+    position: 'Community Officer',
+  },
+  {
+    image: '/assets/officer/OfficerImage.png',
+    name: 'Jensen Jan',
     position: 'Community Officer',
   },
 ];
