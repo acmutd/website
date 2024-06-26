@@ -5,12 +5,12 @@ export const projectDirectors: Array<Director> = [
   {
     name: 'Abis Naqvi',
     position: 'Projects Director',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/projects/AbisNaqvi.png',
   },
   {
     name: 'Karina Batra',
     position: 'Projects Director',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/projects/KarinaBatra.jpeg',
   },
 ];
 
@@ -55,57 +55,57 @@ export const projectsOfficers = [
     {
       name: 'Abel Thomas',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Abel_Thomas.jpg',
     },
     {
       name: 'Avanthi Reddy',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Avanthi_Reddy.jpg',
     },
     {
       name: 'Jason Luu',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Jason_Luu.jpg',
     },
     {
       name: 'Kacie Yee',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/KacieYee.jpeg',
     },
     {
       name: 'Kanchan Javalkar',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Kanchan_Javalkar.jpeg',
     },
     {
       name: 'Ethan Varghese',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Ethan_Varghese.jpg',
     },
     {
       name: 'Nadeeba Atiqui',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Nadeeba_Atiqui.JPG',
     },
     {
       name: 'Lerich Osay',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Lerich_Osay.jpg',
     },
     {
       name: 'Shraddha Subash',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Shraddha_Subash.jpg',
     },
     {
       name: 'Shreya Ramani',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Shreya_Ramani.jpg',
     },
     {
       name: 'Noel Emmanuel',
       position: 'Project Lead',
-      image: '/assets/officer/OfficerImage.png',
+      image: '/assets/officer/projects/Noel_Emmanuel.jpg',
     },
   ],
 ];
