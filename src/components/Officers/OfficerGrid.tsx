@@ -82,7 +82,9 @@ const OfficerGrid = (props: GridProps) => {
 
 const OfficerPill = ({ officer }: PillProps) => (
   <div className="m-2 flex rounded-lg p-2 text-[#cacaca]">
-    <Image src={officer.image} alt={officer.name} width={80} height={80} className="rounded-full" />
+    <div className="relative w-[80px] h-[80px]">
+      <Image fill style={{ objectFit: "contain" }} src={officer.image} alt={officer.name} className="rounded-full" />
+    </div>
     <div className="ml-4 flex flex-col justify-center">
       <h1 className="text-xl font-semibold">{officer.name}</h1>
       <p className="text-sm">{officer.position}</p>
