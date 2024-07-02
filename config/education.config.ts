@@ -108,11 +108,6 @@ export const educationFAQ: Record<SubDivision, Question[]> = {
 export const educationOfficers: Officer[] = [
   ...educationDirectors,
   {
-    name: 'Agastya Bose',
-    position: 'TIP Officer',
-    image: '/assets/officer/OfficerImage.png',
-  },
-  {
     name: 'Michael Zhao',
     position: 'TIP Officer',
     image: '/assets/officer/OfficerImage.png',
