@@ -65,7 +65,7 @@ function Home() {
             </p>
             <Link
               href="/"
-              className="flex h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl"
+              className="flex h-[3rem] md:h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl"
             >
               apply today
             </Link>
@@ -78,13 +78,13 @@ function Home() {
             <div className="flex flex-col gap-y-3">
               <Link
                 href="/"
-                className="flex h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl"
+                className="flex h-[3rem] md:h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl"
               >
                 apply today
               </Link>
               <Link
                 href="/"
-                className="flex h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl"
+                className="flex h-[3rem] md:h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl"
               >
                 apply today
               </Link>
