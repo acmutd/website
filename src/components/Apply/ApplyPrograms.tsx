@@ -14,7 +14,7 @@ function ApplyPrograms() {
       </p>
       <div className="flex w-full justify-end pr-10">
         <Link
-          href="https://portal.acmutd.co"
+          href="https://portal.acmutd.co/opportunities"
           className="mt-6 flex h-12 w-64 items-center justify-center bg-acm-gradient py-2 text-2xl font-bold text-primary md:text-3xl"
         >
           apply now
@@ -22,12 +22,14 @@ function ApplyPrograms() {
       </div>
       <div className="mt-10 grid md:grid-cols-2">
         {applyPageData.programs.map((data: ProgramInfo, index: number) => {
-           return <ApplyProgramCard
-             title="ACM Projects"
-             image={`/assets/apply/programs/${data.programImage}.png`}
-             link={data.link}
-             key={index}
-           />;
+          return (
+            <ApplyProgramCard
+              title={data.programName}
+              image={`/assets/apply/programs/${data.programImage}.png`}
+              link={data.link}
+              key={index}
+            />
+          );
         })}
       </div>
     </div>
