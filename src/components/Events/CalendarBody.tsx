@@ -1,5 +1,5 @@
 import type { Event } from '@/../lib/types.d.ts';
-const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 type Props = {
   year: number;
@@ -20,28 +20,32 @@ export default function CalendarBody({ year, month, events }: Props) {
   return (
     <div className="grid grid-cols-7 gap-1">
       {daysOfWeek.map((day) => (
-        <div key={day} className="text-center text-xs uppercase text-white">
+        <div
+          key={day}
+          className="text-center text-xs font-semibold uppercase text-gray-300 md:text-sm"
+        >
           {day}
         </div>
       ))}
       {Array.from({ length: firstDayIndex }).map((_, i) => (
-        <div key={i} className="rounded-lg bg-white py-2" />
+        <div key={i} className="rounded-lg bg-white/10" />
       ))}
       {daysInMonth.map((day) => (
         <div
           key={day}
-          className="relative h-20 w-20 rounded-lg bg-white py-2 text-center text-slate-700"
+          className="relative rounded-lg bg-white p-2 text-center text-gray-800 shadow transition-all hover:bg-gray-200 md:h-24"
         >
-          <p className="absolute right-2 top-2">{day}</p>
-          <div>
+          <p className="absolute right-2 top-2 text-xs font-bold md:text-sm">{day}</p>
+          <div className="mt-4">
             {events.map((event) => {
               if (!event.start || event.start.getDate() !== day || event.start.getMonth() !== month)
                 return;
               return (
-                <div key={event.id} className="h-4 w-full bg-green-300 first:mt-5">
-                  <p className="overflow-hidden text-ellipsis whitespace-nowrap text-center text-xs">
-                    {event.title}
-                  </p>
+                <div
+                  key={event.id}
+                  className="mt-2 truncate rounded bg-green-200 p-1 text-xs font-medium text-green-800"
+                >
+                  {event.title}
                 </div>
               );
             })}
@@ -49,7 +53,7 @@ export default function CalendarBody({ year, month, events }: Props) {
         </div>
       ))}
       {Array.from({ length: 6 - lastDayIndex }).map((_, i) => (
-        <div key={i + lastDay} className="rounded-lg bg-white py-2" />
+        <div key={i + lastDay} className="rounded-lg bg-white/10 md:h-24" />
       ))}
     </div>
   );
