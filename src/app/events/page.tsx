@@ -15,7 +15,7 @@ export default function Events({ searchParams }: { searchParams: Params }) {
 
   return (
     <div className="h-fit w-full bg-[url(/assets/apply/apply-bg.png)] bg-cover bg-center py-20">
-      <div className="mx-40 flex justify-between pt-16">
+      <div className="flex justify-between pt-16 md:mx-20">
         <div className="flex flex-col">
           <div className="relative">
             <h1 className="text-4xl text-white">upcoming events</h1>
