@@ -13,13 +13,13 @@ export const homePageData: HomePageData = {
   cards: [
     {
       description: 'join our mailing list to stay updated with our events and programs!',
-      linkText: 'apply',
+      linkText: 'join',
       link: '/',
     },
     {
-      description: 'acm applications now open for fall 2023!',
+      description: 'acm applications now open for fall 2024!',
       linkText: 'apply',
-      link: '/',
+      link: 'https://portal.acmutd.co/opportunities',
     },
   ],
   sponsors: {
