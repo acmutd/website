@@ -14,7 +14,7 @@ function ApplyHeader() {
               <br />
               <br />
               All open applications can be found in our member portal at
-              portal.acmutd.co/applications
+              portal.acmutd.co/opportunities
             </p>
           </div>
           <Image
