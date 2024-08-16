@@ -7,7 +7,11 @@ export default function Footer() {
   const iconLinks = Object.values(footerData.community);
 
   return (
-    <footer className="mt-16 grid grid-cols-1 gap-y-8 border-t-2 px-32 py-20 text-white md:grid-cols-2 lg:grid-cols-4">
+    <footer className="mt-16 grid grid-cols-1 gap-y-8 border-t-2 px-32 py-20 text-white md:grid-cols-2 lg:grid-cols-4"
+            style={{
+              borderTop: '1px solid transparent',
+              borderImage: 'linear-gradient(90deg, #ADFF00 1.43%, #FFB900 9.58%, #EA7F01 19.25%, #FFC700 29.94%, #E10087 40.12%, #FE012E 50.3%, #BF01D3 60.48%, #9900E1 71.68%, #5200FF 81.86%, #008CF1 91.02%, #00ECEC 99.17%) 1'
+            }}>
       <Image
         src="/assets/footer/logo.png"
         alt=""

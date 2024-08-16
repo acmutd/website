@@ -11,7 +11,7 @@ const navigation = [
   { name: 'officers', href: '/officers', current: false },
   { name: 'apply', href: '/apply', current: false },
   { name: 'events', href: '/events', current: false },
-  { name: 'contact', href: '/contact', current: false },
+  { name: 'connect', href: '/contact', current: false },
 ];
 
 export default function Navbar() {
@@ -28,11 +28,11 @@ export default function Navbar() {
     };
   }, []);
 
-  const navStyles = top ? 'bg-opacity-0 bg-none' : 'bg-black bg-opacity-90';
+  const navStyles = top ? 'bg-opacity-0 bg-none' : 'bg-black bg-opacity-70 backdrop-blur-xl';
   return (
     <Disclosure
       as="nav"
-      className={`fixed z-10 w-full transition duration-200 ease-in ${navStyles}`}
+      className={`fixed z-20 w-full transition duration-200 ease-in ${navStyles}`}
     >
       {({ open }) => (
         <>
@@ -60,8 +60,8 @@ export default function Navbar() {
                     height={114}
                   />
                 </Link>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-10">
+                <div className="hidden sm:ml-6 sm:block ">
+                  <div className="flex space-x-10 items-center h-screen">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
