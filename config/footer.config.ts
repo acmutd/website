@@ -12,8 +12,8 @@ export const footerData: Footer = {
       link: '/officers',
     },
     {
-      text: 'contact',
-      link: '/contact',
+      text: 'connect',
+      link: '/connect',
     },
     {
       text: 'events',
