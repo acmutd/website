@@ -11,7 +11,7 @@ const navigation = [
   { name: 'officers', href: '/officers', current: false },
   { name: 'apply', href: '/apply', current: false },
   { name: 'events', href: '/events', current: false },
-  { name: 'connect', href: '/contact', current: false },
+  { name: 'connect', href: '/connect', current: false },
 ];
 
 export default function Navbar() {
