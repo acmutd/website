@@ -5,12 +5,12 @@ export const researchDirectors: Array<Director> = [
   {
     name: 'Oscar Lay',
     position: 'Research Director',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/OscarLay.png',
   },
   {
     name: 'Elijah Walker',
     position: 'Research Director',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/ElijahWalker.png',
   },
 ];
 
@@ -72,19 +72,19 @@ export const researchWinners: Projects[] = [
 
 export const researchOfficers = [
   ...researchDirectors,
-  { name: 'Aaryaa  Moharir', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
-  { name: 'Aba Onumah', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
-  { name: 'Abbas Khawaja', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
-  { name: 'Arjun Junghare', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
-  { name: 'Ermina Ashraf', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
-  { name: 'Kenneth Myers', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
-  { name: 'Rushi Trivedi', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
-  { name: 'Sahas Sharma', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
-  { name: 'Sriram Sendhil', position: 'Research Lead', image: '/assets/officer/OfficerImage.png' },
+  { name: 'Aaryaa  Moharir', position: 'Research Lead', image: '/assets/officer/AaryaaMoharir.png' },
+  { name: 'Aba Onumah', position: 'Research Lead', image: '/assets/officer/AbaOnumah.png' },
+  { name: 'Abbas Khawaja', position: 'Research Lead', image: '/assets/officer/AbbasKhawaja.png' },
+  { name: 'Arjun Junghare', position: 'Research Lead', image: '/assets/officer/ArjunJunghare.png' },
+  { name: 'Ermina Ashraf', position: 'Research Lead', image: '/assets/officer/ErminaAshraf.png' },
+  { name: 'Kenneth Myers', position: 'Research Lead', image: '/assets/officer/KennethMyers.png' },
+  { name: 'Rushi Trivedi', position: 'Research Lead', image: '/assets/officer/RushiTrivedi.png' },
+  { name: 'Sahas Sharma', position: 'Research Lead', image: '/assets/officer/SahasSharma.png' },
+  { name: 'Sriram Sendhil', position: 'Research Lead', image: '/assets/officer/SriramSendhil.png' },
   {
     name: 'Vaishnavi Pasumarthi',
     position: 'Research Lead',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/VaishnaviPasumarthi.png',
   },
 ];
 

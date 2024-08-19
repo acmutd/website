@@ -55,57 +55,57 @@ export const projectsOfficers = [
     {
       name: 'Abel Thomas',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Abel_Thomas.jpg',
+      image: '/assets/officer/AbelThomas.png',
     },
     {
       name: 'Avanthi Reddy',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Avanthi_Reddy.jpg',
+      image: '/assets/officer/AvanthiReddy.png',
     },
     {
       name: 'Jason Luu',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Jason_Luu.jpg',
+      image: '/assets/officer/JasonLuu.png',
     },
     {
       name: 'Kacie Yee',
       position: 'Project Lead',
-      image: '/assets/officer/projects/KacieYee.jpeg',
+      image: '/assets/officer/KacieYee.png',
     },
     {
       name: 'Kanchan Javalkar',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Kanchan_Javalkar.jpeg',
+      image: '/assets/officer/KanchanJavalkar.png',
     },
     {
       name: 'Ethan Varghese',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Ethan_Varghese.jpg',
+      image: '/assets/officer/EthanVarghese.png',
     },
     {
       name: 'Nadeeba Atiqui',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Nadeeba_Atiqui.JPG',
+      image: '/assets/officer/NadeebaAtiqui.png',
     },
     {
       name: 'Lerich Osay',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Lerich_Osay.jpg',
+      image: '/assets/officer/LerichOsay.png',
     },
     {
       name: 'Shraddha Subash',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Shraddha_Subash.jpg',
+      image: '/assets/officer/ShraddhaSubash.png',
     },
     {
       name: 'Shreya Ramani',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Shreya_Ramani.jpg',
+      image: '/assets/officer/ShreyaRamani.png',
     },
     {
       name: 'Noel Emmanuel',
       position: 'Project Lead',
-      image: '/assets/officer/projects/Noel_Emmanuel.jpg',
+      image: '/assets/officer/NoelEmmanuel.png',
     },
   ],
 ];

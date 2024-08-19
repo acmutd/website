@@ -1,5 +1,8 @@
+"use client";
+
 import Image from 'next/image';
 import { type ReactNode } from 'react';
+import { useState } from 'react';
 import { divisionOfficerMap } from '../../../config/officers.config';
 
 type Layout =
@@ -66,6 +69,21 @@ const titleMap: Record<Layout, ReactNode> = {
   ),
 };
 
+const OfficerImageWithFallback = (props) => {
+  const { src, fallbackSrc, ...rest } = props;
+  const [imgSrc, setImgSrc] = useState(src);
+
+  return (
+      <Image
+          {...rest}
+          src={imgSrc}
+          onError={() => {
+              setImgSrc(fallbackSrc);
+          }}
+      />
+  );
+}
+
 const OfficerGrid = (props: GridProps) => {
   const officers = divisionOfficerMap[props.type];
   return (
@@ -83,7 +101,7 @@ const OfficerGrid = (props: GridProps) => {
 const OfficerPill = ({ officer }: PillProps) => (
   <div className="m-2 flex rounded-lg p-2 text-[#cacaca]">
     <div className="relative w-[80px] h-[80px]">
-      <Image fill style={{ objectFit: "contain" }} src={officer.image} alt={officer.name} className="rounded-full" />
+      <OfficerImageWithFallback fill style={{ objectFit: "contain" }} src={officer.image} alt={officer.name} fallbackSrc="/assets/officer/OfficerImage.png" className="rounded-full" />
     </div>
     <div className="ml-4 flex flex-col justify-center">
       <h1 className="text-xl font-semibold">{officer.name}</h1>
