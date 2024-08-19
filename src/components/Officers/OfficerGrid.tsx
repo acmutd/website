@@ -69,7 +69,12 @@ const titleMap: Record<Layout, ReactNode> = {
   ),
 };
 
-const OfficerImageWithFallback = (props) => {
+interface OfficerImageWithFallbackProps {
+  src: string;
+  fallbackSrc: string;
+}
+
+const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
   const { src, fallbackSrc, ...rest } = props;
   const [imgSrc, setImgSrc] = useState(src);
 

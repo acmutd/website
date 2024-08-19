@@ -5,12 +5,12 @@ export const projectDirectors: Array<Director> = [
   {
     name: 'Abis Naqvi',
     position: 'Projects Director',
-    image: '/assets/officer/projects/AbisNaqvi.png',
+    image: '/assets/officer/AbisNaqvi.png',
   },
   {
     name: 'Karina Batra',
     position: 'Projects Director',
-    image: '/assets/officer/projects/KarinaBatra.jpeg',
+    image: '/assets/officer/KarinaBatra.png',
   },
 ];
 
