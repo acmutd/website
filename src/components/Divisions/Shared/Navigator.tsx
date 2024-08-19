@@ -29,7 +29,11 @@ export default function Navigator(props: Props) {
   if (props.division === 'education') routeLinks = LINK_DICT.education[props.sub];
   else routeLinks = LINK_DICT[props.division];
   return (
-    <div className="sticky right-5 top-1/3 z-50 h-full pr-10 text-right">
+    <div
+      className={`sticky right-5 z-50 h-full pr-10 text-right ${
+        props.division !== 'education' ? 'top-1/3' : 'top-2/3'
+      }`}
+    >
       {routeLinks.map((link) => (
         <div className="pb-5" key={link}>
           <Link
