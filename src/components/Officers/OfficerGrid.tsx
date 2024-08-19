@@ -73,6 +73,9 @@ interface OfficerImageWithFallbackProps {
   src: string;
   fallbackSrc: string;
   alt: string;
+  fill: boolean;
+  className: string; 
+  style: Properties;
 }
 
 const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
