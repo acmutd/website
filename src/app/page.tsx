@@ -33,7 +33,7 @@ function Home() {
             We&apos;re a team of students with one goal: building a greater, more collaborative
             computing community at The University of Texas at Dallas.
           </p>
-          <div className="flex w-fit flex-row gap-x-6 items-center justify-content-center bg-acm-gradient px-8 py-4">
+          <div className="flex w-fit flex-row gap-x-6 items-center justify-content-center bg-acm-gradient px-8 py-4 z-10">
             {icons.map((icon: string, idx: number) => {
               return (
                 <a href={iconLinks[idx]} key={idx}>
