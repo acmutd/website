@@ -72,7 +72,6 @@ export const researchWinners: Projects[] = [
 
 export const researchOfficers = [
   ...researchDirectors,
-  { name: 'Aaryaa  Moharir', position: 'Research Lead', image: '/assets/officer/AaryaaMoharir.png' },
   { name: 'Aba Onumah', position: 'Research Lead', image: '/assets/officer/AbaOnumah.png' },
   { name: 'Abbas Khawaja', position: 'Research Lead', image: '/assets/officer/AbbasKhawaja.png' },
   { name: 'Arjun Junghare', position: 'Research Lead', image: '/assets/officer/ArjunJunghare.png' },
@@ -80,7 +79,6 @@ export const researchOfficers = [
   { name: 'Kenneth Myers', position: 'Research Lead', image: '/assets/officer/KennethMyers.png' },
   { name: 'Rushi Trivedi', position: 'Research Lead', image: '/assets/officer/RushiTrivedi.png' },
   { name: 'Sahas Sharma', position: 'Research Lead', image: '/assets/officer/SahasSharma.png' },
-  { name: 'Sriram Sendhil', position: 'Research Lead', image: '/assets/officer/SriramSendhil.png' },
   {
     name: 'Vaishnavi Pasumarthi',
     position: 'Research Lead',
@@ -90,44 +88,49 @@ export const researchOfficers = [
 
 export const researchCarousel: CarouselImage[] = [
   {
-    imageLink: '/assets/research/research-1.JPG',
-    title: 'Introduction of judges for the Spring 2024 symposium.',
-    date: new Date(2024, 4, 3),
+    imageLink: '/assets/research/research-1.png',
+    title: 'ACM Research Fall 2024 Team',
+    date: new Date(2024, 7, 18),
   },
   {
     imageLink: '/assets/research/research-2.JPG',
-    title: 'Judging of research project during the Spring 2024 symposium.',
+    title: 'Introduction of judges for the Spring 2024 symposium..',
     date: new Date(2024, 4, 3),
   },
   {
-    imageLink: '/assets/research/research-3.JPG',
-    title: 'Members of the DriverWatch team proudly presenting their poster, Spring 2024.',
-    date: new Date(2024, 4, 3),
+    imageLink: '/assets/research/research-3.png',
+    title: 'Directors of ACM Research Fall 2024.',
+    date: new Date(2024, 7, 18),
   },
   {
-    imageLink: '/assets/research/research-4.webp',
+    imageLink: '/assets/research/research-4.JPG',
     title:
-      'The directors of Spring and Fall 2024 ACM Research celebrating another successful symposium.',
+      'Members of the DriverWatch team proudly presenting their poster, Spring 2024.',
     date: new Date(2024, 4, 3),
   },
   {
     imageLink: '/assets/research/research-5.JPG',
-    title: 'First social of Fall 2023!',
-    date: new Date(2023, 9, 20),
+    title: 'A typical build night at the Blackstone Launchpad.',
+    date: new Date(2023, 7, 25),
   },
   {
-    imageLink: '/assets/research/research-6.JPG',
-    title: 'A typical build night at the Blackstone Launchpad.',
-    date: new Date(2023, 9, 25),
+    imageLink: '/assets/research/research-6.png',
+    title: 'Research Leads Hanging Out',
+    date: new Date(2024, 7, 18),
   },
   {
     imageLink: '/assets/research/research-7.JPG',
-    title: 'Team Auditory Unveil during a Fall 2023 build night.',
-    date: new Date(2023, 9, 25),
+    title: 'Judging of research project during the Spring 2024 symposium.',
+    date: new Date(2024, 4, 3),
   },
   {
-    imageLink: '/assets/research/research-8.jpg',
-    title: 'The directors of Fall 2023 and Spring 2024 getting a quick nap in at HackUTD 2023.',
-    date: new Date(2023, 9, 25),
+    imageLink: '/assets/research/research-8.JPG',
+    title: 'Team Auditory Unveil during a Fall 2023 build night.',
+    date: new Date(2023, 7, 25),
+  },
+  {
+    imageLink: '/assets/research/research-9.png',
+    title: 'The Team In The Trees',
+    date: new Date(2024, 7, 18),
   },
 ];
