@@ -6,8 +6,8 @@ export const homePageData: HomePageData = {
   community: {
     linkedin: 'https://www.linkedin.com/company/acmutd',
     instagram: 'https://www.instagram.com/acmutd/',
-    discord: 'https://discord.gg/fAnuPeJFDN',
-    github: 'https://github.com/acmutd',
+    discord: 'https://discord.gg/ttB9HuaKsA',
+    github: 'https://github.com/acmutd/',
     youtube: 'https://www.youtube.com/@acmutdallas4256',
   },
   cards: [
