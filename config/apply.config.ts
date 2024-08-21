@@ -1,30 +1,35 @@
-import { ApplyPageData } from "../lib/types";
+import { ApplyPageData } from '../lib/types';
 
 export const applyPageData: ApplyPageData = {
   programs: [
     {
+      programName: 'ACM Projects',
       division: 'projects',
       program: 'projects',
       programImage: 'projects',
-      link: 'https://portal.acmutd.co/applications',
+      link: '/projects',
     },
     {
+      programName: 'Technical Interview Prep',
       division: 'education',
       program: 'tip',
       programImage: 'tip',
-      link: '/',
+      link: '/education/tip',
     },
     {
+      programName: 'ACM Research',
       division: 'research',
       program: 'research',
       programImage: 'research',
-      link: '/',
+      link: '/research',
     },
     {
-      division: 'research',
+      programName: 'Mentor Program',
+      division: 'education',
       program: 'mentor',
       programImage: 'mentor',
-      link: '/',
+      link: '/education/mentor',
     },
   ],
 };
+

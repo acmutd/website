@@ -4,6 +4,7 @@ import Navigator from '@/components/Divisions/Shared/Navigator';
 import DivisionExperience from '@/components/Divisions/Shared/DivisionExperience';
 import DivisionFAQ from '@/components/Divisions/Shared/DivisionFAQ';
 import WorkShops from '@/components/Divisions/Shared/WorkShops';
+import { TIPHeader } from '@/components/Divisions/TIP/TIPHeader';
 
 export default function Page() {
   return (
@@ -11,6 +12,7 @@ export default function Page() {
       <Navigator division="education" sub="tip" />
       <DivisionCarousel division="education" sub="tip" />
       <div className="pl-28">
+        <TIPHeader />
         <DivisionOfficers division="education" />
         <DivisionExperience division="education" sub="tip" />
         <WorkShops sub="tip" />

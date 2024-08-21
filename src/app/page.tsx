@@ -27,7 +27,7 @@ function Home() {
       <div className="flex flex-col pt-[5rem] gap-x-12 md:flex-col lg:flex-row">
         <div className={`background-container backdrop-blur-xl flex flex-col max-w-[100vw] md:max-w-[90vw] lg:max-w-[55vw] z-10 md:z-0 gap-y-4 rounded-r-3xl border-y border-r border-primary/50 bg-gray-600/10 px-24 py-14`}>
           <h1 className="text-4xl font-bold md:text-5xl lg:text-7xl">
-            association of computing machinery
+            association for computing machinery
           </h1>
           <p className="text-lg lg:text-2xl">
             We&apos;re a team of students with one goal: building a greater, more collaborative

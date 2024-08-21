@@ -13,7 +13,7 @@ export const educationDirectors: Array<Director> = [
   {
     name: 'Aarian Ahsan',
     position: 'Mentor Director',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/AarianAhsan.png',
   },
 ];
 
@@ -110,32 +110,32 @@ export const educationOfficers: Officer[] = [
   {
     name: 'Michael Zhao',
     position: 'TIP Officer',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/MichaelZhao.png',
   },
   {
     name: 'Abhay Iyer',
     position: 'TIP Officer',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/AbhayIyer.png',
   },
   {
     name: 'Ben Wowo',
     position: 'TIP Officer',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/BenWowo.png',
   },
   {
     name: 'JC Garza',
     position: 'TIP Officer',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/JCGarza.png',
   },
   {
     name: 'Om Badhe',
     position: 'TIP Officer',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/OmBadhe.png',
   },
   {
     name: 'Sisi Aarukapalli',
     position: 'Mentor Program Lead',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/SisiAarukapalli.png',
   },
 ];
 

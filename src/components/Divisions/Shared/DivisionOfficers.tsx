@@ -17,7 +17,7 @@ export default function DivisionOfficers({ division }: Props) {
         {directors.map((director) => (
           <div className="flex items-center" key={director.name}>
             <Image
-              src="/assets/projects/projdir_1.jpeg"
+              src={director.image}
               alt="Projects Director"
               width="165"
               height="165"

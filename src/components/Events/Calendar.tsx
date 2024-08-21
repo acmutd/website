@@ -37,7 +37,7 @@ async function Calendar({ month, year }: Props) {
   const prevParams = changeMonth('dec', { month, year });
 
   return (
-    <div className="hidden rounded-3xl border border-[#ffffff82] bg-gradient-to-tr from-[#ffffff1f] from-[3.07%] to-[#ffffff08] to-[96.39%] p-5 shadow-md backdrop-blur-xl lg:block">
+    <div className="hidden w-2/3 rounded-3xl border border-[#ffffff82] bg-gradient-to-tr from-[#ffffff1f] from-[3.07%] to-[#ffffff08] to-[96.39%] p-5 shadow-md backdrop-blur-xl lg:block">
       <div className="mb-5 flex items-center justify-between text-white">
         <Link
           className="w-10"

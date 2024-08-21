@@ -21,6 +21,7 @@ export type AboutPageData = {
 
 // Apply page types
 export type ProgramInfo = {
+  programName: string;
   division: string;
   program: string;
   programImage: string;
