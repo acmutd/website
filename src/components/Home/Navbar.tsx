@@ -61,7 +61,7 @@ export default function Navbar() {
                   />
                 </Link>
                 <div className="hidden sm:ml-6 sm:block ">
-                  <div className="flex h-screen items-center space-x-10">
+                  <div className="flex space-x-10 items-center py-2">
                     {navigation.map((item) => (
                       <a
                         key={item.name}
