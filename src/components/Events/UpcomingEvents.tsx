@@ -1,5 +1,7 @@
 import type { Event } from '@/../lib/types';
-import { GET as getUpcoming } from '@/app/api/events/route';
+
+const BASE_API_URL =
+  process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://acmutd.co';
 
 const colors = [
   { from: 'from-[#008CF1]', to: 'to-[#00ECEC]' },
@@ -8,7 +10,9 @@ const colors = [
 ];
 
 export default async function UpcomingEvents() {
-  const res = await getUpcoming().then((res) => res.json());
+  const res = await fetch(BASE_API_URL + '/api/events', { next: { revalidate: 60 } }).then((res) =>
+    res.json(),
+  );
   const events: Event[] = res.map((item: any) => {
     const event: Event = {
       id: item.id,

@@ -1,5 +1,8 @@
 import type { Event } from '@/../lib/types.d.ts';
 import { NextResponse } from 'next/server';
+
+export const dynamic = 'force-dynamic';
+
 const calendarId =
   'c_893d7ec01b0d651ddfadf46f6792b1d470abe97c6d9f33157a1f4be2d4420a51@group.calendar.google.com';
 const endpoint = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`;
@@ -18,6 +21,7 @@ export async function GET() {
   });
 
   const now = new Date();
+  now.setHours(0, 0, 0, 0);
   const upcoming = events.filter((event) => event.start && event.start > now);
 
   return new NextResponse<Event[]>(JSON.stringify(upcoming));
