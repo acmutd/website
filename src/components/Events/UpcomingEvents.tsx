@@ -1,4 +1,5 @@
 import type { Event } from '@/../lib/types';
+import EventTime from './EventTime';
 
 const BASE_API_URL =
   process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://acmutd.co';
@@ -35,20 +36,7 @@ export default async function UpcomingEvents() {
           <div className="rounded-lg p-4 backdrop-blur-sm backdrop-filter">
             <h2 className="text-lg font-bold lowercase text-gray-900 md:text-xl">{event.title}</h2>
             {event.start && (
-              <p className="mt-2 text-sm font-medium text-gray-700 md:text-base">
-                {event.start.toLocaleDateString('en-US', {
-                  weekday: 'long',
-                  month: 'long',
-                  day: 'numeric',
-                })}{' '}
-                at{' '}
-                {event.start?.toLocaleTimeString('en-US', {
-                  hour: 'numeric',
-                  minute: event.start.getMinutes() > 0 ? 'numeric' : undefined,
-                  timeZoneName: 'short',
-                })}{' '}
-                in {event.location}
-              </p>
+              <EventTime dateString={event.start.toISOString()} location={event.location} />
             )}
           </div>
         </div>
