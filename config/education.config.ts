@@ -8,7 +8,7 @@ export const educationDirectors: Array<Director> = [
   {
     name: 'Agastya Bose',
     position: 'TIP Director',
-    image: '/assets/officer/OfficerImage.png',
+    image: '/assets/officer/AgastyaBose.png',
   },
   {
     name: 'Aarian Ahsan',
