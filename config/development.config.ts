@@ -7,6 +7,11 @@ export const developmentOfficers: Officer[] = [
     position: 'Director of Development',
   },
   {
+    image: '/assets/officer/ArihantSreenivasa.png',
+    name: 'Arihant Sreenivasa',
+    position: 'Director of Development',
+  },
+  {
     image: '/assets/officer/RubenOlano.png',
     name: 'Ruben Olano',
     position: 'Development Officer (ACM Webiste, Member Portal)',
@@ -19,11 +24,6 @@ export const developmentOfficers: Officer[] = [
   {
     image: '/assets/officer/JonathanLe.png',
     name: 'Jonathan Le',
-    position: 'Development Officer (Member Portal)',
-  },
-  {
-    image: '/assets/officer/ArihantSreenivasa.png',
-    name: 'Arihant Sreenivasa',
     position: 'Development Officer (Member Portal)',
   },
   {

@@ -38,6 +38,11 @@ export const boardOfficers: Officer[] = [
     name: 'Mike Nguyen',
     position: 'Director of Development',
   },
+  {
+    image: '/assets/officer/ArihantSreenivasa.png',
+    name: 'Arihant Sreenivasa',
+    position: 'Director of Development',
+  },
   ...educationDirectors,
   {
     name: 'Purva Pawar',
