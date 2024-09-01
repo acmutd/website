@@ -98,7 +98,7 @@ function Home() {
             <div key={idx} className="content mb-8">
               <div className="flex items-stretch justify-center gap-6">
                 <div
-                  className={`flex h-[400px] w-5/6 flex-col items-center justify-between shadow-lg ${
+                  className={`flex h-[400px] w-5/6 flex-col items-center justify-between rounded-xl shadow-lg ${
                     idx === 0
                       ? 'bg-gold-gradient'
                       : idx === 1
