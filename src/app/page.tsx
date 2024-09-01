@@ -96,42 +96,45 @@ function Home() {
           <h3 className="mb-6 text-2xl font-semibold text-primary lg:text-3xl">Our Sponsors</h3>
           {Object.values(homePageData.sponsors).map((tier, idx) => (
             <div key={idx} className="content mb-8">
-              <h1
-                className={`mb-4 text-xl font-bold lg:text-2xl ${
-                  idx === 0
-                    ? 'text-yellow-600'
-                    : idx === 1
-                    ? 'text-slate-300'
-                    : idx === 2
-                    ? 'text-amber-600'
-                    : 'text-green-600'
-                }`}
-              >
-                {Object.keys(homePageData.sponsors)[idx]}
-              </h1>
-              <div className="grid grid-cols-1 place-items-center gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {tier.map((sponsor) => (
-                  <div
-                    key={sponsor}
-                    className={`flex items-center justify-center rounded-lg p-4 shadow-lg ${
+              <div className="flex items-stretch justify-center gap-6">
+                <div
+                  className={`flex h-[400px] w-5/6 flex-col items-center justify-between shadow-lg ${
+                    idx === 0
+                      ? 'bg-gold-gradient'
+                      : idx === 1
+                      ? 'bg-silver-gradient'
+                      : idx === 2
+                      ? 'bg-bronze-gradient'
+                      : 'bg-green-gradient'
+                  }`}
+                >
+                  <h1
+                    className={`pt-8 text-xl font-bold lg:text-2xl ${
                       idx === 0
-                        ? 'bg-gold-gradient'
+                        ? 'text-yellow-600'
                         : idx === 1
-                        ? 'bg-silver-gradient'
+                        ? 'text-slate-300'
                         : idx === 2
-                        ? 'bg-bronze-gradient'
-                        : 'bg-green-gradient'
+                        ? 'text-amber-600'
+                        : 'text-green-600'
                     }`}
                   >
-                    <Image
-                      src={`/assets/home/sponsors/${sponsor}.png`}
-                      alt={sponsor.toUpperCase()}
-                      className="object-contain"
-                      width={idx === 0 ? 350 : idx === 1 ? 300 : 250}
-                      height={idx === 0 ? 350 : idx === 1 ? 300 : 250}
-                    />
+                    {Object.keys(homePageData.sponsors)[idx]}
+                  </h1>
+                  <div className="flex w-full flex-1 items-center justify-center">
+                    {tier.map((sponsor) => (
+                      <div key={sponsor} className="flex items-center justify-center lg:p-16">
+                        <Image
+                          src={`/assets/home/sponsors/${sponsor}.png`}
+                          alt={sponsor.toUpperCase()}
+                          className="object-contain"
+                          width={idx === 0 ? 300 : idx === 1 ? 250 : 200}
+                          height={100}
+                        />
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           ))}
