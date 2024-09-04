@@ -126,7 +126,7 @@ function Home() {
                       {tier.map((sponsor) => (
                         <div
                           key={sponsor}
-                          className="flex items-center justify-center pb-6 lg:p-16"
+                          className="m-2 flex items-center justify-center pb-6 lg:m-0 lg:p-16"
                         >
                           <Image
                             src={`/assets/home/sponsors/${sponsor}.png`}
