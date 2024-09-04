@@ -122,17 +122,22 @@ function Home() {
                     {Object.keys(homePageData.sponsors)[idx]}
                   </h1>
                   <div className="flex w-full flex-1 items-center justify-center">
-                    {tier.map((sponsor) => (
-                      <div key={sponsor} className="flex items-center justify-center lg:p-16">
-                        <Image
-                          src={`/assets/home/sponsors/${sponsor}.png`}
-                          alt={sponsor.toUpperCase()}
-                          className="object-contain"
-                          width={idx === 0 ? 300 : idx === 1 ? 250 : 200}
-                          height={100}
-                        />
-                      </div>
-                    ))}
+                    <div className="lg:contents">
+                      {tier.map((sponsor) => (
+                        <div
+                          key={sponsor}
+                          className="flex items-center justify-center pb-6 lg:p-16"
+                        >
+                          <Image
+                            src={`/assets/home/sponsors/${sponsor}.png`}
+                            alt={sponsor.toUpperCase()}
+                            className="object-contain"
+                            width={idx === 0 ? 300 : idx === 1 ? 250 : 200}
+                            height={100}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
