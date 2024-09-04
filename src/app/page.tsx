@@ -105,7 +105,7 @@ function Home() {
                       ? 'bg-silver-gradient'
                       : idx === 2
                       ? 'bg-bronze-gradient'
-                      : 'bg-green-gradient'
+                      : 'hidden'
                   }`}
                 >
                   <h1
@@ -116,7 +116,7 @@ function Home() {
                         ? 'text-slate-300'
                         : idx === 2
                         ? 'text-amber-600'
-                        : 'text-green-600'
+                        : 'hidden'
                     }`}
                   >
                     {Object.keys(homePageData.sponsors)[idx]}
