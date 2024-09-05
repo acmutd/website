@@ -1,4 +1,6 @@
+import EventComponent from './EventDays';
 import type { Event } from '@/../lib/types.d.ts';
+
 const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 type Props = {
@@ -37,18 +39,9 @@ export default function CalendarBody({ year, month, events }: Props) {
         >
           <p className="absolute right-2 top-2 text-xs font-bold md:text-sm">{day}</p>
           <div className="mt-4">
-            {events.map((event) => {
-              if (!event.start || event.start.getDate() !== day || event.start.getMonth() !== month)
-                return;
-              return (
-                <div
-                  key={event.id}
-                  className="mt-2 truncate rounded bg-green-200 p-1 text-xs font-medium text-green-800"
-                >
-                  {event.title}
-                </div>
-              );
-            })}
+            {events.map((event) => (
+              <EventComponent key={event.id} event={event} day={day} month={month} />
+            ))}
           </div>
         </div>
       ))}
