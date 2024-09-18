@@ -93,51 +93,49 @@ function Home() {
       </div>
       <div className="flex flex-row py-10">
         <div className="background-container z-10 flex max-w-[100vw] flex-col gap-y-8 rounded-r-3xl border-y border-r border-primary/50 bg-gray-600/10 p-10 text-center shadow-lg backdrop-blur-xl md:z-0 md:max-w-[90vw] lg:max-w-[85vw] lg:p-14">
-          <h3 className="mb-6 text-2xl font-semibold text-primary lg:text-3xl">Our Sponsors</h3>
+          <h3 className="mb-6 text-2xl font-semibold text-primary lg:text-3xl">
+            Our Sponsors
+          </h3>
           {Object.values(homePageData.sponsors).map((tier, idx) => (
             <div key={idx} className="content mb-8">
               <div className="flex items-stretch justify-center gap-6">
                 <div
-                  className={`flex h-[400px] w-5/6 flex-col items-center justify-between rounded-xl shadow-lg ${
-                    idx === 0
+                  className={`flex w-5/6 flex-col items-center justify-between rounded-xl shadow-lg ${idx === 0
                       ? 'bg-gold-gradient'
                       : idx === 1
-                      ? 'bg-silver-gradient'
-                      : idx === 2
-                      ? 'bg-bronze-gradient'
-                      : 'hidden'
-                  }`}
+                        ? 'bg-silver-gradient'
+                        : idx === 2
+                          ? 'bg-bronze-gradient'
+                          : 'hidden'
+                    }`}
                 >
                   <h1
-                    className={`pt-8 text-xl font-bold lg:text-2xl ${
-                      idx === 0
+                    className={`pt-8 text-xl font-bold lg:text-2xl ${idx === 0
                         ? 'text-yellow-600'
                         : idx === 1
-                        ? 'text-slate-300'
-                        : idx === 2
-                        ? 'text-amber-600'
-                        : 'hidden'
-                    }`}
+                          ? 'text-slate-300'
+                          : idx === 2
+                            ? 'text-amber-600'
+                            : 'hidden'
+                      }`}
                   >
                     {Object.keys(homePageData.sponsors)[idx]}
                   </h1>
-                  <div className="flex w-full flex-1 items-center justify-center">
-                    <div className="lg:contents">
-                      {tier.map((sponsor) => (
-                        <div
-                          key={sponsor}
-                          className="m-2 flex items-center justify-center pb-6 lg:m-0 lg:p-16"
-                        >
-                          <Image
-                            src={`/assets/home/sponsors/${sponsor}.png`}
-                            alt={sponsor.toUpperCase()}
-                            className="object-contain"
-                            width={idx === 0 ? 300 : idx === 1 ? 250 : 200}
-                            height={100}
-                          />
-                        </div>
-                      ))}
-                    </div>
+                  <div className="flex w-full flex-1 items-center justify-center flex-wrap">
+                    {tier.map((sponsor) => (
+                      <div
+                        key={sponsor}
+                        className="m-4 flex items-center justify-center pb-6 lg:m-2 lg:p-8"
+                      >
+                        <Image
+                          src={`/assets/home/sponsors/${sponsor}.png`}
+                          alt={sponsor.toUpperCase()}
+                          className="object-contain"
+                          width={idx === 0 ? 350 : idx === 1 ? 250 : 200}
+                          height={idx === 0 ? 150 : 100}
+                        />
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
