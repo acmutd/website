@@ -20,6 +20,7 @@ const defaultOfficer: Officer = {
 };
 
 type Divisions =
+  | 'advisor'
   | 'board'
   | 'media'
   | 'research'
@@ -31,6 +32,11 @@ type Divisions =
   | 'industry';
 
 export const divisionOfficerMap: Record<Divisions, Officer[]> = {
+  advisor: [{
+    image: '/assets/officer/JohnCole.png',
+    name: 'John Cole',
+    position: 'ACM Faculty Advisor',
+  }],
   board: boardOfficers,
   community: communityOfficers,
   development: developmentOfficers,

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Image from 'next/image';
 import { type ReactNode } from 'react';
@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { divisionOfficerMap } from '../../../config/officers.config';
 
 type Layout =
+  | 'advisor'
   | 'board'
   | 'media'
   | 'research'
@@ -31,6 +32,7 @@ type PillProps = {
 };
 
 const titleMap: Record<Layout, ReactNode> = {
+  advisor: <h1 className="text-4xl font-bold">the advisors</h1>,
   board: <h1 className="text-4xl font-bold">the board</h1>,
   media: <Image src="/assets/about/media/media.png" alt="ACM Media" width={186} height={75} />,
   research: (
@@ -83,15 +85,15 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
-      <Image
-          {...rest}
-          src={imgSrc}
-          onError={() => {
-              setImgSrc(fallbackSrc);
-          }}
-      />
+    <Image
+      {...rest}
+      src={imgSrc}
+      onError={() => {
+        setImgSrc(fallbackSrc);
+      }}
+    />
   );
-}
+};
 
 const OfficerGrid = (props: GridProps) => {
   const officers = divisionOfficerMap[props.type];
@@ -109,8 +111,15 @@ const OfficerGrid = (props: GridProps) => {
 
 const OfficerPill = ({ officer }: PillProps) => (
   <div className="m-2 flex rounded-lg p-2 text-[#cacaca]">
-    <div className="relative w-[80px] h-[80px]">
-      <OfficerImageWithFallback fill style={{ objectFit: "contain" }} src={officer.image} alt={officer.name} fallbackSrc="/assets/officer/OfficerImage.png" className="rounded-full" />
+    <div className="relative h-[80px] w-[80px]">
+      <OfficerImageWithFallback
+        fill
+        style={{ objectFit: 'contain' }}
+        src={officer.image}
+        alt={officer.name}
+        fallbackSrc="/assets/officer/OfficerImage.png"
+        className="rounded-full"
+      />
     </div>
     <div className="ml-4 flex flex-col justify-center">
       <h1 className="text-xl font-semibold">{officer.name}</h1>

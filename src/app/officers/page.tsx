@@ -32,6 +32,7 @@ function Apply() {
         <Image src="/assets/officer/divisions.png" alt="Division" width={40} height={463} />
       </div>
       <OfficerHeader />
+      <OfficerGrid type="advisor" />
       <OfficerGrid type="board" />
       <OfficerGrid type="media" />
       <OfficerGrid type="research" />
