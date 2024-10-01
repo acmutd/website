@@ -10,13 +10,7 @@ const OfficerHeader = () => {
           <br /> Here are the students keeping ACM in motion.
         </p>
       </div>
-      <Image
-        className="m-10 h-36 w-36 rounded-full bg-gradient-to-br from-[#F4A3CB] from-10% to-[#dfc84f2b] to-90% p-2 lg:h-[17rem] lg:w-[17rem]"
-        src={'/assets/3DPeechi.png'}
-        alt={''}
-        width={100}
-        height={100}
-      ></Image>
+      <div className="m-10 h-36 w-36 rounded-full bg-gradient-to-br from-[#F4A3CB] from-10% to-[#dfc84f2b] to-90% p-2 lg:h-[17rem] lg:w-[17rem]"></div>
     </div>
   );
 };
