@@ -4,7 +4,7 @@ export const aboutPageData: AboutPageData = {
   pageDescription:
     'We are the Association for Computing Machinery at UT Dallas. Fueled by creativity, passion, and professionalism, we are a dynamic force helping shape the future of the engineering community here at UT Dallas. With diverse divisions spanning Media, Projects, Research, Development, Education, Industry, Community, and HackUTD, you are sure to find your place among us.',
   divisionDescription:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
+    'ACM at UT Dallas is a dynamic organization comprising eight specialized divisions and a dedicated team of over 100 officers. Each division plays a unique role in fostering innovation and engagement, yet we are united by a common mission: to enhance and support the computing community at UT Dallas.',
   divisions: {
     development: {
       section: 'development',
