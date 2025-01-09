@@ -9,7 +9,7 @@ export const aboutPageData: AboutPageData = {
     development: {
       section: 'development',
       description:
-        'ACM Development mainly focuses on maintaining web applications and infrastructures used by ACM to interact with its members such as Member Portal and UTD Grades.',
+        'ACM Development is dedicated to designing, building, and maintaining robust web applications and infrastructures that support ACM’s interactions with its members. Key projects include the Member Portal, which streamlines member engagement, and UTD Grades, a resource for academic insights. By ensuring the reliability and functionality of these platforms, ACM Development plays a crucial role in enhancing the member experience and fostering a connected community.',
       links: [
         { name: 'acm portal', link: 'https://github.com/acmutd/portal-next' },
         { name: 'utdgrades', link: 'https://github.com/acmutd/utd-grades' },
@@ -20,7 +20,7 @@ export const aboutPageData: AboutPageData = {
     research: {
       section: 'research',
       description:
-        'ACM Research is an undergraduate-only research initiative that introduces students to the world of research, equipping them with the skills, resources, and mentorship necessary to formulate nuanced ideas and prepare them for possible future publications. Our goal is to guide you through the holistic research process, starting with the generation of engaging research questions and ending at the presentation of findings to industry and academic professionals in a symposium format.',
+        'ACM Research is an undergraduate program designed to immerse students in the world of research by providing essential skills, resources, and mentorship. The program empowers participants to develop nuanced ideas, engage in hands-on research, and prepare for potential academic publications. From crafting compelling research questions to conducting in-depth analysis, students gain experience with the entire research process. The program culminates in a symposium where participants present their findings to industry experts and academic professionals, fostering collaboration, innovation, and a deeper understanding of research methodologies.',
       links: [{ name: 'learn more', link: '/research' }],
     },
     projects: {
@@ -32,7 +32,7 @@ export const aboutPageData: AboutPageData = {
     education: {
       section: 'education',
       description:
-        'ACM Education runs the Technical Interview Prep (TIP) program, the Mentor program, as well as organizing workshops throughout the semester.',
+        'ACM Education is committed to empowering students by providing resources and opportunities to grow their technical and professional skills. Its initiatives include the Technical Interview Prep (TIP) program, which equips participants with strategies to excel in technical interviews, and the Mentor program, fostering personalized guidance and growth through peer mentorship. Additionally, ACM Education hosts workshops throughout the semester, covering a wide range of topics to support skill development and career readiness.',
       links: [
         { name: 'TIP', link: '/education/tip' },
         { name: 'mentor program', link: '/education/mentor' },
@@ -63,13 +63,13 @@ export const aboutPageData: AboutPageData = {
     },
     industry: {
       section: 'industry',
-      description: `Welcome to ACM Industry!! Our team has the pleasure of acting as the bridge between companies and the ACM community; we do this by introducing more companies to ACM and its members, as well as involving our current sponsors through the various events and workshops we host with them. If there's a technology you would like to learn, a challenge in the college-to-corporate transition you would like to overcome, or if you just want to network with industry professionals, check out ACM Industry!`,
+      description: `ACM Industry serves as the connection between companies and ACM members, fostering relationships that bring value to both students and industry professionals. By introducing new companies to ACM and engaging current sponsors through workshops, events, and networking opportunities, ACM Industry bridges the gap between academics and the corporate world. Whether it's exploring emerging technologies, addressing challenges in transitioning from college to careers, or building connections with industry leaders, ACM Industry offers opportunities to grow and succeed.`,
       links: [],
     },
     community: {
       section: 'community',
       description:
-        'Our purpose is to increase STEM involvement & engagement in K-12 students by providing access to meaningful STEM-related opportunities in low-income communities/schools. In addition, our dedicated events team organizes various social events for students of all majors. These events create a vibrant campus atmosphere by encouraging collaboration, fostering creativity, and enhancing student engagement.',
+        'ACM Community is dedicated to increasing STEM involvement and engagement among K-12 students, particularly in low-income communities and schools, by providing access to meaningful STEM-related opportunities. In addition, the events team organizes social gatherings that welcome students of all majors. These events foster collaboration, inspire creativity, and enrich the campus experience, creating a vibrant and inclusive atmosphere for all.',
       links: [
         {
           name: 'learn more',
