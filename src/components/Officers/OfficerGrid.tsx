@@ -32,7 +32,7 @@ type PillProps = {
 };
 
 const titleMap: Record<Layout, ReactNode> = {
-  advisor: <h1 className="text-4xl font-bold">the advisors</h1>,
+  advisor: <h1 className="text-4xl font-bold">the advisor</h1>,
   board: <h1 className="text-4xl font-bold">the board</h1>,
   media: <Image src="/assets/about/media/media.png" alt="ACM Media" width={186} height={75} />,
   research: (
@@ -81,13 +81,14 @@ interface OfficerImageWithFallbackProps {
 }
 
 const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
-  const { src, fallbackSrc, ...rest } = props;
+  const { src, fallbackSrc, alt, ...rest } = props;
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
     <Image
       {...rest}
       src={imgSrc}
+      alt={alt}
       onError={() => {
         setImgSrc(fallbackSrc);
       }}
@@ -98,7 +99,7 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
 const OfficerGrid = (props: GridProps) => {
   const officers = divisionOfficerMap[props.type];
   return (
-    <div className="flex flex-col p-16 lg:px-[11.5rem] lg:pb-32">
+    <div className="flex flex-col p-10 lg:px-[11.5rem] lg:pb-32">
       <div className="text-[#cacaca]">{titleMap[props.type]}</div>
       <div className="flex flex-wrap justify-center gap-8 pt-8">
         {officers.map((officer) => (
@@ -111,7 +112,11 @@ const OfficerGrid = (props: GridProps) => {
 
 const OfficerPill = ({ officer }: PillProps) => (
   <div className="m-2 flex rounded-lg p-2 text-[#cacaca]">
-    <div className="relative h-[80px] w-[80px]">
+    <div
+      className={`relative ${
+        officer.name === 'John Cole' ? `h-[110px] w-[110px]` : `h-[80px] w-[80px]`
+      } `}
+    >
       <OfficerImageWithFallback
         fill
         style={{ objectFit: 'contain' }}
