@@ -99,7 +99,7 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
 const OfficerGrid = (props: GridProps) => {
   const officers = divisionOfficerMap[props.type];
   return (
-    <div className="flex flex-col p-16 lg:px-[11.5rem] lg:pb-32">
+    <div className="flex flex-col p-10 lg:px-[11.5rem] lg:pb-32">
       <div className="text-[#cacaca]">{titleMap[props.type]}</div>
       <div className="flex flex-wrap justify-center gap-8 pt-8">
         {officers.map((officer) => (
