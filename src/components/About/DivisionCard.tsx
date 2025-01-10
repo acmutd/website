@@ -42,7 +42,7 @@ export default function DivisionCard({ data }: DivisionCardProps) {
                   <Link
                     href={`${obj.link.startsWith('/') ? obj.link : `https://${obj.link}`}`}
                     key={index}
-                    className={`flex items-center justify-center bg-${data.section}-gradient h-[2.30rem] text-base font-bold md:text-xl`}
+                    className={`flex items-center justify-center bg-${data.section}-gradient h-[2.30rem] text-base font-bold md:text-xl rounded-lg border border-primary/50 bg-gray-300/10`}
                   >
                     {obj.name}
                   </Link>

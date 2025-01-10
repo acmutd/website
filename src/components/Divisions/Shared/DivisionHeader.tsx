@@ -15,7 +15,7 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
       {typeof applicationUrl[division] === 'string' ? (
         <div className="mt-20 flex items-center">
           <Link href={applicationUrl[division]}>
-            <div className={`bg-${division.split('.')[0]}-gradient px-5 py-2 text-xl text-white`}>
+            <div className={`bg-${division.split('.')[0]}-gradient px-5 py-2 text-xl text-white rounded-lg border border-primary/50 bg-gray-300/10`}>
               apply today
             </div>
           </Link>
@@ -26,7 +26,7 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
             ([roleName, appUrl]) => (
               <Link href={appUrl} key={roleName}>
                 <div
-                  className={`bg-${division.split('.')[0]}-gradient px-5 py-2 text-xl text-white`}
+                  className={`bg-${division.split('.')[0]}-gradient px-5 py-2 text-xl text-white rounded-lg border border-primary/50 bg-gray-300/10`}
                 >
                   apply today as {roleName}
                 </div>
