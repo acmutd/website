@@ -15,7 +15,7 @@ function ApplyPrograms() {
       <div className="flex w-full justify-end pr-10">
         <Link
           href="https://portal.acmutd.co/opportunities"
-          className="mt-6 flex h-12 w-64 items-center justify-center bg-acm-gradient py-2 text-2xl font-bold text-primary md:text-3xl"
+          className="mt-6 flex h-12 w-64 items-center justify-center bg-acm-gradient py-2 text-2xl font-bold text-primary md:text-3xl rounded-lg border border-primary/50 bg-gray-300/10 shadow-2xl"
         >
           apply now
         </Link>
