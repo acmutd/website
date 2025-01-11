@@ -9,7 +9,7 @@ export const aboutPageData: AboutPageData = {
     development: {
       section: 'development',
       description:
-        'ACM Development mainly focuses on maintaining web applications and infrastructures used by ACM to interact with its members such as Member Portal and UTD Grades.',
+        'ACM Development designs, builds, and maintains web applications that support ACM’s operations and member interactions. Projects like the Member Portal and UTD Grades ensure reliable and user-friendly platforms for the campus community.',
       links: [
         { name: 'acm portal', link: 'https://github.com/acmutd/portal-next' },
         { name: 'utdgrades', link: 'https://github.com/acmutd/utd-grades' },
@@ -20,7 +20,7 @@ export const aboutPageData: AboutPageData = {
     research: {
       section: 'research',
       description:
-        'ACM Research is an undergraduate-only research initiative that introduces students to the world of research, equipping them with the skills, resources, and mentorship necessary to formulate nuanced ideas and prepare them for possible future publications. Our goal is to guide you through the holistic research process, starting with the generation of engaging research questions and ending at the presentation of findings to industry and academic professionals in a symposium format.',
+        'ACM Research introduces undergraduates to research through mentorship, skill-building, and hands-on projects. Students engage in the full research process, from crafting questions to presenting findings at a symposium.',
       links: [{ name: 'learn more', link: '/research' }],
     },
     projects: {
@@ -32,7 +32,7 @@ export const aboutPageData: AboutPageData = {
     education: {
       section: 'education',
       description:
-        'ACM Education runs the Technical Interview Prep (TIP) program, the Mentor program, as well as organizing workshops throughout the semester.',
+        'ACM Education empowers students with technical and professional skills through programs like Technical Interview Prep (TIP), the Mentor program, and skill-building workshops.',
       links: [
         { name: 'TIP', link: '/education/tip' },
         { name: 'mentor program', link: '/education/mentor' },
@@ -63,13 +63,14 @@ export const aboutPageData: AboutPageData = {
     },
     industry: {
       section: 'industry',
-      description: `Welcome to ACM Industry!! Our team has the pleasure of acting as the bridge between companies and the ACM community; we do this by introducing more companies to ACM and its members, as well as involving our current sponsors through the various events and workshops we host with them. If there's a technology you would like to learn, a challenge in the college-to-corporate transition you would like to overcome, or if you just want to network with industry professionals, check out ACM Industry!`,
+      description: 
+        `ACM Industry connects students with companies through workshops, events, and networking opportunities. By fostering relationships with new and current sponsors, it bridges the gap between academics and careers, helping students explore technologies and build professional connections.`,
       links: [],
     },
     community: {
       section: 'community',
-      description:
-        'Our purpose is to increase STEM involvement & engagement in K-12 students by providing access to meaningful STEM-related opportunities in low-income communities/schools. In addition, our dedicated events team organizes various social events for students of all majors. These events create a vibrant campus atmosphere by encouraging collaboration, fostering creativity, and enhancing student engagement.',
+      description: 
+        'ACM Community increases STEM engagement in K-12 students, focusing on underserved schools. It also organizes social events for all majors, fostering collaboration, creativity, and a vibrant campus atmosphere.',
       links: [
         {
           name: 'learn more',
