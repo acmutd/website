@@ -17,7 +17,7 @@ export const homePageData: HomePageData = {
       link: 'https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0',
     },
     {
-      description: 'acm applications now open for fall 2024!',
+      description: 'acm applications now open for spring 2025!',
       linkText: 'apply',
       link: 'https://portal.acmutd.co/opportunities',
     },
