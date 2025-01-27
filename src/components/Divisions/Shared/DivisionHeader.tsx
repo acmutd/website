@@ -42,12 +42,12 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
 // NOTE: This will need to be changed every semester until we have a database
 const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>> = {
   'education.mentor': {
-    Mentor: 'https://portal.acmutd.co/typeform/mentor-app-f24',
-    Mentee: 'https://portal.acmutd.co/typeform/mentee-app-f24',
+    Mentor: 'https://portal.acmutd.co/typeform/mentor-app-s25',
+    Mentee: 'https://portal.acmutd.co/typeform/mentee-app-s25',
   },
-  'education.tip': 'https://portal.acmutd.co/typeform/tip-app-f24',
-  projects: 'https://portal.acmutd.co/typeform/projects-apply-f24',
-  research: 'https://portal.acmutd.co/typeform/research-apply-f24',
+  'education.tip': 'https://portal.acmutd.co/typeform/tip-app-s25',
+  projects: 'https://portal.acmutd.co/typeform/projects-apply-s25',
+  research: 'https://portal.acmutd.co/typeform/research-apply-s25',
 };
 
 const images: Record<ExtendedDivisions, ReactNode> = {
