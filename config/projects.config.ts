@@ -5,12 +5,17 @@ export const projectDirectors: Array<Director> = [
   {
     name: 'Abis Naqvi',
     position: 'Projects Director',
-    image: '/assets/officer/AbisNaqvi.png',
+    image: '/assets/officer/AbisNaqvi.jpg',
+  },
+  {
+    name: 'Kanchan Javalkar',
+    position: 'Projects Director',
+    image: '/assets/officer/KanchanJavalkar.jpg',
   },
   {
     name: 'Karina Batra',
-    position: 'Projects Director',
-    image: '/assets/officer/KarinaBatra.png',
+    position: 'Projects Advisor',
+    image: '/assets/officer/KarinaBatra.jpeg',
   },
 ];
 
@@ -53,59 +58,59 @@ export const projectsOfficers = [
   ...projectDirectors,
   ...[
     {
+      name: 'Nadeeba Atiqui',
+      position: 'Project Lead',
+      image: '/assets/officer/NadeebaAtiqui.jpg',
+    },
+    {
       name: 'Abel Thomas',
       position: 'Project Lead',
-      image: '/assets/officer/AbelThomas.png',
+      image: '/assets/officer/AbelThomas.jpg',
     },
     {
       name: 'Avanthi Reddy',
       position: 'Project Lead',
-      image: '/assets/officer/AvanthiReddy.png',
-    },
-    {
-      name: 'Jason Luu',
-      position: 'Project Lead',
-      image: '/assets/officer/JasonLuu.png',
-    },
-    {
-      name: 'Kacie Yee',
-      position: 'Project Lead',
-      image: '/assets/officer/KacieYee.png',
-    },
-    {
-      name: 'Kanchan Javalkar',
-      position: 'Project Lead',
-      image: '/assets/officer/KanchanJavalkar.png',
-    },
-    {
-      name: 'Ethan Varghese',
-      position: 'Project Lead',
-      image: '/assets/officer/EthanVarghese.png',
-    },
-    {
-      name: 'Nadeeba Atiqui',
-      position: 'Project Lead',
-      image: '/assets/officer/NadeebaAtiqui.png',
-    },
-    {
-      name: 'Lerich Osay',
-      position: 'Project Lead',
-      image: '/assets/officer/LerichOsay.png',
+      image: '/assets/officer/AvanthiReddy.jpg',
     },
     {
       name: 'Shraddha Subash',
       position: 'Project Lead',
-      image: '/assets/officer/ShraddhaSubash.png',
+      image: '/assets/officer/ShraddhaSubash.jpg',
+    },
+    {
+      name: 'Lerich Osay',
+      position: 'Project Lead',
+      image: '/assets/officer/LerichOsay.jpg',
+    },
+    {
+      name: 'Ethan Varghese',
+      position: 'Project Lead',
+      image: '/assets/officer/EthanVarghese.jpg',
     },
     {
       name: 'Shreya Ramani',
       position: 'Project Lead',
-      image: '/assets/officer/ShreyaRamani.png',
+      image: '/assets/officer/ShreyaRamani.jpg',
+    },
+    {
+      name: 'Jason Luu',
+      position: 'Project Lead',
+      image: '/assets/officer/JasonLuu.jpg',
     },
     {
       name: 'Noel Emmanuel',
       position: 'Project Lead',
-      image: '/assets/officer/NoelEmmanuel.png',
+      image: '/assets/officer/NoelEmmanuel.jpg',
+    },
+    {
+      name: 'Adarsh Goura',
+      position: 'Project Lead',
+      image: '/assets/officer/AdarshGoura.jpeg',
+    },
+    {
+      name: 'Tamanna Khurana',
+      position: 'Project Lead',
+      image: '/assets/officer/TammyKhurana.png',
     },
   ],
 ];
