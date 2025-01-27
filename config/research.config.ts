@@ -5,12 +5,12 @@ export const researchDirectors: Array<Director> = [
   {
     name: 'Oscar Lay',
     position: 'Research Director',
-    image: '/assets/officer/OscarLay.png',
+    image: '/assets/officer/OscarLay.jpg',
   },
   {
-    name: 'Elijah Walker',
+    name: 'Sahas Sharma',
     position: 'Research Director',
-    image: '/assets/officer/ElijahWalker.png',
+    image: '/assets/officer/SahasSharma.jpg',
   },
 ];
 
@@ -72,17 +72,42 @@ export const researchWinners: Projects[] = [
 
 export const researchOfficers = [
   ...researchDirectors,
-  { name: 'Aba Onumah', position: 'Research Lead', image: '/assets/officer/AbaOnumah.png' },
-  { name: 'Abbas Khawaja', position: 'Research Lead', image: '/assets/officer/AbbasKhawaja.png' },
-  { name: 'Arjun Junghare', position: 'Research Lead', image: '/assets/officer/ArjunJunghare.png' },
-  { name: 'Ermina Ashraf', position: 'Research Lead', image: '/assets/officer/ErminaAshraf.png' },
-  { name: 'Kenneth Myers', position: 'Research Lead', image: '/assets/officer/KennethMyers.png' },
-  { name: 'Rushi Trivedi', position: 'Research Lead', image: '/assets/officer/RushiTrivedi.png' },
-  { name: 'Sahas Sharma', position: 'Research Lead', image: '/assets/officer/SahasSharma.png' },
   {
     name: 'Vaishnavi Pasumarthi',
     position: 'Research Lead',
-    image: '/assets/officer/VaishnaviPasumarthi.png',
+    image: '/assets/officer/VaishnaviPasumarthi.jpg',
+  },
+  { name: 'Priti See', position: 'Research Lead', image: '/assets/officer/PritiSee.jpg' },
+  { name: 'Purva Patel', position: 'Research Lead', image: '/assets/officer/PurvaPatel.jpg' },
+  {
+    name: 'Sanskriti Aripineni',
+    position: 'Research Lead',
+    image: '/assets/officer/SanskritiAripineni.jpg',
+  },
+  {
+    name: 'Anish Reddy Alle',
+    position: 'Research Lead',
+    image: '/assets/officer/AnishAlle.jpg',
+  },
+  {
+    name: 'Jagadeep Kalluri',
+    position: 'Research Lead',
+    image: '/assets/officer/JagadeepKalluri.jpg',
+  },
+  {
+    name: 'Arjun Krishnan',
+    position: 'Research Lead',
+    image: '/assets/officer/ArjunKrishnan.jpg',
+  },
+  {
+    name: 'Aastha Sharma',
+    position: 'Research Lead',
+    image: '/assets/officer/AasthaSharma.jpg',
+  },
+  {
+    name: 'Tanmay Kulkarni',
+    position: 'Research Lead',
+    image: '/assets/officer/TanmayKulkarni.jpg',
   },
 ];
 
@@ -104,8 +129,7 @@ export const researchCarousel: CarouselImage[] = [
   },
   {
     imageLink: '/assets/research/research-4.JPG',
-    title:
-      'Members of the DriverWatch team proudly presenting their poster, Spring 2024.',
+    title: 'Members of the DriverWatch team proudly presenting their poster, Spring 2024.',
     date: new Date(2024, 4, 3),
   },
   {
