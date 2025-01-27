@@ -2,48 +2,58 @@ import { type Officer } from './officers.config';
 
 export const mediaOfficers: Officer[] = [
   {
-    image: '/assets/officer/IsindiCela.png',
-    name: 'Isindi Cela',
+    image: '/assets/officer/HibaMubeen.png',
+    name: 'Hiba Mubeen',
     position: 'Director of Media',
   },
   {
-    image: '/assets/officer/ShazKumar.png',
-    name: 'Shaz Kumar',
-    position: 'Director of Media',
-  },
-  {
-    image: '/assets/officer/SusanZhang.png',
+    image: '/assets/officer/SusanZhang.jpg',
     name: 'Susan Zhang',
-    position: 'Media Officer',
+    position: 'Director of Media',
   },
   {
-    image: '/assets/officer/CalebHernandez.png',
+    image: '/assets/officer/CalebHernandez.jpg',
     name: 'Caleb Hernandez',
     position: 'Media Officer',
   },
   {
-    image: '/assets/officer/RithikSaripella.png',
-    name: 'Rithik Saripella',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/HibaMubeen.png',
-    name: 'Hiba Mubeen',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/SandraLuo.png',
+    image: '/assets/officer/SandraLuo.jpg',
     name: 'Sandra Luo',
     position: 'Media Officer',
   },
   {
-    image: '/assets/officer/SisiAarukapalli.png',
-    name: 'Sisi Aarukapalli',
+    image: '/assets/officer/NandiniPaidesetty.jpg',
+    name: 'Nandini Paidesetty',
     position: 'Media Officer',
   },
   {
-    image: '/assets/officer/SambiSingh.png',
-    name: 'Sambi Singh',
+    image: '/assets/officer/AdrianAlvarez.jpg',
+    name: 'Adrian Alvarez',
+    position: 'Media Officer',
+  },
+  {
+    image: '/assets/officer/SanjithTamballa.jpg',
+    name: 'Sanjith Tamballa',
+    position: 'Media Officer',
+  },
+  {
+    image: '/assets/officer/MohamedIbrahim.png',
+    name: 'Mohamed Ibrahim',
+    position: 'Media Officer',
+  },
+  {
+    image: '/assets/officer/RajivMallisetty.jpg',
+    name: 'Rajiv Malisetty',
+    position: 'Media Officer',
+  },
+  {
+    image: '/assets/officer/AadharshiniSubramanian.jpg',
+    name: 'Aadharshini Subramanian',
+    position: 'Media Officer',
+  },
+  {
+    image: '/assets/officer/SnehaMaram.jpg',
+    name: 'Sneha Maram',
     position: 'Media Officer',
   },
 ];
