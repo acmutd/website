@@ -12,11 +12,6 @@ export const projectDirectors: Array<Director> = [
     position: 'Projects Director',
     image: '/assets/officer/KanchanJavalkar.jpg',
   },
-  {
-    name: 'Karina Batra',
-    position: 'Projects Advisor',
-    image: '/assets/officer/KarinaBatra.jpeg',
-  },
 ];
 
 export const projectsTestimony: Testimony[] = [
@@ -59,58 +54,63 @@ export const projectsOfficers = [
   ...[
     {
       name: 'Nadeeba Atiqui',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/NadeebaAtiqui.jpg',
     },
     {
       name: 'Abel Thomas',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/AbelThomas.jpg',
     },
     {
       name: 'Avanthi Reddy',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/AvanthiReddy.jpg',
     },
     {
       name: 'Shraddha Subash',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/ShraddhaSubash.jpg',
     },
     {
       name: 'Lerich Osay',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/LerichOsay.jpg',
     },
     {
       name: 'Ethan Varghese',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/EthanVarghese.jpg',
     },
     {
       name: 'Shreya Ramani',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/ShreyaRamani.jpg',
     },
     {
       name: 'Jason Luu',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/JasonLuu.jpg',
     },
     {
       name: 'Noel Emmanuel',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/NoelEmmanuel.jpg',
     },
     {
       name: 'Adarsh Goura',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/AdarshGoura.jpeg',
     },
     {
       name: 'Tamanna Khurana',
-      position: 'Project Lead',
+      position: 'Project Manager',
       image: '/assets/officer/TammyKhurana.png',
+    },
+    {
+      name: 'Karina Batra',
+      position: 'Projects Advisor',
+      image: '/assets/officer/KarinaBatra.jpeg',
     },
   ],
 ];

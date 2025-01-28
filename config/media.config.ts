@@ -2,7 +2,7 @@ import { type Officer } from './officers.config';
 
 export const mediaOfficers: Officer[] = [
   {
-    image: '/assets/officer/HibaMubeen.png',
+    image: '/assets/officer/HibaMubeen.jpg',
     name: 'Hiba Mubeen',
     position: 'Director of Media',
   },

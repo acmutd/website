@@ -4,70 +4,70 @@ import { projectDirectors } from './projects.config'
 
 export const boardOfficers: Officer[] = [
   {
-    image: '/assets/officer/FarhanJamil.png',
-    name: 'Farhan Jamil',
+    image: '/assets/officer/MichaelHellman.jpg',
+    name: 'Michael Hellman',
     position: 'ACM President',
   },
   {
-    image: '/assets/officer/ShoaibHuq.png',
-    name: 'Shoaib Huq',
+    image: '/assets/officer/ElijahWalker.jpg',
+    name: 'Elijah Walker',
     position: 'ACM Vice President',
   },
   {
-    image: '/assets/officer/MichaelHellman.png',
-    name: 'Michael Hellman',
-    position: 'ACM Vice President',
+    name: 'Adelaide Dunning',
+    position: 'Director of HackUTD',
+    image: '/assets/officer/AddyDunning.jpg',
   },
   {
-    image: '/assets/officer/BradleyMixon.png',
-    name: 'Bradley Mixon',
-    position: 'Co-Director of Community',
+    name: 'Kelly Zhou',
+    position: 'Director of HackUTD',
+    image: '/assets/officer/KellyZhou.jpg',
   },
   {
-    image: '/assets/officer/IsindiCela.png',
-    name: 'Isindi Cela',
-    position: 'Director of Media',
+    name: 'Ayusha Timalsena',
+    position: 'Director of Finance',
+    image: '/assets/officer/AyushaTimalsena.jpg',
   },
   {
-    image: '/assets/officer/ShazKumar.png',
-    name: 'Shaz Kumar',
-    position: 'Director of Media',
-  },
-  {
-    image: '/assets/officer/MikeNguyen.png',
-    name: 'Mike Nguyen',
-    position: 'Director of Development',
-  },
-  {
-    image: '/assets/officer/ArihantSreenivasa.png',
-    name: 'Arihant Sreenivasa',
-    position: 'Director of Development',
-  },
-  ...educationDirectors,
-  {
-    name: 'Purva Pawar',
-    position: 'HackUTD Director',
-    image: '/assets/officer/PurvaPawar.png',
-  },
-  {
-    name: 'Salman Jaher',
-    position: 'HackUTD Director',
-    image: '/assets/officer/SalmanJaher.png',
-  },
-  {
-    name: 'Kristine Thomas',
+    name: 'Manasi Vipat',
     position: 'Director of Industry',
-    image: '/assets/officer/KristineThomas.png'
+    image: '/assets/officer/ManasiVipat.jpg'
   },
   ...projectDirectors,
   {
     name: 'Oscar Lay',
-    position: 'Research Director',
-    image: '/assets/officer/OscarLay.png',
+    position: 'Director of Research',
+    image: '/assets/officer/OscarLay.jpg',
   },
   {
-    name: 'Elijah Walker',
-    position: 'Research Director',
-    image: '/assets/officer/ElijahWalker.png',
+    name: 'Sahas Sharma',
+    position: 'Director of Research',
+    image: '/assets/officer/SahasSharma.jpg',
+  },
+  {
+    image: '/assets/officer/HibaMubeen.jpg',
+    name: 'Hiba Mubeen',
+    position: 'Director of Media',
+  },
+  {
+    image: '/assets/officer/SusanZhang.jpg',
+    name: 'Susan Zhang',
+    position: 'Director of Media',
+  },
+  {
+    image: '/assets/officer/FarhanJamil.jpg',
+    name: 'Farhan Jamil',
+    position: 'Director of Development',
+  },
+  ...educationDirectors,
+  {
+    image: '/assets/officer/ShannonCarter.jpg',
+    name: 'Shannon Carter',
+    position: 'Director of Community',
+  },
+  {
+    image: '/assets/officer/MercedesXiong.jpg',
+    name: 'Mercedes Xiong',
+    position: 'Director of Community',
   },
 ]
