@@ -47,7 +47,7 @@ export const mediaOfficers: Officer[] = [
     position: 'Media Officer',
   },
   {
-    image: '/assets/officer/AadharshiniSubramanian.jpg',
+    image: '/assets/officer/AddieSubramanian.png',
     name: 'Aadharshini Subramanian',
     position: 'Media Officer',
   },
