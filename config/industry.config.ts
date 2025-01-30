@@ -2,14 +2,14 @@ import { type Officer } from './officers.config';
 
 export const industryOfficers: Officer[] = [
    {
-    name: 'Kristine Thomas',
+    name: 'Manasi Vipat',
     position: 'Director of Industry',
-    image: '/assets/officer/KristineThomas.png'
+    image: '/assets/officer/ManasiVipat.png'
   },
   {
-    name: 'Manasi Vipat',
+    name: 'Sushant Ganji',
     position: 'Industry Officer',
-    image: '/assets/officer/ManasiVipat.png',
+    image: '/assets/officer/SushantGanji.png',
   },
   {
     name: 'Anika Guin',
@@ -17,14 +17,14 @@ export const industryOfficers: Officer[] = [
     image: '/assets/officer/AnikaGuin.png',
   },
   {
-    name: 'Aryaman Dubey',
+    name: 'Nihita Soma',
     position: 'Industry Officer',
-    image: '/assets/officer/AryamanDubey.png',
+    image: '/assets/officer/NihitaSoma.png',
   },
   {
-    name: 'Pranav Nair',
+    name: 'Soujanya Kamalapur',
     position: 'Industry Officer',
-    image: '/assets/officer/PranavNair.png',
+    image: '/assets/officer/SoujanyaKamalapur.png',
   },
   {
     name: 'Shreya Ram',
