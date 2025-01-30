@@ -55,17 +55,17 @@ export const projectsOfficers = [
     {
       name: 'Nadeeba Atiqui',
       position: 'Project Manager',
-      image: '/assets/officer/NadeebaAtiqui.jpg',
+      image: '/assets/officer/NadeebaAtiqui.JPG',
     },
     {
       name: 'Abel Thomas',
       position: 'Project Manager',
-      image: '/assets/officer/AbelThomas.jpg',
+      image: '/assets/officer/AbelThomas.JPG',
     },
     {
       name: 'Avanthi Reddy',
       position: 'Project Manager',
-      image: '/assets/officer/AvanthiReddy.jpg',
+      image: '/assets/officer/AvanthiReddy.JPG',
     },
     {
       name: 'Shraddha Subash',
@@ -75,7 +75,7 @@ export const projectsOfficers = [
     {
       name: 'Lerich Osay',
       position: 'Project Manager',
-      image: '/assets/officer/LerichOsay.jpg',
+      image: '/assets/officer/LerichOsay.JPG',
     },
     {
       name: 'Ethan Varghese',
@@ -85,17 +85,17 @@ export const projectsOfficers = [
     {
       name: 'Shreya Ramani',
       position: 'Project Manager',
-      image: '/assets/officer/ShreyaRamani.jpg',
+      image: '/assets/officer/ShreyaRamani.JPG',
     },
     {
       name: 'Jason Luu',
       position: 'Project Manager',
-      image: '/assets/officer/JasonLuu.jpg',
+      image: '/assets/officer/JasonLuu.JPG',
     },
     {
       name: 'Noel Emmanuel',
       position: 'Project Manager',
-      image: '/assets/officer/NoelEmmanuel.jpg',
+      image: '/assets/officer/NoelEmmanuel.JPG',
     },
     {
       name: 'Adarsh Goura',
