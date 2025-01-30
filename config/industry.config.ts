@@ -9,7 +9,7 @@ export const industryOfficers: Officer[] = [
   {
     name: 'Sushant Ganji',
     position: 'Industry Officer',
-    image: '/assets/officer/SushantGanji.png',
+    image: '/assets/officer/SushantGanji.jpg',
   },
   {
     name: 'Anika Guin',
@@ -19,7 +19,7 @@ export const industryOfficers: Officer[] = [
   {
     name: 'Nihita Soma',
     position: 'Industry Officer',
-    image: '/assets/officer/NihitaSoma.png',
+    image: '/assets/officer/NihitaSoma.jpg',
   },
   {
     name: 'Soujanya Kamalapur',
