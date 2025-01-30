@@ -27,8 +27,9 @@ export default function Divisions({ data, description }: DivisionsProps) {
           <h1 className="mb-2 text-5xl font-medium">Divisions</h1>
           <p className="mb-10 max-w-4xl text-start text-xl md:text-center">{description}</p>
           <div className="grid w-fit grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {imageElements}
+            {imageElements.slice(0, 6)}
           </div>
+          <div className="mt-4 flex justify-center gap-4">{imageElements.slice(6)}</div>
         </div>
       </div>
     </div>
