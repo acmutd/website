@@ -4,7 +4,7 @@ export const industryOfficers: Officer[] = [
    {
     name: 'Manasi Vipat',
     position: 'Director of Industry',
-    image: '/assets/officer/ManasiVipat.png'
+    image: '/assets/officer/ManasiVipat.jpg'
   },
   {
     name: 'Sushant Ganji',
