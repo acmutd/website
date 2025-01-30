@@ -52,27 +52,27 @@ export const communityOfficers: Officer[] = [
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/VivianNguyen.png',
+    image: '/assets/officer/VivianNguyen.jpg',
     name: 'Vivian Nguyen',
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/AnushaPatel.png',
+    image: '/assets/officer/AnushaPatel.jpg',
     name: 'Anusha Patel',
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/ShriyaKalyan.png',
+    image: '/assets/officer/ShriyaKalyan.jpg',
     name: 'Shriya Kalyan',
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/AyomideTapere.png',
+    image: '/assets/officer/AyomideTapere.jpg',
     name: 'Ayomide Tapere',
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/SuhaniRana.png',
+    image: '/assets/officer/SuhaniRana.jpg',
     name: 'Suhani Rana',
     position: 'Events Officer',
   },
