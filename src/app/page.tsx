@@ -97,7 +97,7 @@ function Home() {
             Our Sponsors
           </h3>
           {Object.entries(homePageData.sponsors).map(([tierName, tier], idx) => {
-            if (idx === 2 && tier.length === 0) return null; // Hide Bronze section if empty
+            if ((idx === 2 || idx === 3) && tier.length === 0) return null; // Hide Bronze section if empty
 
             return (
               <div key={idx} className="content mb-8">
