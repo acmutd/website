@@ -2,14 +2,14 @@ import { type Officer } from './officers.config';
 
 export const hackOfficers: Officer[] = [
   {
-    name: 'Purva Pawar',
-    position: 'HackUTD Director',
-    image: '/assets/officer/PurvaPawar.png',
+    name: 'Adelaide Dunning',
+    position: 'Director of HackUTD',
+    image: '/assets/officer/AddyDunning.jpg',
   },
   {
-    name: 'Salman Jaher',
-    position: 'HackUTD Director',
-    image: '/assets/officer/SalmanJaher.png',
+    name: 'Kelly Zhou',
+    position: 'Director of HackUTD',
+    image: '/assets/officer/KellyZhou.jpg',
   },
   {
     name: 'Joshua Das',

@@ -2,7 +2,7 @@ import { type Officer } from './officers.config';
 
 export const developmentOfficers: Officer[] = [
   {
-    image: '/assets/officer/FarhanJamil.png',
+    image: '/assets/officer/FarhanJamil.jpg',
     name: 'Farhan Jamil',
     position: 'Director of Development',
   },
