@@ -12,7 +12,7 @@ export const communityOfficers: Officer[] = [
     position: 'Co-Director of Community',
   },
   {
-    image: '/assets/officer/BradleyMixon.jpg',
+    image: '/assets/officer/BradleyMixon.JPG',
     name: 'Bradley Mixon',
     position: 'Outreach Officer',
   },
