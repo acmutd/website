@@ -145,17 +145,17 @@ export const educationOfficers: Officer[] = [
   {
     name: 'Noel Emmanuel',
     position: 'TIP Lead',
-    image: '/assets/officer/NoelEmmanuel.png',
+    image: '/assets/officer/NoelEmmanuel.jpg',
   },
   {
     name: 'Solomon Pierce',
     position: 'TIP Lead',
-    image: '/assets/officer/SolomonPierce.png',
+    image: '/assets/officer/SolomonPierce.jpg',
   },
   {
     name: 'Aashay Vishwakarma',
     position: 'TIP Lead',
-    image: '/assets/officer/AashayVishwakarma.png',
+    image: '/assets/officer/AashayVishwakarma.jpg',
   },
 ];
 
