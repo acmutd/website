@@ -45,6 +45,7 @@ export default function DivisionCard({ data }: DivisionCardProps) {
                     href={`${obj.link.startsWith('/') ? obj.link : `https://${obj.link}`}`}
                     text={obj.name}
                     bgStyle={data.section}
+                    textStyles="text-base md:text-xl font-bold"
                   />
                 );
               })}

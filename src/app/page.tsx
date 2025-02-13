@@ -48,7 +48,12 @@ function Home() {
               >
                 <p className="content text-xl">{card.description}</p>
                 <div className="mt-2 self-end">
-                  <Button href={card.link} text={card.linkText} bgStyle="acm" />
+                  <Button
+                    href={card.link}
+                    text={card.linkText}
+                    bgStyle="acm"
+                    textStyles="text-base md:text-xl"
+                  />
                 </div>
               </div>
             );
