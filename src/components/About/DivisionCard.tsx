@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 import { Division, DivisionLink } from '../../../lib/types';
+import { Button } from '../Button';
 
 interface DivisionCardProps {
   data: Division;
@@ -39,13 +40,12 @@ export default function DivisionCard({ data }: DivisionCardProps) {
             <div className="mt-4 grid w-full max-w-lg grid-cols-2 gap-4">
               {data.links.map((obj: DivisionLink, index: number) => {
                 return (
-                  <Link
-                    href={`${obj.link.startsWith('/') ? obj.link : `https://${obj.link}`}`}
+                  <Button
                     key={index}
-                    className={`flex items-center justify-center bg-${data.section}-gradient h-[2.30rem] text-base font-bold md:text-xl rounded-lg border border-primary/50 bg-gray-300/10`}
-                  >
-                    {obj.name}
-                  </Link>
+                    href={`${obj.link.startsWith('/') ? obj.link : `https://${obj.link}`}`}
+                    text={obj.name}
+                    bgStyle={data.section}
+                  />
                 );
               })}
             </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { homePageData } from '../../config/home.config';
 import ParallaxImages from '@/components/parallaxImages';
-import { Button } from '@/components/Home/Button';
+import { Button } from '@/components/Button';
 
 function Home() {
   const icons = Object.keys(homePageData.community);
@@ -48,7 +48,7 @@ function Home() {
               >
                 <p className="content text-xl">{card.description}</p>
                 <div className="mt-2 self-end">
-                  <Button href={card.link} text={card.linkText} />
+                  <Button href={card.link} text={card.linkText} bgStyle="acm" />
                 </div>
               </div>
             );
@@ -63,13 +63,17 @@ function Home() {
               by becoming part of one of our semester long programs (projects, research, TIP, mentor
               program)
             </p>
-            <Button href="https://portal.acmutd.co/opportunities" text="apply today" />
+            <Button
+              href="https://portal.acmutd.co/opportunities"
+              text="apply today"
+              bgStyle="acm"
+            />
           </div>
           <p>OR</p>
           <div className="flex flex-col items-center gap-y-7">
             <p>by creating an ACM portal account and attending any three of our events per year</p>
             <div className="flex flex-col gap-y-3">
-              <Button href="https://portal.acmutd.co/" text="access portal" />
+              <Button href="https://portal.acmutd.co/" text="access portal" bgStyle="acm" />
             </div>
           </div>
         </div>
