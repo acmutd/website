@@ -1,11 +1,9 @@
 'use client';
-import Link from 'next/link';
 import React from 'react';
-import { useEffect } from 'react';
 import Image from 'next/image';
 import { homePageData } from '../../config/home.config';
-import { peechi, orb1, orb2, orb3, orb4, orb5, orb6 } from './data';
 import ParallaxImages from '@/components/parallaxImages';
+import { Button } from '@/components/Button';
 
 function Home() {
   const icons = Object.keys(homePageData.community);
@@ -25,7 +23,7 @@ function Home() {
             We&apos;re a team of students with one goal: building a greater, more collaborative
             computing community at The University of Texas at Dallas.
           </p>
-          <div className="justify-content-center z-10 flex w-fit flex-row items-center gap-x-6 bg-acm-gradient px-8 py-4 rounded-lg border border-primary/50 bg-gray-300/10">
+          <div className="justify-content-center z-10 flex w-fit flex-row items-center gap-x-6 rounded-lg border border-primary/50 bg-gray-300/10 bg-acm-gradient px-8 py-4">
             {icons.map((icon: string, idx: number) => {
               return (
                 <a href={iconLinks[idx]} key={idx}>
@@ -50,12 +48,12 @@ function Home() {
               >
                 <p className="content text-xl">{card.description}</p>
                 <div className="mt-2 self-end">
-                  <Link
+                  <Button
                     href={card.link}
-                    className="content z-20 flex h-[2.30rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:text-xl rounded-lg border border-primary/50 bg-gray-300/10"
-                  >
-                    {card.linkText}
-                  </Link>
+                    text={card.linkText}
+                    bgStyle="acm"
+                    textStyles="text-base md:text-xl"
+                  />
                 </div>
               </div>
             );
@@ -70,32 +68,24 @@ function Home() {
               by becoming part of one of our semester long programs (projects, research, TIP, mentor
               program)
             </p>
-            <Link
+            <Button
               href="https://portal.acmutd.co/opportunities"
-              className="z-20 flex h-[3rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:h-[2.30rem] md:text-xl rounded-lg border border-primary/50 bg-gray-300/10"
-            >
-              apply today
-            </Link>
+              text="apply today"
+              bgStyle="acm"
+            />
           </div>
           <p>OR</p>
           <div className="flex flex-col items-center gap-y-7">
             <p>by creating an ACM portal account and attending any three of our events per year</p>
             <div className="flex flex-col gap-y-3">
-              <Link
-                href="https://portal.acmutd.co/"
-                className="z-20 flex h-[3rem] w-fit items-center justify-center bg-acm-gradient px-4 py-2 text-base font-bold md:h-[2.30rem] md:text-xl rounded-lg border border-primary/50 bg-gray-300/10"
-              >
-                access portal
-              </Link>
+              <Button href="https://portal.acmutd.co/" text="access portal" bgStyle="acm" />
             </div>
           </div>
         </div>
       </div>
       <div className="flex flex-row py-10">
         <div className="background-container z-10 flex max-w-[100vw] flex-col gap-y-8 rounded-r-3xl border-y border-r border-primary/50 bg-gray-600/10 p-10 text-center shadow-lg backdrop-blur-xl md:z-0 md:max-w-[90vw] lg:max-w-[85vw] lg:p-14">
-          <h3 className="mb-6 text-2xl font-semibold text-primary lg:text-3xl">
-            Our Sponsors
-          </h3>
+          <h3 className="mb-6 text-2xl font-semibold text-primary lg:text-3xl">Our Sponsors</h3>
           {Object.entries(homePageData.sponsors).map(([tierName, tier], idx) => {
             if ((idx === 2 || idx === 3) && tier.length === 0) return null; // Hide Bronze section if empty
 
@@ -107,8 +97,8 @@ function Home() {
                       idx === 0
                         ? 'bg-gold-gradient'
                         : idx === 1
-                          ? 'bg-silver-gradient'
-                          : 'bg-bronze-gradient'
+                        ? 'bg-silver-gradient'
+                        : 'bg-bronze-gradient'
                     }`}
                   >
                     <h1
@@ -116,15 +106,18 @@ function Home() {
                         idx === 0
                           ? 'text-yellow-600'
                           : idx === 1
-                            ? 'text-slate-300'
-                            : 'text-amber-600'
+                          ? 'text-slate-300'
+                          : 'text-amber-600'
                       }`}
                     >
                       {tierName}
                     </h1>
-                    <div className="flex w-full flex-1 items-center justify-center flex-wrap">
+                    <div className="flex w-full flex-1 flex-wrap items-center justify-center">
                       {tier.map((sponsor) => (
-                        <div key={sponsor} className="m-4 flex items-center justify-center pb-6 lg:m-2 lg:p-8">
+                        <div
+                          key={sponsor}
+                          className="m-4 flex items-center justify-center pb-6 lg:m-2 lg:p-8"
+                        >
                           <Image
                             src={`/assets/home/sponsors/${sponsor}.png`}
                             alt={sponsor.toUpperCase()}

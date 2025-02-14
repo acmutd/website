@@ -3,6 +3,7 @@ import React from 'react';
 import ApplyProgramCard from './ApplyProgramCard';
 import { applyPageData } from '../../../config/apply.config';
 import type { ProgramInfo } from '../../../lib/types';
+import { Button } from '../Button';
 
 function ApplyPrograms() {
   return (
@@ -13,12 +14,21 @@ function ApplyPrograms() {
         their career
       </p>
       <div className="flex w-full justify-end pr-10">
-        <Link
+        {/* <Link
           href="https://portal.acmutd.co/opportunities"
-          className="mt-6 flex h-12 w-64 items-center justify-center bg-acm-gradient py-2 text-2xl font-bold text-primary md:text-3xl rounded-lg border border-primary/50 bg-gray-300/10 shadow-2xl"
+          className="mt-6 flex h-12 w-64 items-center justify-center rounded-lg border border-primary/50 bg-gray-300/10 bg-acm-gradient py-2 text-2xl font-bold text-primary shadow-2xl md:text-3xl"
         >
           apply now
-        </Link>
+        </Link> */}
+        <Button
+          href="https://portal.acmutd.co/opportunities"
+          text="apply now"
+          bgStyle="acm"
+          width="w-64"
+          height="h-12"
+          textStyles="text-2xl md:text-3xl text-primary"
+          addtitionalStyles="mt-6"
+        />
       </div>
       <div className="mt-10 grid md:grid-cols-2">
         {applyPageData.programs.map((data: ProgramInfo, index: number) => {
