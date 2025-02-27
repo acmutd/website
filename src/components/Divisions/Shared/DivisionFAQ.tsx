@@ -15,17 +15,20 @@ export default function DivisionFAQ(props: Props) {
   const questions = getFAQ(props);
 
   return (
-    <div id="faq" className="pt-12 text-[#CACACA]">
+    <div id="faq" className="pt-12 text-[#CACACA] max-w-4xl">
       <h1 className="text-4xl ">frequently asked questions</h1>
       <div className="mb-20 h-[1px] w-40 bg-[#cacacab0]" />
 
-      <div className="w-[50rem] text-[#CACACA]">
+      <div className="max-w-4xl text-[#CACACA]">
         {questions.map((faq, i) => (
-          <div className="space-y-2 pb-10" key={i}>
-            <h1 className="text-2xl font-semibold">{faq.question}</h1>
-            <p>{faq.answer}</p>
+          <div className="space-y-3 pb-12" key={i}>
+            <h2 className="flex items-start text-xl text-white">
+              <span className="mr-3 text-2xl">•</span>
+              {faq.question}
+            </h2>
+            <p className="pl-6 text-[#CACACA] leading-relaxed">{faq.answer}</p>
             {faq.images && (
-              <div className="flex py-10">
+              <div className="flex py-10 pl-6">
                 {faq.images.map((image, i) => (
                   <Image
                     alt={`${props.division}_${i}`}
@@ -33,6 +36,7 @@ export default function DivisionFAQ(props: Props) {
                     key={i}
                     height="178"
                     width="278"
+                    className="mr-4"
                   />
                 ))}
               </div>

@@ -48,6 +48,7 @@ const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>>
   'education.tip': 'https://portal.acmutd.co/typeform/tip-app-s25',
   projects: 'https://portal.acmutd.co/typeform/projects-apply-s25',
   research: 'https://portal.acmutd.co/typeform/research-apply-s25',
+  development: 'https://portal.acmutd.co/typeform/development-apply-s25',
 };
 
 const images: Record<ExtendedDivisions, ReactNode> = {
@@ -67,5 +68,8 @@ const images: Record<ExtendedDivisions, ReactNode> = {
   ),
   'education.tip': (
     <Image src="/assets/about/education/education.png" alt="ACM TIP" width={272} height={80} />
+  ),
+  development: (
+    <Image src="/assets/about/development/development.png" alt="ACM Development" width={272} height={80} />
   ),
 };

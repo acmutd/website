@@ -21,7 +21,7 @@ export default function DivisionOfficers({ division }: Props) {
               alt="Projects Director"
               width="165"
               height="165"
-              className="rounded-full"
+              className="rounded-full object-cover w-[165px] h-[165px]"
             />
             <div className="pl-12">
               <h2 className="pb-7 text-xl">{director.name}</h2>

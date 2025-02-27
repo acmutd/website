@@ -1,4 +1,5 @@
 import { Question, Testimony } from '../lib/types';
+import { developmentDirectors } from './development.config';
 import {
   educationDirectors,
   educationFAQ,
@@ -22,7 +23,7 @@ import {
 
 type Division =
   | {
-      division: 'projects' | 'research';
+      division: 'projects' | 'research' | 'development';
     }
   | {
       division: 'education';
@@ -61,6 +62,8 @@ export function getDirectors(division: Division['division']): Director[] {
       return projectDirectors;
     case 'research':
       return researchDirectors;
+    case 'development':
+      return developmentDirectors;
     case 'education':
       return educationDirectors;
   }
@@ -74,6 +77,9 @@ export function getTestimony(section: Division): Testimony[] {
       return researchTestimony;
     case 'education':
       return educationTestimony[section.sub];
+    case 'development':
+      const quotes = Array.from({length: 3}).map(() => ({ quote: 'Development is a work in progress', name: 'THIS SHOULD NOT GO LIVE' }))
+      return quotes;
   }
 }
 
@@ -85,6 +91,9 @@ export function getFAQ(section: Division): Question[] {
       return projectsFAQ;
     case 'research':
       return researchFAQ;
+    case 'development':
+      const questions = Array.from({length: 3}).map(() => ({ question: 'Development is a work in progress', answer: 'THIS SHOULD NOT GO LIVE' }))
+      return questions;
   }
 }
 
@@ -96,6 +105,13 @@ export function getCarouselImages(section: Division): CarouselImage[] {
       return projectImages;
     case 'research':
       return researchCarousel;
+    case 'development':
+      const images = Array.from({ length: 3 }, (_) => ({
+        imageLink: `/assets/about/development/development.png`,
+        title: 'Development',
+        date: new Date(),
+      }));
+      return images;
   }
 }
 

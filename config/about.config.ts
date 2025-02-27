@@ -14,6 +14,7 @@ export const aboutPageData: AboutPageData = {
         { name: 'acm portal', link: 'https://github.com/acmutd/portal-next' },
         { name: 'utdgrades', link: 'https://github.com/acmutd/utd-grades' },
         { name: 'github', link: 'https://github.com/acmutd' },
+        { name: "learn more", link: "/development" }
       ],
       linkStyles: '',
     },
@@ -63,13 +64,13 @@ export const aboutPageData: AboutPageData = {
     },
     industry: {
       section: 'industry',
-      description: 
+      description:
         `ACM Industry connects students with companies through workshops, events, and networking opportunities. By fostering relationships with new and current sponsors, it bridges the gap between academics and careers, helping students explore technologies and build professional connections.`,
       links: [],
     },
     community: {
       section: 'community',
-      description: 
+      description:
         'ACM Community increases STEM engagement in K-12 students, focusing on underserved schools. It also organizes social events for all majors, fostering collaboration, creativity, and a vibrant campus atmosphere.',
       links: [
         {

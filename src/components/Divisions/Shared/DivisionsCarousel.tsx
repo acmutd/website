@@ -27,7 +27,7 @@ export default function Carousel(props: CarouselProps) {
 
   return (
     <>
-      <div className="relative h-96 w-full max-w-4xl overflow-hidden rounded-t-lg">
+      <div className="relative h-96 w-full max-w-4xl overflow-hidden rounded-t-lg mx-auto">
         <Image
           src={images[index].imageLink}
           alt={images[index].title}
@@ -47,7 +47,7 @@ export default function Carousel(props: CarouselProps) {
         </div>
       </div>
       <div
-        className={`flex w-full max-w-4xl justify-between rounded-b-lg bg-${props.division}-gradient p-4 text-white`}
+        className={`flex w-full max-w-4xl justify-between rounded-b-lg bg-${props.division}-gradient p-4 text-white mx-auto`}
       >
         <p className="font-semibold">{images[index].title}</p>
         <p className="text-sm">

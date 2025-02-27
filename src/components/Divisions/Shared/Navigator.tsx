@@ -5,10 +5,11 @@ import React from 'react';
 const mentorLinks = ['directors', 'experience', 'workshops', 'faq'];
 const altLinks = ['directors', 'experience', 'winning projects', 'faq'];
 const tipLinks = ['directors', 'experience', 'structure', 'faq'];
-
+const developmentLinks = ['directors', 'experience', 'faq'];
 const LINK_DICT = {
   research: altLinks,
   projects: altLinks,
+  development: developmentLinks,
   education: {
     mentor: mentorLinks,
     tip: tipLinks,
