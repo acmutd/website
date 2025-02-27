@@ -9,9 +9,9 @@ type DivisionHeaderProps = {
 };
 export default function DivisionHeader({ children, division }: DivisionHeaderProps) {
   return (
-    <div className="pt-40 font-sans">
+    <div className="pt-40 font-sans w-1/2">
       {images[division]}
-      <p className="w-[55rem] pt-5 text-2xl text-[#CACACA]">{children}</p>
+      <p className="pt-5 text-2xl text-[#CACACA]">{children}</p>
       {typeof applicationUrl[division] === 'string' ? (
         <div className="mt-20 flex items-center">
           <Link href={applicationUrl[division]}>

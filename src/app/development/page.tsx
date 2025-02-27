@@ -11,7 +11,7 @@ export default function Page() {
       <Navigator division="development" />
       <DivisionCarousel division="development" />
       <div className="px-28">
-        <div className="flex gap-10">
+        <div className="flex gap-10 items-center justify-between px-40">
           <DevHeader />
           <DivisionOfficers division="development" />
         </div>
