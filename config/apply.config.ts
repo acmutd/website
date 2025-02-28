@@ -10,18 +10,18 @@ export const applyPageData: ApplyPageData = {
       link: '/projects',
     },
     {
-      programName: 'Technical Interview Prep',
-      division: 'education',
-      program: 'tip',
-      programImage: 'tip',
-      link: '/education/tip',
-    },
-    {
       programName: 'ACM Research',
       division: 'research',
       program: 'research',
       programImage: 'research',
       link: '/research',
+    },
+    {
+      programName: 'Technical Interview Prep',
+      division: 'education',
+      program: 'tip',
+      programImage: 'tip',
+      link: '/education/tip',
     },
     {
       programName: 'Mentor Program',
