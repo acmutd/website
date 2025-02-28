@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import React from 'react';
 import ApplyProgramCard from './ApplyProgramCard';
 import { applyPageData } from '../../../config/apply.config';
@@ -30,7 +29,7 @@ function ApplyPrograms() {
           addtitionalStyles="mt-6"
         />
       </div>
-      <div className="mt-10 grid md:grid-cols-2">
+      <div className="mt-10 grid md:grid-cols-2 gap-5">
         {applyPageData.programs.map((data: ProgramInfo, index: number) => {
           return (
             <ApplyProgramCard
