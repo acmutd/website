@@ -14,7 +14,7 @@ function ApplyProgramCard({ title, image, link }: ApplyProgramCardProps) {
       <h1 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-center text-4xl font-bold text-primary xl:text-5xl">
         {title}
       </h1>
-      <Image src={image} alt={title} width={500} height={500} className="w-full" />
+      <Image src={image} alt={title} width={500} height={500} className="w-full rounded-3xl" />
     </Link>
   );
 }
