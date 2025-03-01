@@ -1,7 +1,9 @@
 import { ReactNode } from 'react';
-import { ExtendedDivisions } from './divisionUtil';
+import { Division, EducationSub  } from './divisionUtil';
 import Image from 'next/image';
 import Link from 'next/link';
+
+type ExtendedDivisions = Exclude<Division, 'education'> | `education.${EducationSub}`;
 
 type DivisionHeaderProps = {
   children: ReactNode;

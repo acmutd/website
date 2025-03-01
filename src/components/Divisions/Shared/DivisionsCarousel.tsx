@@ -2,17 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { type Division } from './divisionUtil';
+import { DivisionProps } from './divisionUtil';
 import { getCarouselImages } from '../../../../config/divisions.config';
 
-type CarouselProps =
-  | { division: Exclude<Division, 'education'> }
-  | {
-      division: 'education';
-      sub: 'mentor' | 'tip';
-    };
-
-export default function Carousel(props: CarouselProps) {
+export default function Carousel(props: DivisionProps) {
   const images = getCarouselImages(props);
 
   const [index, setIndex] = useState(0);

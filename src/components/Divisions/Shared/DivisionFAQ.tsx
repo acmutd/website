@@ -1,17 +1,8 @@
 import Image from 'next/image';
-import { Division } from './divisionUtil';
+import { DivisionProps } from './divisionUtil';
 import { getFAQ } from '@/../config/divisions.config';
 
-type Props =
-  | {
-      division: Exclude<Division, 'education'>;
-    }
-  | {
-      division: 'education';
-      sub: 'tip' | 'mentor';
-    };
-
-export default function DivisionFAQ(props: Props) {
+export default function DivisionFAQ(props: DivisionProps) {
   const questions = getFAQ(props);
 
   return (
