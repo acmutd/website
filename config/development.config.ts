@@ -32,11 +32,6 @@ export const developmentOfficers: Officer[] = [
     position: 'Development Officer (PM for BSG)',
   },
   {
-    image: '/assets/officer/ArnavJain.jpg',
-    name: 'Arnav Jain',
-    position: 'Development Officer (BSG)',
-  },
-  {
     image: '/assets/officer/BhaveshMandalapu.jpg',
     name: 'Bhavesh Mandalapu',
     position: 'Development Officer (BSG)',
