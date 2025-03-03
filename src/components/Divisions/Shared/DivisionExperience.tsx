@@ -1,17 +1,8 @@
 import { getTestimony } from '@/../config/divisions.config';
-import { Division } from './divisionUtil';
+import { DivisionProps } from './divisionUtil';
 import QuoteMarks from './QuoteMarks';
 
-type Props =
-  | {
-      division: Exclude<Division, 'education'>;
-    }
-  | {
-      division: 'education';
-      sub: 'tip' | 'mentor';
-    };
-
-export default function DivisionExperience(props: Props) {
+export default function DivisionExperience(props: DivisionProps) {
   const quotes = getTestimony(props);
   return (
     <div id="experience" className="pt-12 text-[#CACACA]">

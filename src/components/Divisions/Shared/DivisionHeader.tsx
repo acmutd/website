@@ -1,7 +1,9 @@
 import { ReactNode } from 'react';
-import { ExtendedDivisions } from './divisionUtil';
+import { Division, EducationSub  } from './divisionUtil';
 import Image from 'next/image';
 import Link from 'next/link';
+
+type ExtendedDivisions = Exclude<Division, 'education'> | `education.${EducationSub}`;
 
 type DivisionHeaderProps = {
   children: ReactNode;
@@ -9,9 +11,9 @@ type DivisionHeaderProps = {
 };
 export default function DivisionHeader({ children, division }: DivisionHeaderProps) {
   return (
-    <div className="pt-40 font-sans">
+    <div className="pt-40 font-sans w-1/2">
       {images[division]}
-      <p className="w-[55rem] pt-5 text-2xl text-[#CACACA]">{children}</p>
+      <p className="pt-5 text-2xl text-[#CACACA]">{children}</p>
       {typeof applicationUrl[division] === 'string' ? (
         <div className="mt-20 flex items-center">
           <Link href={applicationUrl[division]}>
@@ -48,6 +50,7 @@ const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>>
   'education.tip': 'https://portal.acmutd.co/typeform/tip-app-s25',
   projects: 'https://portal.acmutd.co/typeform/projects-apply-s25',
   research: 'https://portal.acmutd.co/typeform/research-apply-s25',
+  development: 'https://portal.acmutd.co/typeform/development-apply-s25',
 };
 
 const images: Record<ExtendedDivisions, ReactNode> = {
@@ -67,5 +70,8 @@ const images: Record<ExtendedDivisions, ReactNode> = {
   ),
   'education.tip': (
     <Image src="/assets/about/education/education.png" alt="ACM TIP" width={272} height={80} />
+  ),
+  development: (
+    <Image src="/assets/about/development/development.png" alt="ACM Development" width={272} height={80} />
   ),
 };

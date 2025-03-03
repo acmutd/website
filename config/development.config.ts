@@ -1,4 +1,18 @@
+import { Director } from './divisions.config';
 import { type Officer } from './officers.config';
+
+export const developmentDirectors: Director[] = [
+  {
+    image: '/assets/officer/FarhanJamil.jpg',
+    name: 'Farhan Jamil',
+    position: 'Director of Development',
+  },
+  {
+    image: '/assets/officer/ArihantSreenivasa.png',
+    name: 'Arihant Sreenivasa',
+    position: 'Director of Development',
+  },
+]
 
 export const developmentOfficers: Officer[] = [
   {

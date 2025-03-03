@@ -17,8 +17,6 @@ export function Button({
   textStyles?: string;
   addtitionalStyles?: string;
 }) {
-  console.log(bgStyle);
-
   return (
     <Link
       href={href}

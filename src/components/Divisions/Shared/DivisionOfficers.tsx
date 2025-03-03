@@ -13,7 +13,7 @@ export default function DivisionOfficers({ division }: Props) {
       <h1 className="text-4xl">meet the directors</h1>
       <div className="h-[1px] w-40 bg-[#cacacab0]" />
 
-      <div className="flex w-[50rem] flex-col gap-y-12 pt-10">
+      <div className="flex flex-col gap-y-12 pt-10">
         {directors.map((director) => (
           <div className="flex items-center" key={director.name}>
             <Image
@@ -21,7 +21,7 @@ export default function DivisionOfficers({ division }: Props) {
               alt="Projects Director"
               width="165"
               height="165"
-              className="rounded-full"
+              className="rounded-full object-cover w-[165px] h-[165px]"
             />
             <div className="pl-12">
               <h2 className="pb-7 text-xl">{director.name}</h2>
