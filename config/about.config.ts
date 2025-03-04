@@ -13,7 +13,7 @@ export const aboutPageData: AboutPageData = {
       links: [
         { name: 'acm portal', link: 'github.com/acmutd/portal-next' },
         { name: 'utdgrades', link: 'github.com/acmutd/utd-grades' },
-        { name: 'github', link: 'github.com/acmutd' },
+        // { name: 'github', link: 'github.com/acmutd' },
       ],
       linkStyles: '',
     },
@@ -43,9 +43,9 @@ export const aboutPageData: AboutPageData = {
       description:
         'ACM Media is the lively mix of creative minds and dedicated members behind all our campaigns. Composed of talented marketing specialists, gifted designers, and polished videographers, we are the amplified voice of our divisions. Together, we craft engaging content and foster an environment where our community thrives.',
       links: [
-        { name: 'linkedIn', link: 'www.linkedin.com/company/acmutd' },
-        { name: 'instagram', link: 'www.instagram.com/acmutd/' },
-        { name: 'youtube', link: 'www.youtube.com/@acmutdallas4256' },
+        // { name: 'linkedIn', link: 'www.linkedin.com/company/acmutd' },
+        // { name: 'instagram', link: 'www.instagram.com/acmutd/' },
+        // { name: 'youtube', link: 'www.youtube.com/@acmutdallas4256' },
         {
           name: 'newsletter',
           link: 'cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0',
@@ -63,13 +63,12 @@ export const aboutPageData: AboutPageData = {
     },
     industry: {
       section: 'industry',
-      description: 
-        `ACM Industry connects students with companies through workshops, events, and networking opportunities. By fostering relationships with new and current sponsors, it bridges the gap between academics and careers, helping students explore technologies and build professional connections.`,
-      links: [],
+      description: `ACM Industry connects students with companies through workshops, events, and networking opportunities. By fostering relationships with new and current sponsors, it bridges the gap between academics and careers, helping students explore technologies and build professional connections.`,
+      links: [{ name: 'learn more', link: '/industry' }],
     },
     community: {
       section: 'community',
-      description: 
+      description:
         'ACM Community increases STEM engagement in K-12 students, focusing on underserved schools. It also organizes social events for all majors, fostering collaboration, creativity, and a vibrant campus atmosphere.',
       links: [
         {
