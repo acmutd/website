@@ -1,18 +1,23 @@
 import React from 'react';
 import Image from 'next/image';
+import { Division } from '../../../lib/types';
+import Link from 'next/link';
+import { Button } from '../Button';
 
 interface DivisionsProps {
-  data: string[];
+  data: { [key: string]: Division };
   description: string;
 }
 
 export default function Divisions({ data, description }: DivisionsProps) {
-  const divisionCard = data.map((division: string, index: number) => {
+  const keys = Object.keys(data);
+  const values = Object.values(data);
+  console.log(values);
+  const divisionCard = keys.map((division: string, index: number) => {
+    const divisionData = values[index];
+
     return (
-      <div
-        className={`relative h-20 w-72 rounded-md p-4`}
-        key={division}
-      >
+      <div className={`relative m-10 h-20 w-72 rounded-md p-4`} key={division}>
         <div className="relative h-full w-full">
           <Image
             src={`/assets/about/${division}/${division}.png`}
@@ -20,6 +25,21 @@ export default function Divisions({ data, description }: DivisionsProps) {
             fill
             className="object-contain"
           />
+        </div>
+        <div className="mt-4">
+          {divisionData.links && (
+            <div className="m-5 flex flex-col gap-2">
+              {divisionData.links.map((link, i) => (
+                <Button
+                  key={i}
+                  href={link.link.startsWith('http') ? link.link : `https://${link.link}`}
+                  bgStyle={division}
+                  width="w-[13.5rem]"
+                  text={link.name}
+                ></Button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     );
