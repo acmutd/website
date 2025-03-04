@@ -2,20 +2,25 @@ import React from 'react';
 import Image from 'next/image';
 
 interface DivisionsProps {
-  data: string[],
-  description: string,
+  data: string[];
+  description: string;
 }
 
 export default function Divisions({ data, description }: DivisionsProps) {
-  const imageElements = data.map((division: string, index: number) => {
+  const divisionCard = data.map((division: string, index: number) => {
     return (
-      <div className="relative h-20 w-72" key={division}>
-        <Image
-          src={`/assets/about/${division}/${division}.png`}
-          alt={division}
-          fill
-          className="object-contain"
-        />
+      <div
+        className={`relative h-20 w-72 rounded-md p-4`}
+        key={division}
+      >
+        <div className="relative h-full w-full">
+          <Image
+            src={`/assets/about/${division}/${division}.png`}
+            alt={division}
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
     );
   });
@@ -27,9 +32,9 @@ export default function Divisions({ data, description }: DivisionsProps) {
           <h1 className="mb-2 text-5xl font-medium">Divisions</h1>
           <p className="mb-10 max-w-4xl text-start text-xl md:text-center">{description}</p>
           <div className="grid w-fit grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {imageElements.slice(0, 6)}
+            {divisionCard.slice(0, 6)}
           </div>
-          <div className="mt-4 flex justify-center gap-4">{imageElements.slice(6)}</div>
+          <div className="mt-4 flex justify-center gap-4">{divisionCard.slice(6)}</div>
         </div>
       </div>
     </div>

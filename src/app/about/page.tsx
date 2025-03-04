@@ -10,16 +10,18 @@ export default function About() {
   const keys = Object.keys(divisions);
   const values = Object.values(divisions);
 
+  console.log(values);
+
   return (
     <div className="py-20 text-center">
       <AboutHeader pageDescription={pageDescription} />
       <div className="mt-28 flex flex-col gap-y-36">
         <Divisions data={keys} description={divisionDescription} />
-        <div className="flex flex-col gap-y-9">
+        {/* <div className="flex flex-col gap-y-9">
           {values.map((data: Division, index: number) => {
             return <DivisionCard data={data} key={index} />;
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );
