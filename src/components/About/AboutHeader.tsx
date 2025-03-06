@@ -22,10 +22,6 @@ function AboutHeader({ pageDescription }: AboutHeaderProps) {
           <div className="max-w-lg text-left text-4xl font-bold text-primary xl:text-5xl">
             The world&apos;s largest international computing society, here at UT Dallas
           </div>
-          <div className="relative mt-4 max-w-lg rounded-3xl bg-opacity-10 bg-about-graident p-8 text-primary shadow-2xl backdrop-blur-xl">
-            <div className="absolute left-0 top-0 h-full w-full rounded-3xl border border-primary/50 opacity-50"></div>
-            <p className="text-sm lg:text-lg">{pageDescription}</p>
-          </div>
         </div>
       </div>
     </div>
