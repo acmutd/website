@@ -17,8 +17,11 @@ export default function Divisions({ data, description }: DivisionsProps) {
     const divisionData = values[index];
 
     return (
-      <div className={`relative m-10 h-20 w-72 rounded-md p-4`} key={division}>
-        <div className="relative h-full w-full">
+      <div
+        className={`h-70 relative m-10 flex w-96 flex-col rounded-md bg-white/5 p-4 backdrop-blur-sm`}
+        key={division}
+      >
+        <div className="relative h-[120px] w-full">
           <Image
             src={`/assets/about/${division}/${division}.png`}
             alt={division}
@@ -26,9 +29,9 @@ export default function Divisions({ data, description }: DivisionsProps) {
             className="object-contain"
           />
         </div>
-        <div className="mt-4">
+        <div className="mt-4 flex-grow">
           {divisionData.links && (
-            <div className="m-5 flex flex-col gap-2">
+            <div className="m-5 flex flex-col items-center gap-2">
               {divisionData.links.map((link, i) => (
                 <Button
                   key={i}
@@ -36,6 +39,7 @@ export default function Divisions({ data, description }: DivisionsProps) {
                   bgStyle={division}
                   width="w-[13.5rem]"
                   text={link.name}
+                  textStyles="text-xl"
                 ></Button>
               ))}
             </div>
