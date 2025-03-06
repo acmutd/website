@@ -12,7 +12,7 @@ interface DivisionsProps {
 export default function Divisions({ data, description }: DivisionsProps) {
   const keys = Object.keys(data);
   const values = Object.values(data);
-  console.log(values);
+
   const divisionCard = keys.map((division: string, index: number) => {
     const divisionData = values[index];
 

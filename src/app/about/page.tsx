@@ -10,8 +10,6 @@ export default function About() {
   const keys = Object.keys(divisions);
   const values = Object.values(divisions);
 
-  console.log(values);
-
   return (
     <div className="py-20 text-center">
       <AboutHeader pageDescription={pageDescription} />
