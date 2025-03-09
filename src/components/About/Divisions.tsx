@@ -18,7 +18,7 @@ export default function Divisions({ data, description }: DivisionsProps) {
 
     return (
       <div
-        className={`h-70 relative m-10 flex w-96 flex-col rounded-md bg-white/5 p-4 backdrop-blur-sm`}
+        className={`h-70 relative m-10 flex w-96 flex-col rounded-3xl bg-white/5 p-4 backdrop-blur-sm`}
         key={division}
       >
         <div className="relative h-[120px] w-full">
