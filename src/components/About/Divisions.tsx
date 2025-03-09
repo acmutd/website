@@ -1,21 +1,50 @@
 import React from 'react';
 import Image from 'next/image';
+import { Division } from '../../../lib/types';
+import Link from 'next/link';
+import { Button } from '../Button';
 
 interface DivisionsProps {
-  data: string[],
-  description: string,
+  data: { [key: string]: Division };
+  description: string;
 }
 
 export default function Divisions({ data, description }: DivisionsProps) {
-  const imageElements = data.map((division: string, index: number) => {
+  const keys = Object.keys(data);
+  const values = Object.values(data);
+
+  const divisionCard = keys.map((division: string, index: number) => {
+    const divisionData = values[index];
+
     return (
-      <div className="relative h-20 w-72" key={division}>
-        <Image
-          src={`/assets/about/${division}/${division}.png`}
-          alt={division}
-          fill
-          className="object-contain"
-        />
+      <div
+        className={`h-70 relative m-10 flex w-96 flex-col rounded-3xl bg-white/5 p-4 backdrop-blur-sm`}
+        key={division}
+      >
+        <div className="relative h-[120px] w-full">
+          <Image
+            src={`/assets/about/${division}/${division}.png`}
+            alt={division}
+            fill
+            className="object-contain"
+          />
+        </div>
+        <div className="mt-4 flex-grow">
+          {divisionData.links && (
+            <div className="m-5 flex flex-col items-center gap-2">
+              {divisionData.links.map((link, i) => (
+                <Button
+                  key={i}
+                  href={link.link.startsWith('http') ? link.link : `https://${link.link}`}
+                  bgStyle={division}
+                  width="w-[13.5rem]"
+                  text={link.name}
+                  textStyles="text-xl"
+                ></Button>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     );
   });
@@ -27,9 +56,9 @@ export default function Divisions({ data, description }: DivisionsProps) {
           <h1 className="mb-2 text-5xl font-medium">Divisions</h1>
           <p className="mb-10 max-w-4xl text-start text-xl md:text-center">{description}</p>
           <div className="grid w-fit grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {imageElements.slice(0, 6)}
+            {divisionCard.slice(0, 6)}
           </div>
-          <div className="mt-4 flex justify-center gap-4">{imageElements.slice(6)}</div>
+          <div className="mt-4 flex justify-center gap-4">{divisionCard.slice(6)}</div>
         </div>
       </div>
     </div>
