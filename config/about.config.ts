@@ -11,9 +11,10 @@ export const aboutPageData: AboutPageData = {
       description:
         'ACM Development designs, builds, and maintains web applications that support ACM’s operations and member interactions. Projects like the Member Portal and UTD Grades ensure reliable and user-friendly platforms for the campus community.',
       links: [
-        { name: 'acm portal', link: 'https://github.com/acmutd/portal-next' },
-        { name: 'utdgrades', link: 'https://github.com/acmutd/utd-grades' },
-        { name: 'github', link: 'https://github.com/acmutd' },
+        {
+          name: 'learn more',
+          link: '/development',
+        },
       ],
       linkStyles: '',
     },
@@ -34,8 +35,10 @@ export const aboutPageData: AboutPageData = {
       description:
         'ACM Education empowers students with technical and professional skills through programs like Technical Interview Prep (TIP), the Mentor program, and skill-building workshops.',
       links: [
-        { name: 'TIP', link: '/education/tip' },
-        { name: 'mentor program', link: '/education/mentor' },
+        {
+          name: 'learn more',
+          link: '/education',
+        },
       ],
     },
     media: {
@@ -43,12 +46,9 @@ export const aboutPageData: AboutPageData = {
       description:
         'ACM Media is the lively mix of creative minds and dedicated members behind all our campaigns. Composed of talented marketing specialists, gifted designers, and polished videographers, we are the amplified voice of our divisions. Together, we craft engaging content and foster an environment where our community thrives.',
       links: [
-        { name: 'linkedIn', link: 'www.linkedin.com/company/acmutd' },
-        { name: 'instagram', link: 'www.instagram.com/acmutd/' },
-        { name: 'youtube', link: 'www.youtube.com/@acmutdallas4256' },
         {
-          name: 'newsletter',
-          link: 'https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0',
+          name: 'learn more',
+          link: '/media',
         },
       ],
     },
@@ -57,24 +57,30 @@ export const aboutPageData: AboutPageData = {
       description:
         'HackUTD is an annual 24-hour hackathon that attracts a wide variety of sponsors and participants to come together to solve various problems. During our last iteration (HackUTD X), we had over 1000 participants and 230 project submissions, making us the 2nd largest 24 hour hackathon in the US! None of this would have been possible without the amazing, dedicated team of organizers we had on our side.',
       links: [
-        { name: 'website', link: 'hackutd.co' },
-        { name: 'instagram', link: 'instagram.com/hackutd' },
+        {
+          name: 'learn more',
+          link: '/hackutd',
+        },
       ],
     },
     industry: {
       section: 'industry',
-      description: 
-        `ACM Industry connects students with companies through workshops, events, and networking opportunities. By fostering relationships with new and current sponsors, it bridges the gap between academics and careers, helping students explore technologies and build professional connections.`,
-      links: [],
+      description: `ACM Industry connects students with companies through workshops, events, and networking opportunities. By fostering relationships with new and current sponsors, it bridges the gap between academics and careers, helping students explore technologies and build professional connections.`,
+      links: [
+        {
+          name: 'learn more',
+          link: '/industry',
+        },
+      ],
     },
     community: {
       section: 'community',
-      description: 
+      description:
         'ACM Community increases STEM engagement in K-12 students, focusing on underserved schools. It also organizes social events for all majors, fostering collaboration, creativity, and a vibrant campus atmosphere.',
       links: [
         {
           name: 'learn more',
-          link: 'discord.com/channels/692266201644007424/1022696200429895710',
+          link: '/community',
         },
       ],
     },
