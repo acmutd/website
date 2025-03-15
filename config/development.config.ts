@@ -194,6 +194,6 @@ export const developmentCarouselImages: CarouselImage[] = [
   {
     imageLink: '/assets/development/sage.png',
     title: "SAGE, an AI-powered student advisor",
-    date: new Date(2025, 3, 28)
+    date: new Date(2025, 2, 31)
   }
 ]
