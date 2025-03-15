@@ -1,5 +1,5 @@
 import { Question, Testimony } from '../lib/types';
-import { developmentDirectors } from './development.config';
+import { developmentCarouselImages, developmentDirectors, developmentFAQ, developmentTestimony } from './development.config';
 import {
   educationDirectors,
   educationFAQ,
@@ -78,8 +78,7 @@ export function getTestimony(section: Division): Testimony[] {
     case 'education':
       return educationTestimony[section.sub];
     case 'development':
-      const quotes = Array.from({length: 3}).map(() => ({ quote: 'Development is a work in progress', name: 'THIS SHOULD NOT GO LIVE' }))
-      return quotes;
+      return developmentTestimony;
   }
 }
 
@@ -92,8 +91,7 @@ export function getFAQ(section: Division): Question[] {
     case 'research':
       return researchFAQ;
     case 'development':
-      const questions = Array.from({length: 3}).map(() => ({ question: 'Development is a work in progress', answer: 'THIS SHOULD NOT GO LIVE' }))
-      return questions;
+      return developmentFAQ;
   }
 }
 
@@ -106,12 +104,7 @@ export function getCarouselImages(section: Division): CarouselImage[] {
     case 'research':
       return researchCarousel;
     case 'development':
-      const images = Array.from({ length: 3 }, (_) => ({
-        imageLink: `/assets/about/development/development.png`,
-        title: 'Development',
-        date: new Date(),
-      }));
-      return images;
+      return developmentCarouselImages;
   }
 }
 

@@ -1,4 +1,5 @@
-import { Director } from './divisions.config';
+import { Question, Testimony } from '../lib/types';
+import { CarouselImage, Director } from './divisions.config';
 import { type Officer } from './officers.config';
 
 export const developmentDirectors: Director[] = [
@@ -171,3 +172,28 @@ export const developmentOfficers: Officer[] = [
     position: 'Development Officer (SAGE)',
   },
 ];
+
+export const developmentTestimony: Testimony[] = [{
+  quote: "Being able to work with a team of people who are all passionate about the same thing is a great feeling"
+}, {
+  quote: "The leads are always there to help you out and guide you"
+}
+]
+
+export const developmentFAQ: Question[] = [
+  {
+    question: 'Why should I join ACM Dev?',
+    answer: 'ACM Dev is a great way to get involved and apply your skills'
+  }, {
+    question: 'What types of roles are there in ACM Dev? ',
+    answer: 'There are many roles in ACM Dev, including project management, web development, design, and more. We will help you find a role that fits your skills and interests.'
+  }
+]
+
+export const developmentCarouselImages: CarouselImage[] = [
+  {
+    imageLink: '/assets/development/sage.png',
+    title: "SAGE, an AI-powered student advisor",
+    date: new Date(2025, 3, 28)
+  }
+]
