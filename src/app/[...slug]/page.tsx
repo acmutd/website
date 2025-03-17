@@ -33,32 +33,18 @@ export function generateStaticParams() {
   return params;
 }
 
-// Render the appropriate header based on the division config
-const renderHeader = (divisionProps: DivisionProps, config: DivisionConfig) => {
-  const { headerType, officersInHeader } = config;
-  const HeaderComponent = (() => {
-    switch (headerType) {
-      case 'project': return <ProjHeader />;
-      case 'development': return <DevHeader />;
-      case 'research': return <ResearchHeader />;
-      case 'tip': return <TIPHeader />;
-      case 'mentor': return <MentorHeader />;
-      case 'education': return notFound();
-      default: return null;
-    }
-  })();
+function Header(props: DivisionProps & { config: DivisionConfig }) {
+  const { headerType } = props.config;
 
-  if (officersInHeader) {
-    return (
-      <div className="flex gap-10 items-center justify-between px-40">
-        {HeaderComponent}
-        <DivisionOfficers division={divisionProps.division} />
-      </div>
-    );
-  }
+  if (headerType === 'project') return <ProjHeader />;
+  if (headerType === 'development') return <DevHeader />;
+  if (headerType === 'research') return <ResearchHeader />;
+  if (headerType === 'tip') return <TIPHeader />;
+  if (headerType === 'mentor') return <MentorHeader />;
+  if (headerType === 'education') return notFound();
 
-  return HeaderComponent;
-};
+  return null;
+}
 
 const parseDivisionSlug = (slug: string[]): DivisionProps | null => {
   if (!slug || slug.length === 0) return null;
@@ -101,7 +87,10 @@ export default function Page({ params }: { params: { slug: string[] } }) {
       <DivisionCarousel {...divisionProps} />
 
       <div className={config.containerClass}>
-        {renderHeader(divisionProps, config)}
+        <div className="flex gap-10 items-center justify-between px-40">
+          <Header {...divisionProps} config={config} />
+          <DivisionOfficers division={divisionProps.division} />
+        </div>
 
         <div className="flex justify-center">
           <DivisionExperience {...divisionProps} />

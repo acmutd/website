@@ -43,7 +43,6 @@ export type DivisionConfig = {
   showWorkshops?: boolean;
   centerExperience?: boolean;
   centerFAQ?: boolean;
-  officersInHeader?: boolean;
 };
 
 // Default configuration that applies to all divisions
@@ -51,7 +50,6 @@ const defaultConfig = {
   containerClass: 'px-28',
   centerExperience: true,
   centerFAQ: true,
-  officersInHeader: true,
 };
 
 export const divisionConfigs: Record<Division, DivisionConfig | Record<EducationSub, DivisionConfig>> = {
