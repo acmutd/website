@@ -33,17 +33,19 @@ export function generateStaticParams() {
   return params;
 }
 
+const headerComponents = {
+  project: ProjHeader,
+  development: DevHeader,
+  research: ResearchHeader,
+  tip: TIPHeader,
+  mentor: MentorHeader,
+  education: () => notFound(),
+}
+
 function Header(props: DivisionProps & { config: DivisionConfig }) {
   const { headerType } = props.config;
-
-  if (headerType === 'project') return <ProjHeader />;
-  if (headerType === 'development') return <DevHeader />;
-  if (headerType === 'research') return <ResearchHeader />;
-  if (headerType === 'tip') return <TIPHeader />;
-  if (headerType === 'mentor') return <MentorHeader />;
-  if (headerType === 'education') return notFound();
-
-  return null;
+  const HeaderComponent = headerComponents[headerType as keyof typeof headerComponents];
+  return <HeaderComponent />
 }
 
 const parseDivisionSlug = (slug: string[]): DivisionProps | null => {

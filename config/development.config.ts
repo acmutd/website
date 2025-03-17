@@ -8,11 +8,6 @@ export const developmentDirectors: Director[] = [
     name: 'Farhan Jamil',
     position: 'Director of Development',
   },
-  {
-    image: '/assets/officer/ArihantSreenivasa.png',
-    name: 'Arihant Sreenivasa',
-    position: 'Director of Development',
-  },
 ]
 
 export const developmentOfficers: Officer[] = [
@@ -178,8 +173,9 @@ export const developmentTestimony: Testimony[] = [{
 export const developmentFAQ: Question[] = [
   {
     question: 'Why should I join ACM Dev?',
-    answer: 'ACM Dev is a great way to get involved and apply your skills'
-  }, {
+    answer: `ACM Dev offers hands-on experience creating projects for our fellow UTD students and is an amazing community of talented developers. You'll build impactful solutions for UTD, gain mentorship, and strengthen your portfolio—all while collaborating on cutting-edge technology. If you want to grow, innovate, and make a difference, ACM Dev is the place to be!`
+  },
+  {
     question: 'What types of roles are there in ACM Dev? ',
     answer: 'There are many roles in ACM Dev, including project management, web development, design, and more. We will help you find a role that fits your skills and interests.'
   }
