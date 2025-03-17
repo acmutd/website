@@ -11,9 +11,9 @@ export const aboutPageData: AboutPageData = {
       description:
         'ACM Development designs, builds, and maintains web applications that support ACM’s operations and member interactions. Projects like the Member Portal and UTD Grades ensure reliable and user-friendly platforms for the campus community.',
       links: [
-        { name: 'acm portal', link: 'https://github.com/acmutd/portal-next' },
-        { name: 'utdgrades', link: 'https://github.com/acmutd/utd-grades' },
-        { name: 'github', link: 'https://github.com/acmutd' },
+        { name: 'acm portal', link: 'github.com/acmutd/portal-next' },
+        { name: 'utdgrades', link: 'github.com/acmutd/utd-grades' },
+        { name: 'github', link: 'github.com/acmutd' },
         { name: "learn more", link: "/development" }
       ],
       linkStyles: '',
@@ -49,7 +49,7 @@ export const aboutPageData: AboutPageData = {
         { name: 'youtube', link: 'www.youtube.com/@acmutdallas4256' },
         {
           name: 'newsletter',
-          link: 'https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0',
+          link: 'cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0',
         },
       ],
     },
