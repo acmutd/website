@@ -1,4 +1,5 @@
 import { Question, Testimony } from '../lib/types';
+import { developmentCarouselImages, developmentDirectors, developmentFAQ, developmentTestimony } from './development.config';
 import {
   educationDirectors,
   educationFAQ,
@@ -22,7 +23,7 @@ import {
 
 type Division =
   | {
-      division: 'projects' | 'research';
+      division: 'projects' | 'research' | 'development';
     }
   | {
       division: 'education';
@@ -61,6 +62,8 @@ export function getDirectors(division: Division['division']): Director[] {
       return projectDirectors;
     case 'research':
       return researchDirectors;
+    case 'development':
+      return developmentDirectors;
     case 'education':
       return educationDirectors;
   }
@@ -74,6 +77,8 @@ export function getTestimony(section: Division): Testimony[] {
       return researchTestimony;
     case 'education':
       return educationTestimony[section.sub];
+    case 'development':
+      return developmentTestimony;
   }
 }
 
@@ -85,6 +90,8 @@ export function getFAQ(section: Division): Question[] {
       return projectsFAQ;
     case 'research':
       return researchFAQ;
+    case 'development':
+      return developmentFAQ;
   }
 }
 
@@ -96,6 +103,8 @@ export function getCarouselImages(section: Division): CarouselImage[] {
       return projectImages;
     case 'research':
       return researchCarousel;
+    case 'development':
+      return developmentCarouselImages;
   }
 }
 

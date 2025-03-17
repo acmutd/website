@@ -1,36 +1,33 @@
 import Link from 'next/link';
-import { Division } from './divisionUtil';
+import { DivisionProps, isEducationDivision } from './divisionUtil';
 import React from 'react';
 
 const mentorLinks = ['directors', 'experience', 'workshops', 'faq'];
 const altLinks = ['directors', 'experience', 'winning projects', 'faq'];
 const tipLinks = ['directors', 'experience', 'structure', 'faq'];
-
+const developmentLinks = ['directors', 'experience', 'faq'];
 const LINK_DICT = {
   research: altLinks,
   projects: altLinks,
+  development: developmentLinks,
   education: {
     mentor: mentorLinks,
     tip: tipLinks,
   },
 } as const;
 
-type Props =
-  | {
-      division: Exclude<Division, 'education'>;
-    }
-  | {
-      division: 'education';
-      sub: 'mentor' | 'tip';
-    };
-
-export default function Navigator(props: Props) {
+export default function Navigator(props: DivisionProps) {
   let routeLinks = [];
-  if (props.division === 'education') routeLinks = LINK_DICT.education[props.sub];
-  else routeLinks = LINK_DICT[props.division];
+
+  if (isEducationDivision(props)) {
+    routeLinks = LINK_DICT.education[props.sub];
+  } else {
+    routeLinks = LINK_DICT[props.division];
+  }
+
   return (
     <div
-      className={`sticky right-5 z-50 h-full pr-10 text-right ${
+      className={`fixed right-5 z-50 h-auto pr-10 text-right ${
         props.division !== 'education' ? 'top-1/3' : 'top-2/3'
       }`}
     >

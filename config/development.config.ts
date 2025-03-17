@@ -1,4 +1,14 @@
+import { Question, Testimony } from '../lib/types';
+import { CarouselImage, Director } from './divisions.config';
 import { type Officer } from './officers.config';
+
+export const developmentDirectors: Director[] = [
+  {
+    image: '/assets/officer/FarhanJamil.jpg',
+    name: 'Farhan Jamil',
+    position: 'Director of Development',
+  },
+]
 
 export const developmentOfficers: Officer[] = [
   {
@@ -152,3 +162,29 @@ export const developmentOfficers: Officer[] = [
     position: 'Development Officer (SAGE)',
   },
 ];
+
+export const developmentTestimony: Testimony[] = [{
+  quote: "Being able to work with a team of people who are all passionate about the same thing is a great feeling"
+}, {
+  quote: "The leads are always there to help you out and guide you"
+}
+]
+
+export const developmentFAQ: Question[] = [
+  {
+    question: 'Why should I join ACM Dev?',
+    answer: `ACM Dev offers hands-on experience creating projects for our fellow UTD students and is an amazing community of talented developers. You'll build impactful solutions for UTD, gain mentorship, and strengthen your portfolio—all while collaborating on cutting-edge technology. If you want to grow, innovate, and make a difference, ACM Dev is the place to be!`
+  },
+  {
+    question: 'What types of roles are there in ACM Dev? ',
+    answer: 'There are many roles in ACM Dev, including project management, web development, design, and more. We will help you find a role that fits your skills and interests.'
+  }
+]
+
+export const developmentCarouselImages: CarouselImage[] = [
+  {
+    imageLink: '/assets/development/sage.png',
+    title: "SAGE, an AI-powered student advisor",
+    date: new Date(2025, 2, 31)
+  }
+]
