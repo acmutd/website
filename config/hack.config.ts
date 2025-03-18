@@ -1,4 +1,19 @@
+import { Question, Testimony } from '../lib/types';
+import { CarouselImage, Director, Projects } from './divisions.config';
 import { type Officer } from './officers.config';
+
+export const hackDirectors: Director[] = [
+  {
+    name: 'Adelaide Dunning',
+    position: 'Director of HackUTD',
+    image: '/assets/officer/AddyDunning.jpg',
+  },
+  {
+    name: 'Kelly Zhou',
+    position: 'Director of HackUTD',
+    image: '/assets/officer/KellyZhou.jpg',
+  },
+]
 
 export const hackOfficers: Officer[] = [
   {
@@ -182,3 +197,23 @@ export const hackOfficers: Officer[] = [
     image: '/assets/officer/MichaelZhao.png',
   },
 ];
+
+export const hackTestimony: Testimony[] = [
+
+]
+
+export const hackFAQ: Question[] = []
+export const hackCarouselImages: CarouselImage[] = [
+  {
+    imageLink: '/assets/about/hackutd/hackutd.png',
+    title: 'HackUTD X',
+    date: new Date('2024-03-16'),
+  },
+  {
+    imageLink: '/assets/about/hackutd/hackutd.png',
+    title: 'HackUTD X',
+    date: new Date('2024-03-16'),
+  },
+
+]
+export const hackWinners: Projects[] = []
