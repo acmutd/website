@@ -6,6 +6,8 @@ const mentorLinks = ['directors', 'experience', 'workshops', 'faq'];
 const altLinks = ['directors', 'experience', 'winning projects', 'faq'];
 const tipLinks = ['directors', 'experience', 'structure', 'faq'];
 const developmentLinks = ['directors', 'experience', 'faq'];
+const mediaLinks = ['directors', 'experience', 'faq'];
+
 const LINK_DICT = {
   research: altLinks,
   projects: altLinks,
@@ -14,6 +16,7 @@ const LINK_DICT = {
     mentor: mentorLinks,
     tip: tipLinks,
   },
+  media: mediaLinks,
 } as const;
 
 export default function Navigator(props: DivisionProps) {
