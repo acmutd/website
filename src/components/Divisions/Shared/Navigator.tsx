@@ -14,6 +14,7 @@ const LINK_DICT = {
     mentor: mentorLinks,
     tip: tipLinks,
   },
+  hackutd: altLinks,
 } as const;
 
 export default function Navigator(props: DivisionProps) {

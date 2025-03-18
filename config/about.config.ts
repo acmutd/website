@@ -60,6 +60,7 @@ export const aboutPageData: AboutPageData = {
       links: [
         { name: 'website', link: 'hackutd.co' },
         { name: 'instagram', link: 'instagram.com/hackutd' },
+        { name: 'learn more', link: '/hackutd' },
       ],
     },
     industry: {
