@@ -51,6 +51,7 @@ export const aboutPageData: AboutPageData = {
           name: 'newsletter',
           link: 'cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0',
         },
+        { name: 'learn more', link: '/media' },
       ],
     },
     hackutd: {
