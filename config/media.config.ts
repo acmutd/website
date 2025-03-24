@@ -114,13 +114,13 @@ export const mediaFAQ: Question[] = [
 
 export const mediaCarousel: CarouselImage[] = [
   {
-    imageLink: '/assets/about/media/media.png',
-    title: 'ACM Media',
-    date: new Date('2024-08-01'),
+    imageLink: '/assets/media/BigData_14.jpg',
+    title: 'Big Data Event',
+    date: new Date(2025, 2, 6),
   },
   {
-    imageLink: '/assets/about/media/media.png',
-    title: 'ACM Media',
-    date: new Date('2024-08-01'),
+    imageLink: '/assets/media/DSC03211-Edit.png',
+    title: 'Notes and Floats',
+    date: new Date(2025, 1, 11),
   },
 ]
