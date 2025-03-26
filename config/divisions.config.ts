@@ -54,7 +54,7 @@ export type Projects = {
   image: string;
   members: string[];
   links: ProjectLink[];
-  manager: string;
+  manager?: string;
 };
 
 export function getDirectors(division: Division['division']): Director[] {
