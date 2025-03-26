@@ -199,10 +199,30 @@ export const hackOfficers: Officer[] = [
 ];
 
 export const hackTestimony: Testimony[] = [
-
+{
+  quote: `Being on the HackUTD team has given me the chance to build something incredible with a group of people who care just as much as I do. It’s so rewarding to see the event come to life after months of planning!`
+},
+{
+  quote: `HackUTD has taught me how to manage large-scale logistics while still keeping the heart of it all—creating a welcoming, inspiring space for hackers`
+},
+{
+  quote: `I joined HackUTD for the resume boost, but I stayed for the late-night planning sessions, the laughs, and the energy of bringing tech and people together`
+}
 ]
 
-export const hackFAQ: Question[] = []
+export const hackFAQ: Question[] = [{
+  question: 'What is HackUTD?',
+  answer: `HackUTD is the official student-run hackathon of UT Dallas, organized by ACM. It’s the largest university hackathon in North Texas, welcoming hundreds of students to build innovative projects over a weekend.`
+},
+{
+  question: `Do I need prior coding experience to participate in HackUTD?`,
+  answer: `Not at all! HackUTD is beginner-friendly and offers workshops, mentors, and starter kits to help you learn and build, even if it's your first hackathon.`
+,
+},
+{
+  question: `How can I get involved with the HackUTD team?`,
+  answer: `Recruitment typically happens at the start of each semester through ACM UTD. Keep an eye out for applications, and don’t be afraid to reach out to current team members for advice!`
+}]
 export const hackCarouselImages: CarouselImage[] = [
   {
     imageLink: '/assets/about/hackutd/hackutd.png',
