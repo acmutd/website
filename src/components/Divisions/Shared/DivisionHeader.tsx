@@ -51,6 +51,7 @@ const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>>
   projects: 'https://portal.acmutd.co/typeform/projects-apply-s25',
   research: 'https://portal.acmutd.co/typeform/research-apply-s25',
   development: 'https://portal.acmutd.co/typeform/development-apply-s25',
+  media: 'https://portal.acmutd.co/typeform/media-apply-s25',
   hackutd: 'https://portal.acmutd.co/typeform/hackutd-apply-s25',
 };
 
@@ -74,6 +75,9 @@ const images: Record<ExtendedDivisions, ReactNode> = {
   ),
   development: (
     <Image src="/assets/about/development/development.png" alt="ACM Development" width={272} height={80} />
+  ),
+  media: (
+    <Image src="/assets/about/media/media.png" alt="ACM Media" width={272} height={80} />
   ),
   hackutd: (
     <Image src="/assets/about/hackutd/hackutd.png" alt="ACM HackUTD" width={272} height={80} />

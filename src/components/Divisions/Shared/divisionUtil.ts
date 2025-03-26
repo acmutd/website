@@ -1,4 +1,4 @@
-export type Division = 'projects' | 'development' | 'research' | 'education' | 'hackutd';
+export type Division = 'projects' | 'development' | 'research' | 'education' | 'media' | 'hackutd';
 export type EducationSub = 'tip' | 'mentor';
 
 export type DivisionProps =
@@ -13,7 +13,7 @@ export const hasEducationSub = (props: DivisionProps): props is { division: 'edu
   return props.division === 'education' && !!props.sub;
 };
 
-export const validDivisions: Division[] = ['projects', 'development', 'research', 'education', 'hackutd'];
+export const validDivisions: Division[] = ['projects', 'development', 'research', 'education', 'media', 'hackutd'];
 export const educationSubs: EducationSub[] = ['tip', 'mentor'];
 
 // Helper to parse division path
@@ -38,7 +38,7 @@ export const parseDivisionPath = (path: string): DivisionProps | null => {
 export type DivisionConfig = {
   bgImage: string;
   containerClass: string;
-  headerType: 'project' | 'development' | 'research' | 'tip' | 'mentor' | 'education' | 'hackutd';
+  headerType: 'project' | 'development' | 'research' | 'tip' | 'mentor' | 'education' | 'media' | 'hackutd';
   showWinningProjects?: boolean;
   showWorkshops?: boolean;
   centerExperience?: boolean;
@@ -87,6 +87,11 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
       headerType: 'mentor',
       showWorkshops: true,
     },
+  },
+  media: {
+    ...defaultConfig,
+    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    headerType: 'media',
   },
   hackutd: {
     ...defaultConfig,
