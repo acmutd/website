@@ -1,4 +1,14 @@
+import { Question, Testimony } from '../lib/types';
+import { CarouselImage, Director } from './divisions.config';
 import { type Officer } from './officers.config';
+
+export const industryDirectors: Director[] = [
+  {
+    name: 'Manasi Vipat',
+    position: 'Director of Industry',
+    image: '/assets/officer/ManasiVipat.jpg',
+  },
+];
 
 export const industryOfficers: Officer[] = [
    {
@@ -32,3 +42,20 @@ export const industryOfficers: Officer[] = [
     image: '/assets/officer/ShreyaRam.png',
   },
 ];
+
+export const industryTestimony: Testimony[] = []
+
+export const industryFAQ: Question[] = []
+
+export const industryCarouselImages: CarouselImage[] = [
+  {
+    imageLink: '/assets/about/industry/cover.jpg',
+    title: 'Industry Workshop',
+    date: new Date('2024-03-01'),
+  },
+  {
+    imageLink: '/assets/about/industry/cover.jpg',
+    title: 'Industry Workshop',
+    date: new Date('2024-03-01'),
+  },
+]

@@ -52,6 +52,7 @@ const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>>
   research: 'https://portal.acmutd.co/typeform/research-apply-s25',
   development: 'https://portal.acmutd.co/typeform/development-apply-s25',
   media: 'https://portal.acmutd.co/typeform/media-apply-s25',
+  industry: 'https://portal.acmutd.co/typeform/industry-apply-s25',
 };
 
 const images: Record<ExtendedDivisions, ReactNode> = {
@@ -77,5 +78,8 @@ const images: Record<ExtendedDivisions, ReactNode> = {
   ),
   media: (
     <Image src="/assets/about/media/media.png" alt="ACM Media" width={272} height={80} />
+  ),
+  industry: (
+    <Image src="/assets/about/industry/industry.png" alt="ACM Industry" width={272} height={80} />
   ),
 };
