@@ -21,9 +21,10 @@ import {
   researchWinners,
 } from './research.config';
 import { mediaDirectors, mediaTestimony, mediaFAQ, mediaCarousel } from './media.config';
+import { industryCarouselImages, industryDirectors, industryFAQ, industryTestimony } from './industry.config';
 type Division =
   | {
-      division: 'projects' | 'research' | 'development' | 'media';
+      division: 'projects' | 'research' | 'development' | 'media' | 'industry';
     }
   | {
       division: 'education';
@@ -68,6 +69,8 @@ export function getDirectors(division: Division['division']): Director[] {
       return educationDirectors;
     case 'media':
       return mediaDirectors;
+    case 'industry':
+        return industryDirectors;
   }
 }
 
@@ -83,6 +86,8 @@ export function getTestimony(section: Division): Testimony[] {
       return developmentTestimony;
     case 'media':
       return mediaTestimony;
+    case 'industry':
+      return industryTestimony
   }
 }
 
@@ -98,6 +103,8 @@ export function getFAQ(section: Division): Question[] {
       return developmentFAQ;
     case 'media':
       return mediaFAQ;
+    case 'industry':
+      return industryFAQ;
   }
 }
 
@@ -113,6 +120,8 @@ export function getCarouselImages(section: Division): CarouselImage[] {
       return developmentCarouselImages;
     case 'media':
       return mediaCarousel;
+    case 'industry':
+      return industryCarouselImages;
   }
 }
 
