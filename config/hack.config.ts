@@ -225,15 +225,21 @@ export const hackFAQ: Question[] = [{
 }]
 export const hackCarouselImages: CarouselImage[] = [
   {
-    imageLink: '/assets/about/hackutd/hackutd.png',
-    title: 'HackUTD X',
+    imageLink: '/assets/hackutd/_SMJ0048.JPG',
+    title: 'HackUTD Ripple Effect',
+    date: new Date(2024, 10, 16),
+  },
+  {
+    imageLink: '/assets/hackutd/HackUTD_team_pic.png',
+    title: 'HackUTD Team',
     date: new Date('2024-03-16'),
   },
   {
-    imageLink: '/assets/about/hackutd/hackutd.png',
-    title: 'HackUTD X',
-    date: new Date('2024-03-16'),
+    imageLink: '/assets/hackutd/SMJ01455.JPG',
+    title: 'HackUTD Ripple Effect',
+    date: new Date(2024, 10, 16),
   },
+
 
 ]
 export const hackWinners: Projects[] = [
