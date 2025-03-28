@@ -1,4 +1,19 @@
+import { Question, Testimony } from '../lib/types';
+import { CarouselImage, Director } from './divisions.config';
 import { type Officer } from './officers.config';
+
+export const communityDirectors: Director[] = [
+  {
+    image: '/assets/officer/ShannonCarter.jpg',
+    name: 'Shannon Carter',
+    position: 'Co-Director of Community',
+  },
+  {
+    image: '/assets/officer/MercedesXiong.jpg',
+    name: 'Mercedes Xiong',
+    position: 'Co-Director of Community',
+  },
+]
 
 export const communityOfficers: Officer[] = [
   {
@@ -77,3 +92,18 @@ export const communityOfficers: Officer[] = [
     position: 'Events Officer',
   },
 ];
+
+export const communitCarouselImages: CarouselImage[] = [
+  {
+    date: new Date(2025, 1,2),
+    imageLink: '/assets/about/community/community.png',
+    title: 'Community'
+  },
+    {
+    date: new Date(2025, 1,2),
+    imageLink: '/assets/about/community/community.png',
+    title: 'Community'
+  }
+]
+export const communityTestimony: Testimony[] = []
+export const communityFAQ: Question[] = []
