@@ -20,6 +20,7 @@ import {
   DivisionConfig
 } from '@/components/Divisions/Shared/divisionUtil';
 import { MediaHeader } from '@/components/Divisions/Media/MediaHeader';
+import { CommunityHeader } from '@/components/Divisions/Community/CommunityHeader';
 export function generateStaticParams() {
   const params = [
     { slug: ['projects'] },
@@ -29,6 +30,7 @@ export function generateStaticParams() {
     { slug: ['education', 'tip'] },
     { slug: ['education', 'mentor'] },
     { slug: ['media']},
+    { slug: ['community']}
   ];
 
   return params;
@@ -42,6 +44,7 @@ const headerComponents = {
   mentor: MentorHeader,
   education: () => notFound(),
   media: MediaHeader,
+  community: CommunityHeader
 }
 
 function Header(props: DivisionProps & { config: DivisionConfig }) {
