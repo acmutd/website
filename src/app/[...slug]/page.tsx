@@ -21,6 +21,7 @@ import {
 } from '@/components/Divisions/Shared/divisionUtil';
 import { MediaHeader } from '@/components/Divisions/Media/MediaHeader';
 import { IndustryHeader } from '@/components/Divisions/Industry/IndustryHeader';
+import IndustrySponsors from '@/components/Divisions/Industry/IndustrySponsors';
 
 export function generateStaticParams() {
   const params = [
@@ -118,6 +119,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
         <div className="flex justify-center">
           <DivisionFAQ {...divisionProps} />
         </div>
+        {divisionProps.division === 'industry' && (
+          <IndustrySponsors />
+        )}
       </div>
     </div>
   );
