@@ -17,6 +17,7 @@ const LINK_DICT = {
     tip: tipLinks,
   },
   media: mediaLinks,
+  industry: mediaLinks,
 } as const;
 
 export default function Navigator(props: DivisionProps) {
