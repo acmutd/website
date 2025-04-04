@@ -6,6 +6,7 @@ import {
   educationImages,
   educationTestimony,
 } from './education.config';
+import { hackDirectors, hackTestimony, hackFAQ, hackWinners, hackCarouselImages } from './hack.config';
 import {
   projectDirectors,
   projectImages,
@@ -23,7 +24,7 @@ import {
 import { mediaDirectors, mediaTestimony, mediaFAQ, mediaCarousel } from './media.config';
 type Division =
   | {
-      division: 'projects' | 'research' | 'development' | 'media';
+      division: 'projects' | 'research' | 'development' | 'media' | 'hackutd';
     }
   | {
       division: 'education';
@@ -53,7 +54,7 @@ export type Projects = {
   image: string;
   members: string[];
   links: ProjectLink[];
-  manager: string;
+  manager?: string;
 };
 
 export function getDirectors(division: Division['division']): Director[] {
@@ -68,6 +69,8 @@ export function getDirectors(division: Division['division']): Director[] {
       return educationDirectors;
     case 'media':
       return mediaDirectors;
+    case 'hackutd':
+      return hackDirectors;
   }
 }
 
@@ -83,6 +86,8 @@ export function getTestimony(section: Division): Testimony[] {
       return developmentTestimony;
     case 'media':
       return mediaTestimony;
+    case 'hackutd':
+      return hackTestimony;
   }
 }
 
@@ -98,6 +103,8 @@ export function getFAQ(section: Division): Question[] {
       return developmentFAQ;
     case 'media':
       return mediaFAQ;
+    case 'hackutd':
+      return hackFAQ;
   }
 }
 
@@ -113,10 +120,12 @@ export function getCarouselImages(section: Division): CarouselImage[] {
       return developmentCarouselImages;
     case 'media':
       return mediaCarousel;
+    case 'hackutd':
+      return hackCarouselImages
   }
 }
 
-type WinningProjectSelector = 'projects' | 'research';
+type WinningProjectSelector = 'projects' | 'research' | 'hackutd';
 
 export function getWinningProjects(selector: WinningProjectSelector): Projects[] {
   switch (selector) {
@@ -124,5 +133,7 @@ export function getWinningProjects(selector: WinningProjectSelector): Projects[]
       return projectsWinners;
     case 'research':
       return researchWinners;
+    case 'hackutd':
+      return hackWinners;
   }
 }
