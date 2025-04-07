@@ -77,12 +77,12 @@ export const industryFAQ: Question[] = [
 export const industryCarouselImages: CarouselImage[] = [
   {
     imageLink: '/assets/about/industry/cover.jpg',
-    title: 'Industry Workshop',
-    date: new Date('2024-03-01'),
+    title: 'The Industry Team',
+    date: new Date(2025, 1, 20),
   },
   {
-    imageLink: '/assets/about/industry/cover.jpg',
-    title: 'Industry Workshop',
-    date: new Date('2024-03-01'),
+    imageLink: '/assets/industry/paycom-workshop.jpg',
+    title: 'Paycom Workshop',
+    date: new Date(2025, 2, 11),
   },
 ]
