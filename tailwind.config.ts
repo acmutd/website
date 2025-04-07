@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: [
+    content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -31,31 +31,72 @@ const config: Config = {
         sans: ['Gilroy', 'sans-serif'],
       },
       colors: {
-        background: '#151515',
-        primary: '#FFFFFF',
-        primaryDark: '#CACACA',
-      },
-      backgroundImage: {
-        'acm-gradient': 'linear-gradient(94deg, #E10087 10.67%, #4004C0 93.37%)',
-        'media-gradient': 'linear-gradient(98deg, #E10087 7.24%, #FFD600 95.11%)',
-        'research-gradient': 'linear-gradient(98deg, #EA5400 18.05%, #FFC700 94.8%)',
-        'education-gradient': 'linear-gradient(98deg, #56E100 7.24%, #00EAC0 95.11%)',
-        'projects-gradient': 'linear-gradient(98deg, #008CF1 7.24%, #00ECEC 95.11%)',
-        'development-gradient': 'linear-gradient(97deg, #9900E1 7.31%, #5200FF 59.32%)',
-        'community-gradient': 'linear-gradient(98deg, #FFB800 18.05%, #ADFF00 94.8%)',
-        'hackutd-gradient': 'linear-gradient(98deg, #FE002E 7.24%, #AD00FF 95.11%)',
-         'apply-gradient':
-          'linear-gradient(128deg, rgba(255, 255, 255, 0.12) 3.07%, rgba(255, 255, 255, 0.03) 96.39%)',
-        'industry-gradient': 'linear-gradient(98deg, #6F6F6F 7.24%, #FFFFFF 95.11%)',
-        'about-graident':
-        'linear-gradient(128deg, rgba(255, 255, 255, 0.12) 3.07%, rgba(255, 255, 255, 0.03) 96.39%)',
-        'gold-gradient': 'linear-gradient(128deg, rgba(227, 160, 73, 0.12) 3.07%, rgba(227, 160, 73, 0.09) 96.39%)',
-        'silver-gradient': 'linear-gradient(128deg, rgba(143, 155, 166, 0.12) 3.07%, rgba(143, 155, 166, 0.09) 96.39%)',
-        'bronze-gradient': 'linear-gradient(128deg, rgba(219, 114, 64, 0.12) 3.07%, rgba(219, 114, 64, 0.09) 96.39%)',
-        'green-gradient': 'linear-gradient(128deg, rgba(34, 193, 195, 0.12) 3.07%, rgba(34, 193, 195, 0.09) 96.39%)',
-      },
-    },
+  			background: 'hsl(var(--background))',
+  			primary: {
+  				DEFAULT: 'hsl(var(--primary))',
+  				foreground: 'hsl(var(--primary-foreground))'
+  			},
+  			primaryDark: '#CACACA',
+  			foreground: 'hsl(var(--foreground))',
+  			card: {
+  				DEFAULT: 'hsl(var(--card))',
+  				foreground: 'hsl(var(--card-foreground))'
+  			},
+  			popover: {
+  				DEFAULT: 'hsl(var(--popover))',
+  				foreground: 'hsl(var(--popover-foreground))'
+  			},
+  			secondary: {
+  				DEFAULT: 'hsl(var(--secondary))',
+  				foreground: 'hsl(var(--secondary-foreground))'
+  			},
+  			muted: {
+  				DEFAULT: 'hsl(var(--muted))',
+  				foreground: 'hsl(var(--muted-foreground))'
+  			},
+  			accent: {
+  				DEFAULT: 'hsl(var(--accent))',
+  				foreground: 'hsl(var(--accent-foreground))'
+  			},
+  			destructive: {
+  				DEFAULT: 'hsl(var(--destructive))',
+  				foreground: 'hsl(var(--destructive-foreground))'
+  			},
+  			border: 'hsl(var(--border))',
+  			input: 'hsl(var(--input))',
+  			ring: 'hsl(var(--ring))',
+  			chart: {
+  				'1': 'hsl(var(--chart-1))',
+  				'2': 'hsl(var(--chart-2))',
+  				'3': 'hsl(var(--chart-3))',
+  				'4': 'hsl(var(--chart-4))',
+  				'5': 'hsl(var(--chart-5))'
+  			}
+  		},
+  		backgroundImage: {
+  			'acm-gradient': 'linear-gradient(94deg, #E10087 10.67%, #4004C0 93.37%)',
+  			'media-gradient': 'linear-gradient(98deg, #E10087 7.24%, #FFD600 95.11%)',
+  			'research-gradient': 'linear-gradient(98deg, #EA5400 18.05%, #FFC700 94.8%)',
+  			'education-gradient': 'linear-gradient(98deg, #56E100 7.24%, #00EAC0 95.11%)',
+  			'projects-gradient': 'linear-gradient(98deg, #008CF1 7.24%, #00ECEC 95.11%)',
+  			'development-gradient': 'linear-gradient(97deg, #9900E1 7.31%, #5200FF 59.32%)',
+  			'community-gradient': 'linear-gradient(98deg, #FFB800 18.05%, #ADFF00 94.8%)',
+  			'hackutd-gradient': 'linear-gradient(98deg, #FE002E 7.24%, #AD00FF 95.11%)',
+  			'apply-gradient': 'linear-gradient(128deg, rgba(255, 255, 255, 0.12) 3.07%, rgba(255, 255, 255, 0.03) 96.39%)',
+  			'industry-gradient': 'linear-gradient(98deg, #6F6F6F 7.24%, #FFFFFF 95.11%)',
+  			'about-graident': 'linear-gradient(128deg, rgba(255, 255, 255, 0.12) 3.07%, rgba(255, 255, 255, 0.03) 96.39%)',
+  			'gold-gradient': 'linear-gradient(128deg, rgba(227, 160, 73, 0.12) 3.07%, rgba(227, 160, 73, 0.09) 96.39%)',
+  			'silver-gradient': 'linear-gradient(128deg, rgba(143, 155, 166, 0.12) 3.07%, rgba(143, 155, 166, 0.09) 96.39%)',
+  			'bronze-gradient': 'linear-gradient(128deg, rgba(219, 114, 64, 0.12) 3.07%, rgba(219, 114, 64, 0.09) 96.39%)',
+  			'green-gradient': 'linear-gradient(128deg, rgba(34, 193, 195, 0.12) 3.07%, rgba(34, 193, 195, 0.09) 96.39%)'
+  		},
+  		borderRadius: {
+  			lg: 'var(--radius)',
+  			md: 'calc(var(--radius) - 2px)',
+  			sm: 'calc(var(--radius) - 4px)'
+  		}
+  	}
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };
 export default config;

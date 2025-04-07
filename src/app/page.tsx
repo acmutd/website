@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { homePageData } from '../../config/home.config';
 import ParallaxImages from '@/components/parallaxImages';
 import { Button } from '@/components/Button';
+import Sponsors from '@/components/Home/SponsorCarousel';
 
 function Home() {
   const icons = Object.keys(homePageData.community);
@@ -84,56 +85,7 @@ function Home() {
         </div>
       </div>
       <div className="flex flex-row py-10">
-        <div className="background-container z-10 flex max-w-[100vw] flex-col gap-y-8 rounded-r-3xl border-y border-r border-primary/50 bg-gray-600/10 p-10 text-center shadow-lg backdrop-blur-xl md:z-0 md:max-w-[90vw] lg:max-w-[85vw] lg:p-14">
-          <h3 className="mb-6 text-2xl font-semibold text-primary lg:text-3xl">Our Sponsors</h3>
-          {Object.entries(homePageData.sponsors).map(([tierName, tier], idx) => {
-            if ((idx === 2 || idx === 3) && tier.length === 0) return null; // Hide Bronze section if empty
-
-            return (
-              <div key={idx} className="content mb-8">
-                <div className="flex items-stretch justify-center gap-6">
-                  <div
-                    className={`flex w-5/6 flex-col items-center justify-between rounded-xl shadow-lg ${
-                      idx === 0
-                        ? 'bg-gold-gradient'
-                        : idx === 1
-                        ? 'bg-silver-gradient'
-                        : 'bg-bronze-gradient'
-                    }`}
-                  >
-                    <h1
-                      className={`pt-8 text-xl font-bold lg:text-2xl ${
-                        idx === 0
-                          ? 'text-yellow-600'
-                          : idx === 1
-                          ? 'text-slate-300'
-                          : 'text-amber-600'
-                      }`}
-                    >
-                      {tierName}
-                    </h1>
-                    <div className="flex w-full flex-1 flex-wrap items-center justify-center">
-                      {tier.map((sponsor) => (
-                        <div
-                          key={sponsor}
-                          className="m-4 flex items-center justify-center pb-6 lg:m-2 lg:p-8"
-                        >
-                          <Image
-                            src={`/assets/home/sponsors/${sponsor}.png`}
-                            alt={sponsor.toUpperCase()}
-                            className="object-contain"
-                            width={idx === 0 ? 350 : idx === 1 ? 250 : 200}
-                            height={idx === 0 ? 150 : 100}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <Sponsors />
       </div>
     </main>
   );
