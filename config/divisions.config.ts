@@ -6,6 +6,7 @@ import {
   educationImages,
   educationTestimony,
 } from './education.config';
+import { hackDirectors, hackTestimony, hackFAQ, hackWinners, hackCarouselImages } from './hack.config';
 import {
   projectDirectors,
   projectImages,
@@ -21,10 +22,11 @@ import {
   researchWinners,
 } from './research.config';
 import { mediaDirectors, mediaTestimony, mediaFAQ, mediaCarousel } from './media.config';
+import { communitCarouselImages, communityDirectors, communityFAQ, communityTestimony } from './community.config';
 import { industryCarouselImages, industryDirectors, industryFAQ, industryTestimony } from './industry.config';
 type Division =
   | {
-      division: 'projects' | 'research' | 'development' | 'media' | 'industry';
+      division: 'projects' | 'research' | 'development' | 'media' | 'industry' | 'hackutd' | 'community'
     }
   | {
       division: 'education';
@@ -54,7 +56,7 @@ export type Projects = {
   image: string;
   members: string[];
   links: ProjectLink[];
-  manager: string;
+  manager?: string;
 };
 
 export function getDirectors(division: Division['division']): Director[] {
@@ -69,6 +71,10 @@ export function getDirectors(division: Division['division']): Director[] {
       return educationDirectors;
     case 'media':
       return mediaDirectors;
+    case 'hackutd':
+      return hackDirectors;
+    case 'community':
+      return communityDirectors
     case 'industry':
         return industryDirectors;
   }
@@ -86,6 +92,10 @@ export function getTestimony(section: Division): Testimony[] {
       return developmentTestimony;
     case 'media':
       return mediaTestimony;
+    case 'hackutd':
+      return hackTestimony;
+    case 'community':
+      return communityTestimony
     case 'industry':
       return industryTestimony
   }
@@ -103,6 +113,10 @@ export function getFAQ(section: Division): Question[] {
       return developmentFAQ;
     case 'media':
       return mediaFAQ;
+    case 'hackutd':
+      return hackFAQ;
+    case 'community':
+      return communityFAQ
     case 'industry':
       return industryFAQ;
   }
@@ -120,12 +134,16 @@ export function getCarouselImages(section: Division): CarouselImage[] {
       return developmentCarouselImages;
     case 'media':
       return mediaCarousel;
+    case 'hackutd':
+      return hackCarouselImages
+    case 'community':
+      return communitCarouselImages
     case 'industry':
       return industryCarouselImages;
   }
 }
 
-type WinningProjectSelector = 'projects' | 'research';
+type WinningProjectSelector = 'projects' | 'research' | 'hackutd';
 
 export function getWinningProjects(selector: WinningProjectSelector): Projects[] {
   switch (selector) {
@@ -133,5 +151,7 @@ export function getWinningProjects(selector: WinningProjectSelector): Projects[]
       return projectsWinners;
     case 'research':
       return researchWinners;
+    case 'hackutd':
+      return hackWinners;
   }
 }

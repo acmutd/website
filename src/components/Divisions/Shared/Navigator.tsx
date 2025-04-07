@@ -17,6 +17,8 @@ const LINK_DICT = {
     tip: tipLinks,
   },
   media: mediaLinks,
+  hackutd: altLinks,
+  community: mediaLinks,
   industry: mediaLinks,
 } as const;
 

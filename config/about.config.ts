@@ -61,6 +61,7 @@ export const aboutPageData: AboutPageData = {
       links: [
         { name: 'website', link: 'hackutd.co' },
         { name: 'instagram', link: 'instagram.com/hackutd' },
+        { name: 'learn more', link: '/hackutd' },
       ],
     },
     industry: {
@@ -76,7 +77,7 @@ export const aboutPageData: AboutPageData = {
       links: [
         {
           name: 'learn more',
-          link: 'discord.com/channels/692266201644007424/1022696200429895710',
+          link: '/community',
         },
       ],
     },

@@ -9,6 +9,7 @@ import { ProjHeader } from '@/components/Divisions/Projects/ProjHeader';
 import { DevHeader } from '@/components/Divisions/Development/DevHeader';
 import { ResearchHeader } from '@/components/Divisions/Research/ResearchHeader';
 import { TIPHeader } from '@/components/Divisions/TIP/TIPHeader';
+import { HackHeader } from '@/components/Divisions/Hack/HackHeader';
 import { MentorHeader } from '@/components/Divisions/Mentor/MentorHeader';
 import { notFound } from 'next/navigation';
 import {
@@ -20,6 +21,7 @@ import {
   DivisionConfig
 } from '@/components/Divisions/Shared/divisionUtil';
 import { MediaHeader } from '@/components/Divisions/Media/MediaHeader';
+import { CommunityHeader } from '@/components/Divisions/Community/CommunityHeader';
 import { IndustryHeader } from '@/components/Divisions/Industry/IndustryHeader';
 import IndustrySponsors from '@/components/Divisions/Industry/IndustrySponsors';
 
@@ -32,6 +34,8 @@ export function generateStaticParams() {
     { slug: ['education', 'tip'] },
     { slug: ['education', 'mentor'] },
     { slug: ['media']},
+    { slug: ['hackutd']},
+    { slug: ['community']},
     { slug: ['industry']},
   ];
 
@@ -44,8 +48,10 @@ const headerComponents = {
   research: ResearchHeader,
   tip: TIPHeader,
   mentor: MentorHeader,
+  hackutd: HackHeader,
   education: () => notFound(),
   media: MediaHeader,
+  community: CommunityHeader,
   industry: IndustryHeader,
 }
 
