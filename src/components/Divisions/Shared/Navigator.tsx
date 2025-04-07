@@ -18,6 +18,7 @@ const LINK_DICT = {
   },
   media: mediaLinks,
   hackutd: altLinks,
+  community: mediaLinks
 } as const;
 
 export default function Navigator(props: DivisionProps) {
