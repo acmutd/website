@@ -23,9 +23,10 @@ import {
 } from './research.config';
 import { mediaDirectors, mediaTestimony, mediaFAQ, mediaCarousel } from './media.config';
 import { communitCarouselImages, communityDirectors, communityFAQ, communityTestimony } from './community.config';
+import { industryCarouselImages, industryDirectors, industryFAQ, industryTestimony } from './industry.config';
 type Division =
   | {
-      division: 'projects' | 'research' | 'development' | 'media' | 'hackutd' | 'community'
+      division: 'projects' | 'research' | 'development' | 'media' | 'industry' | 'hackutd' | 'community'
     }
   | {
       division: 'education';
@@ -74,6 +75,8 @@ export function getDirectors(division: Division['division']): Director[] {
       return hackDirectors;
     case 'community':
       return communityDirectors
+    case 'industry':
+        return industryDirectors;
   }
 }
 
@@ -93,6 +96,8 @@ export function getTestimony(section: Division): Testimony[] {
       return hackTestimony;
     case 'community':
       return communityTestimony
+    case 'industry':
+      return industryTestimony
   }
 }
 
@@ -112,6 +117,8 @@ export function getFAQ(section: Division): Question[] {
       return hackFAQ;
     case 'community':
       return communityFAQ
+    case 'industry':
+      return industryFAQ;
   }
 }
 
@@ -131,6 +138,8 @@ export function getCarouselImages(section: Division): CarouselImage[] {
       return hackCarouselImages
     case 'community':
       return communitCarouselImages
+    case 'industry':
+      return industryCarouselImages;
   }
 }
 

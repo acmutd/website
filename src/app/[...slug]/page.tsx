@@ -22,6 +22,9 @@ import {
 } from '@/components/Divisions/Shared/divisionUtil';
 import { MediaHeader } from '@/components/Divisions/Media/MediaHeader';
 import { CommunityHeader } from '@/components/Divisions/Community/CommunityHeader';
+import { IndustryHeader } from '@/components/Divisions/Industry/IndustryHeader';
+import IndustrySponsors from '@/components/Divisions/Industry/IndustrySponsors';
+
 export function generateStaticParams() {
   const params = [
     { slug: ['projects'] },
@@ -32,7 +35,8 @@ export function generateStaticParams() {
     { slug: ['education', 'mentor'] },
     { slug: ['media']},
     { slug: ['hackutd']},
-    { slug: ['community']}
+    { slug: ['community']},
+    { slug: ['industry']},
   ];
 
   return params;
@@ -47,7 +51,8 @@ const headerComponents = {
   hackutd: HackHeader,
   education: () => notFound(),
   media: MediaHeader,
-  community: CommunityHeader
+  community: CommunityHeader,
+  industry: IndustryHeader,
 }
 
 function Header(props: DivisionProps & { config: DivisionConfig }) {
@@ -120,6 +125,9 @@ export default function Page({ params }: { params: { slug: string[] } }) {
         <div className="flex justify-center">
           <DivisionFAQ {...divisionProps} />
         </div>
+        {divisionProps.division === 'industry' && (
+          <IndustrySponsors />
+        )}
       </div>
     </div>
   );

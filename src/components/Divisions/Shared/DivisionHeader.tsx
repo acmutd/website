@@ -54,6 +54,7 @@ const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>>
   media: 'https://portal.acmutd.co/typeform/media-apply-s25',
   hackutd: 'https://portal.acmutd.co/typeform/hackutd-apply-s25',
   community: 'https://portal.acmutd.co/typeform/community-apply-s25',
+  industry: 'https://portal.acmutd.co/typeform/industry-apply-s25',
 };
 
 const images: Record<ExtendedDivisions, ReactNode> = {
@@ -85,5 +86,8 @@ const images: Record<ExtendedDivisions, ReactNode> = {
   ),
   community: (
     <Image src="/assets/about/community/community.png" alt="ACM Media" width={272} height={80} />
-  )
+  ),
+  industry: (
+    <Image src="/assets/about/industry/industry.png" alt="ACM Industry" width={272} height={80} />
+  ),
 };

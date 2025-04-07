@@ -18,7 +18,8 @@ const LINK_DICT = {
   },
   media: mediaLinks,
   hackutd: altLinks,
-  community: mediaLinks
+  community: mediaLinks,
+  industry: mediaLinks,
 } as const;
 
 export default function Navigator(props: DivisionProps) {
