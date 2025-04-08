@@ -35,7 +35,7 @@ export default function Divisions({ data, description }: DivisionsProps) {
               {divisionData.links.map((link, i) => (
                 <Button
                   key={i}
-                  href={link.link.startsWith('http') ? link.link : `https://${link.link}`}
+                  href={link.link}
                   bgStyle={division}
                   width="w-[13.5rem]"
                   text={link.name}
