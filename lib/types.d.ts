@@ -83,7 +83,7 @@ export type FooterLink = {
   link: string;
 };
 
-export type Division = 'projects' | 'research' | 'education';
+export type Division = 'projects' | 'research' | 'education' | 'development';
 export type ExtendedDivisions = Exclude<
   Division | 'education.mentor' | 'education.tip',
   'education'
