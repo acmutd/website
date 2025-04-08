@@ -90,11 +90,6 @@ const config: Config = {
   			'bronze-gradient': 'linear-gradient(128deg, rgba(219, 114, 64, 0.12) 3.07%, rgba(219, 114, 64, 0.09) 96.39%)',
   			'green-gradient': 'linear-gradient(128deg, rgba(34, 193, 195, 0.12) 3.07%, rgba(34, 193, 195, 0.09) 96.39%)'
   		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
