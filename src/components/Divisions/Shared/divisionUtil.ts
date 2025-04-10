@@ -47,7 +47,7 @@ export type DivisionConfig = {
 
 // Default configuration that applies to all divisions
 const defaultConfig = {
-  containerClass: 'px-28',
+  containerClass: 'px-4md:px-28',
   centerExperience: true,
   centerFAQ: true,
 };

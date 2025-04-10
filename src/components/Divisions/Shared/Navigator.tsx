@@ -33,14 +33,14 @@ export default function Navigator(props: DivisionProps) {
 
   return (
     <div
-      className={`fixed right-5 z-50 h-auto pr-10 text-right ${
+      className={`fixed right-0 md:right-5 z-50 h-auto pr-2 md:pr-10 text-right hidden md:block ${
         props.division !== 'education' ? 'top-1/3' : 'top-2/3'
       }`}
     >
       {routeLinks.map((link) => (
-        <div className="pb-5" key={link}>
+        <div className="pb-3 md:pb-5" key={link}>
           <Link
-            className="pb-5 text-2xl font-semibold text-white transition-all duration-300 hover:text-gray-300"
+            className="pb-3 md:pb-5 text-lg md:text-2xl font-semibold text-white transition-all duration-300 hover:text-gray-300"
             href={`#${link.split(' ').join('-').toLowerCase()}`}
           >
             {link}
