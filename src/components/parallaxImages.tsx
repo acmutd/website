@@ -123,7 +123,7 @@ const ParallaxImages: React.FC = () => {
         alt='image'
       />
       <Image
-        className={`absolute img orb6 bottom-[25rem] right-[1rem] z-10 transition-transform duration-1000 ease-out -z-10`}
+        className={`absolute img orb6 bottom-[25rem] right-[1rem] md:z-10 transition-transform duration-1000 ease-out -z-10`}
         src={orb7}
         alt='image'
       />
