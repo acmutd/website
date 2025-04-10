@@ -11,24 +11,24 @@ type DivisionHeaderProps = {
 };
 export default function DivisionHeader({ children, division }: DivisionHeaderProps) {
   return (
-    <div className="pt-40 font-sans w-1/2">
+    <div className="pt-20 md:pt-40 font-sans w-full md:w-1/2">
       {images[division]}
-      <p className="pt-5 text-2xl text-[#CACACA]">{children}</p>
+      <p className="pt-5 text-lg md:text-2xl text-[#CACACA]">{children}</p>
       {typeof applicationUrl[division] === 'string' ? (
-        <div className="mt-20 flex items-center">
+        <div className="mt-10 md:mt-20 flex items-center">
           <Link href={applicationUrl[division]}>
-            <div className={`bg-${division.split('.')[0]}-gradient px-5 py-2 text-xl text-white rounded-lg border border-primary/50 bg-gray-300/10`}>
+            <div className={`bg-${division.split('.')[0]}-gradient px-4 md:px-5 py-2 text-lg md:text-xl text-white rounded-lg border border-primary/50 bg-gray-300/10`}>
               apply today
             </div>
           </Link>
         </div>
       ) : (
-        <div className="mt-20 flex items-center gap-x-3">
+        <div className="mt-10 md:mt-20 flex flex-col md:flex-row items-center gap-y-3 md:gap-x-3">
           {Object.entries(applicationUrl[division] as Record<string, string>).map(
             ([roleName, appUrl]) => (
               <Link href={appUrl} key={roleName}>
                 <div
-                  className={`bg-${division.split('.')[0]}-gradient px-5 py-2 text-xl text-white rounded-lg border border-primary/50 bg-gray-300/10`}
+                  className={`bg-${division.split('.')[0]}-gradient px-4 md:px-5 py-2 text-lg md:text-xl text-white rounded-lg border border-primary/50 bg-gray-300/10`}
                 >
                   apply today as {roleName}
                 </div>
