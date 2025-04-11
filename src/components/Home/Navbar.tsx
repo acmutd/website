@@ -28,7 +28,7 @@ export default function Navbar() {
     };
   }, []);
 
-  const navStyles = top ? 'bg-opacity-0 bg-none' : 'bg-black bg-opacity-70 backdrop-blur-xl';
+  const navStyles = top ? 'md:bg-opacity-0 md:bg-none bg-black/70' : 'bg-black bg-opacity-70 backdrop-blur-xl';
   return (
     <Disclosure
       as="nav"
