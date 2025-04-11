@@ -11,6 +11,11 @@ export type Division = {
   linkStyles?: string; // This field is optional, indicated by the "?"
 };
 
+export type Link = {
+  name: string;
+  link: string;
+}
+
 export type AboutPageData = {
   pageDescription: string;
   divisionDescription: string;
