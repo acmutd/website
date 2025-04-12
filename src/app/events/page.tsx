@@ -32,13 +32,6 @@ export default function Events({ searchParams }: { searchParams: Params }) {
         </div>
         <PastEvents />
       </div>
-      <div className="mx-40 flex flex-col justify-between pt-16">
-        <div className="relative">
-          <h1 className="text-4xl text-white">past workshops</h1>
-          <div className="h-[1px] w-28 bg-[#cacacab0]" />
-        </div>
-        <PastWorkshops />
-      </div>
     </div>
   );
 }

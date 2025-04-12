@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import CalendarBody from './CalendarBody';
-import { byDate } from '@/app/api/events/byDate/route';
+
+const BASE_API_URL =
+  process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://acmutd.co';
 
 type Props = {
   month: number;
@@ -32,7 +34,7 @@ function changeMonth(amt: 'inc' | 'dec', { month, year }: { month: number; year:
 }
 
 async function Calendar({ month, year }: Props) {
-  const events = await byDate(month, year);
+  const res = await fetch(`${BASE_API_URL}/api/events?month=${month}&year=${year}`).then((res) => res.json());
   const nextParams = changeMonth('inc', { month, year });
   const prevParams = changeMonth('dec', { month, year });
 
@@ -55,7 +57,7 @@ async function Calendar({ month, year }: Props) {
           }}
         >{`>`}</Link>
       </div>
-      <CalendarBody month={month} year={year} events={events} />
+      <CalendarBody month={month} year={year} events={res.events} />
     </div>
   );
 }

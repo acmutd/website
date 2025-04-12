@@ -14,7 +14,7 @@ export default async function UpcomingEvents() {
   const res = await fetch(BASE_API_URL + '/api/events', { next: { revalidate: 60 } }).then((res) =>
     res.json(),
   );
-  const events: Event[] = res.map((item: any) => {
+  const events: Event[] = res.events.map((item: any) => {
     const event: Event = {
       id: item.id,
       title: item.title,
