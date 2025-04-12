@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import CalendarBody from './CalendarBody';
 
-const BASE_API_URL =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://acmutd.co';
+const BASE_API_URL = process.env.NEXT_PUBLIC_VERCEL_URL;
 
 type Props = {
   month: number;
@@ -34,7 +33,7 @@ function changeMonth(amt: 'inc' | 'dec', { month, year }: { month: number; year:
 }
 
 async function Calendar({ month, year }: Props) {
-  const res = await fetch(`${BASE_API_URL}/api/events?month=${month}&year=${year}`).then((res) => res.json());
+  const res = await fetch(`https://${BASE_API_URL}/api/events?month=${month}&year=${year}`).then((res) => res.json());
   const nextParams = changeMonth('inc', { month, year });
   const prevParams = changeMonth('dec', { month, year });
 

@@ -1,6 +1,5 @@
 import Calendar from '@/components/Events/Calendar';
 import PastEvents from '@/components/Events/PastEvents';
-import PastWorkshops from '@/components/Events/PastWorkshops';
 import UpcomingEvents from '@/components/Events/UpcomingEvents';
 
 type Params = {

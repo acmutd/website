@@ -1,6 +1,5 @@
 
-const BASE_API_URL =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://acmutd.co';
+const BASE_API_URL = process.env.NEXT_PUBLIC_VERCEL_URL;
 
   type Event = {
     id: string;
@@ -9,7 +8,7 @@ const BASE_API_URL =
     start?: string;
   }
 export default async function PastEvents() {
-  const res: { events: Event[] } = await fetch(`${BASE_API_URL}/api/events/past`).then((res) => res.json());
+  const res: { events: Event[] } = await fetch(`https://${BASE_API_URL}/api/events/past`).then((res) => res.json());
   return (
     <div className="flex flex-wrap items-center justify-center gap-8 p-8">
       {res.events.map((event) => (
