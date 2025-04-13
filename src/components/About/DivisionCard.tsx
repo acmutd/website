@@ -1,57 +1,93 @@
-import Link from 'next/link';
-import React from 'react';
+'use client'
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Division, DivisionLink } from '../../../lib/types';
-import { Button } from '../Button';
+import Link from 'next/link';
+import { Division } from '../../../lib/types';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '../ui/hover-card';
+import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 
 interface DivisionCardProps {
-  data: Division;
+  division: string;
+  divisionData: Division;
 }
 
-export default function DivisionCard({ data }: DivisionCardProps) {
+export default function DivisionCard({ division, divisionData }: DivisionCardProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkIfMobile();
+    window.addEventListener('resize', checkIfMobile);
+
+    return () => window.removeEventListener('resize', checkIfMobile);
+  }, []);
+
+  const LinksContent = () => (
+    <div className="flex flex-col gap-1">
+      {divisionData.links.map((link, i) => (
+        <Link
+          key={i}
+          href={link.link}
+          className="block w-full rounded-md px-3 py-2 text-sm font-medium text-primary transition-all duration-200 ease-in-out hover:bg-primary/10 text-center"
+          target={link.link.includes('http') ? '_blank' : '_self'}
+        >
+          {link.name}
+        </Link>
+      ))}
+    </div>
+  );
+
   return (
     <div
-      className={`bg-[url(/assets/about/${data.section}/${data.section}-bg.png)] bg-cover bg-center bg-no-repeat`}
+      className="relative flex min-w-[300px] w-full max-w-[400px] flex-col rounded-3xl bg-white/5 p-4"
+      key={division}
     >
-      <div className="mx-auto w-full max-w-[120rem]">
-        <div
-          className={`flex flex-col-reverse items-center gap-x-4 gap-y-8  p-6 text-primary lg:flex-row lg:p-0`}
-        >
-          {/* Replace png with 'cover.png' */}
-          <div className="h-fit w-full lg:max-w-max">
-            <Image
-              src={`/assets/about/${data.section}/cover.jpg`}
-              alt={data.section + ' officers'}
-              width={1000}
-              height={1000}
-              className="object-contain"
-            />
+      <div className="relative h-[100px] sm:h-[120px] w-full">
+        <Image
+          src={`/assets/about/${division}/${division}.png`}
+          alt={division}
+          fill
+          className="object-contain"
+        />
+      </div>
+      <div className="mt-4 flex-grow">
+        {divisionData.links && (
+          <div className="m-5 flex flex-col items-center gap-2">
+            {isMobile ? (
+              <Popover>
+                <PopoverTrigger>
+                  <div className={`flex w-[13rem] items-center justify-center rounded-lg border border-primary/50 bg-gray-300/10 bg-${division}-gradient px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:border-primary hover:shadow-lg cursor-pointer`}>
+                    Learn more
+                  </div>
+              </PopoverTrigger>
+                <PopoverContent
+                  className="w-[13.5rem] rounded-lg border border-primary bg-gray-600/50 backdrop-blur-sm p-1.5 shadow-lg transition-all duration-300 ease-in-out z-50"
+                  align="center"
+                  sideOffset={2}
+                >
+                  <LinksContent />
+                </PopoverContent>
+              </Popover>
+            ) : (
+              <HoverCard openDelay={20}>
+                <HoverCardTrigger asChild>
+                  <div className={`flex w-[13rem] items-center justify-center rounded-lg border border-primary/50 bg-gray-300/10 bg-${division}-gradient px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:border-primary hover:shadow-lg cursor-pointer`}>
+                    Learn more
+                  </div>
+                </HoverCardTrigger>
+                <HoverCardContent
+                  className="w-[13.5rem] rounded-lg border border-primary bg-gray-600/50 backdrop-blur-sm p-1.5 shadow-lg transition-all duration-300 ease-in-out z-50"
+                  align="center"
+                  sideOffset={2}
+                >
+                  <LinksContent />
+                </HoverCardContent>
+              </HoverCard>
+            )}
           </div>
-          <div className="flex w-full flex-col items-start md:items-center">
-            <div className="relative h-36 w-full">
-              <Image
-                src={`/assets/about/${data.section}/${data.section}.png`}
-                alt=""
-                className="object-contain"
-                fill
-              />
-            </div>
-            <h1 className="max-w-lg text-start">{data.description}</h1>
-            <div className="mt-4 grid w-full max-w-lg grid-cols-2 gap-4">
-              {data.links.map((obj: DivisionLink, index: number) => {
-                return (
-                  <Button
-                    key={index}
-                    href={`${obj.link.startsWith('/') ? obj.link : `https://${obj.link}`}`}
-                    text={obj.name}
-                    bgStyle={data.section}
-                    textStyles="text-base md:text-xl font-bold"
-                  />
-                );
-              })}
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
