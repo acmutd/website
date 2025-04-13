@@ -31,6 +31,7 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
           key={i}
           href={link.link}
           className="block w-full rounded-md px-3 py-2 text-sm font-medium text-primary transition-all duration-200 ease-in-out hover:bg-primary/10 text-center"
+          target={link.link.includes('http') ? '_blank' : '_self'}
         >
           {link.name}
         </Link>
