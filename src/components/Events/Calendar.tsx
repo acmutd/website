@@ -41,15 +41,15 @@ async function Calendar({ month, year }: Props) {
     <div className="w-full rounded-3xl border border-[#ffffff82] bg-gradient-to-tr from-[#ffffff1f] from-[3.07%] to-[#ffffff08] to-[96.39%] p-3 md:p-5 shadow-md backdrop-blur-xl lg:w-2/3">
       <div className="mb-3 md:mb-5 flex items-center justify-between text-white">
         <Link
-          className="w-8 md:w-10 text-lg md:text-base"
+          className="w-8 md:w-10 h-8 md:h-10 flex items-center justify-center text-lg md:text-base rounded-full hover:bg-white/20 transition-colors"
           href={{
             pathname: '/events',
             query: { month: prevParams.month, year: prevParams.year },
           }}
         >{`<`}</Link>
-        <span className="w-24 md:w-32 text-center text-xl md:text-2xl font-semibold">{monthNames[month]}</span>
+        <span className="w-24 md:w-32 text-center text-lg md:text-2xl font-semibold">{monthNames[month]}</span>
         <Link
-          className="w-8 md:w-10 text-lg md:text-base"
+          className="w-8 md:w-10 h-8 md:h-10 flex items-center justify-center text-lg md:text-base rounded-full hover:bg-white/20 transition-colors"
           href={{
             pathname: '/events',
             query: { month: nextParams.month, year: nextParams.year },

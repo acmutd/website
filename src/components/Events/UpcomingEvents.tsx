@@ -33,7 +33,7 @@ export default async function UpcomingEvents() {
           } ${colors[i % 3].to} rounded-lg p-1 shadow-lg`}
         >
           <div className="rounded-lg p-3 md:p-4 backdrop-blur-sm backdrop-filter">
-            <h2 className="text-base md:text-lg font-bold lowercase text-gray-900 md:text-xl">{event.title}</h2>
+            <h2 className="text-base font-bold lowercase text-gray-900 md:text-xl">{event.title}</h2>
             {event.start && (
               <EventTime dateString={event.start.toISOString()} location={event.location} />
             )}
