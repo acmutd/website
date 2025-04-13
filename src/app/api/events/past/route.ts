@@ -24,7 +24,7 @@ type CalendarEvent = {
   };
 }
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
     if (!process.env.CALENDAR_API_KEY) {
       return NextResponse.json(
@@ -33,40 +33,16 @@ export async function GET(request: Request) {
       );
     }
 
-    const url = new URL(request.url);
-    const yearParam = url.searchParams.get('year');
-    const monthParam = url.searchParams.get('month');
+    // Set timeMax to now to get past events
+    const now = new Date();
+    const timeMax = now.toISOString();
 
-    let apiUrl = `${endpoint}?key=${process.env.CALENDAR_API_KEY}`;
+    // Set timeMin to 1 year ago to limit the search range
+    const oneYearAgo = new Date();
+    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+    const timeMin = oneYearAgo.toISOString();
 
-    if (yearParam && monthParam) {
-      const year = parseInt(yearParam, 10);
-      const month = parseInt(monthParam, 10);
-
-      if (isNaN(year) || isNaN(month)) {
-        return NextResponse.json(
-          { error: 'Invalid year or month format' },
-          { status: 400 }
-        );
-      }
-
-      if (month < 0 || month > 11) {
-        return NextResponse.json(
-          { error: 'Month must be between 0 and 11' },
-          { status: 400 }
-        );
-      }
-
-      const timeMin = new Date(year, month, 1).toISOString();
-      const timeMax = new Date(year, month + 1, 0, 23, 59, 59, 999).toISOString();
-
-      apiUrl += `&timeMin=${timeMin}&timeMax=${timeMax}`;
-    } else {
-      // For upcoming events, set timeMin to now
-      const now = new Date();
-      now.setHours(0, 0, 0, 0);
-      apiUrl += `&timeMin=${now.toISOString()}`;
-    }
+    const apiUrl = `${endpoint}?key=${process.env.CALENDAR_API_KEY}&timeMin=${timeMin}&timeMax=${timeMax}&orderBy=startTime&singleEvents=true`;
 
     const response = await fetch(apiUrl);
 
@@ -79,7 +55,6 @@ export async function GET(request: Request) {
 
     const data = await response.json() as CalendarApiResponse;
 
-    // Check for API errors
     if (data.error) {
       return NextResponse.json(
         { error: `Calendar API error: ${data.error.message}` },
@@ -93,17 +68,20 @@ export async function GET(request: Request) {
       return NextResponse.json({ events: [] });
     }
 
-    const events = parseItems(items).sort((a, b) => {
-      if (!a.start) return -1;
-      if (!b.start) return 1;
-      return a.start.getTime() - b.start.getTime();
-    });
+    // Parse and sort events in descending order (most recent first)
+    const events = parseItems(items)
+      .sort((a, b) => {
+        if (!a.start) return -1;
+        if (!b.start) return 1;
+        return b.start.getTime() - a.start.getTime();
+      })
+      .slice(0, 3); // Get only the three most recent events
 
     return NextResponse.json({ events });
   } catch (error) {
-    console.error('Error fetching calendar events:', error);
+    console.error('Error fetching past calendar events:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch calendar events' },
+      { error: 'Failed to fetch past calendar events' },
       { status: 500 }
     );
   }

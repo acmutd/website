@@ -1,8 +1,7 @@
 import type { Event } from '@/../lib/types';
 import EventTime from './EventTime';
 
-const BASE_API_URL =
-  process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://acmutd.co';
+const BASE_API_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 
 const colors = [
   { from: 'from-[#008CF1]', to: 'to-[#00ECEC]' },
@@ -11,10 +10,10 @@ const colors = [
 ];
 
 export default async function UpcomingEvents() {
-  const res = await fetch(BASE_API_URL + '/api/events', { next: { revalidate: 60 } }).then((res) =>
+  const res = await fetch(`${BASE_API_URL}/api/events`, { next: { revalidate: 60 } }).then((res) =>
     res.json(),
   );
-  const events: Event[] = res.map((item: any) => {
+  const events: Event[] = res.events.map((item: any) => {
     const event: Event = {
       id: item.id,
       title: item.title,
@@ -25,16 +24,16 @@ export default async function UpcomingEvents() {
   });
 
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center p-4 md:w-96">
+    <div className="flex h-full w-full flex-col items-center justify-center p-2 md:p-4 md:w-96">
       {events.slice(0, 3).map((event, i) => (
         <div
           key={event.id}
-          className={`my-4 flex h-auto w-full flex-col justify-center bg-gradient-to-r ${
+          className={`my-2 md:my-4 flex h-auto w-full flex-col justify-center bg-gradient-to-r ${
             colors[i % 3].from
           } ${colors[i % 3].to} rounded-lg p-1 shadow-lg`}
         >
-          <div className="rounded-lg p-4 backdrop-blur-sm backdrop-filter">
-            <h2 className="text-lg font-bold lowercase text-gray-900 md:text-xl">{event.title}</h2>
+          <div className="rounded-lg p-3 md:p-4 backdrop-blur-sm backdrop-filter">
+            <h2 className="text-base font-bold lowercase text-gray-900 md:text-xl">{event.title}</h2>
             {event.start && (
               <EventTime dateString={event.start.toISOString()} location={event.location} />
             )}
