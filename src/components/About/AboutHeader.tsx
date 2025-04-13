@@ -13,9 +13,9 @@ function AboutHeader({ pageDescription }: AboutHeaderProps) {
           <Image
             src="/assets/about/about.jpg"
             alt="ACM UTD"
+            className="object-contain"
             width={1000}
             height={1000}
-            className="object-contain"
           />
         </div>
         <div className="flex h-fit w-full flex-col items-center text-center align-middle">

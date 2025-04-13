@@ -1,35 +1,35 @@
 import React from 'react';
-import Image from 'next/image';
+import { Division } from '../../../lib/types';
+import DivisionCard from './DivisionCard';
 
 interface DivisionsProps {
-  data: string[],
-  description: string,
+  data: { [key: string]: Division };
+  description: string;
 }
 
 export default function Divisions({ data, description }: DivisionsProps) {
-  const imageElements = data.map((division: string, index: number) => {
-    return (
-      <div className="relative h-20 w-72" key={division}>
-        <Image
-          src={`/assets/about/${division}/${division}.png`}
-          alt={division}
-          fill
-          className="object-contain"
-        />
-      </div>
-    );
-  });
+  const keys = Object.keys(data);
+  const values = Object.values(data);
+
+  const divisionCards = keys.map((division: string, index: number) => (
+    <DivisionCard
+      key={division}
+      division={division}
+      divisionData={values[index]}
+    />
+  ));
 
   return (
     <div className="flex h-full items-center justify-center bg-[url(/assets/about/about-divisions-bg.png)] bg-contain bg-center bg-no-repeat">
-      <div className="mx-auto w-full max-w-[120rem]">
-        <div className="flex flex-col items-start p-6 text-primary md:items-center md:p-0">
+      <div className="mx-auto w-full max-w-[120rem] px-4 sm:px-6">
+        <div className="flex flex-col items-center p-6 text-primary md:p-0">
           <h1 className="mb-2 text-5xl font-medium">Divisions</h1>
-          <p className="mb-10 max-w-4xl text-start text-xl md:text-center">{description}</p>
-          <div className="grid w-fit grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {imageElements.slice(0, 6)}
+          <p className="mb-10 max-w-4xl text-center text-xl">{description}</p>
+          <div className="grid w-full place-items-center grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {divisionCards.slice(0, 6)}
+            <div className="md:hidden inline-flex flex-col gap-4">{divisionCards.slice(6)}</div>
           </div>
-          <div className="mt-4 flex justify-center gap-4">{imageElements.slice(6)}</div>
+          <div className="mt-4 md:flex w-1/2 justify-center gap-4 hidden">{divisionCards.slice(6)}</div>
         </div>
       </div>
     </div>
