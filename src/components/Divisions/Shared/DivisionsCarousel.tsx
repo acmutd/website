@@ -47,7 +47,7 @@ export default function DivisionsCarousel(props: DivisionProps) {
                   <Image
                     src={image.imageLink}
                     alt={image.title}
-                    className={`h-full w-full object-contain pt-3`}
+                    className={`h-full w-full object-contain md:pt-3`}
                     fill
                     priority={i === 0}
                   />
@@ -78,20 +78,20 @@ export default function DivisionsCarousel(props: DivisionProps) {
       <div
         className={`flex flex-col md:flex-row w-full max-w-4xl justify-between rounded-b-lg bg-${props.division}-gradient p-3 md:p-4 text-white mx-auto text-sm md:text-base`}
       >
-        <p className="font-semibold text-center md:text-left">{images[0].title}</p>
+        <p className="font-semibold text-center md:text-left">{images[current].title}</p>
         <p className="text-xs md:text-sm text-center md:text-right mt-1 md:mt-0">
           Shot{' '}
-          {images[0].date.toLocaleDateString('en-US', {
+          {images[current].date.toLocaleDateString('en-US', {
             weekday: 'long',
             month: 'long',
             day: 'numeric',
           })}
-          {images[0].date.getHours() !== 0 || images[0].date.getMinutes() !== 0 ? (
+          {images[current].date.getHours() !== 0 || images[current].date.getMinutes() !== 0 ? (
             <>
               {' at '}
-              {images[0].date.toLocaleTimeString('en-US', {
+              {images[current].date.toLocaleTimeString('en-US', {
                 hour: 'numeric',
-                minute: images[0].date.getMinutes() > 0 ? 'numeric' : undefined,
+                minute: images[current].date.getMinutes() > 0 ? 'numeric' : undefined,
                 timeZoneName: 'short',
               })}
             </>
