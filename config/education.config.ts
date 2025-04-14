@@ -182,19 +182,19 @@ export const educationImages: {
   ],
   tip: [
     {
-      imageLink: '/assets/research/ResearchCarousel.png',
-      title: 'Projects Presentation Night 1',
-      date: new Date(2022, 5, 29, 16, 7),
+      imageLink: '/assets/education/tip-1.JPG',
+      title: 'TIP Internship Panel',
+      date: new Date(2024, 3, 9),
     },
     {
-      imageLink: '/assets/research/ResearchCarousel.png',
-      title: 'Projects Presentation Night 2',
-      date: new Date(2022, 5, 29, 16, 7),
+      imageLink: '/assets/education/tip-2.JPG',
+      title: 'TIP Internship Panel',
+      date: new Date(2024, 3, 9),
     },
     {
-      imageLink: '/assets/research/ResearchCarousel.png',
-      title: 'Projects Presentation Night 3',
-      date: new Date(2022, 5, 29, 16, 7),
+      imageLink: '/assets/education/tip-3.JPG',
+      title: 'TIP Leads',
+      date: new Date(2024, 4, 11),
     },
   ],
 };
