@@ -3,7 +3,7 @@ import DivisionHeader from "../Shared/DivisionHeader";
 export function CommunityHeader() {
   return (
     <DivisionHeader division="community">
-        ACM Development designs, builds, and maintains web applications that support ACM’s operations and member interactions. Projects like the Member Portal and UTD Grades ensure reliable and user-friendly platforms for the campus community.
+        ACM Community increases STEM engagement in K-12 students, focusing on underserved schools. It also organizes social events for all majors, fostering collaboration, creativity, and a vibrant campus atmosphere.
     </DivisionHeader>
   );
 }

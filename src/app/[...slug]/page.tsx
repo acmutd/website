@@ -96,7 +96,7 @@ export default function Page({ params }: { params: { slug: string[] } }) {
   const config = getDivisionConfig(divisionProps);
 
   return (
-    <div className={`relative w-full ${config.bgImage} bg-cover bg-center py-10 md:py-20`}>
+    <div className={`relative w-full ${config.bgImage} bg-cover bg-center py-10 md:py-20 mt-10 md:mt-0`}>
       <Navigator {...divisionProps} />
       <DivisionCarousel {...divisionProps} />
 
