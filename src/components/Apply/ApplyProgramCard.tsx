@@ -19,7 +19,7 @@ function ApplyProgramCard({ title, image, link }: ApplyProgramCardProps) {
         alt={title}
         width={500}
         height={500}
-        className="aspect-[6/3] w-full rounded-3xl object-cover"
+        className="aspect-[7/3] w-full rounded-3xl object-cover"
       />
     </Link>
   );
