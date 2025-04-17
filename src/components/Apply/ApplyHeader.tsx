@@ -13,8 +13,14 @@ function ApplyHeader() {
               an officer!
               <br />
               <br />
-              All open applications can be found in our member portal at
-              portal.acmutd.co/opportunities
+              All open applications can be found in our member portal at{' '}
+              <a
+                href="https://portal.acmutd.co/opportunities"
+                className="text-primary underline transition-colors hover:text-primaryDark"
+                target="_blank"
+              >
+                portal.acmutd.co/opportunities
+              </a>
             </p>
           </div>
           <Image
