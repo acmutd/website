@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Division } from '../../../lib/types';
-import { HoverCard, HoverCardContent, HoverCardTrigger } from '../ui/hover-card';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
+import { ChevronDown } from 'lucide-react';
 
 interface DivisionCardProps {
   division: string;
@@ -12,21 +12,12 @@ interface DivisionCardProps {
 }
 
 export default function DivisionCard({ division, divisionData }: DivisionCardProps) {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkIfMobile();
-    window.addEventListener('resize', checkIfMobile);
-
-    return () => window.removeEventListener('resize', checkIfMobile);
-  }, []);
+  const learnMoreLink = divisionData.links.find(link => link.name.toLowerCase().includes('learn more'));
+  const restLinks = divisionData.links.filter(link => !link.name.toLowerCase().includes('learn more'));
 
   const LinksContent = () => (
     <div className="flex flex-col gap-1">
-      {divisionData.links.map((link, i) => (
+      {restLinks.map((link, i) => (
         <Link
           key={i}
           href={link.link}
@@ -55,37 +46,35 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
       <div className="mt-4 flex-grow">
         {divisionData.links && (
           <div className="m-5 flex flex-col items-center gap-2">
-            {isMobile ? (
-              <Popover>
-                <PopoverTrigger>
-                  <div className={`flex w-[13rem] items-center justify-center rounded-lg border border-primary/50 bg-gray-300/10 bg-${division}-gradient px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:border-primary hover:shadow-lg cursor-pointer`}>
-                    Learn more
-                  </div>
-              </PopoverTrigger>
-                <PopoverContent
-                  className="w-[13.5rem] rounded-lg border border-primary bg-gray-600/50 backdrop-blur-sm p-1.5 shadow-lg transition-all duration-300 ease-in-out z-50"
-                  align="center"
-                  sideOffset={2}
-                >
-                  <LinksContent />
-                </PopoverContent>
-              </Popover>
-            ) : (
-              <HoverCard openDelay={20}>
-                <HoverCardTrigger asChild>
-                  <div className={`flex w-[13rem] items-center justify-center rounded-lg border border-primary/50 bg-gray-300/10 bg-${division}-gradient px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:border-primary hover:shadow-lg cursor-pointer`}>
-                    Learn more
-                  </div>
-                </HoverCardTrigger>
-                <HoverCardContent
-                  className="w-[13.5rem] rounded-lg border border-primary bg-gray-600/50 backdrop-blur-sm p-1.5 shadow-lg transition-all duration-300 ease-in-out z-50"
-                  align="center"
-                  sideOffset={2}
-                >
-                  <LinksContent />
-                </HoverCardContent>
-              </HoverCard>
-            )}
+            <div className={`flex items-center rounded-lg bg-${division}-gradient p-[1px]`}>
+              {learnMoreLink ? <Link
+                href={learnMoreLink.link}
+                className="flex w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+                target={learnMoreLink.link.includes('http') ? '_blank' : '_self'}
+              >
+                Learn more
+              </Link> : ( <div className="flex w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+                Learn more
+              </div>)
+              }
+
+              {restLinks.length > 0 && (
+                <Popover>
+                  <PopoverTrigger>
+                    <div className={`flex w-[42px] rounded-r-lg h-[42px] items-center justify-center bg-gray-300/10 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105`}>
+                        <ChevronDown className="h-5 w-5 stroke-[2.5]" />
+                    </div>
+                  </PopoverTrigger>
+                  <PopoverContent
+                    className="w-[13.5rem] rounded-lg border border-primary bg-gray-600/50 backdrop-blur-sm p-1.5 shadow-lg transition-all duration-300 ease-in-out z-50"
+                    align="center"
+                    sideOffset={2}
+                  >
+                    <LinksContent />
+                  </PopoverContent>
+                </Popover>
+              )}
+            </div>
           </div>
         )}
       </div>
