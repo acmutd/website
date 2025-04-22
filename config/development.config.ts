@@ -29,12 +29,22 @@ export const developmentOfficers: Officer[] = [
   {
     image: '/assets/officer/GiangPham.jpg',
     name: 'Giang Pham',
-    position: 'Development Officer (ACM Website)',
+    position: 'Development Officer (ACM Core)',
   },
   {
     image: '/assets/officer/BennettFeigenbaum.JPG',
     name: 'Bennett Feigenbaum',
-    position: 'Development Officer (ACM Website)',
+    position: 'Development Officer (ACM Core)',
+  },
+  {
+    image: '/assets/officer/BhaveshMandalapu.jpg',
+    name: 'Bhavesh Mandalapu',
+    position: 'Development Officer (ACM Core)',
+  },
+  {
+    image: '/assets/officer/RubenOlano.jpg',
+    name: 'Ruben Olano',
+    position: 'Development Officer (ACM Core)',
   },
   {
     image: '/assets/officer/YashShah.jpg',
@@ -42,8 +52,8 @@ export const developmentOfficers: Officer[] = [
     position: 'Development Officer (PM for BSG)',
   },
   {
-    image: '/assets/officer/BhaveshMandalapu.jpg',
-    name: 'Bhavesh Mandalapu',
+    image: '/assets/officer/RonakChava.jpg',
+    name: 'Ronak Chava',
     position: 'Development Officer (BSG)',
   },
   {
