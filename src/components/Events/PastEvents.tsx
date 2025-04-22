@@ -7,7 +7,7 @@ const BASE_API_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:
     start?: string;
   }
 export default async function PastEvents() {
-  const res: { events: Event[] } = await fetch(`${BASE_API_URL}/api/events/past`).then((res) => res.json());
+  const res: { events: Event[] } = await fetch(`${BASE_API_URL}/api/events/past`, { next: { revalidate: 60 } }).then((res) => res.json());
   return (
     <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 p-4 md:p-8">
       {res.events.map((event) => (
