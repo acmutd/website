@@ -19,6 +19,7 @@ type CalendarEvent = {
   id: string;
   summary: string;
   location?: string;
+  description?: string;
   start?: {
     dateTime?: string;
   };
@@ -97,6 +98,7 @@ function parseItems(list: CalendarEvent[]): Event[] {
       const toAdd: Event = {
         id: item.id,
         title: item.summary,
+        description: item.description,
       };
 
       if (item.location) {

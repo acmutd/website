@@ -5,6 +5,7 @@ const BASE_API_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:
     title: string;
     location?: string;
     start?: string;
+    description?: string;
   }
 export default async function PastEvents() {
   const res: { events: Event[] } = await fetch(`${BASE_API_URL}/api/events/past`, { next: { revalidate: 60 } }).then((res) => res.json());
@@ -22,6 +23,11 @@ export default async function PastEvents() {
             {event.location && (
               <p className="text-xs md:text-sm text-[#CACACA]">
                 📍 {event.location}
+              </p>
+            )}
+            {event.description && (
+              <p className="text-xs md:text-sm text-[#CACACA] line-clamp-3 overflow-hidden text-ellipsis mt-2">
+                {event.description}
               </p>
             )}
           </div>
