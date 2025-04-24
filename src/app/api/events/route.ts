@@ -6,6 +6,7 @@ export const dynamic = 'force-dynamic';
 const calendarId =
   'c_893d7ec01b0d651ddfadf46f6792b1d470abe97c6d9f33157a1f4be2d4420a51@group.calendar.google.com';
 const endpoint = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`;
+const calendarTimeZone = 'America/Chicago';
 
 type CalendarApiResponse = {
   items?: CalendarEvent[];
@@ -58,10 +59,12 @@ export async function GET(request: Request) {
         );
       }
 
-      const timeMin = new Date(year, month, 1).toISOString();
-      const timeMax = new Date(year, month + 1, 0, 23, 59, 59, 999).toISOString();
+      const timeMin = new Date(year, month, 1).toLocaleString('en-US', { timeZone: calendarTimeZone })
+      const timeMinString = new Date(timeMin).toISOString();
+      const timeMax = new Date(year, month + 1, 1, 23, 59, 59, 999).toLocaleString('en-US', { timeZone: calendarTimeZone });
+      const timeMaxString = new Date(timeMax).toISOString();
 
-      apiUrl += `&timeMin=${timeMin}&timeMax=${timeMax}`;
+      apiUrl += `&timeMin=${timeMinString}&timeMax=${timeMaxString}`;
     } else {
       // For upcoming events, set timeMin to now
       const now = new Date();
