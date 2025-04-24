@@ -43,6 +43,7 @@ export type Event = {
   title: string;
   start?: Date;
   location?: string;
+  description?: string;
 };
 
 export type WorkShopLink = { type: 'github' | 'video'; link: string };

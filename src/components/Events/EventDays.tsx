@@ -63,6 +63,12 @@ const EventComponent = ({ event, day, month }: Props) => {
               <p className="text-xs sm:text-sm md:text-base text-gray-100">{event.location}</p>
             </div>
           )}
+          {event.description && (
+            <div className="space-y-1">
+              <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-200">Description</h3>
+              <p className="text-xs sm:text-sm md:text-base text-gray-100">{event.description}</p>
+            </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>

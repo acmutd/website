@@ -19,6 +19,7 @@ type CalendarApiResponse = {
 type CalendarEvent = {
   id: string;
   summary: string;
+  description?: string;
   location?: string;
   start?: {
     dateTime?: string;
@@ -70,7 +71,6 @@ export async function GET(request: Request) {
       now.setHours(0, 0, 0, 0);
       apiUrl += `&timeMin=${now.toISOString()}`;
     }
-
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
@@ -122,6 +122,7 @@ function parseItems(list: CalendarEvent[]): Event[] {
       const toAdd: Event = {
         id: item.id,
         title: item.summary,
+        description: item.description,
       };
 
       if (item.location) {
