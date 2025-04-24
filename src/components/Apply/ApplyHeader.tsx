@@ -24,12 +24,12 @@ function ApplyHeader() {
             </p>
           </div>
           <Image
-            src="/assets/home/peechi.png"
-            width={0}
-            height={0}
+            src="/assets/apply/peechi.png"
+            width={100}
+            height={100}
             sizes="100vw"
             alt="apply"
-            className="mt-6 w-full max-w-xs object-contain sm:max-w-sm md:max-w-md lg:mt-0 lg:max-w-xl"
+            className="mt-6 w-full max-w-xs object-contain sm:max-w-sm md:max-w-md lg:mt-0 lg:max-w-md"
           />
         </div>
       </div>
