@@ -11,6 +11,7 @@ function ApplyPrograms() {
           return (
             <ApplyProgramCard
               title={data.programName}
+              division={data.division}
               image={`/assets/apply/programs/${data.programImage}.png`}
               link={data.link}
               key={index}
