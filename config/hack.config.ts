@@ -17,89 +17,59 @@ export const hackDirectors: Director[] = [
 
 export const hackOfficers: Officer[] = [
   {
-    name: 'Adelaide Dunning',
-    position: 'Director of HackUTD',
-    image: '/assets/officer/AddyDunning.jpg',
+    name: 'Purva Pawar',
+    position: 'Advisor',
+    image: '/assets/officer/PurvaPawar.png',
+  },
+  {
+    name: 'Salman Jaher',
+    position: 'Advisor',
+    image: '/assets/officer/SalmanJaher.png',
   },
   {
     name: 'Kelly Zhou',
-    position: 'Director of HackUTD',
+    position: 'Director',
     image: '/assets/officer/KellyZhou.jpg',
+  },
+  {
+    name: 'Adelaide Dunning',
+    position: 'Director',
+    image: '/assets/officer/AddyDunning.jpg',
   },
   {
     name: 'Joshua Das',
     position: 'Experience Lead',
-    image: '/assets/officer/JoshuaDas.png',
+    image: '/assets/officer/JoshDas.png',
   },
   {
-    name: 'Evan Ngo',
-    position: 'Experience Officer',
-    image: '/assets/officer/EvanNgo.png',
+    name: 'Shaz Kumar',
+    position: 'Marketing Coordinator',
+    image: '/assets/officer/ShazKumar.png',
   },
   {
-    name: 'Reiki Hingorani',
-    position: 'Experience Officer',
-    image: '/assets/officer/ReikiHingorani.png',
+    name: 'Jordan Tan',
+    position: 'Marketing Lead',
+    image: '/assets/officer/JordanTan.png',
   },
   {
-    name: 'Alan Roybal',
-    position: 'Experience Officer',
-    image: '/assets/officer/AlanRoybal.png',
+    name: 'Wei Seng',
+    position: 'Tech Coordinator',
+    image: '/assets/officer/WeiSeng.png',
   },
   {
-    name: 'Veer Shah',
-    position: 'Experience Officer',
-    image: '/assets/officer/VeerShah.png',
+    name: 'Rayyan Waris',
+    position: 'Tech Lead',
+    image: '/assets/officer/RayyanWaris.png',
   },
   {
-    name: 'Arjun Kumar',
-    position: 'Experience Officer',
-    image: '/assets/officer/ArjunKumar.png',
+    name: 'Victoria Vynnychok',
+    position: 'Tech Coordinator',
+    image: '/assets/officer/VictoriaVynnychok.png',
   },
   {
-    name: 'Daniel Kim',
-    position: 'Experience Officer',
-    image: '/assets/officer/DanielKim.png',
-  },
-  {
-    name: 'Adelaide Dunning',
-    position: 'Logistics Lead',
-    image: '/assets/officer/AdelaideDunning.png',
-  },
-  {
-    name: 'Anwita Gudapurri',
-    position: 'Logistics Coordinator',
-    image: '/assets/officer/AnwitaGudapurri.png',
-  },
-  {
-    name: 'Shreya Mekala',
-    position: 'Logistics Coordinator',
-    image: '/assets/officer/ShreyaMekala.png',
-  },
-  {
-    name: 'Roshni Reddhannan',
-    position: 'Logistics Coordinator',
-    image: '/assets/officer/RoshniReddhannan.png',
-  },
-  {
-    name: 'Sahishnu Sagiraju',
-    position: 'Logistics Coordinator',
-    image: '/assets/officer/SahishnuSagiraju.png',
-  },
-  {
-    name: 'Alexander Tifase',
-    position: 'Logistics Coordinator',
-    image: '/assets/officer/AlexanderTifase.png',
-  },
-  {
-    name: 'Bhuvana Madiraju',
-    position: 'Industry Lead',
-    image: '/assets/officer/BhuvanaMadiraju.png',
-  },
-  {
-    name: 'Sharun Naicker',
-    position: 'Industry Coordinator',
-    image: '/assets/officer/SharunNaicker.png',
+    name: 'Sarah Jacob',
+    position: 'Marketing Coordinator',
+    image: '/assets/officer/SarahJacob.png',
   },
   {
     name: 'Sachi Hansalia',
@@ -108,7 +78,7 @@ export const hackOfficers: Officer[] = [
   },
   {
     name: 'Ridwan Amin',
-    position: 'Industry Coordinator',
+    position: 'Industry Lead',
     image: '/assets/officer/RidwanAmin.png',
   },
   {
@@ -122,85 +92,145 @@ export const hackOfficers: Officer[] = [
     image: '/assets/officer/JohnLuke.png',
   },
   {
-    name: 'Mike Nguyen',
-    position: 'Tech Lead',
-    image: '/assets/officer/MikeNguyen.png',
-  },
-  {
-    name: 'Wei Seng',
-    position: 'Developer',
-    image: '/assets/officer/WeiSeng.png',
-  },
-  {
-    name: 'Rayyan Waris',
-    position: 'Developer',
-    image: '/assets/officer/RayyanWaris.png',
-  },
-  {
-    name: 'Victoria Vynnychok',
-    position: 'Developer',
-    image: '/assets/officer/VictoriaVynnychok.png',
-  },
-  {
-    name: 'Anh Tu Do',
-    position: 'Developer',
-    image: '/assets/officer/AnhTuDo.png',
-  },
-  {
-    name: 'Kelly Zhou',
-    position: 'Maketing Lead',
-    image: '/assets/officer/KellyZhou.png',
-  },
-  {
-    name: 'Mitchell Vu',
-    position: 'Video Editor',
-    image: '/assets/officer/MitchellVu.png',
-  },
-  {
-    name: 'Shaz Kumar',
-    position: 'Social Media',
-    image: '/assets/officer/ShazKumar.png',
-  },
-  {
-    name: 'Jordan Tan',
-    position: 'Designer',
-    image: '/assets/officer/JordanTan.png',
-  },
-  {
-    name: 'Alyssa To',
-    position: 'Designer/UI/UX',
-    image: '/assets/officer/AlyssaTo.png',
-  },
-  {
-    name: 'Ann Jayan',
-    position: 'Designer',
-    image: '/assets/officer/AnnJayan.png',
-  },
-  {
-    name: 'Sarah Jacob',
-    position: 'Designer',
-    image: '/assets/officer/SarahJacob.png',
+    name: 'Shreya Mekala',
+    position: 'Logistics Coordinator',
+    image: '/assets/officer/ShreyaMekala.png',
   },
   {
     name: 'Caleb Bae',
-    position: 'Outreach',
+    position: 'Marketing Coordinator',
     image: '/assets/officer/CalebBae.png',
   },
   {
+    name: 'Reiki Hingorani',
+    position: 'Experience Coordinator',
+    image: '/assets/officer/ReikiHingorani.png',
+  },
+  {
+    name: 'Alan Roybal',
+    position: 'Experience Coordinator',
+    image: '/assets/officer/AlanRoybal.png',
+  },
+  {
+    name: 'Veer Shah',
+    position: 'Experience Coordinator',
+    image: '/assets/officer/VeerShah.png',
+  },
+  {
+    name: 'Sahishnu Sagiraju',
+    position: 'Industry Coordinator',
+    image: '/assets/officer/SahishnuSagiraju.png',
+  },
+  {
+    name: 'Ann Jayan',
+    position: 'Marketing Coordinator',
+    image: '/assets/officer/AnnJayan.png',
+  },
+  {
+    name: 'Roshni Beddhannan',
+    position: 'Logistics Coordinator',
+    image: '/assets/officer/RoshniBeddhannan.png',
+  },
+  {
+    name: 'Anwita Gudapuri',
+    position: 'Logistics Lead',
+    image: '/assets/officer/AnwitaGudapuri.png',
+  },
+  {
+    name: 'Daniel Kim',
+    position: 'Experience Coordinator',
+    image: '/assets/officer/DanielKim.png',
+  },
+  {
     name: 'Ayusha Timalsena',
-    position: 'Finance',
+    position: 'Finance Lead',
     image: '/assets/officer/AyushaTimalsena.png',
   },
   {
-    name: 'Michael Zhao',
-    position: 'Advisor',
-    image: '/assets/officer/MichaelZhao.png',
+    name: 'Sreevasan Sivasubramanian',
+    position: 'Technical Coordinator',
+    image: '/assets/officer/SreevasanSivasubramanian.jpg',
   },
-];
+  {
+    name: 'Ayro Escobar',
+    position: 'Technical Coordinator',
+    image: '/assets/officer/AyroEscobar.png',
+  },
+  {
+    name: 'Andrew Dmitrievsky',
+    position: 'Technical Coordinator',
+    image: '/assets/officer/AndrewDmitrievsky.jpeg',
+  },
+  {
+    name: 'Abhiram Tadepalli',
+    position: 'Technical Coordinator',
+    image: '/assets/officer/AbhiramTadepalli.png',
+  },
+  {
+    name: 'Fletcher Lauber',
+    position: 'Marketing Coordinator',
+    image: '/assets/officer/FletcherLauber.png',
+  },
+  {
+    name: 'Abdala Aljewarane',
+    position: 'Industry Coordinator',
+    image: '/assets/officer/AbdalaAljewarane.png',
+  },
+  {
+    name: 'Shraddha Subash',
+    position: 'Industry Coordinator',
+    image: '/assets/officer/ShraddhaSubash.jpg',
+  },
+  {
+    name: 'Nandini Paidesetty',
+    position: 'Industry Coordinator',
+    image: '/assets/officer/NandiniPaidesetty.jpg',
+  },
+  {
+    name: 'Sofia Thomas',
+    position: 'Logistics Coordinator',
+    image: '/assets/officer/SofiaThomas.png',
+  },
+  {
+    name: 'Soumika Seelam',
+    position: 'Logistics Coordinator',
+    image: '/assets/officer/SoumikaSeelam.png',
+  },
+  {
+    name: 'Dhivyesh Prithviraj',
+    position: 'Logistics Coordinator',
+    image: '/assets/officer/DhivyeshPrithviraj.png',
+  },
+  {
+    name: 'Liana Forster',
+    position: 'Experience Coordinator',
+    image: '/assets/officer/LianaForster.png',
+  },
+  {
+    name: 'Sahas Sharma',
+    position: 'Experience Coordinator',
+    image: '/assets/officer/SahasSharma.png',
+  },
+  {
+    name: 'Sunay Shehaan',
+    position: 'Experience Coordinator',
+    image: '/assets/officer/SunayShehaan.png',
+  },
+  {
+    name: 'Sree Aatish Bommisetty',
+    position: 'Finance Coordinator',
+    image: '/assets/officer/SreeAatishBommisetty.png',
+  },
+  {
+    name: 'Leeza Paul',
+    position: 'Finance Coordinator',
+    image: '/assets/officer/LeezaPaul.png',
+  },
+]
 
 export const hackTestimony: Testimony[] = [
 {
-  quote: `Being on the HackUTD team has given me the chance to build something incredible with a group of people who care just as much as I do. It’s so rewarding to see the event come to life after months of planning!`
+  quote: `Being on the HackUTD team has given me the chance to build something incredible with a group of people who care just as much as I do. It's so rewarding to see the event come to life after months of planning!`
 },
 {
   quote: `HackUTD has taught me how to manage large-scale logistics while still keeping the heart of it all—creating a welcoming, inspiring space for hackers`
@@ -212,7 +242,7 @@ export const hackTestimony: Testimony[] = [
 
 export const hackFAQ: Question[] = [{
   question: 'What is HackUTD?',
-  answer: `HackUTD is the official student-run hackathon of UT Dallas, organized by ACM. It’s the largest university hackathon in North Texas, welcoming hundreds of students to build innovative projects over a weekend.`
+  answer: `HackUTD is the official student-run hackathon of UT Dallas, organized by ACM. It's the largest university hackathon in North Texas, welcoming hundreds of students to build innovative projects over a weekend.`
 },
 {
   question: `Do I need prior coding experience to participate in HackUTD?`,
@@ -221,7 +251,7 @@ export const hackFAQ: Question[] = [{
 },
 {
   question: `How can I get involved with the HackUTD team?`,
-  answer: `Recruitment typically happens at the start of each semester through ACM UTD. Keep an eye out for applications, and don’t be afraid to reach out to current team members for advice!`
+  answer: `Recruitment typically happens at the start of each semester through ACM UTD. Keep an eye out for applications, and don't be afraid to reach out to current team members for advice!`
 }]
 export const hackCarouselImages: CarouselImage[] = [
   {
