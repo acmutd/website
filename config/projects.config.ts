@@ -118,7 +118,7 @@ export const projectsOfficers = [
 export const projectImages: CarouselImage[] = [
   {
     imageLink: '/assets/projects/proj_1.jpg',
-    title: 'Projects carrying the ACM President Farhan at Activate (both physically and literally)',
+    title: 'Projects carrying the ACM President Farhan at Activate',
     date: new Date(2024, 1, 21),
   },
   {
