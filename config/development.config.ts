@@ -196,5 +196,10 @@ export const developmentCarouselImages: CarouselImage[] = [
     imageLink: '/assets/development/sage.png',
     title: "SAGE, an AI-powered student advisor",
     date: new Date(2025, 2, 31)
+  },
+  {
+    imageLink: '/assets/development/utdgrades.png',
+    title: "UTD Grades, a quick and easy way to view class grading distributions",
+    date: new Date(2025, 3, 27)
   }
 ]
