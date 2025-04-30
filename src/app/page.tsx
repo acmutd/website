@@ -13,7 +13,7 @@ function Home() {
   return (
     <main className="relative flex h-fit flex-col gap-y-12 bg-[url(/assets/apply/apply-bg.png)] bg-cover py-10 text-white sm:gap-y-16 sm:py-16 md:gap-y-20 md:py-20 lg:gap-y-24">
       <ParallaxImages />
-      <div className=" mt-16 flex flex-col gap-y-[5vh]">
+      <div className=" mt-10 flex flex-col gap-y-[5vh]">
         <div className="flex flex-col lg:flex-row lg:gap-x-8">
           <div className="flex w-full flex-col gap-y-8 lg:w-3/5">
             <div
