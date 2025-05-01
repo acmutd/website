@@ -86,7 +86,6 @@ function Home() {
           <div className="mt-8 flex w-full flex-col gap-y-8 lg:mt-0 lg:w-2/5">
             <div className="background-container flex w-full flex-col items-center rounded-3xl border border-primary/50 bg-gray-600/10 backdrop-blur-xl sm:px-8 sm:py-10 sm:pb-0 md:py-14 md:pb-0">
               <div className="relative flex h-full w-full flex-col items-center justify-center">
-                <div className="absolute left-0 top-0 z-0 h-64 w-64 rounded-full bg-gradient-to-br from-pink-400 via-purple-400 to-yellow-300 opacity-80 md:h-80 md:w-80 xl:h-96 xl:w-96"></div>
                 <Image
                   src={`/assets/home/sage.png`}
                   width={500}
