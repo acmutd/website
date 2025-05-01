@@ -42,6 +42,8 @@ export type CarouselImage = {
   imageLink: string;
   title: string;
   date: Date;
+  description?: string;
+  location?: string;
 };
 
 type ProjectLink = {
