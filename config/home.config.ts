@@ -1,4 +1,5 @@
 import { HomePageData } from '../lib/types';
+import { CarouselImage } from './divisions.config';
 
 export const homePageData: HomePageData = {
   orgStatement:
@@ -29,3 +30,20 @@ export const homePageData: HomePageData = {
     custom: [],
   },
 };
+
+
+export const flexImages: CarouselImage[] = [
+  {
+    imageLink: '/assets/development/sage.png',
+    title: 'sage',
+    date: new Date('2025-01-01'),
+  },
+];
+
+export const eventImages: CarouselImage[] = [
+  {
+    imageLink: '/assets/home/research_symposium.png',
+    title: 'research symposium',
+    date: new Date('2025-01-01'),
+  },
+];

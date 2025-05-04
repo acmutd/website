@@ -1,10 +1,13 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { homePageData } from '../../config/home.config';
+import { eventImages, flexImages, homePageData } from '../../config/home.config';
 import ParallaxImages from '@/components/parallaxImages';
 import { Button } from '@/components/Button';
 import Sponsors from '@/components/Home/SponsorCarousel';
+import { FlexCarousel } from '@/components/Home/FlexCarousel';
+import { developmentCarouselImages } from '../../config/development.config';
+import { EventCarousel } from '@/components/Home/EventCarousel';
 
 function Home() {
   const icons = Object.keys(homePageData.community);
@@ -84,26 +87,9 @@ function Home() {
           </div>
 
           <div className="mt-8 flex w-full flex-col gap-y-8 lg:mt-0 lg:w-2/5">
-            <div className="background-container flex w-full flex-col items-center rounded-3xl border border-primary/50 bg-gray-600/10 backdrop-blur-xl sm:px-8 sm:py-10 sm:pb-0 md:py-14 md:pb-0">
-              <div className="relative flex h-full w-full flex-col items-center justify-center">
-                <Image
-                  src={`/assets/home/sage.png`}
-                  width={500}
-                  height={500}
-                  alt="sage"
-                  className="relative z-10 h-48 w-auto md:h-64 xl:h-80"
-                />
-              </div>
-              <div className="mt-6 w-full self-end">
-                <p className="content pl-3 text-center text-xl sm:text-base">
-                  Sage, an AI-powered student advisor
-                </p>
-              </div>
-            </div>
+            <FlexCarousel items={flexImages} />
 
-            <div className="background-container ml-[20%] mt-20 flex h-[50%] w-[60%] flex-col gap-y-6 rounded-3xl border border-primary/50 bg-gray-600/10 p-6 backdrop-blur-xl sm:gap-y-8 sm:p-10 md:gap-y-10 md:p-14">
-              <h3 className="text-xl font-extralight sm:text-lg">ACM Research Symposium</h3>
-            </div>
+            <EventCarousel items={eventImages} />
           </div>
         </div>
       </div>
