@@ -15,7 +15,7 @@ function Home() {
       <ParallaxImages />
       <div className=" mt-10 flex flex-col gap-y-[5vh]">
         <div className="flex flex-col lg:flex-row lg:gap-x-8">
-          <div className="flex w-full flex-col gap-y-8 lg:w-3/5">
+          <div className="z-10 flex w-full flex-col gap-y-8 lg:w-3/5">
             <div
               className={`background-container z-10 flex w-full flex-col gap-y-4 rounded-3xl border border-primary/50 bg-gray-600/10 px-6 py-8 backdrop-blur-xl sm:px-12 sm:py-10 md:z-0 md:px-16 md:py-14 lg:px-24`}
             >
