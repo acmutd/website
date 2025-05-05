@@ -5,12 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+
 import {
   HoverCard,
   HoverCardContent,
@@ -26,14 +21,14 @@ const navigation = [
 ];
 
 const divisions = [
-  { name: 'Projects', href: '/projects' },
-  { name: 'Development', href: '/development' },
+  { name: 'Media', href: '/media' },
   { name: 'Research', href: '/research' },
+  { name: 'Development', href: '/development' },
+  { name: 'Projects', href: '/projects' },
   { name: 'Education - TIP', href: '/education/tip' },
   { name: 'Education - Mentor', href: '/education/mentor' },
-  { name: 'Media', href: '/media' },
-  { name: 'HackUTD', href: '/hackutd' },
   { name: 'Community', href: '/community' },
+  { name: 'HackUTD', href: '/hackutd' },
   { name: 'Industry', href: '/industry' },
 ];
 
