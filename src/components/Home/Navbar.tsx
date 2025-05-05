@@ -124,22 +124,6 @@ export default function Navbar() {
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
-                item.name === 'about' ? (
-                  <DropdownMenu key={item.name}>
-                    <DropdownMenuTrigger className="w-full text-left block rounded-md px-3 py-2 text-base font-medium text-primary hover:bg-primaryDark/30 hover:text-primary">
-                      {item.name}
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-56 bg-black/70 backdrop-blur-xl border-primary/20">
-                      {divisions.map((division) => (
-                        <DropdownMenuItem key={division.name} className="focus:bg-primaryDark/30 focus:text-primary">
-                          <Link href={division.href} className="w-full px-2 py-1.5 text-primary hover:translate-x-1 hover:pl-3 transition-all duration-200">
-                            {division.name}
-                          </Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                ) : (
                   <Disclosure.Button
                     key={item.name}
                     as={Link}
@@ -148,8 +132,7 @@ export default function Navbar() {
                   >
                     {item.name}
                   </Disclosure.Button>
-                )
-              ))}
+                ))}
             </div>
           </Disclosure.Panel>
         </>
