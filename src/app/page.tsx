@@ -85,10 +85,8 @@ function Home() {
               </div>
             </div>
           </div>
-
           <div className="mt-8 flex w-full flex-col gap-y-8 lg:mt-0 lg:w-2/5">
             <FlexCarousel items={flexImages} />
-
             <EventCarousel items={eventImages} />
           </div>
         </div>

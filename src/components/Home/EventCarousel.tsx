@@ -38,7 +38,7 @@ export function EventCarousel({ items }: EventCarouselProps) {
   }, [api])
 
   return (
-    <div className="background-container relative mx-12 md:mx-3 lg:mx-auto flex w-full flex-col rounded-3xl border border-primary/50 bg-amber-600/10 p-3 pb-8 backdrop-blur-xl">
+    <div className="background-container relative flex w-full flex-col rounded-3xl border border-primary/50 bg-amber-600/10 p-3 pb-5 backdrop-blur-xl">
       <div className="relative w-full">
         <Carousel className="w-full" setApi={setApi} opts={{ loop: true }}>
           <CarouselContent overflowHidden>
@@ -46,13 +46,13 @@ export function EventCarousel({ items }: EventCarouselProps) {
               <CarouselItem key={index} className="basis-full">
                 <Dialog>
                   <DialogTrigger asChild>
-                    <div className="relative w-[389px] h-[472px] mx-auto cursor-pointer">
+                    <div className="relative w-[500px] h-[600px] mx-auto cursor-pointer group">
                       <Image
                         src={item.imageLink}
                         alt={item.title}
-                        width={389}
-                        height={472}
-                        className="rounded-[40px] transition-transform"
+                        width={500}
+                        height={800}
+                        className="rounded-[40px] transition-all duration-300 group-hover:scale-[1.02]"
                         priority={index === 0}
                       />
                     </div>
@@ -72,16 +72,16 @@ export function EventCarousel({ items }: EventCarouselProps) {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-0 bg-black/20 backdrop-blur-sm border-white/50 hover:bg-black/40 transition-colors" />
-          <CarouselNext className="absolute right-0 bg-black/20 backdrop-blur-sm border-white/50 hover:bg-black/40 transition-colors" />
-          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex justify-center gap-2 py-2 px-4 bg-black/20 backdrop-blur-sm rounded-full">
+          <CarouselPrevious className="absolute left-0 bg-black/30 backdrop-blur-sm border-white/50 hover:bg-black/50 transition-all duration-300 hover:scale-110" />
+          <CarouselNext className="absolute right-0 bg-black/30 backdrop-blur-sm border-white/50 hover:bg-black/50 transition-all duration-300 hover:scale-110" />
+          <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex justify-center gap-2 py-2 px-4 bg-black/30 backdrop-blur-sm rounded-full shadow-lg">
             {items.map((_, index) => (
               <button
                 key={index}
-                className={`h-2 rounded-full transition-all ${
+                className={`h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex
-                    ? "bg-white w-4"
-                    : "bg-white/50 hover:bg-white/70 w-2"
+                    ? "bg-white w-4 shadow-sm shadow-white/50"
+                    : "bg-white/50 hover:bg-white/70 w-2 hover:scale-110"
                 }`}
                 onClick={() => scrollTo(index)}
                 aria-label={`Go to slide ${index + 1}`}
@@ -90,8 +90,8 @@ export function EventCarousel({ items }: EventCarouselProps) {
           </div>
         </Carousel>
       </div>
-      <div className="absolute bottom-0 right-0 bg-white/10 px-4 py-2 rounded-tl-xl border-t-2 border-l-2 border-white/50 z-10">
-        <p className="text-lg text-white font-sans">
+      <div className="absolute bottom-0 right-0 bg-black/30 backdrop-blur-sm px-6 py-3 rounded-tl-xl border-t-2 border-l-2 border-white/50 z-10 shadow-lg shadow-black/20">
+        <p className="text-lg text-white font-sans font-medium tracking-wide">
           {items[currentIndex]?.title}
         </p>
       </div>
