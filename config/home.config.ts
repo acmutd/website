@@ -51,4 +51,9 @@ export const eventImages: CarouselImage[] = [
     title: 'research symposium',
     date: new Date('2025-01-01'),
   },
+  {
+    imageLink: '/assets/home/research_symposium.png',
+    title: 'research symposium',
+    date: new Date('2025-01-01'),
+  },
 ];
