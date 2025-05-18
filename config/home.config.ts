@@ -38,6 +38,11 @@ export const flexImages: CarouselImage[] = [
     title: 'sage',
     date: new Date('2025-01-01'),
   },
+  {
+    imageLink: '/assets/development/sage.png',
+    title: 'sage',
+    date: new Date('2025-01-01'),
+  },
 ];
 
 export const eventImages: CarouselImage[] = [
