@@ -35,7 +35,7 @@ export const homePageData: HomePageData = {
 export const flexImages: CarouselImage[] = [
   {
     imageLink: '/assets/development/sage.png',
-    title: 'sage',
+    title: "sage: ACM's very own Student Advising & Guidance Engine",
     date: new Date('2025-01-01'),
   },
   {
