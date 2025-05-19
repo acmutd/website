@@ -50,7 +50,7 @@ export default function Navbar() {
   return (
     <Disclosure
       as="nav"
-      className={`fixed z-20 w-full transition duration-200 ease-in ${navStyles}`}
+      className={`fixed z-50 w-full transition duration-200 ease-in ${navStyles}`}
     >
       {({ open }) => (
         <>

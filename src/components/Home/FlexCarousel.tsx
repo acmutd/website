@@ -38,7 +38,7 @@ export function FlexCarousel({ items }: FlexCarouselProps) {
   }, [api])
 
   return (
-    <div className="background-container relative mx-4 sm:mx-8 md:mx-3 lg:mx-auto flex w-full lg:max-w-[50vw] flex-col gap-y-4 sm:gap-y-6 rounded-2xl sm:rounded-3xl border border-primary/50 bg-amber-600/10 p-2 sm:p-3 pb-12 sm:pb-16 backdrop-blur-xl z-[100]">
+    <div className="background-container relative mx-2 sm:mx-8 md:mx-3 lg:mx-auto flex w-full lg:max-w-[50vw] flex-col gap-y-3 sm:gap-y-6 rounded-xl sm:rounded-3xl border border-primary/50 bg-amber-600/10 p-1.5 sm:p-3 pb-10 sm:pb-16 backdrop-blur-xl z-[40]">
       <div className="relative w-full">
         <Carousel className="w-full" setApi={setApi} opts={{ loop: true }}>
           <CarouselContent overflowHidden>
@@ -51,11 +51,11 @@ export function FlexCarousel({ items }: FlexCarouselProps) {
                         src={item.imageLink}
                         alt={item.title}
                         fill
-                        className="object-cover rounded-[24px] sm:rounded-[36px] transition-transform"
+                        className="object-cover rounded-lg sm:rounded-[36px] transition-transform"
                       />
                     </div>
                   </DialogTrigger>
-                  <DialogContent className="max-w-4xl w-[95vw] sm:w-[90vw] h-[95vh] sm:h-[90vh] p-0 bg-transparent border-none">
+                  <DialogContent className="max-w-4xl w-[98vw] sm:w-[90vw] h-[98vh] sm:h-[90vh] p-0 bg-transparent border-none">
                     <div className="relative w-full h-full">
                       <Image
                         src={item.imageLink}
@@ -70,15 +70,15 @@ export function FlexCarousel({ items }: FlexCarouselProps) {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="absolute left-0 bg-black/20 backdrop-blur-sm border-white/50 hover:bg-black/40 transition-colors h-8 w-8 sm:h-10 sm:w-10" />
-          <CarouselNext className="absolute right-0 bg-black/20 backdrop-blur-sm border-white/50 hover:bg-black/40 transition-colors h-8 w-8 sm:h-10 sm:w-10" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-center gap-1.5 sm:gap-2 py-1.5 sm:py-2 px-3 sm:px-4 bg-black/20 backdrop-blur-sm rounded-full">
+          <CarouselPrevious className="absolute left-1 sm:left-0 bg-black/30 backdrop-blur-sm border-white/50 hover:bg-black/40 transition-colors h-7 w-7 sm:h-10 sm:w-10" />
+          <CarouselNext className="absolute right-1 sm:right-0 bg-black/30 backdrop-blur-sm border-white/50 hover:bg-black/40 transition-colors h-7 w-7 sm:h-10 sm:w-10" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex justify-center gap-1 sm:gap-2 py-1 sm:py-2 px-2 sm:px-4 bg-black/30 backdrop-blur-sm rounded-full">
             {items.map((_, index) => (
               <button
                 key={index}
                 className={`h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full transition-all ${
                   index === currentIndex
-                    ? "bg-white w-3 sm:w-4"
+                    ? "bg-white w-2.5 sm:w-4"
                     : "bg-white/50 hover:bg-white/70"
                 }`}
                 onClick={() => scrollTo(index)}
@@ -88,8 +88,8 @@ export function FlexCarousel({ items }: FlexCarouselProps) {
           </div>
         </Carousel>
       </div>
-      <div className="absolute bottom-0 right-2 md:right-0 bg-white/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-tl-xl border-t-2 border-l-2 border-white/50 z-10">
-        <p className="text-sm sm:text-lg text-white font-sans">{items[currentIndex]?.title}</p>
+      <div className="absolute bottom-0 right-1 sm:right-2 md:right-0 bg-black/30 backdrop-blur-sm px-2 sm:px-4 py-1 sm:py-2 rounded-tl-lg sm:rounded-tl-xl border-t border-l border-white/50 z-10">
+        <p className="text-xs sm:text-lg text-white font-sans">{items[currentIndex]?.title}</p>
       </div>
     </div>
   )
