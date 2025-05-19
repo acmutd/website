@@ -6,7 +6,6 @@ import ParallaxImages from '@/components/parallaxImages';
 import { Button } from '@/components/Button';
 import Sponsors from '@/components/Home/SponsorCarousel';
 import { FlexCarousel } from '@/components/Home/FlexCarousel';
-import { developmentCarouselImages } from '../../config/development.config';
 import { EventCarousel } from '@/components/Home/EventCarousel';
 
 function Home() {
