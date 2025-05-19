@@ -63,7 +63,7 @@ const ParallaxImages: React.FC = () => {
   return (
     <>
       <Image
-        className={`img peechi absolute right-[10%] top-[20rem] z-20 h-auto w-64 opacity-0 transition-transform duration-1000 ease-out md:w-96 md:opacity-100 lg:right-[33vw] lg:top-[1px]`}
+        className={`img peechi absolute right-[10%] top-[20rem] z-20 h-auto w-64 opacity-0 transition-transform duration-1000 ease-out md:w-96 md:opacity-100 lg:right-[40vw] lg:top-[1px]`}
         src={peechi}
         alt="image"
       />
