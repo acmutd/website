@@ -48,10 +48,10 @@ function Home() {
 
             <div className="background-container mx-auto mt-20 flex w-[90%] flex-col gap-y-6 rounded-3xl border border-primary/50 bg-gray-600/10 p-6 backdrop-blur-xl sm:gap-y-8 sm:p-10 md:gap-y-10 md:p-14">
               <h3 className="text-2xl font-extralight sm:text-2xl md:text-3xl lg:text-6xl">
-                Upcoming Events
+                upcoming events
               </h3>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
-                Come join us at any of our events on campus! We&apos;re sure you&apos;ll find
+                come join us at any of our events on campus! we&apos;re sure you&apos;ll find
                 something you like.
               </p>
             </div>
