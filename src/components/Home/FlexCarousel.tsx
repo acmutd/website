@@ -38,7 +38,7 @@ export function FlexCarousel({ items }: FlexCarouselProps) {
   }, [api])
 
   return (
-    <div className="background-container relative mx-4 sm:mx-8 md:mx-3 lg:mx-auto flex w-full lg:max-w-[50vw] flex-col gap-y-4 sm:gap-y-6 rounded-2xl sm:rounded-3xl border border-primary/50 bg-amber-600/10 p-2 sm:p-3 pb-12 sm:pb-16 backdrop-blur-xl">
+    <div className="background-container relative mx-4 sm:mx-8 md:mx-3 lg:mx-auto flex w-full lg:max-w-[50vw] flex-col gap-y-4 sm:gap-y-6 rounded-2xl sm:rounded-3xl border border-primary/50 bg-amber-600/10 p-2 sm:p-3 pb-12 sm:pb-16 backdrop-blur-xl z-[100]">
       <div className="relative w-full">
         <Carousel className="w-full" setApi={setApi} opts={{ loop: true }}>
           <CarouselContent overflowHidden>
