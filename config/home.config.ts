@@ -39,18 +39,18 @@ export const flexImages: CarouselImage[] = [
     date: new Date('2025-01-01'),
   },
   {
-    imageLink: '/assets/research/research-symposium-winners-s25.png',
+    imageLink: '/assets/research/research-symposium-s25-098.jpg',
     title: "research symposium Spring '25 winners: Helix",
+    date: new Date('2025-01-01'),
+  },
+  {
+    imageLink: '/assets/projects/presentationnight-s25-247.jpg',
+    title: "projects presentation night Spring '25 winners: HackLab",
     date: new Date('2025-01-01'),
   },
 ];
 
 export const eventImages: CarouselImage[] = [
-  {
-    imageLink: '/assets/home/research_symposium.png',
-    title: 'research symposium',
-    date: new Date('2025-01-01'),
-  },
   {
     imageLink: '/assets/community/events_application_flyer.png',
     title: 'apply to be an events officer now!',
@@ -59,6 +59,11 @@ export const eventImages: CarouselImage[] = [
   {
     imageLink: '/assets/education/mentor-4.png',
     title: 'apply to be a mentor now!',
+    date: new Date('2025-01-01'),
+  },
+  {
+    imageLink: '/assets/home/research_symposium.png',
+    title: 'research symposium',
     date: new Date('2025-01-01'),
   },
 ];
