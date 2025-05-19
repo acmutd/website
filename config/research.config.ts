@@ -113,48 +113,28 @@ export const researchOfficers = [
 
 export const researchCarousel: CarouselImage[] = [
   {
-    imageLink: '/assets/research/research-1.png',
-    title: 'ACM Research Fall 2024 Team',
-    date: new Date(2024, 7, 18),
+    imageLink: '/assets/research/research-officers-s25.jpg',
+    title: 'ACM Research Spring 2025 Team',
+    date: new Date(2025, 1, 18),
   },
   {
-    imageLink: '/assets/research/research-2.JPG',
-    title: 'Introduction of judges for the Spring 2024 symposium..',
-    date: new Date(2024, 4, 3),
+    imageLink: '/assets/research/research-symposium-s25-130.jpg',
+    title: 'Research Directors speaking at symposium night .',
+    date: new Date(2025, 5, 6),
   },
   {
-    imageLink: '/assets/research/research-3.png',
-    title: 'Directors of ACM Research Fall 2024.',
-    date: new Date(2024, 7, 18),
+    imageLink: '/assets/research/research-symposium-s25-poster.jpg',
+    title: 'Members of the Helix team proudly presenting their poster, Spring 2025.',
+    date: new Date(2025, 5, 6),
   },
   {
-    imageLink: '/assets/research/research-4.JPG',
-    title: 'Members of the DriverWatch team proudly presenting their poster, Spring 2024.',
-    date: new Date(2024, 4, 3),
+    imageLink: '/assets/research/research-symposium-s25-2ndplace.jpg',
+    title: 'Second place winners: DRAMa',
+    date: new Date(2025, 5, 6),
   },
   {
-    imageLink: '/assets/research/research-5.JPG',
-    title: 'A typical build night at the Blackstone Launchpad.',
-    date: new Date(2023, 7, 25),
-  },
-  {
-    imageLink: '/assets/research/research-6.png',
-    title: 'Research Leads Hanging Out',
-    date: new Date(2024, 7, 18),
-  },
-  {
-    imageLink: '/assets/research/research-7.JPG',
-    title: 'Judging of research project during the Spring 2024 symposium.',
-    date: new Date(2024, 4, 3),
-  },
-  {
-    imageLink: '/assets/research/research-8.JPG',
-    title: 'Team Auditory Unveil during a Fall 2023 build night.',
-    date: new Date(2023, 7, 25),
-  },
-  {
-    imageLink: '/assets/research/research-9.png',
-    title: 'The Team In The Trees',
-    date: new Date(2024, 7, 18),
+    imageLink: '/assets/research/research-symposium-s25-winners.jpg',
+    title: 'First place winners: Helix',
+    date: new Date(2025, 5, 6),
   },
 ];
