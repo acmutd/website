@@ -1,8 +1,9 @@
 import { HomePageData } from '../lib/types';
+import { CarouselImage } from './divisions.config';
 
 export const homePageData: HomePageData = {
   orgStatement:
-    "We're a team of students with one goal: building a greater, more collaborative computing community at The University of Texas at Dallas.",
+    "we're a team of students with one goal: building a greater, more collaborative computing community at The University of Texas at Dallas.",
   community: {
     linkedin: 'https://www.linkedin.com/company/acmutd',
     instagram: 'https://www.instagram.com/acmutd/',
@@ -17,7 +18,7 @@ export const homePageData: HomePageData = {
       link: 'https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0',
     },
     {
-      description: 'acm applications now open for spring 2025!',
+      description: 'acm applications now open for fall 2025!',
       linkText: 'apply',
       link: 'https://portal.acmutd.co/opportunities',
     },
@@ -29,3 +30,35 @@ export const homePageData: HomePageData = {
     custom: [],
   },
 };
+
+
+export const flexImages: CarouselImage[] = [
+  {
+    imageLink: '/assets/development/sage.png',
+    title: "sage: ACM's very own Student Advising & Guidance Engine",
+    date: new Date('2025-01-01'),
+  },
+  {
+    imageLink: '/assets/research/research-symposium-s25-098.jpg',
+    title: "research symposium Spring '25 winners: Helix",
+    date: new Date('2025-01-01'),
+  },
+  {
+    imageLink: '/assets/projects/presentationnight-s25-247.jpg',
+    title: "projects presentation night Spring '25 winners: HackLab",
+    date: new Date('2025-01-01'),
+  },
+];
+
+export const eventImages: CarouselImage[] = [
+  {
+    imageLink: '/assets/community/events_application_flyer.png',
+    title: 'head to the apply page now!',
+    date: new Date('2025-01-01'),
+  },
+  {
+    imageLink: '/assets/education/mentor-4.png',
+    title: 'head to the apply page now!',
+    date: new Date('2025-01-01'),
+  },
+];
