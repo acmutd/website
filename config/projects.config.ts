@@ -117,14 +117,24 @@ export const projectsOfficers = [
 
 export const projectImages: CarouselImage[] = [
   {
-    imageLink: '/assets/projects/proj_1.jpg',
-    title: 'Projects carrying the ACM President Farhan at Activate',
-    date: new Date(2024, 1, 21),
+    imageLink: '/assets/projects/projects_1.JPG',
+    title: 'Projects Build Night in action',
+    date: new Date(2025, 4, 30),
   },
   {
-    imageLink: '/assets/projects/proj_2.jpg',
-    title: 'Projects Presentation Night Fall 2023',
-    date: new Date(2023, 11, 30),
+    imageLink: '/assets/projects/presentationnight-s25.jpg',
+    title: 'Projects Presentation Night',
+    date: new Date(2025, 4, 30),
+  },
+  {
+    imageLink: '/assets/projects/presentationnight-s25-240.jpg',
+    title: 'Projects second place winners: CometClaim',
+    date: new Date(2025, 4, 30),
+  },
+  {
+    imageLink: '/assets/projects/presentationnight-s25-winners.jpg',
+    title: 'Projects first place winners: HackLab',
+    date: new Date(2025, 4, 30),
   },
 ];
 

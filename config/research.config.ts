@@ -128,7 +128,7 @@ export const researchCarousel: CarouselImage[] = [
     date: new Date(2025, 5, 6),
   },
   {
-    imageLink: '/assets/research/research-symposium-s25-2ndplace.jpg',
+    imageLink: '/assets/research/research-symposium-s25-081.jpg',
     title: 'Second place winners: DRAMa',
     date: new Date(2025, 5, 6),
   },
