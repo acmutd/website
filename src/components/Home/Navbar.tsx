@@ -86,7 +86,7 @@ export default function Navbar() {
                           <HoverCardTrigger asChild className="text-lg font-semibold text-primary hover:text-primary/80 cursor-pointer">
                             <Link href={item.href}>{item.name}</Link>
                           </HoverCardTrigger>
-                          <HoverCardContent className="w-48 p-2 bg-black/70 backdrop-blur-xl border-primary/20">
+                          <HoverCardContent className="w-48 p-2 bg-black/70 backdrop-blur-xl border-primary/20 z-50">
                             <div className="flex flex-col space-y-1">
                               {divisions.map((division) => (
                                 <Link
