@@ -201,5 +201,10 @@ export const developmentCarouselImages: CarouselImage[] = [
     imageLink: '/assets/development/utdgrades.png',
     title: "UTD Grades, a quick and easy way to view class grading distributions",
     date: new Date(2025, 3, 27)
+  },
+  {
+    imageLink: '/assets/development/dev-team-s25.jpg',
+    title: "ACM Development Leads for Spring '25",
+    date: new Date(2025, 3, 27)
   }
 ]
