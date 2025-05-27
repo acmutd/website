@@ -119,12 +119,12 @@ export const researchCarousel: CarouselImage[] = [
   },
   {
     imageLink: '/assets/research/research-symposium-s25-130.jpg',
-    title: 'Research Directors speaking at symposium night .',
+    title: 'Research Directors speaking at symposium night',
     date: new Date(2025, 5, 6),
   },
   {
     imageLink: '/assets/research/research-symposium-s25-poster.jpg',
-    title: 'Members of the Helix team proudly presenting their poster, Spring 2025.',
+    title: 'Members of the Helix team proudly presenting their poster, Spring 2025',
     date: new Date(2025, 5, 6),
   },
   {

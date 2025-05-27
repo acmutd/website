@@ -44,7 +44,7 @@ export const flexImages: CarouselImage[] = [
     date: new Date('2025-01-01'),
   },
   {
-    imageLink: '/assets/projects/presentationnight-s25-247.jpg',
+    imageLink: '/assets/projects/presentationnight-s25-winners.jpg',
     title: "projects presentation night Spring '25 winners: HackLab",
     date: new Date('2025-01-01'),
   },
