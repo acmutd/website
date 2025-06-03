@@ -39,12 +39,12 @@ export const flexImages: CarouselImage[] = [
     date: new Date('2025-01-01'),
   },
   {
-    imageLink: '/assets/research/research-symposium-s25-098.jpg',
+    imageLink: '/assets/research/research-symposium-s25-winners.jpg',
     title: "research symposium Spring '25 winners: Helix",
     date: new Date('2025-01-01'),
   },
   {
-    imageLink: '/assets/projects/presentationnight-s25-247.jpg',
+    imageLink: '/assets/projects/presentationnight-s25-winners.jpg',
     title: "projects presentation night Spring '25 winners: HackLab",
     date: new Date('2025-01-01'),
   },
