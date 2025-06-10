@@ -9,11 +9,11 @@ function ApplyHeader() {
           <div className="w-full max-w-md lg:max-w-xl">
             <h1 className="mb-10 text-3xl font-bold text-primary xl:text-5xl">apply</h1>
             <p className="text-lg font-medium text-primaryDark xl:text-2xl">
-              Become a part of ACM today by applying to one of our semester long programs or to be
+              become a part of ACM today by applying to one of our semester long programs or to be
               an officer!
               <br />
               <br />
-              All open applications can be found in our member portal at{' '}
+              all open applications can be found in our member portal at{' '}
               <a
                 href="https://portal.acmutd.co/opportunities"
                 className="text-primary underline transition-colors hover:text-primaryDark"

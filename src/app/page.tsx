@@ -25,7 +25,7 @@ function Home() {
                 association for computing machinery
               </h1>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl">
-                We&apos;re a team of students with one goal: building a greater, more collaborative
+                we&apos;re a team of students with one goal: building a greater, more collaborative
                 computing community at The University of Texas at Dallas.
               </p>
               <div className="justify-content-center z-10 flex w-fit flex-row items-center gap-x-4 rounded-lg border border-primary/50 bg-gray-300/10 bg-acm-gradient px-4 py-3 sm:gap-x-6 sm:px-6 sm:py-4 md:px-8">

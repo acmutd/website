@@ -53,12 +53,12 @@ export const flexImages: CarouselImage[] = [
 export const eventImages: CarouselImage[] = [
   {
     imageLink: '/assets/community/events_application_flyer.png',
-    title: 'head to the apply page now!',
+    title: 'apply now',
     date: new Date('2025-01-01'),
   },
   {
     imageLink: '/assets/education/mentor-4.png',
-    title: 'head to the apply page now!',
+    title: 'apply now',
     date: new Date('2025-01-01'),
   },
 ];
