@@ -119,7 +119,7 @@ const OfficerPill = ({ officer }: PillProps) => (
     >
       <OfficerImageWithFallback
         fill
-        style={{ objectFit: 'contain' }}
+        style={{ objectFit: 'cover' }}
         src={officer.image}
         alt={officer.name}
         fallbackSrc="/assets/officer/OfficerImage.png"
