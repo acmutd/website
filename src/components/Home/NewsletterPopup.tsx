@@ -1,23 +1,46 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
-import { setCookie, getCookie } from "@/lib/utils";
 
 interface NewsletterPopupProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+function setCookie(name: string, value: string, days: number) {
+  const expires = new Date(Date.now() + days * 864e5).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
+}
+
+function getCookie(name: string) {
+  if (typeof document === "undefined") return undefined;
+  return document.cookie
+    .split("; ")
+    .find((row) => row.startsWith(name + "="))
+    ?.split("=")[1];
+}
+
 export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
+  const [shouldRender, setShouldRender] = useState(false);
+  const [hidden, setHidden] = useState(true);
+
+  useEffect(() => {
+    if (getCookie("hideNewsletterPopup") !== "true") {
+      setHidden(false);
+    }
+    setShouldRender(true);
+  }, []);
+
   const handleClose = () => {
-    setCookie("hideNewsletterPopup", "true", 1); // Hide it for 1 day I guess
+    setCookie("hideNewsletterPopup", "true", 7);
+    setHidden(true);
     onClose();
   };
 
-  if (!isOpen) return null;
+  if (!shouldRender || !isOpen || hidden) return null;
 
   return (
-    <div className={`${getCookie("hideNewsletterPopup") === "true" ? "hidden" : ""} fixed left-0 bottom-0 z-50 p-4 w-full max-w-sm flex items-end`}>
+    <div className="fixed left-0 bottom-0 z-50 p-4 w-full max-w-sm flex items-end">
       <div className="bg-gray-900 rounded-2xl p-8 w-full relative border border-gray-400/50">
         <button
           onClick={handleClose}
@@ -36,7 +59,6 @@ export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
         <div className="flex justify-end">
           <Button
             href="/newsletter"
-            // Old link: https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0
             text="join"
             bgStyle="acm"
           />
