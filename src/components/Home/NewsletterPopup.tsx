@@ -7,37 +7,50 @@ interface NewsletterPopupProps {
   onClose: () => void;
 }
 
-function setCookie(name: string, value: string, days: number) {
-  const expires = new Date(Date.now() + days * 864e5).toUTCString();
-  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
+function setLocalStorage(key: string, days: number) {
+  const now = new Date();
+  const item = { expireDate: now.getTime() + days * 864e5 };
+  localStorage.setItem(key, JSON.stringify(item));
 }
 
-function getCookie(name: string) {
-  if (typeof document === "undefined") return undefined;
-  return document.cookie
-    .split("; ")
-    .find((row) => row.startsWith(name + "="))
-    ?.split("=")[1];
+function findLocalStorage(key: string) {
+  if (typeof window === "undefined") return false;
+  const itemStr = localStorage.getItem(key);
+  if (!itemStr) return false;
+  try {
+    const item = JSON.parse(itemStr);
+    if (!item.expireDate || Date.now() > item.expireDate) {
+      localStorage.removeItem(key);
+      return false;
+    }
+    return true;
+  } catch {
+    localStorage.removeItem(key);
+    return false;
+  }
 }
 
 export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
-  const [shouldRender, setShouldRender] = useState(false);
+  const [displayThis, setDisplayThis] = useState(false);
   const [hidden, setHidden] = useState(true);
 
   useEffect(() => {
-    if (getCookie("hideNewsletterPopup") !== "true") {
+    // If the item exists and is valid, hide the popup
+    if (findLocalStorage("hideNewsletterPopup")) {
+      setHidden(true);
+    } else {
       setHidden(false);
     }
-    setShouldRender(true);
+    setDisplayThis(true);
   }, []);
 
   const handleClose = () => {
-    setCookie("hideNewsletterPopup", "true", 7);
+    setLocalStorage("hideNewsletterPopup", 1);
     setHidden(true);
     onClose();
   };
 
-  if (!shouldRender || !isOpen || hidden) return null;
+  if (!displayThis || !isOpen || hidden) return null;
 
   return (
     <div className="fixed left-0 bottom-0 z-50 p-4 w-full max-w-sm flex items-end">
@@ -59,6 +72,7 @@ export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
         <div className="flex justify-end">
           <Button
             href="/newsletter"
+            // Old link: https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0
             text="join"
             bgStyle="acm"
           />
