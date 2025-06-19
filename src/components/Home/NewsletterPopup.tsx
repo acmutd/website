@@ -54,7 +54,7 @@ export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
 
   return (
     <div className="fixed left-0 bottom-0 z-50 p-4 w-full max-w-sm flex items-end">
-      <div className="background-container p-8 w-full relative rounded-3xl border border-primary/50 bg-gray-900/60 backdrop-blur-md">
+      <div className="background-container p-8 w-full relative rounded-3xl border border-primary/50 bg-black/40 backdrop-blur-md">
         <button
           onClick={handleClose}
           className="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl font-bold focus:outline-none"
