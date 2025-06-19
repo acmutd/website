@@ -30,7 +30,8 @@ export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
         <div className="flex justify-end">
           {/* ikiag, i was tryna make my own button and then i saw there was alr a component for it in the top level of component folder kms 🙏🙏 */}
           <Button
-            href="https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0"
+            href="/newsletter"
+            /*old link: https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0*/
             text="join"
             bgStyle="acm"
           />
