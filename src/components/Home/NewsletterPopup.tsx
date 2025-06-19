@@ -1,5 +1,7 @@
-import React from 'react';
-import { Button } from '@/components/Button';
+"use client";
+import React from "react";
+import { Button } from "@/components/Button";
+import { setCookie, getCookie } from "@/lib/utils";
 
 interface NewsletterPopupProps {
   isOpen: boolean;
@@ -7,14 +9,18 @@ interface NewsletterPopupProps {
 }
 
 export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
+  const handleClose = () => {
+    setCookie("hideNewsletterPopup", "true", 1); // Hide it for 1 day I guess
+    onClose();
+  };
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed left-0 bottom-0 z-50 p-4 w-full max-w-sm flex items-end">
-      <div className="background-container p-8 w-full relative rounded-3xl border border-primary/50 bg-gray-600/10 backdrop-blur-md">
-        {/* ts will close ts 🙏 */}
+    <div className={`${getCookie("hideNewsletterPopup") === "true" ? "hidden" : ""} fixed left-0 bottom-0 z-50 p-4 w-full max-w-sm flex items-end`}>
+      <div className="bg-gray-900 rounded-2xl p-8 w-full relative border border-gray-400/50">
         <button
-          onClick={onClose}
+          onClick={handleClose}
           className="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl font-bold focus:outline-none"
           aria-label="Close"
         >
@@ -28,10 +34,9 @@ export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
           </div>
         </div>
         <div className="flex justify-end">
-          {/* ikiag, i was tryna make my own button and then i saw there was alr a component for it in the top level of component folder kms 🙏🙏 */}
           <Button
             href="/newsletter"
-            /*old link: https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0*/
+            // Old link: https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0
             text="join"
             bgStyle="acm"
           />
