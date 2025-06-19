@@ -7,6 +7,7 @@ import { Button } from '@/components/Button';
 import Sponsors from '@/components/Home/SponsorCarousel';
 import { FlexCarousel } from '@/components/Home/FlexCarousel';
 import { EventCarousel } from '@/components/Home/EventCarousel';
+import  VideoPlayer  from '@/components/Home/VideoPlayer';
 
 function Home() {
   const icons = Object.keys(homePageData.community);
@@ -85,6 +86,7 @@ function Home() {
             </div>
           </div>
           <div className="mt-8 flex w-full flex-col gap-y-8 lg:mt-0 lg:w-2/5">
+            <VideoPlayer/>
             <FlexCarousel items={flexImages} />
             <EventCarousel items={eventImages} />
           </div>
