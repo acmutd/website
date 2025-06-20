@@ -1,63 +1,48 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
 
-interface NewsletterPopupProps {
-  isOpen: boolean;
-  onClose: () => void;
+const localStorageKey = "newsletterExpiresAt";
+
+function setPopupExpiry(days: number) {
+  const expireDate = Date.now() + days * 864e5;
+  localStorage.setItem(localStorageKey, String(expireDate));
 }
 
-function setLocalStorage(key: string, days: number) {
-  const now = new Date();
-  const item = { expireDate: now.getTime() + days * 864e5 };
-  localStorage.setItem(key, JSON.stringify(item));
-}
-
-function findLocalStorage(key: string) {
+function isItemExpired() {
   if (typeof window === "undefined") return false;
-  const itemStr = localStorage.getItem(key);
-  if (!itemStr) return false;
-  try {
-    const item = JSON.parse(itemStr);
-    if (!item.expireDate || Date.now() > item.expireDate) {
-      localStorage.removeItem(key);
-      return false;
-    }
-    return true;
-  } catch {
-    localStorage.removeItem(key);
+  const expireDate = Number(localStorage.getItem(localStorageKey));
+  if (!expireDate || isNaN(expireDate)) return false;
+  if (Date.now() > expireDate) {
+    localStorage.removeItem(localStorageKey);
     return false;
   }
+  return true;
 }
 
-export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
-  const [displayThis, setDisplayThis] = useState(false);
-  const [hidden, setHidden] = useState(true);
-  const [sliding, setSliding] = useState(false);
+export function NewsletterPopup() {
+  const [hidden, setHidden] = useState(true); // Whether the popup is in the DOM or not
+  const [sliding, setSliding] = useState(false); // Whether the popup is currently animating
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (findLocalStorage("hideNewsletterPopup")) {
-        setHidden(true);
-      } else {
-        setHidden(false);
-        setTimeout(() => setSliding(true), 10); // This will delay the slide effect so in the styles down below it will start becoming invisible WHILE the animation is happening
+      if (!isItemExpired()) { // "If the item IS expired"
+        setHidden(false); // Add popup to DOM
+        setTimeout(() => setSliding(true), 10); // Animate it in
       }
-      setDisplayThis(true);
-    }, 2000); // This delays the popup appearance by 2 seconds
+    }, 2000); // Delay popup appearance by 2 seconds
 
     return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
-    setSliding(false);
-    setTimeout(() => {
-      setLocalStorage("hideNewsletterPopup", 1);
-      setHidden(true);
-      onClose();
-    }, 300);
+    setSliding(false); // Animate it out
+    setTimeout(() => { // Ensures the animation completes before removing from DOM
+      setPopupExpiry(1);
+      setHidden(true); // Remove from DOM after animation
+    }, 300); // Same as the transition duration below
   };
 
-  if (!displayThis || !isOpen || hidden) return null;
+  if (hidden) return null;
 
   return (
     <div className="fixed left-0 bottom-0 z-50 p-4 w-full max-w-sm flex items-end">

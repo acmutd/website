@@ -13,13 +13,12 @@ import { NewsletterPopup } from '@/components/Home/NewsletterPopup';
 function Home() {
   const icons = Object.keys(homePageData.community);
   const iconLinks = Object.values(homePageData.community);
-  const [isPopupOpen, setPopupOpen] = useState(true);
 
   return (
     <main className="relative flex h-fit flex-col gap-y-12 bg-[url(/assets/apply/apply-bg.png)] bg-cover py-10 text-white sm:gap-y-16 sm:py-16 md:gap-y-20 md:py-20 lg:gap-y-24">
       <ParallaxImages />
       <div className=" mt-10 flex flex-col gap-y-[5vh]">
-        <NewsletterPopup isOpen={isPopupOpen} onClose={() => setPopupOpen(false)} />
+        <NewsletterPopup />
         <div className="flex flex-col lg:flex-row lg:gap-x-8">
           <div className="z-10 flex w-full flex-col gap-y-8 lg:w-3/5">
             <div
