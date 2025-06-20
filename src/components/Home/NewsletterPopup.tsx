@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect, useState } from "react";
 import { Button } from "@/components/Button";
 
@@ -33,28 +32,40 @@ function findLocalStorage(key: string) {
 export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
   const [displayThis, setDisplayThis] = useState(false);
   const [hidden, setHidden] = useState(true);
+  const [sliding, setSliding] = useState(false);
 
   useEffect(() => {
-    // If the item exists and is valid, hide the popup
-    if (findLocalStorage("hideNewsletterPopup")) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
-    setDisplayThis(true);
+    const timer = setTimeout(() => {
+      if (findLocalStorage("hideNewsletterPopup")) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+        setTimeout(() => setSliding(true), 10); // This will delay the slide effect so in the styles down below it will start becoming invisible a little bit later
+      }
+      setDisplayThis(true);
+    }, 1000); // This delays the popup appearance by 2 seconds
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleClose = () => {
-    setLocalStorage("hideNewsletterPopup", 1);
-    setHidden(true);
-    onClose();
+    setSliding(false);
+    setTimeout(() => {
+      setLocalStorage("hideNewsletterPopup", 1);
+      setHidden(true);
+      onClose();
+    }, 300);
   };
 
   if (!displayThis || !isOpen || hidden) return null;
 
   return (
     <div className="fixed left-0 bottom-0 z-50 p-4 w-full max-w-sm flex items-end">
-      <div className="background-container p-8 w-full relative rounded-3xl border border-primary/50 bg-black/40 backdrop-blur-md">
+      <div
+        className={`background-container p-8 w-full relative rounded-3xl border border-primary/50 bg-black/40 backdrop-blur-md transition-all duration-300
+          ${sliding ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}
+        `}
+      >
         <button
           onClick={handleClose}
           className="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl font-bold focus:outline-none"
@@ -72,7 +83,6 @@ export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
         <div className="flex justify-end">
           <Button
             href="/newsletter"
-            // Old link: https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0
             text="join"
             bgStyle="acm"
           />
