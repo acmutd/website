@@ -40,7 +40,7 @@ export function NewsletterPopup({ isOpen, onClose }: NewsletterPopupProps) {
         setHidden(true);
       } else {
         setHidden(false);
-        setTimeout(() => setSliding(true), 10); // This will delay the slide effect so in the styles down below it will start becoming invisible a little bit later
+        setTimeout(() => setSliding(true), 10); // This will delay the slide effect so in the styles down below it will start becoming invisible WHILE the animation is happening
       }
       setDisplayThis(true);
     }, 1000); // This delays the popup appearance by 2 seconds
