@@ -68,41 +68,41 @@ const ParallaxImages: React.FC = () => {
         alt="image"
       />
       <Image
-        className={`img orb2 absolute right-[8vw] top-[12rem] z-0 transition-transform duration-1000 ease-out`}
+        className={`img orb1 absolute left-[10vw] z-0 transition-transform duration-1000 ease-out`}
+        src={orb1}
+        alt="image"
+      />
+      <Image
+        className={`img orb2 absolute right-[8vw] top-[15rem] z-0 transition-transform duration-1000 ease-out`}
         src={orb2}
         alt="image"
       />
       <Image
-        className={`img orb3 absolute left-[12vw] top-[18rem] z-0 transition-transform duration-1000 ease-out`}
+        className={`img orb3 absolute left-[5vw] top-[25rem] z-0 transition-transform duration-1000 ease-out`}
         src={orb3}
         alt="image"
       />
       <Image
-        className={`img orb4 absolute right-[15vw] top-[6rem] z-0 transition-transform duration-1000 ease-out`}
+        className={`img orb4 absolute right-[25vw] top-[10rem] z-0 transition-transform duration-1000 ease-out`}
         src={orb4}
         alt="image"
       />
       <Image
-        className={`img orb5 z-0 absolute left-[20vw] top-[4rem] transition-transform duration-1000 ease-out`}
+        className={`img orb5 z-0 absolute left-[75vw] top-[36rem] transition-transform duration-1000 ease-out`}
         src={orb5}
         alt="image"
       />
       <Image
-        className={`img orb6 absolute right-[25vw] top-[20rem] z-0 transition-transform duration-1000 ease-out`}
+        className={`img orb6 absolute right-[25vw] top-[28rem] z-0 transition-transform duration-1000 ease-out`}
         src={orb6}
         alt="image"
       />
-      <Image
-        className={`img orb7 absolute left-[5vw] top-[25rem] z-0 transition-transform duration-1000 ease-out`}
-        src={orb7}
-        alt="image"
-      />
 
-      <div className="absolute right-[10vw] top-[25rem] h-96 w-96 rounded-full bg-[#8135DA] opacity-20 blur-[8rem]"></div>
-      <div className="absolute left-[10vw] top-[15rem] h-52 w-52 rounded-full bg-[#3ADAB0] opacity-20 blur-[8rem]"></div>
-      <div className="absolute right-[30vw] top-[8rem] h-36 w-36 rounded-full bg-[#FF0052] opacity-20 blur-[8rem]"></div>
-      <div className="absolute left-[30vw] top-[22rem] h-64 w-64 rounded-full bg-[#E39E34] opacity-30 blur-[8rem]"></div>
-      <div className="absolute right-[5vw] top-[18rem] h-48 w-48 rounded-full bg-[#8135DA] opacity-25 blur-[6rem]"></div>
+      <div className="absolute left-[12vw] top-[15rem] h-80 w-80 rounded-full bg-[#8135DA] opacity-20 blur-[7rem]"></div>
+      <div className="absolute right-[12vw] top-[10rem] h-64 w-64 rounded-full bg-[#3ADAB0] opacity-20 blur-[7rem]"></div>
+      <div className="absolute right-[30vw] top-[8rem] h-48 w-48 rounded-full bg-[#FF0052] opacity-20 blur-[6rem]"></div>
+      <div className="absolute left-[30vw] top-[30rem] h-72 w-72 rounded-full bg-[#E39E34] opacity-25 blur-[7rem]"></div>
+      <div className="absolute left-[70vw] top-[18rem] h-56 w-56 rounded-full bg-[#8135DA] opacity-20 blur-[6rem]"></div>
     </>
   );
 };
