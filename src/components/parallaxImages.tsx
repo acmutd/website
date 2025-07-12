@@ -10,6 +10,8 @@ const multipliers: { [key: string]: number } = {
   orb4: 0.08,
   orb5: 0.06,
   orb6: 0.09,
+  orb7: 0.08,
+  orb8: 0.07,
 };
 
 const ParallaxImages: React.FC = () => {
@@ -95,6 +97,21 @@ const ParallaxImages: React.FC = () => {
       <Image
         className={`img orb6 absolute right-[25vw] top-[28rem] z-0 transition-transform duration-1000 ease-out`}
         src={orb6}
+        alt="image"
+      />
+      <Image
+        className={`img orb7 absolute left-[-5vw] top-[10rem] z-0 transition-transform duration-1000 ease-out`}
+        src={orb7}
+        alt="image"
+      />
+      <Image
+        className={`img orb8 absolute right-[-2vw] top-[20rem] z-0 transition-transform duration-1000 ease-out`}
+        src={orb2}
+        alt="image"
+      />
+      <Image
+        className={`img orb8 absolute right-[-7vw] top-[40rem] z-0 transition-transform duration-1000 ease-out`}
+        src={orb4}
         alt="image"
       />
 
