@@ -65,12 +65,12 @@ const ParallaxImages: React.FC = () => {
   return (
     <>
       <Image
-        className={`img peechi absolute right-[10%] top-[40rem] z-20 h-auto w-64 opacity-0 transition-transform duration-1000 ease-out md:w-96 md:opacity-100 lg:right-[5%] lg:top-[3rem]`}
+        className={`img peechi absolute right-[10%] top-[40rem] z-20 h-auto w-64 opacity-0 transition-transform duration-1000 ease-out md:w-96 md:opacity-100 lg:right-[5%] lg:top-[3rem] hidden xl:block`}
         src={peechi}
         alt="image"
       />
       <Image
-        className={`img orb1 absolute left-[10vw] z-0 transition-transform duration-1000 ease-out`}
+        className={`img orb1 absolute left-[10vw] z-0 transition-transform duration-1000 ease-out hidden md:block`}
         src={orb1}
         alt="image"
       />
@@ -85,17 +85,17 @@ const ParallaxImages: React.FC = () => {
         alt="image"
       />
       <Image
-        className={`img orb4 absolute right-[25vw] top-[10rem] z-0 transition-transform duration-1000 ease-out`}
+        className={`img orb4 absolute right-[25vw] top-[10rem] z-0 transition-transform duration-1000 ease-out hidden lg:block`}
         src={orb4}
         alt="image"
       />
       <Image
-        className={`img orb5 z-0 absolute left-[75vw] top-[36rem] transition-transform duration-1000 ease-out`}
+        className={`img orb5 z-0 absolute left-[75vw] top-[36rem] transition-transform duration-1000 ease-out hidden md:block`}
         src={orb5}
         alt="image"
       />
       <Image
-        className={`img orb6 absolute right-[25vw] top-[28rem] z-0 transition-transform duration-1000 ease-out`}
+        className={`img orb6 absolute right-[25vw] top-[28rem] z-0 transition-transform duration-1000 ease-out hidden lg:block`}
         src={orb6}
         alt="image"
       />
@@ -105,21 +105,21 @@ const ParallaxImages: React.FC = () => {
         alt="image"
       />
       <Image
-        className={`img orb8 absolute right-[-2vw] top-[20rem] z-0 transition-transform duration-1000 ease-out`}
+        className={`img orb8 absolute right-[-2vw] top-[20rem] z-0 transition-transform duration-1000 ease-out hidden sm:block`}
         src={orb2}
         alt="image"
       />
       <Image
-        className={`img orb8 absolute right-[-7vw] top-[40rem] z-0 transition-transform duration-1000 ease-out`}
+        className={`img orb8 absolute right-[-7vw] top-[40rem] z-0 transition-transform duration-1000 ease-out hidden md:block`}
         src={orb4}
         alt="image"
       />
 
       <div className="absolute left-[12vw] top-[15rem] h-80 w-80 rounded-full bg-[#8135DA] opacity-20 blur-[7rem]"></div>
       <div className="absolute right-[12vw] top-[10rem] h-64 w-64 rounded-full bg-[#3ADAB0] opacity-20 blur-[7rem]"></div>
-      <div className="absolute right-[30vw] top-[8rem] h-48 w-48 rounded-full bg-[#FF0052] opacity-20 blur-[6rem]"></div>
-      <div className="absolute left-[30vw] top-[30rem] h-72 w-72 rounded-full bg-[#E39E34] opacity-25 blur-[7rem]"></div>
-      <div className="absolute left-[70vw] top-[18rem] h-56 w-56 rounded-full bg-[#8135DA] opacity-20 blur-[6rem]"></div>
+      <div className="absolute right-[30vw] top-[8rem] h-48 w-48 rounded-full bg-[#FF0052] opacity-20 blur-[6rem] hidden md:block"></div>
+      <div className="absolute left-[30vw] top-[30rem] h-72 w-72 rounded-full bg-[#E39E34] opacity-25 blur-[7rem] hidden sm:block"></div>
+      <div className="absolute left-[70vw] top-[18rem] h-56 w-56 rounded-full bg-[#8135DA] opacity-20 blur-[6rem] hidden lg:block"></div>
     </>
   );
 };
