@@ -9,6 +9,7 @@ import { FlexCarousel } from '@/components/Home/FlexCarousel';
 import { EventCarousel } from '@/components/Home/EventCarousel';
 import { NewsletterPopup } from '@/components/Home/NewsletterPopup';
 import WhyJoin from '@/components/Home/WhyJoin';
+import DivisionsGrid from '@/components/Home/DivisionsGrid';
 
 function Home() {
   const icons = Object.keys(homePageData.community);
@@ -54,6 +55,7 @@ function Home() {
 
       <div className="py-10 sm:py-16 md:py-20 lg:py-24">
         <WhyJoin />
+        <DivisionsGrid />
       </div>
     </main>
   );
