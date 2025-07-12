@@ -45,31 +45,34 @@ export function NewsletterPopup() {
   if (hidden) return null;
 
   return (
-    <div className="fixed left-0 bottom-0 z-50 p-4 w-full max-w-sm flex items-end">
+    <div className="fixed left-0 bottom-0 z-50 p-3 max-w-xs sm:max-w-sm sm:p-4 flex items-end">
       <div
-        className={`background-container p-8 w-full relative rounded-3xl border border-primary/50 bg-black/40 backdrop-blur-md transition-all duration-300
+        className={`background-container p-4 sm:p-6 w-full relative rounded-2xl sm:rounded-3xl border border-primary/50 bg-black/40 backdrop-blur-md transition-all duration-300
           ${sliding ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}
         `}
       >
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl font-bold focus:outline-none"
+          className="absolute top-2 right-2 sm:top-4 sm:right-4 text-gray-300 hover:text-white text-xl sm:text-2xl font-bold focus:outline-none"
           aria-label="Close"
         >
           &times;
         </button>
         <div className="flex flex-col h-full justify-between">
-          <div className="text-xl font-normal leading-relaxed">
+          <div className="text-sm sm:text-lg md:text-xl font-normal leading-relaxed">
             join our mailing list to stay<br />
             updated with our events and<br />
             programs!
           </div>
         </div>
-        <div className="flex justify-end">
+        <div className="flex justify-end mt-3 sm:mt-4">
           <Button
             href=" https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0"
             text="join"
             bgStyle="acm"
+            height="h-8 sm:h-10"
+            textStyles="text-xs sm:text-sm"
+            addtitionalStyles="px-4 sm:px-6"
           />
         </div>
       </div>
