@@ -10,6 +10,7 @@ import { EventCarousel } from '@/components/Home/EventCarousel';
 import { NewsletterPopup } from '@/components/Home/NewsletterPopup';
 import WhyJoin from '@/components/Home/WhyJoin';
 import DivisionsGrid from '@/components/Home/DivisionsGrid';
+import ReadyToJoin from '@/components/Home/ReadyToJoin';
 
 function Home() {
   const icons = Object.keys(homePageData.community);
@@ -56,6 +57,10 @@ function Home() {
       <div className="py-10 sm:py-16 md:py-20 lg:py-24">
         <WhyJoin />
         <DivisionsGrid />
+        <ReadyToJoin />
+        <div className="flex w-full flex-col items-center justify-center px-6 py-8 sm:px-12 sm:py-12 md:px-16 md:py-14 lg:px-24 lg:py-16">
+          <Sponsors />
+        </div>
       </div>
     </main>
   );

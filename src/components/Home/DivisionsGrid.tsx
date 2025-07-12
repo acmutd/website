@@ -19,7 +19,7 @@ const DivisionsGrid: React.FC = () => {
         </div>
 
         {/* Use the existing Divisions component but remove its own header and description */}
-        <div className="[&>div]:bg-transparent [&>div]:bg-none [&_h1]:hidden [&_p]:hidden">
+        <div className="[&>div]:bg-transparent [&>div]:bg-none [&_h1]:hidden [&_p]:hidden [&_.relative.flex.min-w-\\[300px\\]]:min-w-[200px] [&_.relative.flex.min-w-\\[300px\\]]:max-w-[280px] [&_.relative.flex.min-w-\\[300px\\]]:p-3 [&_.relative.h-\\[100px\\]]:h-[80px] [&_.w-\\[13rem\\]]:w-[10rem] [&_.w-\\[42px\\]]:w-[36px] [&_.h-\\[42px\\]]:h-[36px]">
           <Divisions data={divisions} description={divisionDescription} />
         </div>
       </div>
