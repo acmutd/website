@@ -1,8 +1,10 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
 const WhyJoin: React.FC = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const reasons = [
     {
       title: 'Meet Other Developers',
@@ -43,20 +45,39 @@ const WhyJoin: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center rounded-2xl border border-primary/30 bg-gray-600/10 p-6 backdrop-blur-xl transition-all duration-300 hover:border-primary/50 hover:bg-gray-600/20"
-            >
-              <h3 className="mb-4 text-center text-lg font-bold text-white sm:text-xl">
-                {reason.title}
-              </h3>
-              <p className="text-center text-sm text-gray-300 sm:text-base">
-                {reason.description}
-              </p>
-            </div>
-          ))}
+          {/* Show limited cards on mobile, all cards on desktop */}
+          {reasons.map((reason, index) => {
+            // On mobile, only show first 4 cards unless showAll is true
+            // On desktop (md+), always show all cards
+            const shouldShow = index < 3 || showAll;
+
+            return (
+              <div
+                key={index}
+                className={`flex flex-col items-center rounded-2xl border border-primary/30 bg-gray-600/10 p-4 sm:p-6 backdrop-blur-xl transition-all duration-300 hover:border-primary/50 hover:bg-gray-600/20 ${shouldShow ? 'block md:flex' : 'hidden md:flex'}`}
+              >
+                <h3 className="mb-3 sm:mb-4 text-center text-base font-bold text-white sm:text-lg lg:text-xl">
+                  {reason.title}
+                </h3>
+                <p className="text-center text-xs text-gray-300 sm:text-sm lg:text-base">
+                  {reason.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
+
+        {/* Show More/Less button - only visible on mobile when there are more cards */}
+        {reasons.length > 4 && (
+          <div className="mt-8 flex justify-center md:hidden">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="rounded-lg border border-primary/50 bg-gray-600/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-xl transition-all duration-300 hover:border-primary/70 hover:bg-gray-600/20"
+            >
+              {showAll ? 'Show Less' : 'Show More'}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
