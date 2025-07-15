@@ -1,6 +1,12 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselDots,
+} from "@/components/ui/carousel";
 
 const WhyJoin: React.FC = () => {
 
@@ -43,7 +49,35 @@ const WhyJoin: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Mobile Carousel */}
+        <div className="sm:hidden flex flex-col items-center">
+          <Carousel
+            opts={{
+              align: "center",
+              loop: true,
+            }}
+            className="w-full max-w-sm"
+          >
+            <CarouselContent className="ml-0">
+              {reasons.map((reason, index) => (
+                <CarouselItem key={index} className="pl-4 basis-full">
+                  <div className="flex flex-col items-center rounded-2xl border border-primary/30 bg-gray-600/10 p-4 sm:p-6 backdrop-blur-xl transition-all duration-300 hover:border-primary/50 hover:bg-gray-600/20">
+                    <h3 className="mb-3 sm:mb-4 text-center text-base font-bold text-white sm:text-lg">
+                      {reason.title}
+                    </h3>
+                    <p className="text-center text-xs text-gray-300 sm:text-sm">
+                      {reason.description}
+                    </p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselDots />
+          </Carousel>
+        </div>
+
+        {/* Desktop Grid */}
+        <div className="hidden sm:grid grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((reason, index) => (
             <div
               key={index}
