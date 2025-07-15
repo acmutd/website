@@ -45,8 +45,6 @@ export const homePageData: HomePageData = {
   },
 };
 
-/**
-
 export const flexImages: CarouselImage[] = [
   {
     imageLink: '/assets/development/sage.png',
@@ -77,5 +75,3 @@ export const eventImages: CarouselImage[] = [
     date: new Date('2025-01-01'),
   },
 ];
-
-*/
