@@ -3,7 +3,7 @@ import React from 'react';
 import { aboutPageData } from '../../../config/about.config';
 import Divisions from '@/components/About/Divisions';
 
-const DivisionsGrid: React.FC = () => {
+function DivisionsGrid() {
   const { divisions, divisionDescription } = aboutPageData;
 
   return (

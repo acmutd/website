@@ -11,17 +11,31 @@ export const homePageData: HomePageData = {
     github: 'https://github.com/acmutd/',
     youtube: 'https://www.youtube.com/@acmutdallas4256',
   },
-  cards: [
+  whyJoinCards: [
     {
-      description: 'join our mailing list to stay updated with our events and programs!',
-      linkText: 'join',
-      link: 'https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0',
+      title: 'Meet Other Developers',
+      description: 'Connect with a community of students who are into coding, building, and tech.'
     },
     {
-      description: 'acm applications now open for fall 2025!',
-      linkText: 'apply',
-      link: 'https://portal.acmutd.co/opportunities',
+      title: 'Learn By Doing',
+      description: 'Workshops and coding events help you grow your skills outside the classroom.'
     },
+    {
+      title: 'Get Career Ready',
+      description: 'Networking events and interview prep to set you up for success for internships'
+    },
+    {
+      title: 'Research Opportunities',
+      description: 'Work with peers on real-world research in areas like AI, security, or systems.'
+    },
+    {
+      title: 'Mentorship Access',
+      description: 'Get advice from experienced students, alumni, and industry professionals.'
+    },
+    {
+      title: "It's Fun",
+      description: 'From social events to coding hangouts, it\'s a great place to meet people and have fun.'
+    }
   ],
   sponsors: {
     gold: ['statefarm', 'paycom', 'CBRE', 'eogresources', 'goldmansachs'],
@@ -31,6 +45,7 @@ export const homePageData: HomePageData = {
   },
 };
 
+/**
 
 export const flexImages: CarouselImage[] = [
   {
@@ -62,3 +77,5 @@ export const eventImages: CarouselImage[] = [
     date: new Date('2025-01-01'),
   },
 ];
+
+*/

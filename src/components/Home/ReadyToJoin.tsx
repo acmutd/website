@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/Button';
 
-const ReadyToJoin: React.FC = () => {
+function ReadyToJoin() {
   return (
     <div className="flex w-full flex-col items-center justify-center px-6 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-24 lg:py-24">
       <div className="flex w-full max-w-4xl flex-col items-center gap-y-6 text-center">

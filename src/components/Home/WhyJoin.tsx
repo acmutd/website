@@ -1,47 +1,21 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselDots,
 } from "@/components/ui/carousel";
+import { homePageData } from "../../../config/home.config";
 
-const WhyJoin: React.FC = () => {
-
-  const reasons = [
-    {
-      title: 'Meet Other Developers',
-      description: 'Connect with a community of students who are into coding, building, and tech.'
-    },
-    {
-      title: 'Learn By Doing',
-      description: 'Workshops and coding events help you grow your skills outside the classroom.'
-    },
-    {
-      title: 'Get Career Ready',
-      description: 'Networking events and interview prep to set you up for success as internships and job odds.'
-    },
-    {
-      title: 'Research Opportunities',
-      description: 'Work with peers on real-world research in areas like AI, security, or systems.'
-    },
-    {
-      title: 'Mentorship Access',
-      description: 'Get advice from experienced students, alumni, and industry professionals.'
-    },
-    {
-      title: "It's Fun",
-      description: 'From social events to coding hangouts, it\'s a great place to meet people and have a good time.'
-    }
-  ];
+function WhyJoin() {
+  const reasons = homePageData.whyJoinCards;
 
   return (
     <section className="relative flex w-full flex-col items-center justify-center px-6 py-16 sm:px-12 md:px-16 lg:px-24">
       <div className="w-full max-w-7xl">
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl md:text-5xl">
             Why Join ACM?
           </h2>
           <p className="mt-4 text-base text-gray-300 sm:text-lg md:text-xl">
