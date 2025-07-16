@@ -25,11 +25,12 @@ export default function Divisions({ data, description }: DivisionsProps) {
         <div className="flex flex-col items-center p-6 text-primary md:p-0">
           <h1 className="mb-2 text-5xl font-medium">Divisions</h1>
           <p className="mb-10 max-w-4xl text-center text-xl">{description}</p>
-          <div className="grid w-full place-items-center grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid w-full place-items-center grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {divisionCards.slice(0, 6)}
-            <div className="md:hidden inline-flex flex-col gap-4">{divisionCards.slice(6)}</div>
           </div>
-          <div className="mt-4 md:flex w-1/2 justify-center gap-4 hidden">{divisionCards.slice(6)}</div>
+          <div className="mt-4 flex max-sm:flex-wrap sm:flex-row w-full justify-center gap-4">
+            {divisionCards.slice(6)}
+          </div>
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
 
   return (
     <div
-      className="relative flex min-w-[300px] w-full max-w-[400px] flex-col rounded-3xl bg-white/5 p-4"
+      className="relative flex min-w-[250px] sm:min-w-[280px] md:min-w-[300px] w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] flex-col rounded-3xl bg-white/5 p-4"
       key={division}
     >
       <div className="relative h-[100px] sm:h-[120px] w-full">
@@ -49,11 +49,11 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
             <div className={`flex items-center rounded-lg bg-${division}-gradient p-[1px]`}>
               {learnMoreLink ? <Link
                 href={learnMoreLink.link}
-                className="flex w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+                className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-3 sm:px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm sm:text-base"
                 target={learnMoreLink.link.includes('http') ? '_blank' : '_self'}
               >
                 Learn more
-              </Link> : ( <div className="flex w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg">
+              </Link> : ( <div className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-3 sm:px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm sm:text-base">
                 Learn more
               </div>)
               }
@@ -61,12 +61,12 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
               {restLinks.length > 0 && (
                 <Popover>
                   <PopoverTrigger>
-                    <div className={`flex w-[42px] rounded-r-lg h-[42px] items-center justify-center bg-gray-300/10 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105`}>
-                        <ChevronDown className="h-5 w-5 stroke-[2.5]" />
+                    <div className={`flex w-[36px] sm:w-[40px] md:w-[42px] rounded-r-lg h-[36px] sm:h-[40px] md:h-[42px] items-center justify-center bg-gray-300/10 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105`}>
+                        <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 stroke-[2.5]" />
                     </div>
                   </PopoverTrigger>
                   <PopoverContent
-                    className="w-[13.5rem] rounded-lg border border-primary bg-gray-600/50 backdrop-blur-sm p-1.5 shadow-lg transition-all duration-300 ease-in-out z-50"
+                    className="w-[10.5rem] sm:w-[11.5rem] md:w-[13.5rem] rounded-lg border border-primary bg-gray-600/50 backdrop-blur-sm p-1.5 shadow-lg transition-all duration-300 ease-in-out z-50"
                     align="center"
                     sideOffset={2}
                   >
