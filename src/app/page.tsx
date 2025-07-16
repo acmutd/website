@@ -11,6 +11,7 @@ import { NewsletterPopup } from '@/components/Home/NewsletterPopup';
 import WhyJoin from '@/components/Home/WhyJoin';
 import DivisionsGrid from '@/components/Home/DivisionsGrid';
 import ReadyToJoin from '@/components/Home/ReadyToJoin';
+import ScrollIndicator from '@/components/Home/ScrollIndicator';
 
 function Home() {
   const icons = Object.keys(homePageData.community);
@@ -19,7 +20,7 @@ function Home() {
   return (
     <main className="relative flex h-fit flex-col gap-y-12 bg-[url(/assets/apply/apply-bg.png)] bg-cover text-white">
       <ParallaxImages />
-      <div className="flex h-screen flex-col items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24">
+      <div className="relative flex h-screen flex-col items-center justify-center px-6 sm:px-12 md:px-16 lg:px-24">
         <NewsletterPopup />
         <div className="flex flex-col items-center justify-center">
           <div className="z-10 flex w-full max-w-7xl flex-col gap-y-8">
@@ -50,7 +51,14 @@ function Home() {
                 })}
               </div>
             </div>
+            
+            {/* Scroll Indicator - positioned at bottom of hero */}
           </div>
+        </div>
+        
+        {/* Scroll Indicator positioned at bottom of viewport */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <ScrollIndicator />
         </div>
       </div>
 
