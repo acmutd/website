@@ -1,12 +1,9 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import { eventImages, flexImages, homePageData } from '../../config/home.config';
+import { homePageData } from '../../config/home.config';
 import ParallaxImages from '@/components/parallaxImages';
-import { Button } from '@/components/Button';
 import Sponsors from '@/components/Home/SponsorCarousel';
-import { FlexCarousel } from '@/components/Home/FlexCarousel';
-import { EventCarousel } from '@/components/Home/EventCarousel';
 import { NewsletterPopup } from '@/components/Home/NewsletterPopup';
 import WhyJoin from '@/components/Home/WhyJoin';
 import DivisionsGrid from '@/components/Home/DivisionsGrid';
@@ -51,18 +48,15 @@ function Home() {
                 })}
               </div>
             </div>
-            
-            {/* Scroll Indicator - positioned at bottom of hero */}
           </div>
         </div>
-        
-        {/* Scroll Indicator positioned at bottom of viewport */}
+
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <ScrollIndicator />
         </div>
       </div>
 
-      <div className="py-10 sm:py-16 md:py-20 lg:py-24">
+      <div id="why-join" className="py-10 sm:py-16 md:py-20 lg:py-24">
         <WhyJoin />
         <DivisionsGrid />
         <ReadyToJoin />
