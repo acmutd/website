@@ -11,10 +11,10 @@ function DivisionsGrid() {
       <div className="w-full max-w-6xl">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
-            Our Divisions
+            our divisions
           </h2>
           <p className="mt-3 text-sm text-gray-300 sm:text-base md:text-lg">
-            Our chapter is comprised of eight divisions — each serving a different topic and mission
+            acm utd is comprised of eight divisions — each serving a different topic and mission
           </p>
         </div>
 

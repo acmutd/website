@@ -16,10 +16,10 @@ function WhyJoin() {
       <div className="w-full max-w-7xl">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-white sm:text-4xl md:text-5xl">
-            Why Join ACM?
+            why join acm?
           </h2>
           <p className="mt-4 text-base text-gray-300 sm:text-lg md:text-xl">
-            Unlock opportunities for growth, learning, and professional development in computing
+            unlock opportunities for growth, learning, and professional development in computing
           </p>
         </div>
 

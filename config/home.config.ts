@@ -13,28 +13,28 @@ export const homePageData: HomePageData = {
   },
   whyJoinCards: [
     {
-      title: 'Meet Other Developers',
-      description: 'Connect with a community of students who are into coding, building, and tech.'
+      title: 'meet other developers',
+      description: 'connect with a community of students who are into coding, building, and tech'
     },
     {
-      title: 'Learn By Doing',
-      description: 'Workshops and coding events help you grow your skills outside the classroom.'
+      title: 'learn by doing',
+      description: 'workshops and coding events help you grow your skills outside the classroom'
     },
     {
-      title: 'Get Career Ready',
-      description: 'Networking events and interview prep to set you up for success for internships'
+      title: 'get career ready',
+      description: 'networking events and interview prep to set you up for success for internships'
     },
     {
-      title: 'Research Opportunities',
-      description: 'Work with peers on real-world research in areas like AI, security, or systems.'
+      title: 'research opportunities',
+      description: 'work with peers on real-world research in areas like AI, security, or systems'
     },
     {
-      title: 'Mentorship Access',
-      description: 'Get advice from experienced students, alumni, and industry professionals.'
+      title: 'mentorship access',
+      description: 'get advice from experienced students, alumni, and industry professionals'
     },
     {
-      title: "It's Fun",
-      description: 'From social events to coding hangouts, it\'s a great place to meet people and have fun.'
+      title: "it's fun",
+      description: 'from social events to coding hangouts, it\'s a great place to meet people and have fun'
     }
   ],
   sponsors: {
