@@ -1,10 +1,12 @@
 'use client';
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 const ScrollIndicator = () => {
+  const router = useRouter();
+
   const scrollToNextSection = () => {
-    // First try to find the why-join section
     const whyJoinSection = document.getElementById('why-join');
     if (whyJoinSection) {
       whyJoinSection.scrollIntoView({
@@ -14,12 +16,7 @@ const ScrollIndicator = () => {
       return;
     }
 
-    // Fallback: scroll down by viewport height
-    const viewportHeight = window.innerHeight;
-    window.scrollTo({
-      top: viewportHeight,
-      behavior: 'smooth'
-    });
+    router.push('#why-join');
   };
 
   return (
