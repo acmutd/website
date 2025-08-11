@@ -7,7 +7,7 @@ interface AboutHeaderProps {
 
 function AboutHeader({ pageDescription }: AboutHeaderProps) {
   return (
-    <div className="flex h-full items-center justify-center bg-[url(/assets/about/about-header-bg.png)] bg-cover bg-center bg-no-repeat">
+    <div className="flex h-full items-center justify-center bg-[url(/assets/about/about-header-bg.png)] bg-cover bg-center bg-no-repeat pb-52">
       <div className="flex h-full w-full max-w-[120rem] flex-col-reverse items-center gap-x-4 gap-y-4 p-6 md:flex-row md:p-0">
         <div className="h-fit w-full max-w-lg lg:max-w-max">
           <Image
