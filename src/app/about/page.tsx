@@ -10,7 +10,7 @@ export default function About() {
   return (
     <div className="py-20 text-center">
       <AboutHeader pageDescription={pageDescription} />
-      <div className="mt-28 flex flex-col items-center md:gap-y-36">
+      <div className="flex flex-col items-center md:gap-y-36">
         <Divisions data={divisions} description={divisionDescription} />
       </div>
     </div>
