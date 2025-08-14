@@ -18,7 +18,7 @@ export const homePageData: HomePageData = {
     },
     {
       title: 'learn by doing',
-      description: 'workshops and coding events help you grow your skills outside the classroom'
+      description: 'workshops, coding events, and hackathons help you grow your skills outside the classroom'
     },
     {
       title: 'get career ready',
@@ -33,8 +33,8 @@ export const homePageData: HomePageData = {
       description: 'get advice from experienced students, alumni, and industry professionals'
     },
     {
-      title: "it's fun",
-      description: 'from social events to coding hangouts, it\'s a great place to meet people and have fun'
+      title: "make connections",
+      description: 'from social events to coding hangouts, be part of a welcoming community'
     }
   ],
   sponsors: {
