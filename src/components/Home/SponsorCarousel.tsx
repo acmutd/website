@@ -72,7 +72,7 @@ const SponsorCarousel = () => {
 
   return (
     <div className="background-container relative z-10 flex w-full flex-col gap-y-4 sm:gap-y-6 md:gap-y-8 rounded-3xl sm:rounded-r-3xl border border-primary/50 sm:border-y sm:border-r bg-gradient-to-br from-gray-600/10 to-gray-800/5 p-6 sm:p-8 md:p-10 lg:p-14 text-center shadow-lg backdrop-blur-xl">
-      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-primary">Our Sponsors</h3>
+      <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-primary">our sponsors</h3>
 
       <Carousel
         setApi={setApi}

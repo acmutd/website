@@ -57,7 +57,7 @@ export type PastWorkshop = {
 export type HomePageData = {
   orgStatement: string;
   community: CommunityIconsData;
-  cards: HomeCard[];
+  whyJoinCards: HomeCard[];
   sponsors: Record<SponsorType, string[]>;
 };
 
@@ -72,9 +72,8 @@ export type CommunityIconsData = {
 };
 
 export type HomeCard = {
+  title: string;
   description: string;
-  link: string;
-  linkText: string;
 };
 
 // Footer Types
