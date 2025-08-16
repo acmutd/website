@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Division, EducationSub  } from './divisionUtil';
+import { Division, EducationSub } from './divisionUtil';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,11 +18,12 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
         <div className="mt-10 md:mt-20 flex items-center">
           <Link href={applicationUrl[division]}>
             <div className={`bg-${division.split('.')[0]}-gradient px-4 md:px-5 py-2 text-lg md:text-xl text-white rounded-lg border border-primary/50 bg-gray-300/10`}>
-              apply today
+              apply
             </div>
           </Link>
         </div>
       ) : (
+        // This was only used for the Education division for Mentor, you could apply for Mentor and Mentee so there would be two apply buttons
         <div className="mt-10 md:mt-20 flex flex-col md:flex-row items-center gap-y-3 md:gap-x-3">
           {Object.entries(applicationUrl[division] as Record<string, string>).map(
             ([roleName, appUrl]) => (
@@ -43,18 +44,15 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
 
 // NOTE: This will need to be changed every semester until we have a database
 const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>> = {
-  'education.mentor': {
-    Mentor: 'https://portal.acmutd.co/typeform/mentor-app-s25',
-    Mentee: 'https://portal.acmutd.co/typeform/mentee-app-s25',
-  },
-  'education.tip': 'https://portal.acmutd.co/typeform/tip-app-s25',
-  projects: 'https://portal.acmutd.co/typeform/projects-apply-s25',
-  research: 'https://portal.acmutd.co/typeform/research-apply-s25',
-  development: 'https://portal.acmutd.co/typeform/development-apply-s25',
-  media: 'https://portal.acmutd.co/typeform/media-apply-s25',
-  hackutd: 'https://portal.acmutd.co/typeform/hackutd-apply-s25',
-  community: 'https://portal.acmutd.co/typeform/community-apply-s25',
-  industry: 'https://portal.acmutd.co/typeform/industry-apply-s25',
+  'education.mentor': 'https://portal.acmutd.co/opportunities',
+  'education.tip': 'https://portal.acmutd.co/opportunities',
+  projects: 'https://portal.acmutd.co/opportunities',
+  research: 'https://portal.acmutd.co/opportunities',
+  development: 'https://portal.acmutd.co/opportunities',
+  media: 'https://portal.acmutd.co/opportunities',
+  hackutd: 'https://portal.acmutd.co/opportunities',
+  community: 'https://portal.acmutd.co/opportunities',
+  industry: 'https://portal.acmutd.co/opportunities',
 };
 
 const images: Record<ExtendedDivisions, ReactNode> = {
