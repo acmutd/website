@@ -23,6 +23,7 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
           </Link>
         </div>
       ) : (
+        // This was only used for the Education division for Mentor, you could apply for Mentor and Mentee so there would be two apply buttons
         <div className="mt-10 md:mt-20 flex flex-col md:flex-row items-center gap-y-3 md:gap-x-3">
           {Object.entries(applicationUrl[division] as Record<string, string>).map(
             ([roleName, appUrl]) => (
@@ -43,10 +44,7 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
 
 // NOTE: This will need to be changed every semester until we have a database
 const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>> = {
-  'education.mentor': {
-    Mentor: 'https://portal.acmutd.co/opportunities',
-    Mentee: 'https://portal.acmutd.co/opportunities',
-  },
+  'education.mentor': 'https://portal.acmutd.co/opportunities',
   'education.tip': 'https://portal.acmutd.co/opportunities',
   projects: 'https://portal.acmutd.co/opportunities',
   research: 'https://portal.acmutd.co/opportunities',
