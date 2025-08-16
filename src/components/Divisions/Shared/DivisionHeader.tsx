@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Division, EducationSub  } from './divisionUtil';
+import { Division, EducationSub } from './divisionUtil';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,7 +18,7 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
         <div className="mt-10 md:mt-20 flex items-center">
           <Link href={applicationUrl[division]}>
             <div className={`bg-${division.split('.')[0]}-gradient px-4 md:px-5 py-2 text-lg md:text-xl text-white rounded-lg border border-primary/50 bg-gray-300/10`}>
-              apply today
+              apply
             </div>
           </Link>
         </div>
