@@ -44,17 +44,17 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
 // NOTE: This will need to be changed every semester until we have a database
 const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>> = {
   'education.mentor': {
-    Mentor: 'https://portal.acmutd.co/typeform/mentor-app-s25',
-    Mentee: 'https://portal.acmutd.co/typeform/mentee-app-s25',
+    Mentor: 'https://portal.acmutd.co/opportunities',
+    Mentee: 'https://portal.acmutd.co/opportunities',
   },
-  'education.tip': 'https://portal.acmutd.co/typeform/tip-app-s25',
-  projects: 'https://portal.acmutd.co/typeform/projects-apply-s25',
-  research: 'https://portal.acmutd.co/typeform/research-apply-s25',
-  development: 'https://portal.acmutd.co/typeform/development-apply-s25',
-  media: 'https://portal.acmutd.co/typeform/media-apply-s25',
-  hackutd: 'https://portal.acmutd.co/typeform/hackutd-apply-s25',
-  community: 'https://portal.acmutd.co/typeform/community-apply-s25',
-  industry: 'https://portal.acmutd.co/typeform/industry-apply-s25',
+  'education.tip': 'https://portal.acmutd.co/opportunities',
+  projects: 'https://portal.acmutd.co/opportunities',
+  research: 'https://portal.acmutd.co/opportunities',
+  development: 'https://portal.acmutd.co/opportunities',
+  media: 'https://portal.acmutd.co/opportunities',
+  hackutd: 'https://portal.acmutd.co/opportunities',
+  community: 'https://portal.acmutd.co/opportunities',
+  industry: 'https://portal.acmutd.co/opportunities',
 };
 
 const images: Record<ExtendedDivisions, ReactNode> = {
