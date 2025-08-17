@@ -51,8 +51,7 @@ export const aboutPageData: AboutPageData = {
         'acm education empowers students with technical and professional skills through programs like Technical Interview Prep (TIP), the Mentor program, and skill-building workshops.',
       links: [
         { name: 'TIP', link: '/education/tip' },
-        { name: 'mentor program', link: '/education/mentor' },
-        { name: 'learn more', link: '/education' },
+        { name: 'mentor program', link: '/education/mentor' }
       ],
     },
     community: {
