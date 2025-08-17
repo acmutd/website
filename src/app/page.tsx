@@ -38,7 +38,7 @@ function Home() {
                       <Image
                         src={`/assets/home/icons/${icon}.png`}
                         alt=""
-                        className="object-contain"
+                        className="object-contain transition-transform duration-200 hover:scale-125"
                         width={20}
                         height={20}
                         style={{ width: 'auto', height: 'auto' }}

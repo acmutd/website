@@ -24,8 +24,8 @@ export default function Footer() {
         <div className="flex flex-col">
           {footerData.links.map((link, idx) => {
             return (
-              <Link 
-                href={link.link} 
+              <Link
+                href={link.link}
                 key={idx}
                 className="text-primary hover:text-primary/80 transition-colors duration-200"
               >
@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
       <div className="flex flex-col">
         <h3 className="text-xl">reach us at</h3>
-        <a 
+        <a
           href={`mailto:${footerData.contact}`}
           className="text-primary hover:text-primary/80 transition-colors duration-200"
         >
@@ -53,7 +53,7 @@ export default function Footer() {
                 <Image
                   src={`/assets/home/icons/${icon}.png`}
                   alt=""
-                  className="object-contain"
+                  className="object-contain transition-transform duration-200 hover:scale-125"
                   width={25}
                   height={25}
                 />
