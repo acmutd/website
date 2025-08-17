@@ -54,9 +54,9 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
                 className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-3 sm:px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm sm:text-base"
                 target={learnMoreLink.link.includes('http') ? '_blank' : '_self'}
               >
-                Learn more
+                learn more
               </Link> : ( <div className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-3 sm:px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm sm:text-base">
-                Learn more
+                learn more
               </div>)
               }
 
