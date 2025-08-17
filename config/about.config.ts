@@ -52,6 +52,7 @@ export const aboutPageData: AboutPageData = {
       links: [
         { name: 'TIP', link: '/education/tip' },
         { name: 'mentor program', link: '/education/mentor' },
+        { name: 'learn more', link: '/education' },
       ],
     },
     community: {
