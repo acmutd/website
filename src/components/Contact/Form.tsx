@@ -6,7 +6,7 @@ import { homePageData } from '../../../config/home.config';
 
 export default function Form() {
   return (
-    <div className="flex min-h-[700px] w-full flex-col gap-y-8 rounded-2xl border border-primary/50 bg-gray-300/10 p-12 text-primary md:w-1/2 md:rounded-l-2xl md:rounded-r-[0px] md:border-y md:border-l md:border-r-[0px]">
+    <div className="flex min-h-[700px] w-full flex-col gap-y-8 rounded-2xl border border-primary/50 bg-gray-300/10 p-12 text-primary md:w-1/2 md:rounded-2xl">
       <p className="text-2xl font-bold lg:text-3xl">connect with us!</p>
       <div className="my-auto flex h-3/5 flex-col gap-y-8">
         <Link href={homePageData.community.linkedin} passHref>
