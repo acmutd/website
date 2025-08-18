@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export const dynamic = 'force-dynamic';
 
 const calendarId =
-  'c_893d7ec01b0d651ddfadf46f6792b1d470abe97c6d9f33157a1f4be2d4420a51@group.calendar.google.com';
+  'c_3a5b5311f40423092c66bb75ea43060109e03f61514557d285298c0495d1681b@group.calendar.google.com';
 const endpoint = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`;
 
 type CalendarApiResponse = {
