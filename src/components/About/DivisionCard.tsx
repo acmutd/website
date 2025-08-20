@@ -34,7 +34,7 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
 
   return (
     <div
-      className="relative flex min-w-[250px] sm:min-w-[280px] md:min-w-[300px] w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] flex-col rounded-3xl bg-white/5 p-4"
+      className="relative flex min-w-[250px] sm:min-w-[280px] md:min-w-[300px] w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] flex-col rounded-3xl p-4"
       key={division}
     >
       <div className="relative h-[100px] sm:h-[120px] w-full">
@@ -51,7 +51,7 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
             <div className={`flex items-center rounded-lg bg-${division}-gradient p-[1px]`}>
               {learnMoreLink ? <Link
                 href={learnMoreLink.link}
-                className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-3 sm:px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm sm:text-base"
+                className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg px-3 sm:px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm sm:text-base"
                 target={learnMoreLink.link.includes('http') ? '_blank' : '_self'}
               >
                 learn more
