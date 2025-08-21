@@ -3,8 +3,7 @@ import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
-const calendarId =
-  'c_3a5b5311f40423092c66bb75ea43060109e03f61514557d285298c0495d1681b@group.calendar.google.com';
+const calendarId = process.env.CALENDAR_ID;
 const endpoint = `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events`;
 const calendarTimeZone = 'America/Chicago';
 
@@ -31,6 +30,12 @@ export async function GET(request: Request) {
     if (!process.env.CALENDAR_API_KEY) {
       return NextResponse.json(
         { error: 'Calendar API key is not configured' },
+        { status: 500 }
+      );
+    }
+    else if (!process.env.CALENDAR_ID) {
+      return NextResponse.json(
+        { error: 'Calendar ID is not configured' },
         { status: 500 }
       );
     }
