@@ -28,13 +28,13 @@ export default function DivisionsCarousel(props: DivisionProps) {
     });
   }, [api]);
 
+  const division = props.division || 'education'; // TIP and Mentor will default to Education division that way
+
   return (
-    <div className="w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
-      <div
-        className="relative h-56 sm:h-64 md:h-96 w-full overflow-hidden group"
-      >
+    <div className={`w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg p-[2px] bg-${division}-gradient`}>
+      <div className="relative aspect-video w-full overflow-hidden group bg-black rounded-lg">
         <Carousel
-          className={`w-full h-full bg-${props.division}-gradient`}
+          className="w-full h-full"
           opts={{
             loop: true,
             align: "center",
@@ -44,14 +44,20 @@ export default function DivisionsCarousel(props: DivisionProps) {
           <CarouselContent>
             {images.map((image, i) => (
               <CarouselItem key={i}>
-                <div className="relative h-56 sm:h-64 md:h-96 w-full flex items-center justify-center p-2 sm:p-3 md:p-4">
+                <div className="relative w-full h-full flex items-center justify-center aspect-video">
                   <Image
                     src={image.imageLink}
                     alt={image.title}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full object-cover rounded-lg"
                     fill
                     priority={i === 0}
                   />
+                  {/* Description box at bottom right */}
+                  {i === current && (
+                    <div className="absolute bottom-4 right-4 bg-black/60 rounded-md px-4 py-2 text-white text-sm md:text-base font-medium shadow-lg">
+                      {image.title}
+                    </div>
+                  )}
                 </div>
               </CarouselItem>
             ))}
@@ -64,40 +70,15 @@ export default function DivisionsCarousel(props: DivisionProps) {
           {images.map((_, i) => (
             <button
               key={i}
-              className={`h-2 sm:h-2.5 md:h-3 w-2 sm:w-2.5 md:w-3 rounded-full transition-all duration-300 ${
-                i === current
+              className={`h-2 sm:h-2.5 md:h-3 w-2 sm:w-2.5 md:w-3 rounded-full transition-all duration-300 ${i === current
                   ? 'scale-110 bg-white shadow-md'
                   : 'bg-white/50 hover:bg-white/80'
-              }`}
+                }`}
               aria-label={`Go to slide ${i + 1}`}
               onClick={() => api?.scrollTo(i)}
             />
           ))}
         </div>
-      </div>
-
-      <div
-        className={`flex flex-col sm:flex-row w-full justify-between bg-${props.division}-gradient p-3 sm:p-4 md:p-5 text-white`}
-      >
-        <p className="font-semibold text-center sm:text-left text-sm sm:text-base md:text-lg">{images[current].title}</p>
-        <p className="text-xs sm:text-sm text-center sm:text-right mt-1 sm:mt-0 opacity-90">
-          Shot{' '}
-          {images[current].date.toLocaleDateString('en-US', {
-            weekday: 'long',
-            month: 'long',
-            day: 'numeric',
-          })}
-          {images[current].date.getHours() !== 0 || images[current].date.getMinutes() !== 0 ? (
-            <>
-              {' at '}
-              {images[current].date.toLocaleTimeString('en-US', {
-                hour: 'numeric',
-                minute: images[current].date.getMinutes() > 0 ? 'numeric' : undefined,
-                timeZoneName: 'short',
-              })}
-            </>
-          ) : null}
-        </p>
       </div>
     </div>
   );
