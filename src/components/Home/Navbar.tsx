@@ -81,11 +81,11 @@ export default function Navbar() {
                 <div className="hidden sm:ml-6 sm:block ">
                   <div className="flex space-x-10 items-center py-2">
                     {navigation.map((item) => (
-                      item.name === 'about' ? (
-                        <HoverCard key={item.name} openDelay={10}>
-                          <HoverCardTrigger asChild className="text-lg font-semibold text-primary hover:text-primary/80 cursor-pointer">
-                            <Link href={item.href}>{item.name}</Link>
-                          </HoverCardTrigger>
+                      <HoverCard key={item.name} openDelay={10}>
+                        <HoverCardTrigger asChild className="text-lg font-semibold text-primary hover:text-primary/80 cursor-pointer">
+                          <Link href={item.href}>{item.name}</Link>
+                        </HoverCardTrigger>
+                        {item.name === 'about' && (
                           <HoverCardContent className="w-48 p-2 bg-black/70 backdrop-blur-xl border-primary/20 z-50">
                             <div className="flex flex-col space-y-1">
                               {divisions.map((division) => (
@@ -99,16 +99,8 @@ export default function Navbar() {
                               ))}
                             </div>
                           </HoverCardContent>
-                        </HoverCard>
-                      ) : (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          className="text-lg font-semibold text-primary"
-                        >
-                          {item.name}
-                        </Link>
-                      )
+                        )}
+                      </HoverCard>
                     ))}
                   </div>
                 </div>

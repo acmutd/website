@@ -3,7 +3,7 @@ import React from 'react';
 
 function ApplyHeader() {
   return (
-    <div className="flex min-h-[600px] w-full justify-end pl-10 pr-10 md:min-h-[470px]">
+    <div className="flex min-h-[600px] w-full justify-end px-10 md:min-h-[470px]">
       <div className="relative mb-6 w-full overflow-hidden rounded-3xl border border-primary/50 bg-apply-gradient shadow-2xl">
         <div className="absolute left-0 top-0 flex h-full w-full flex-col items-center justify-center p-6 md:flex-row md:space-x-10">
           <div className="w-full max-w-md lg:max-w-xl">

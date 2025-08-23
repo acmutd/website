@@ -27,7 +27,7 @@ function ApplyProgramCard({ title, image, link, division }: ApplyProgramCardProp
           {title}
         </h1>
       </div>
-      <div className="absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-3xl bg-black/70" />
+      <div className="absolute left-1/2 top-1/2 flex h-full w-full -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-3xl bg-black/60" />
 
       <Image
         src={image}

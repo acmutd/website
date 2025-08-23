@@ -15,6 +15,8 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
   const learnMoreLink = divisionData.links.find(link => link.name.toLowerCase().includes('learn more'));
   const restLinks = divisionData.links.filter(link => !link.name.toLowerCase().includes('learn more'));
 
+  const [popoverOpen, setPopoverOpen] = useState(false);
+
   const LinksContent = () => (
     <div className="flex flex-col gap-1">
       {restLinks.map((link, i) => (
@@ -49,20 +51,22 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
             <div className={`flex items-center rounded-lg bg-${division}-gradient p-[1px]`}>
               {learnMoreLink ? <Link
                 href={learnMoreLink.link}
-                className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-3 sm:px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm sm:text-base"
+                className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg px-3 sm:px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm sm:text-base"
                 target={learnMoreLink.link.includes('http') ? '_blank' : '_self'}
               >
-                Learn more
-              </Link> : ( <div className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-3 sm:px-4 py-2 font-bold transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm sm:text-base">
-                Learn more
-              </div>)
+                learn more
+              </Link> : (
+                <div className="flex w-[10rem] sm:w-[11rem] md:w-[13rem] items-center justify-center rounded-l-lg bg-gray-300/10 px-3 sm:px-4 py-2 font-bold text-sm sm:text-base">
+                  learn more
+                </div>
+              )
               }
 
               {restLinks.length > 0 && (
-                <Popover>
+                <Popover open={popoverOpen} onOpenChange={setPopoverOpen}>
                   <PopoverTrigger>
                     <div className={`flex w-[36px] sm:w-[40px] md:w-[42px] rounded-r-lg h-[36px] sm:h-[40px] md:h-[42px] items-center justify-center bg-gray-300/10 cursor-pointer transition-all duration-300 ease-in-out hover:scale-105`}>
-                        <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 stroke-[2.5]" />
+                        <ChevronDown className={`h-4 w-4 sm:h-5 sm:w-5 stroke-[2.5] transition-transform duration-300 ${popoverOpen ? 'rotate-180' : ''}`} />
                     </div>
                   </PopoverTrigger>
                   <PopoverContent
