@@ -119,7 +119,7 @@ export default function DivisionsCarousel(props: DivisionProps) {
         aria-hidden={!lightboxOpen}
       >
         <div
-          className={`relative flex items-center justify-center rounded-lg p-[2px] bg-gradient-to-r bg-${division}-gradient`}
+          className={`relative flex items-center justify-center rounded-lg p-[2px] bg-${division}-gradient`}
           onClick={e => e.stopPropagation()}
         >
           <div className="relative rounded-lg overflow-hidden">
