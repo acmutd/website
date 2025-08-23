@@ -34,7 +34,7 @@ export default function DivisionCard({ division, divisionData }: DivisionCardPro
 
   return (
     <div
-      className="relative flex min-w-[250px] sm:min-w-[280px] md:min-w-[300px] w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] flex-col rounded-3xl p-4"
+      className="relative flex min-w-[250px] sm:min-w-[280px] md:min-w-[300px] w-full max-w-[320px] sm:max-w-[360px] md:max-w-[400px] flex-col rounded-3xl bg-white/5 p-4"
       key={division}
     >
       <div className="relative h-[100px] sm:h-[120px] w-full">
