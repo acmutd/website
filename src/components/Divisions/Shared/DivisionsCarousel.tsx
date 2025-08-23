@@ -20,6 +20,16 @@ export default function DivisionsCarousel(props: DivisionProps) {
   const [current, setCurrent] = useState(0);
   const [api, setApi] = useState<CarouselApi>();
 
+  // Carousel autoscroller (every 5s)
+  // Will stop when lightbox modal is open
+  useEffect(() => {
+    if (!api || images.length <= 1 || lightboxOpen) return;
+    const interval = setInterval(() => {
+      api.scrollTo((api.selectedScrollSnap() + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [api, images.length, lightboxOpen]);
+
   useEffect(() => {
     if (!api) return;
 
