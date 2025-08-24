@@ -33,7 +33,7 @@ export default function Navigator(props: DivisionProps) {
 
   return (
     <div
-      className={`fixed right-0 md:right-5 z-50 h-auto pr-2 md:pr-10 text-right hidden md:block ${
+      className={`fixed right-0 md:right-5 z-50 h-auto pr-2 md:pr-10 text-right hidden xl:block ${
         props.division !== 'education' ? 'top-1/3' : 'top-2/3'
       }`}
     >
