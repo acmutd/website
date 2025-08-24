@@ -54,7 +54,7 @@ export default function DivisionsCarousel(props: DivisionProps) {
 
   return (
     <>
-      <div className={`w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg p-[2px] bg-${division}-gradient`}>
+  <div className={`w-full sm:max-w-4xl max-w-[calc(100vw-1rem)] rounded-lg overflow-hidden shadow-lg p-[2px] bg-${division}-gradient mx-auto`}>
         <div className="relative aspect-video w-full overflow-hidden group bg-black rounded-lg">
           <Carousel
             className="w-full h-full"
