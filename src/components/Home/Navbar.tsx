@@ -18,6 +18,7 @@ const navigation = [
   { name: 'apply', href: '/apply', current: false },
   { name: 'events', href: '/events', current: false },
   { name: 'connect', href: '/connect', current: false },
+  { name: 'sponsor', href: '/sponsor', current: false}
 ];
 
 const divisions = [
