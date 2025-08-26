@@ -67,7 +67,7 @@ export default function UpcomingEvents() {
     const endDate = new Date(event.start.getTime() + 60 * 60 * 1000);
     const end = formatDateTime(endDate);
     const details = [event.description || '', event.location ? `Location: ${event.location}` : ''].filter(Boolean).join('%0A');
-    return `https://www.google.com/calendar/render?action=TEMPLATE&text=ACM UTD: ${encodeURIComponent(event.title)}&dates=${start}/${end}&details=${encodeURIComponent(details)}${event.location ? `&location=${encodeURIComponent(event.location)}` : ''}`;
+    return `https://www.google.com/calendar/render?action=TEMPLATE&text=ACM%20UTD:%20${encodeURIComponent(event.title)}&dates=${start}/${end}&details=${encodeURIComponent(details)}${event.location ? `&location=${encodeURIComponent(event.location)}` : ''}`;
   };
 
   return (
