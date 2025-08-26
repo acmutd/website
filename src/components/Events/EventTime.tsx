@@ -18,7 +18,7 @@ export default function UpcomingEventCard({ dateString, location }: Props) {
         </div>
         <div className="flex items-center">
           <span className="inline-flex items-center justify-center w-2 h-2 mr-4 text-2xl">
-            🕒
+            📅
           </span>
           <span>
             {date.toLocaleDateString('en-US', {
