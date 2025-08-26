@@ -98,7 +98,11 @@ export async function GET(request: Request) {
     const items = data.items || [];
 
     if (items.length === 0) {
-      return NextResponse.json({ events: [] });
+      return NextResponse.json({ events: [] }, {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
     }
 
     const events = parseItems(items).sort((a, b) => {
@@ -107,7 +111,11 @@ export async function GET(request: Request) {
       return a.start.getTime() - b.start.getTime();
     });
 
-    return NextResponse.json({ events });
+    return NextResponse.json({ events }, {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    });
   } catch (error) {
     console.error('Error fetching calendar events:', error);
     return NextResponse.json(

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Button } from '@/components/Button';
 import type { Event } from '@/../lib/types.d.ts';
 import {
   Dialog,
@@ -39,6 +40,22 @@ const EventComponent = ({ event, day, month }: Props) => {
     });
   };
 
+  // Helper to create Google Calendar event link
+  const getGoogleCalendarUrl = () => {
+    if (!localStartDate) return '#';
+    const formatDateTime = (date: Date) => {
+      // Google Calendar expects: YYYYMMDDTHHmmssZ
+      return date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
+    };
+    const start = formatDateTime(localStartDate);
+    // Default to 1 hour duration
+    const endDate = new Date(localStartDate.getTime() + 60 * 60 * 1000);
+    const end = formatDateTime(endDate);
+    const details = [event.description || '', event.location ? `Location: ${event.location}` : ''].filter(Boolean).join('%0A');
+    const url = `https://www.google.com/calendar/render?action=TEMPLATE&text=ACM%20UTD:%20${encodeURIComponent(event.title)}&dates=${start}/${end}&details=${encodeURIComponent(details)}${event.location ? `&location=${encodeURIComponent(event.location)}` : ''}`;
+    return url;
+  };
+
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -46,7 +63,7 @@ const EventComponent = ({ event, day, month }: Props) => {
           {event.title}
         </div>
       </DialogTrigger>
-      <DialogContent className="w-[95vw] max-w-md p-4 sm:p-6">
+      <DialogContent className="w-[95vw] max-w-md p-6 sm:p-10">
         <DialogHeader className="space-y-2">
           <DialogTitle className="text-base sm:text-lg md:text-xl">{event.title}</DialogTitle>
         </DialogHeader>
@@ -67,6 +84,17 @@ const EventComponent = ({ event, day, month }: Props) => {
             <div className="space-y-1">
               <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-200">Description</h3>
               <p className="text-xs sm:text-sm md:text-base text-gray-100">{event.description}</p>
+            </div>
+          )}
+          {localStartDate && (
+            <div className="pt-2">
+              <Button
+                href={getGoogleCalendarUrl()}
+                text='Add to Google Calendar'
+                textStyles="text-xs sm:text-sm"
+                addtitionalStyles="px-4 sm:px-6"
+                bgStyle='acm'
+              />
             </div>
           )}
         </div>
