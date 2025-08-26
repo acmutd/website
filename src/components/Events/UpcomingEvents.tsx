@@ -52,7 +52,7 @@ export default function UpcomingEvents() {
           <Dialog key={event.id}>
             <DialogTrigger asChild>
               <div
-                className={`my-2 md:my-4 flex h-auto w-full flex-col justify-center bg-gradient-to-r ${colors[i % 3].from} ${colors[i % 3].to} rounded-lg p-1 shadow-lg cursor-pointer`}
+                className={`my-2 md:my-4 flex h-auto w-full flex-col justify-center bg-gradient-to-r ${colors[i % 3].from} ${colors[i % 3].to} hover:opacity-80 transition-all rounded-lg p-1 shadow-lg cursor-pointer`}
                 onClick={() => setSelectedEvent(event)}
               >
                 <div className="rounded-lg p-3 md:p-4 backdrop-blur-sm backdrop-filter">
