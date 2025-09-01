@@ -45,7 +45,7 @@ export const projectsFAQ: Array<Question> = [
   {
     question: 'What is the time commitment?',
     answer:
-      "The minimum time commitment is the 1.5 hours required for each weekly build night. Beyond this, you and your team may need extra time to complete your project so it's up to you to schedule the time amongst yourselves. N S",
+      "The minimum time commitment is the 1.5 hours required for each weekly build night. Beyond this, you and your team may need extra time to complete your project so it's up to you to schedule the time amongst yourselves.",
   },
 ];
 
