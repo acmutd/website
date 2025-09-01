@@ -21,6 +21,67 @@ const faqs = [
 function Sponsor() {
   return (
     <div className="h-fit w-full py-20 flex flex-col items-center px-4 sm:px-6 md:px-8">
+      {/* Sponsors Grid */}
+      <div className="w-full max-w-5xl mx-auto rounded-2xl border border-white/20 bg-black/40 backdrop-blur-md p-8 mb-12 relative">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+          our sponsors
+        </h2>
+        <p className="text-center text-lg md:text-xl text-white/80 mb-12">
+          Our sponsors are at the heart of what we do. Through their support,
+          we're able to provide students with top-tier resources, events, and
+          opportunities that help them grow both professionally and personally.
+        </p>
+        <div className="flex flex-col gap-8 items-center">
+          {/* Gold */}
+          <div className="relative bg-yellow-400/20 rounded-xl p-6 w-full max-w-2xl flex flex-col items-center">
+            <span className="mb-4 text-xs uppercase text-yellow-400 font-bold tracking-wide">
+              gold
+            </span>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full mb-4">
+              <img
+                src="/assets/home/sponsors/statefarm.png"
+                alt="StateFarm"
+                className="h-12 w-full object-contain mx-auto"
+              />
+              <img
+                src="/assets/home/sponsors/paycom.png"
+                alt="Paycom"
+                className="h-12 w-full object-contain mx-auto"
+              />
+              <img
+                src="/assets/home/sponsors/CBRE.png"
+                alt="CBRE"
+                className="h-12 w-full object-contain mx-auto"
+              />
+              <img
+                src="/assets/home/sponsors/eogresources.png"
+                alt="EOG Resources"
+                className="h-12 w-full object-contain mx-auto"
+              />
+              <div className="lg:col-span-2 flex justify-center">
+                <img
+                  src="/assets/home/sponsors/goldmansachs.png"
+                  alt="Goldman Sachs"
+                  className="h-20 max-w-[140px] w-full object-contain mx-auto"
+                />
+              </div>
+            </div>
+          </div>
+          {/* Silver */}
+          <div className="relative bg-gray-300/20 rounded-xl p-6 w-full max-w-2xl flex flex-col items-center space-y-4 mb-12">
+            <span className="absolute top-4 left-1/2 -translate-x-1/2 text-xs uppercase text-gray-300 font-bold tracking-wide">
+              silver
+            </span>
+            <div className="flex justify-center items-center w-full">
+              <img
+                src="/assets/home/sponsors/visa.png"
+                alt="Visa"
+                className="h-12 object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
       <h1 className="text-center text-3xl sm:text-4xl font-bold pb-12 sm:pb-20">
         sponsor faq
