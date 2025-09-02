@@ -4,7 +4,7 @@ const faqs = [
   {
     question: "What impact has ACM UTD had on the tech community?",
     answer:
-      "ACM is the largest student-run tech organization on campus, driving innovation and industry engagement. We host HackUTD, the largest university hackathon in Texas, attracting 1,000+ participants and nationwide sponsor attention. We run technical and developmental workshops each semester. Our alumni have gone on to work at FAANG companies, launch startups, and contribute to open-source communities.",
+      "ACM is the largest student-run tech organization on campus, driving innovation and industry engagement. We host HackUTD, the largest university hackathon in Texas, attracting 1,000+ participants and nationwide sponsor attention. We run technical and developmental workshops each semester, allowing companies to connect with the top motivated students. Our alumni have gone on to work at FAANG companies, launch startups, and contribute to open-source communities.",
   },
   {
     question: "What sponsorships opportunities are available?",
