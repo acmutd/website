@@ -32,11 +32,11 @@ function Sponsor() {
       {/* Sponsors Grid */}
       <div className="w-full max-w-5xl mx-auto rounded-2xl border border-white/20 bg-black/40 backdrop-blur-md p-8 mb-12 relative">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-          IndustrySponsor
+          our sponsors
         </h2>
-        <p className="text-center text-lg md:text-xl text-white/80 mb-12">
+        <p className="text-center md:px-12 text-lg md:text-xl text-white/80 mb-12">
           Our sponsors are at the heart of what we do. Through their support,
-          we're able to provide students with top-tier resources, events, and
+          we&apos;re able to provide students with top-tier resources, events, and
           opportunities that help them grow both professionally and personally.
         </p>
         <div className="flex flex-col gap-8 items-center">
