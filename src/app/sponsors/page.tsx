@@ -91,6 +91,18 @@ function Sponsor() {
         </div>
       </div>
 
+      {/* 3 images side by side above FAQ title */}
+      <div className="w-full flex justify-center items-center gap-6 mb-8 flex-wrap">
+        {['pic1.jpg','pic2.jpg','pic3.jpg','pic4.jpg','pic5.jpg'].map((filename, idx) => (
+          <div key={idx} className="relative w-[240px] h-[160px] rounded-lg p-[2px] bg-hackutd-gradient overflow-hidden mb-4">
+            <img
+              src={`/assets/sponsors/pics/${filename}`}
+              alt={`Sponsor pic ${idx+1}`}
+              className="object-cover w-full h-full rounded-lg"
+            />
+          </div>
+        ))}
+      </div>
       <h1 className="text-center text-3xl sm:text-4xl font-bold pb-12 sm:pb-20">
         sponsor faq
       </h1>
