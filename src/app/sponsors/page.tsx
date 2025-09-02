@@ -1,30 +1,6 @@
 import React from "react";
 
-const faqs = [
-  {
-    question: "What impact has ACM UTD had on the tech community?",
-    answer:
-      "ACM is the largest student-run tech organization on campus, driving innovation and industry engagement. We host HackUTD, the largest university hackathon in Texas, attracting 1,000+ participants and nationwide sponsor attention. We run technical and developmental workshops each semester, allowing companies to connect with the top motivated students. Our alumni have gone on to work at FAANG companies, launch startups, and contribute to open-source communities.",
-  },
-  {
-    question: "What sponsorships opportunities are available?",
-    answer: "ACM UTD offers four tiers of sponsorships(Bronze, Silver, Gold, Platinum). Some of the perks include logo placement on ACM’s website, accessed by 100s of UTD students and visitors everyday; exclusive access to ACM member resumes; social media spotlights across all our platforms reaching about 2000+ followers; industry event participation that connect sponsors with top UTD students, kickoff speaking opportunities to promote your company to new members, and ACM promotions of open opportunities."
-  },
-  {
-    question: "How large is ACM UTD's reach?",
-    answer: "ACM UTD is the largest student tech organization at UT Dallas, with over 2,000 members and a mailing list reaching thousands more. Our events usually draw 100+ students, giving sponsors access to a large and active student tech community."
-  },
-  {
-    question: "What outcomes can we expect from sponsoring ACM UTD?",
-    answer:
-      "Sponsors have achieved direct recruiting success, strong brand recognition on campus, and meaningful engagement with future industry leaders. Many of our partners have reported internship hires and lasting relationships with students after collaborating with us.",
-  },
-  {
-    question: "What types of students engage with ACM at UTD?",
-    answer:
-      "While most members are computer science majors, our events attract students from engineering, ITS, math, and other STEM fields. Members range from first-year students eager to learn to graduates with multiple internships and research experience, providing sponsors with access to a wide talent pool.",
-  },
-];
+import { sponsorImages, sponsors, sponsorFaqs } from "../../../config/sponsors.config";
 
 function Sponsor() {
   return (
@@ -40,75 +16,69 @@ function Sponsor() {
           opportunities that help them grow both professionally and personally.
         </p>
         <div className="flex flex-col gap-8 items-center">
-          {/* Gold */}
+          {/* Gold Sponsors */}
           <div className="relative bg-yellow-400/20 rounded-xl p-6 w-full max-w-2xl flex flex-col items-center">
             <span className="mb-4 text-xs uppercase text-yellow-400 font-bold tracking-wide">
               gold
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full mb-4">
-              <img
-                src="/assets/sponsors/logos/statefarm.png"
-                alt="StateFarm"
-                className="h-12 w-full object-contain mx-auto"
-              />
-              <img
-                src="/assets/sponsors/logos/paycom.png"
-                alt="Paycom"
-                className="h-12 w-full object-contain mx-auto"
-              />
-              <img
-                src="/assets/sponsors/logos/CBRE.png"
-                alt="CBRE"
-                className="h-12 w-full object-contain mx-auto"
-              />
-              <img
-                src="/assets/sponsors/logos/eogresources.png"
-                alt="EOG Resources"
-                className="h-12 w-full object-contain mx-auto"
-              />
-              <div className="lg:col-span-2 flex justify-center">
+              {sponsors.filter(s => s.tier === 'gold').slice(0, -1).map((s) => (
                 <img
-                  src="/assets/sponsors/logos/goldmansachs.png"
-                  alt="Goldman Sachs"
-                  className="h-20 max-w-[140px] w-full object-contain mx-auto"
+                  key={s.name}
+                  src={s.logo}
+                  alt={s.name}
+                  className="h-12 w-full object-contain mx-auto"
                 />
-              </div>
+              ))}
+            </div>
+            {/* Last sponsor is centered */}
+            <div className="flex justify-center w-full mt-2">
+              <img
+                src={sponsors.filter(s => s.tier === 'gold').slice(-1)[0].logo}
+                alt={sponsors.filter(s => s.tier === 'gold').slice(-1)[0].name}
+                className="h-20 max-w-[140px] w-full object-contain mx-auto"
+              />
             </div>
           </div>
-          {/* Silver */}
+          {/* Silver Sponsors */}
           <div className="relative bg-gray-300/20 rounded-xl p-6 w-full max-w-2xl flex flex-col items-center space-y-4 mb-12">
             <span className="absolute top-4 left-1/2 -translate-x-1/2 text-xs uppercase text-gray-300 font-bold tracking-wide">
               silver
             </span>
             <div className="flex justify-center items-center w-full">
-              <img
-                src="/assets/sponsors/logos/visa.png"
-                alt="Visa"
-                className="h-12 object-contain"
-              />
+              {sponsors.filter(s => s.tier === 'silver').map(s => (
+                <img
+                  key={s.name}
+                  src={s.logo}
+                  alt={s.name}
+                  className="h-12 object-contain"
+                />
+              ))}
             </div>
           </div>
         </div>
       </div>
 
-      {/* 3 images side by side above FAQ title */}
+      {/* Sponsor Images Carousel */}
       <div className="w-full flex justify-center items-center gap-6 mb-8 flex-wrap">
-        {['pic1.jpg','pic2.jpg','pic3.jpg','pic4.jpg','pic5.jpg'].map((filename, idx) => (
-          <div key={idx} className="relative w-[240px] h-[160px] rounded-lg p-[2px] bg-hackutd-gradient overflow-hidden mb-4">
+        {sponsorImages.map((filePath, i) => (
+          <div key={i} className="relative w-[240px] h-[160px] rounded-lg p-[2px] bg-hackutd-gradient overflow-hidden mb-4">
             <img
-              src={`/assets/sponsors/pics/${filename}`}
-              alt={`Sponsor pic ${idx+1}`}
+              src={filePath}
+              alt={`Sponsor pic ${i + 1}`}
               className="object-cover w-full h-full rounded-lg"
             />
           </div>
         ))}
       </div>
+
+      {/* Sponsor FAQ Section */}
       <h1 className="text-center text-3xl sm:text-4xl font-bold pb-12 sm:pb-20">
         sponsor faq
       </h1>
 
       <div className="flex flex-col gap-y-12 w-full max-w-5xl">
-        {faqs.map((faq, idx) => (
+        {sponsorFaqs.map((faq, idx) => (
           <div
             key={idx}
             className="rounded-3xl border border-primary/50 bg-gray-600/10 px-4 py-6 sm:px-8 sm:py-8 md:px-12 md:py-10"
