@@ -32,7 +32,7 @@ function Sponsor() {
       {/* Sponsors Grid */}
       <div className="w-full max-w-5xl mx-auto rounded-2xl border border-white/20 bg-black/40 backdrop-blur-md p-8 mb-12 relative">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">
-          our sponsors
+          IndustrySponsor
         </h2>
         <p className="text-center text-lg md:text-xl text-white/80 mb-12">
           Our sponsors are at the heart of what we do. Through their support,
@@ -47,28 +47,28 @@ function Sponsor() {
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full mb-4">
               <img
-                src="/assets/home/sponsors/statefarm.png"
+                src="/assets/sponsors/logos/statefarm.png"
                 alt="StateFarm"
                 className="h-12 w-full object-contain mx-auto"
               />
               <img
-                src="/assets/home/sponsors/paycom.png"
+                src="/assets/sponsors/logos/paycom.png"
                 alt="Paycom"
                 className="h-12 w-full object-contain mx-auto"
               />
               <img
-                src="/assets/home/sponsors/CBRE.png"
+                src="/assets/sponsors/logos/CBRE.png"
                 alt="CBRE"
                 className="h-12 w-full object-contain mx-auto"
               />
               <img
-                src="/assets/home/sponsors/eogresources.png"
+                src="/assets/sponsors/logos/eogresources.png"
                 alt="EOG Resources"
                 className="h-12 w-full object-contain mx-auto"
               />
               <div className="lg:col-span-2 flex justify-center">
                 <img
-                  src="/assets/home/sponsors/goldmansachs.png"
+                  src="/assets/sponsors/logos/goldmansachs.png"
                   alt="Goldman Sachs"
                   className="h-20 max-w-[140px] w-full object-contain mx-auto"
                 />
@@ -82,7 +82,7 @@ function Sponsor() {
             </span>
             <div className="flex justify-center items-center w-full">
               <img
-                src="/assets/home/sponsors/visa.png"
+                src="/assets/sponsors/logos/visa.png"
                 alt="Visa"
                 className="h-12 object-contain"
               />
