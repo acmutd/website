@@ -52,7 +52,6 @@ export default function UpcomingEvents() {
   const formatDate = (date: Date) => {
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
-      year: 'numeric',
       month: 'long',
       day: 'numeric',
     });
@@ -96,8 +95,17 @@ export default function UpcomingEvents() {
               <div className="space-y-3 sm:space-y-4">
                 {event.start && (
                   <div className="space-y-1">
-                    <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-200">Date</h3>
-                    <p className="text-xs sm:text-sm md:text-base text-gray-100">{formatDate(event.start)}</p>
+                    <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-200">Date & Time</h3>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-100">
+                      {formatDate(event.start)}{" "}at{" "}
+                      <span className="font-semibold">
+                        {event.start.toLocaleTimeString('en-US', {
+                          hour: 'numeric',
+                          minute: '2-digit',
+                          timeZoneName: 'short',
+                        })}
+                      </span>
+                    </p>
                   </div>
                 )}
                 {event.location && (

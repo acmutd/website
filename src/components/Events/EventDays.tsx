@@ -34,7 +34,6 @@ const EventComponent = ({ event, day, month }: Props) => {
   const formatDate = (date: Date) => {
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
-      year: 'numeric',
       month: 'long',
       day: 'numeric',
     });
@@ -70,8 +69,17 @@ const EventComponent = ({ event, day, month }: Props) => {
         <div className="space-y-3 sm:space-y-4">
           {localStartDate && (
             <div className="space-y-1">
-              <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-200">Date</h3>
-              <p className="text-xs sm:text-sm md:text-base text-gray-100">{formatDate(localStartDate)}</p>
+              <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-200">Date & Time</h3>
+              <p className="text-xs sm:text-sm md:text-base text-gray-100">
+                {formatDate(localStartDate)}{" "}at{" "}
+                <span className="font-semibold">
+                  {localStartDate.toLocaleTimeString('en-US', {
+                    hour: 'numeric',
+                    minute: '2-digit',
+                    timeZoneName: 'short',
+                  })}
+                </span>
+              </p>
             </div>
           )}
           {event.location && (
