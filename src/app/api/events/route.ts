@@ -63,12 +63,12 @@ export async function GET(request: Request) {
       apiUrl += `&timeMin=${timeMinString}&timeMax=${timeMaxString}`;
     } else {
       // For upcoming events, set timeMin to now
-      const now = new Date();
-      now.setHours(0, 0, 0, 0);
-      const nowString = now.toLocaleString('en-US', {
+      const nowString = new Date().toLocaleString('en-US', {
         timeZone: calendarTimeZone,
       });
-      apiUrl += `&timeMin=${new Date(nowString).toISOString()}`;
+      const now = new Date(nowString);
+      now.setHours(0, 0, 0, 0);
+      apiUrl += `&timeMin=${now.toISOString()}`;
     }
     const response = await fetch(apiUrl);
 
