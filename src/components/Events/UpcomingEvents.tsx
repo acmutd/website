@@ -1,6 +1,6 @@
 
 "use client";
-import { useState, useEffect } from "react";
+import { useQuery } from '@tanstack/react-query';
 import { Button } from '@/components/Button';
 import type { Event } from '@/../lib/types';
 import EventTime from './EventTime';
@@ -20,34 +20,37 @@ const colors = [
   { from: 'from-[#78DFCD]', to: 'to-[#E1EE93]' },
 ];
 
+// Fetch function for events
+const fetchEvents = async (): Promise<Event[]> => {
+  const res = await fetch(`${BASE_API_URL}/api/events`);
+  if (!res.ok) {
+    throw new Error('Failed to fetch events');
+  }
+  const data = await res.json();
+  const events: Event[] = data.events.map((item: any) => {
+    let start: Date | undefined = undefined;
+    if (item.start) {
+      start = new Date(item.start);
+    }
+    return {
+      id: item.id,
+      title: item.title,
+      start,
+      location: item.location,
+      description: item.description,
+    };
+  });
+  return events;
+};
+
 
 export default function UpcomingEvents() {
-  const [events, setEvents] = useState<Event[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchEvents() {
-      const res = await fetch(`${BASE_API_URL}/api/events`, { next: { revalidate: 60 } }).then((res) =>
-      res.json()
-    );
-      const events: Event[] = res.events.map((item: any) => {
-        let start: Date | undefined = undefined;
-        if (item.start) {
-          start = new Date(item.start);
-        }
-        return {
-          id: item.id,
-          title: item.title,
-          start,
-          location: item.location,
-          description: item.description,
-        };
-      });
-      setEvents(events);
-      setLoading(false);
-    }
-    fetchEvents();
-  }, []);
+  const { data: events = [], isLoading, error } = useQuery({
+    queryKey: ['events'],
+    queryFn: fetchEvents,
+    staleTime: 5 * 60 * 1000, // 5 minutes
+    refetchInterval: 5 * 60 * 1000, // Refetch every 5 minutes
+  });
 
   const formatDate = (date: Date) => {
     return date.toLocaleDateString('en-US', {
@@ -69,9 +72,17 @@ export default function UpcomingEvents() {
     return `https://www.google.com/calendar/render?action=TEMPLATE&text=ACM%20UTD:%20${encodeURIComponent(event.title)}&dates=${start}/${end}&details=${encodeURIComponent(details)}${event.location ? `&location=${encodeURIComponent(event.location)}` : ''}`;
   };
 
+  if (error) {
+    return (
+      <div className="flex h-full w-full flex-col items-center justify-center p-2 md:p-4 md:w-96">
+        <div className="text-center text-red-500">Failed to load events</div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex h-full w-full flex-col items-center justify-center p-2 md:p-4 md:w-96">
-      {loading ? (
+      {isLoading ? (
         <div className="text-center text-gray-500">Loading...</div>
       ) : (
         events.slice(0, 3).map((event, i) => (
