@@ -13,7 +13,7 @@ type CalendarApiResponse = {
     code: number;
     message: string;
   };
-}
+};
 
 type CalendarEvent = {
   id: string;
@@ -23,21 +23,14 @@ type CalendarEvent = {
   start?: {
     dateTime?: string;
   };
-}
+};
 
 export async function GET(request: Request) {
   try {
     if (!process.env.CALENDAR_API_KEY) {
-      return NextResponse.json(
-        { error: 'Calendar API key is not configured' },
-        { status: 500 }
-      );
-    }
-    else if (!process.env.CALENDAR_ID) {
-      return NextResponse.json(
-        { error: 'Calendar ID is not configured' },
-        { status: 500 }
-      );
+      return NextResponse.json({ error: 'Calendar API key is not configured' }, { status: 500 });
+    } else if (!process.env.CALENDAR_ID) {
+      return NextResponse.json({ error: 'Calendar ID is not configured' }, { status: 500 });
     }
 
     const url = new URL(request.url);
@@ -51,58 +44,57 @@ export async function GET(request: Request) {
       const month = parseInt(monthParam, 10);
 
       if (isNaN(year) || isNaN(month)) {
-        return NextResponse.json(
-          { error: 'Invalid year or month format' },
-          { status: 400 }
-        );
+        return NextResponse.json({ error: 'Invalid year or month format' }, { status: 400 });
       }
 
       if (month < 0 || month > 11) {
-        return NextResponse.json(
-          { error: 'Month must be between 0 and 11' },
-          { status: 400 }
-        );
+        return NextResponse.json({ error: 'Month must be between 0 and 11' }, { status: 400 });
       }
 
-      const timeMin = new Date(year, month, 1).toLocaleString('en-US', { timeZone: calendarTimeZone })
+      const timeMin = new Date(year, month, 1).toLocaleString('en-US', {
+        timeZone: calendarTimeZone,
+      });
       const timeMinString = new Date(timeMin).toISOString();
-      const timeMax = new Date(year, month + 1, 1, 23, 59, 59, 999).toLocaleString('en-US', { timeZone: calendarTimeZone });
+      const timeMax = new Date(year, month + 1, 1, 23, 59, 59, 999).toLocaleString('en-US', {
+        timeZone: calendarTimeZone,
+      });
       const timeMaxString = new Date(timeMax).toISOString();
 
       apiUrl += `&timeMin=${timeMinString}&timeMax=${timeMaxString}`;
     } else {
-      // For upcoming events, set timeMin to now
-      const now = new Date();
-      now.setHours(0, 0, 0, 0);
-      apiUrl += `&timeMin=${now.toISOString()}`;
+      const timeMin = url.searchParams.get('timeMin') || new Date().toISOString();
+      apiUrl += `&timeMin=${timeMin}`;
     }
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
       return NextResponse.json(
         { error: `Calendar API error: ${response.statusText}` },
-        { status: response.status }
+        { status: response.status },
       );
     }
 
-    const data = await response.json() as CalendarApiResponse;
+    const data = (await response.json()) as CalendarApiResponse;
 
     // Check for API errors
     if (data.error) {
       return NextResponse.json(
         { error: `Calendar API error: ${data.error.message}` },
-        { status: data.error.code || 500 }
+        { status: data.error.code || 500 },
       );
     }
 
     const items = data.items || [];
 
     if (items.length === 0) {
-      return NextResponse.json({ events: [] }, {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
+      return NextResponse.json(
+        { events: [] },
+        {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
         },
-      });
+      );
     }
 
     const events = parseItems(items).sort((a, b) => {
@@ -111,17 +103,17 @@ export async function GET(request: Request) {
       return a.start.getTime() - b.start.getTime();
     });
 
-    return NextResponse.json({ events }, {
-      headers: {
-        'Access-Control-Allow-Origin': '*',
+    return NextResponse.json(
+      { events },
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
       },
-    });
+    );
   } catch (error) {
     console.error('Error fetching calendar events:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch calendar events' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Failed to fetch calendar events' }, { status: 500 });
   }
 }
 

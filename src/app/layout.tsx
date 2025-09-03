@@ -2,6 +2,7 @@ import Navbar from '@/components/Home/Navbar';
 import './globals.css';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
+import QueryProvider from '@/components/QueryProvider';
 
 export const metadata: Metadata = {
   title: 'ACM UTD',
@@ -13,9 +14,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="!scroll-smooth">
       <body className="bg-background">
-        <Navbar />
-        {children}
-        <Footer />
+        <QueryProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );
