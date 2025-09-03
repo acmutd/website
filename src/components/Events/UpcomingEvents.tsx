@@ -22,7 +22,8 @@ const colors = [
 
 // Fetch function for events
 const fetchEvents = async (): Promise<Event[]> => {
-  const res = await fetch(`${BASE_API_URL}/api/events`);
+  const minTime = new Date().toISOString();
+  const res = await fetch(`${BASE_API_URL}/api/events?timeMin=${minTime}`);
   if (!res.ok) {
     throw new Error('Failed to fetch events');
   }
