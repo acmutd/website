@@ -21,20 +21,20 @@ export default function SponsorImageCarousel() {
 
   return (
     <div className="w-full flex flex-col items-center">
-     
-      <div ref={sliderRef} className="keen-slider w-full ">
+
+      <div ref={sliderRef} className="keen-slider w-full">
         {images.map((src, idx) => (
-          <div key={idx} className="keen-slider__slide flex justify-center">
+          <div key={idx} className="keen-slider__slide flex justify-center bg-hackutd-gradient p-[2px] rounded-lg">
             <img
               src={src}
               alt={`Slide ${idx + 1}`}
-              className="w-[400px] h-[250px] object-cover rounded-2xl border border-gray-600"
+              className="w-[400px] h-[250px] object-cover rounded-lg"
             />
           </div>
         ))}
       </div>
 
-    
+
       <div className="flex gap-6 mt-8">
         <button
           onClick={() => instanceRef.current?.prev()}
@@ -48,7 +48,7 @@ export default function SponsorImageCarousel() {
         >
           <ArrowRight />
         </button>
-        
+
       </div>
     </div>
   )
