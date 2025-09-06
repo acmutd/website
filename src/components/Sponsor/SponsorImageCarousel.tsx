@@ -25,11 +25,11 @@ export default function SponsorImageCarousel() {
   })
 
   const images = [
-    "/assets/sponsor/brilliantly-boring.jpg",
-    "/assets/sponsor/goldman-sachs.jpg",
-    "/assets/sponsor/sponsor-speech.jpg",
-    "/assets/sponsor/sponsor-talk.jpg",
-    "/assets/sponsor/state-farm.jpg",
+    "/assets/sponsors/pics/brilliantly-boring.jpg",
+    "/assets/sponsors/pics/goldman-sachs.jpg",
+    "/assets/sponsors/pics/sponsor-speech.jpg",
+    "/assets/sponsors/pics/sponsor-talk.jpg",
+    "/assets/sponsors/pics/state-farm.jpg",
   ]
 
   // Lightbox modal state

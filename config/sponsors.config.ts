@@ -61,6 +61,6 @@ export const sponsors = [
   {
     name: 'Visa',
     tier: 'silver',
-    logo: '/assets/sponsors/logos/visa.png',
+    logo: '/assets/sponsors/logos/VISA.png',
   },
 ];
