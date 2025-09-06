@@ -4,21 +4,24 @@ import { useKeenSlider } from "keen-slider/react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 
 export default function SponsorImageCarousel() {
+  const [currentSlide, setCurrentSlide] = useState(0)
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
-    mode: "snap",
-        slides: {
-            perView: 3,
-            spacing: 16,
-        },
-        breakpoints: {
-            "(max-width: 1024px)": {
-                slides: { perView: 2, spacing: 12 },
-            },
-            "(max-width: 768px)": {
-                slides: { perView: 1, spacing: 8 }, // always just 1 on mobile
-            },
-        },
+    slides: {
+      perView: 3,
+      spacing: 16,
+    },
+    breakpoints: {
+      "(max-width: 1024px)": {
+        slides: { perView: 2, spacing: 12 },
+      },
+      "(max-width: 768px)": {
+        slides: { perView: 1, spacing: 8 },
+      },
+    },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
   })
 
   const images = [
@@ -48,7 +51,7 @@ export default function SponsorImageCarousel() {
     <div className="w-full flex flex-col items-center overflow-hidden">
       <div ref={sliderRef} className="keen-slider w-full">
         {images.map((src, idx) => (
-          <div key={idx} className="keen-slider__slide flex justify-center bg-hackutd-gradient p-[2px] rounded-lg  ">
+          <div key={idx} className="keen-slider__slide flex justify-center bg-hackutd-gradient p-[2px] rounded-lg">
             <img
               src={src}
               alt={`Slide ${idx + 1}`}
@@ -58,6 +61,19 @@ export default function SponsorImageCarousel() {
           </div>
         ))}
       </div>
+
+      {/* Dots below carousel */}
+      <div className="flex justify-center items-center gap-2 mt-4">
+        {images.map((_, idx) => (
+          <button
+            key={idx}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === idx ? 'bg-white scale-110 shadow' : 'bg-white/40 hover:bg-white/70'}`}
+            aria-label={`Go to slide ${idx + 1}`}
+            onClick={() => instanceRef.current?.moveToIdx(idx)}
+          />
+        ))}
+      </div>
+
       <div className="flex gap-6 mt-8">
         <button
           onClick={() => instanceRef.current?.prev()}
@@ -72,7 +88,6 @@ export default function SponsorImageCarousel() {
           <ArrowRight />
         </button>
       </div>
-
       {/* Lightbox modal */}
       <div
         className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 transition-opacity duration-300 ${showModal ? (lightboxOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none') : 'opacity-0 pointer-events-none'}`}
