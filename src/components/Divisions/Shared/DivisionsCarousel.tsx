@@ -77,7 +77,7 @@ export default function DivisionsCarousel(props: DivisionProps) {
                       <Image
                         src={image.imageLink}
                         alt={image.title}
-                        className="h-full w-full object-cover rounded-lg hover:brightness-90 transition-all"
+                        className="h-full w-full object-cover rounded-lg hover:brightness-75 transition-all"
                         fill
                         priority={i === 0}
                       />
