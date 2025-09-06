@@ -29,7 +29,7 @@ export default function SponsorImageCarousel() {
             <img
               src={src}
               alt={`Slide ${idx + 1}`}
-              className="w-[400px] h-[250px] object-cover rounded-lg"
+              className="aspect-video object-cover rounded-lg"
             />
           </div>
         ))}
