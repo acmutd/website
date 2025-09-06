@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 
 export default function SponsorImageCarousel() {
   const [sliderRef, instanceRef] = useKeenSlider({
+    loop: true,
     slides: {
       perView: 3,
       spacing: 15,

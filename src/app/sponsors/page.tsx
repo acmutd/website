@@ -2,7 +2,7 @@
 import React from "react";
 import SponsorImageCarousel from "@/components/Sponsor/SponsorImageCarousel";
 
-import { sponsorImages, sponsors, sponsorFaqs } from "../../../config/sponsors.config";
+import { sponsors, sponsorFaqs } from "../../../config/sponsors.config";
 
 function Sponsor() {
   return (
