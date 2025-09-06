@@ -24,7 +24,8 @@ function Sponsor() {
               gold
             </span>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full mb-4">
-              {sponsors.filter(s => s.tier === 'gold').slice(0, -1).map((s) => (
+              {/* sponsors.filter(s => s.tier === 'gold').slice(0, -1).map((s) -> ( if odd number of sponsors */}
+              {sponsors.filter(s => s.tier === 'gold').map((s) => (
                 <img
                   key={s.name}
                   src={s.logo}
@@ -33,14 +34,14 @@ function Sponsor() {
                 />
               ))}
             </div>
-            {/* Last sponsor is centered */}
+            {/* Last sponsor is centered - ONLY INCLUDE IF ODD NUM OF SPONSORS
             <div className="flex justify-center w-full mt-2">
               <img
                 src={sponsors.filter(s => s.tier === 'gold').slice(-1)[0].logo}
                 alt={sponsors.filter(s => s.tier === 'gold').slice(-1)[0].name}
                 className="h-20 max-w-[140px] w-full object-contain mx-auto"
               />
-            </div>
+            </div> */}
           </div>
           {/* Silver Sponsors */}
           <div className="relative bg-gray-300/20 rounded-xl p-6 w-full max-w-2xl flex flex-col items-center space-y-4 mb-12">

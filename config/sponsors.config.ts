@@ -34,11 +34,6 @@ export const sponsorImages = [
 
 export const sponsors = [
   {
-    name: 'StateFarm',
-    tier: 'gold',
-    logo: '/assets/sponsors/logos/statefarm.png',
-  },
-  {
     name: 'Paycom',
     tier: 'gold',
     logo: '/assets/sponsors/logos/paycom.png',
@@ -49,14 +44,14 @@ export const sponsors = [
     logo: '/assets/sponsors/logos/CBRE.png',
   },
   {
-    name: 'EOG Resources',
-    tier: 'gold',
-    logo: '/assets/sponsors/logos/eogresources.png',
-  },
-  {
     name: 'Goldman Sachs',
     tier: 'gold',
     logo: '/assets/sponsors/logos/goldmansachs.png',
+  },
+  {
+    name: 'G Research',
+    tier: 'gold',
+    logo: '/assets/sponsors/logos/gresearch.png',
   },
   {
     name: 'Visa',
