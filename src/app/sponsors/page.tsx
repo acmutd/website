@@ -1,4 +1,6 @@
+'use client';
 import React from "react";
+import SponsorImageCarousel from "@/components/Sponsor/SponsorImageCarousel";
 
 import { sponsorImages, sponsors, sponsorFaqs } from "../../../config/sponsors.config";
 
@@ -58,6 +60,13 @@ function Sponsor() {
           </div>
         </div>
       </div>
+
+      {/* Sponsor Image Carousel */}
+      <div className="w-full max-w-5xl mb-20 ">
+        <SponsorImageCarousel />
+      </div>
+
+      {/* FAQ Section */}
 
       {/* Sponsor Images Carousel */}
       <div className="w-full flex justify-center items-center gap-6 mb-8 flex-wrap">
