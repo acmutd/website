@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
@@ -20,22 +20,35 @@ export default function SponsorImageCarousel() {
     "/assets/sponsor/state-farm.jpg",
   ]
 
+  // Lightbox modal state
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [showModal, setShowModal] = useState(false)
+  const [current, setCurrent] = useState(0)
+
+  // Fade in/out logic
+  React.useEffect(() => {
+    if (lightboxOpen) {
+      setShowModal(true)
+    } else {
+      const timeout = setTimeout(() => setShowModal(false), 300)
+      return () => clearTimeout(timeout)
+    }
+  }, [lightboxOpen])
+
   return (
     <div className="w-full flex flex-col items-center">
-
       <div ref={sliderRef} className="keen-slider w-full">
         {images.map((src, idx) => (
-          <div key={idx} className="keen-slider__slide flex justify-center bg-hackutd-gradient p-[2px] rounded-lg">
+          <div key={idx} className="keen-slider__slide flex justify-center bg-hackutd-gradient p-[2px] rounded-lg hover:brightness-90 transition-all">
             <img
               src={src}
               alt={`Slide ${idx + 1}`}
-              className="aspect-video object-cover rounded-lg"
+              className="aspect-video object-cover rounded-lg cursor-pointer"
+              onClick={() => { setCurrent(idx); setLightboxOpen(true); }}
             />
           </div>
         ))}
       </div>
-
-
       <div className="flex gap-6 mt-8">
         <button
           onClick={() => instanceRef.current?.prev()}
@@ -49,7 +62,52 @@ export default function SponsorImageCarousel() {
         >
           <ArrowRight />
         </button>
+      </div>
 
+      {/* Lightbox modal */}
+      <div
+        className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 transition-opacity duration-300 ${showModal ? (lightboxOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none') : 'opacity-0 pointer-events-none'}`}
+        onClick={() => setLightboxOpen(false)}
+        aria-hidden={!lightboxOpen}
+      >
+        <div
+          className="relative flex items-center justify-center rounded-lg p-[2px] bg-hackutd-gradient"
+          onClick={e => e.stopPropagation()}
+        >
+          <div className="relative rounded-lg overflow-hidden">
+            <img
+              src={images[current]}
+              alt={`Sponsor full ${current + 1}`}
+              className="rounded-lg"
+              style={{ maxHeight: '80vh', maxWidth: '90vw', height: 'auto', width: 'auto' }}
+            />
+          </div>
+          {/* Left/Right navigation in modal */}
+          <button
+            type="button"
+            className="absolute left-2 top-1/2 -translate-y-1/2 text-white bg-black/60 rounded-full p-2 hover:bg-black/80 focus:outline-none"
+            onClick={() => setCurrent((c) => (c - 1 + images.length) % images.length)}
+            aria-label="Previous image"
+          >
+            <ArrowLeft />
+          </button>
+          <button
+            type="button"
+            className="absolute right-2 top-1/2 -translate-y-1/2 text-white bg-black/60 rounded-full p-2 hover:bg-black/80 focus:outline-none"
+            onClick={() => setCurrent((c) => (c + 1) % images.length)}
+            aria-label="Next image"
+          >
+            <ArrowRight />
+          </button>
+          <button
+            type="button"
+            className="absolute top-4 right-4 text-white bg-black/60 rounded-full p-2 hover:bg-black/80 focus:outline-none"
+            onClick={() => setLightboxOpen(false)}
+            aria-label="Close full view"
+          >
+            &#10005;
+          </button>
+        </div>
       </div>
     </div>
   )
