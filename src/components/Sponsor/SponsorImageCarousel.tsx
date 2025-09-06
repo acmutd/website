@@ -6,10 +6,19 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 export default function SponsorImageCarousel() {
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
-    slides: {
-      perView: 3,
-      spacing: 15,
-    },
+    mode: "snap",
+        slides: {
+            perView: 3,
+            spacing: 16,
+        },
+        breakpoints: {
+            "(max-width: 1024px)": {
+                slides: { perView: 2, spacing: 12 },
+            },
+            "(max-width: 768px)": {
+                slides: { perView: 1, spacing: 8 }, // always just 1 on mobile
+            },
+        },
   })
 
   const images = [
@@ -36,14 +45,14 @@ export default function SponsorImageCarousel() {
   }, [lightboxOpen])
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center overflow-hidden">
       <div ref={sliderRef} className="keen-slider w-full">
         {images.map((src, idx) => (
-          <div key={idx} className="keen-slider__slide flex justify-center bg-hackutd-gradient p-[2px] rounded-lg hover:brightness-90 transition-all">
+          <div key={idx} className="keen-slider__slide flex justify-center bg-hackutd-gradient p-[2px] rounded-lg  ">
             <img
               src={src}
               alt={`Slide ${idx + 1}`}
-              className="aspect-video object-cover rounded-lg cursor-pointer"
+              className="aspect-video object-cover rounded-lg cursor-pointer hover:brightness-75 transition-all"
               onClick={() => { setCurrent(idx); setLightboxOpen(true); }}
             />
           </div>
