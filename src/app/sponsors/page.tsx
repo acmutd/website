@@ -66,21 +66,6 @@ function Sponsor() {
         <SponsorImageCarousel />
       </div>
 
-      {/* FAQ Section */}
-
-      {/* Sponsor Images Carousel */}
-      <div className="w-full flex justify-center items-center gap-6 mb-8 flex-wrap">
-        {sponsorImages.map((filePath, i) => (
-          <div key={i} className="relative w-[240px] h-[160px] rounded-lg p-[2px] bg-hackutd-gradient overflow-hidden mb-4">
-            <img
-              src={filePath}
-              alt={`Sponsor pic ${i + 1}`}
-              className="object-cover w-full h-full rounded-lg"
-            />
-          </div>
-        ))}
-      </div>
-
       {/* Sponsor FAQ Section */}
       <h1 className="text-center text-3xl sm:text-4xl font-bold pb-12 sm:pb-20">
         sponsor faq
