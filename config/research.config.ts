@@ -60,6 +60,15 @@ export const researchFAQ: Array<Question> = [
 
 export const researchWinners: Projects[] = [
   {
+    name: 'Helix',
+    placement: 'S25 First Place',
+    desc: 'Helix set out to predict the biological impact of missense mutations on protein growth by integrating structural bioinformatics with interpretable machine learning. Using the ThermoMutDB dataset of over 13,000 mutations we engineered a rich feature space to capture physiochemical, evolutionary, and 3D structural characteristics. With this dataset we developed a custom voting ensemble that utilized random forests, gradient boosting and SVM classifiers, which outperformed Siamese Neural Networks by 23% in classifying stabilizing vs destabilizing mutations. Our approach generalized well over a diverse set of protein families and also improved the interpretability of a reliable and faster mutation based discovery model.',
+    manager: 'Priti See',
+    members: ['Cheryl Wang', 'Nathan Han', 'Kaamil Kaka', 'Arya Velayutham', 'Divya Narayan'],
+    image: '/assets/research/research-symposium-s25-poster.jpg',
+    links: [],
+  },
+  {
     name: 'Fingertip Fluency',
     placement: 'Best Research Project Award',
     desc: 'The research project achieved its goal of advancing American Sign Language (ASL) fingerspelling and exploring its intricate nuances. With the comprehensive dataset provided by Google, we successfully developed cutting-edge machine learning models, utilizing state-of-the-art, novel architectures. Our innovative approach not only accurately interpreted the dynamic hand movements in ASL and deciphered their meanings but also surpassed the top-performing paper by an impressive 7%. By leveraging advanced models like SignExplainer and PoseNet, we set a new benchmark in the field.',
@@ -123,18 +132,13 @@ export const researchCarousel: CarouselImage[] = [
     date: new Date(2025, 5, 6),
   },
   {
-    imageLink: '/assets/research/research-symposium-s25-poster.jpg',
-    title: 'Members of the Helix team proudly presenting their poster, Spring 2025',
+    imageLink: '/assets/research/research-symposium-s25-winners.jpg',
+    title: 'First place winners: Helix',
     date: new Date(2025, 5, 6),
   },
   {
     imageLink: '/assets/research/research-symposium-s25-081.jpg',
     title: 'Second place winners: DRAMa',
-    date: new Date(2025, 5, 6),
-  },
-  {
-    imageLink: '/assets/research/research-symposium-s25-winners.jpg',
-    title: 'First place winners: Helix',
     date: new Date(2025, 5, 6),
   },
 ];

@@ -58,7 +58,7 @@ export default function WinningProjects({ division }: { division: 'projects' | '
 
                 {project.manager && (
                   <p className="text-base md:text-lg mt-1">
-                    <span>{division === 'projects' ? 'project lead ' : 'research lead '}</span>
+                    <span>{division === 'projects' ? 'project lead: x' : 'research lead: '}</span>
                     <span className="font-medium">{project.manager}</span>
                   </p>
                 )}
