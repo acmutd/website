@@ -38,7 +38,7 @@ export const homePageData: HomePageData = {
     }
   ],
   sponsors: {
-    gold: ['statefarm', 'paycom', 'CBRE', 'eogresources', 'goldmansachs'],
+    gold: ['paycom', 'CBRE', 'goldmansachs', 'gresearch'],
     silver: ['VISA'],
     bronze: [],
     custom: [],
