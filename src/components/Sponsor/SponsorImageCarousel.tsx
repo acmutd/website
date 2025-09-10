@@ -51,11 +51,11 @@ export default function SponsorImageCarousel() {
     <div className="w-full flex flex-col items-center overflow-hidden">
       <div ref={sliderRef} className="keen-slider w-full">
         {images.map((src, idx) => (
-          <div key={idx} className="keen-slider__slide flex justify-center bg-hackutd-gradient p-[2px] rounded-lg">
+          <div key={idx} className="keen-slider__slide flex justify-center border-2 border-gray-500 rounded-lg">
             <img
               src={src}
               alt={`Slide ${idx + 1}`}
-              className="aspect-video object-cover rounded-lg cursor-pointer hover:brightness-75 transition-all"
+              className="aspect-video object-cover cursor-pointer hover:brightness-75 transition-all"
               onClick={() => { setCurrent(idx); setLightboxOpen(true); }}
             />
           </div>
@@ -95,14 +95,13 @@ export default function SponsorImageCarousel() {
         aria-hidden={!lightboxOpen}
       >
         <div
-          className="relative flex items-center justify-center rounded-lg p-[2px] bg-hackutd-gradient"
+          className="relative flex items-center justify-center rounded-lg border-2 border-gray-500"
           onClick={e => e.stopPropagation()}
         >
-          <div className="relative rounded-lg overflow-hidden">
+          <div className="relative overflow-hidden rounded-md">
             <img
               src={images[current]}
               alt={`Sponsor full ${current + 1}`}
-              className="rounded-lg"
               style={{ maxHeight: '80vh', maxWidth: '90vw', height: 'auto', width: 'auto' }}
             />
           </div>
