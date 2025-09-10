@@ -125,7 +125,7 @@ export default function SponsorImageCarousel() {
           </button>
           <button
             type="button"
-            className="absolute top-4 right-4 text-white bg-black/60 rounded-full p-2 hover:bg-black/80 focus:outline-none"
+            className="absolute top-3 right-3 text-white bg-black/60 rounded-full px-3 py-2 hover:bg-black/80 focus:outline-none"
             onClick={() => setLightboxOpen(false)}
             aria-label="Close full view"
           >
