@@ -32,7 +32,7 @@ export const researchTestimony: Testimony[] = [
 
 export const researchFAQ: Array<Question> = [
   {
-    question: 'What are the benefits of joining the research club?',
+    question: 'What are the benefits of joining the research division?',
     answer:
       "By joining, you'll gain hands-on research experience, improve your critical thinking and problem-solving skills, and build a strong foundation for a career in research. Additionally, publishing a paper can significantly enhance your resume and graduate school applications. This provides a great talking point in interviews and networking opportunities",
   },
@@ -52,7 +52,7 @@ export const researchFAQ: Array<Question> = [
       'The time commitment can vary depending on the research project and your role. On average, members should expect to dedicate a 5-8 hours each week to meetings, research activities, and workshops.',
   },
   {
-    question: 'What resources are available to club members?',
+    question: 'What resources are available to members?',
     answer:
       'Members have access to a wealth of resources, including research databases, software for data analysis, laboratory equipment (if applicable), and a network of faculty advisors and experienced researchers.',
   },

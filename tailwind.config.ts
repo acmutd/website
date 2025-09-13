@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+    darkMode: ['class'],
     content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -26,11 +27,14 @@ const config: Config = {
     'bg-[url(/assets/about/community/community-bg.png)]',
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Gilroy', 'sans-serif'],
-      },
-      colors: {
+  	extend: {
+  		fontFamily: {
+  			sans: [
+  				'Gilroy',
+  				'sans-serif'
+  			]
+  		},
+  		colors: {
   			background: 'hsl(var(--background))',
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
@@ -90,6 +94,28 @@ const config: Config = {
   			'bronze-gradient': 'linear-gradient(128deg, rgba(219, 114, 64, 0.12) 3.07%, rgba(219, 114, 64, 0.09) 96.39%)',
   			'green-gradient': 'linear-gradient(128deg, rgba(34, 193, 195, 0.12) 3.07%, rgba(34, 193, 195, 0.09) 96.39%)'
   		},
+  		keyframes: {
+  			'accordion-down': {
+  				from: {
+  					height: '0'
+  				},
+  				to: {
+  					height: 'var(--radix-accordion-content-height)'
+  				}
+  			},
+  			'accordion-up': {
+  				from: {
+  					height: 'var(--radix-accordion-content-height)'
+  				},
+  				to: {
+  					height: '0'
+  				}
+  			}
+  		},
+  		animation: {
+  			'accordion-down': 'accordion-down 0.2s ease-out',
+  			'accordion-up': 'accordion-up 0.2s ease-out'
+  		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
