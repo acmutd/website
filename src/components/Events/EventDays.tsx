@@ -102,6 +102,7 @@ const EventComponent = ({ event, day, month }: Props) => {
                 textStyles="text-xs sm:text-sm"
                 addtitionalStyles="px-4 sm:px-6"
                 bgStyle='acm'
+                external
               />
             </div>
           )}
