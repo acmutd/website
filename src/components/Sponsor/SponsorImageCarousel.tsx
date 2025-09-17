@@ -26,8 +26,8 @@ export default function SponsorImageCarousel() {
 
   const images = [
     "/assets/sponsors/pics/state-farm.jpg",
-    "/assets/sponsors/pics/paycom-sponsor.jpg",
-    "/assets/sponsors/pics/a-guy.jpg",
+    "/assets/sponsors/pics/paycom-sponsor.JPG",
+    "/assets/sponsors/pics/a-guy.JPG",
     "/assets/sponsors/pics/sponsor-speech.jpg",
     "/assets/sponsors/pics/twilight-tunes.jpg",
     "/assets/sponsors/pics/people-staring1.jpg",
