@@ -4,21 +4,21 @@ import { DivisionProps, isEducationDivision } from './divisionUtil';
 import React, { useState, useEffect } from 'react';
 
 const mentorLinks = ['directors', 'experience', 'workshops', 'faq'];
-const altLinks = ['directors', 'experience', 'winning projects', 'faq'];
+const projectsLinks = ['directors', 'experience', 'winning projects', 'faq'];
 const tipLinks = ['directors', 'experience', 'structure', 'faq'];
-const developmentLinks = ['directors', 'experience', 'faq'];
+const developmentLinks = ['directors', 'experience', 'our projects', 'faq'];
 const mediaLinks = ['directors', 'experience', 'faq'];
 
 const LINK_DICT = {
-  research: altLinks,
-  projects: altLinks,
+  research: projectsLinks,
+  projects: projectsLinks,
   development: developmentLinks,
   education: {
     mentor: mentorLinks,
     tip: tipLinks,
   },
   media: mediaLinks,
-  hackutd: altLinks,
+  hackutd: projectsLinks,
   community: mediaLinks,
   industry: mediaLinks,
 } as const;
@@ -47,7 +47,7 @@ export default function Navigator(props: DivisionProps) {
     };
   }, []);
 
-  let routeLinks = [];
+  let routeLinks: string[] = [];
 
   if (isEducationDivision(props)) {
     routeLinks = LINK_DICT.education[props.sub];
