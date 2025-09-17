@@ -1,12 +1,23 @@
 import { Question, Testimony } from '../lib/types';
-import { developmentCarouselImages, developmentDirectors, developmentFAQ, developmentTestimony } from './development.config';
+import {
+  developmentCarouselImages,
+  developmentDirectors,
+  developmentFAQ,
+  developmentTestimony,
+} from './development.config';
 import {
   educationDirectors,
   educationFAQ,
   educationImages,
   educationTestimony,
 } from './education.config';
-import { hackDirectors, hackTestimony, hackFAQ, hackWinners, hackCarouselImages } from './hack.config';
+import {
+  hackDirectors,
+  hackTestimony,
+  hackFAQ,
+  hackWinners,
+  hackCarouselImages,
+} from './hack.config';
 import {
   projectDirectors,
   projectImages,
@@ -22,11 +33,28 @@ import {
   researchWinners,
 } from './research.config';
 import { mediaDirectors, mediaTestimony, mediaFAQ, mediaCarousel } from './media.config';
-import { communitCarouselImages, communityDirectors, communityFAQ, communityTestimony } from './community.config';
-import { industryCarouselImages, industryDirectors, industryFAQ, industryTestimony } from './industry.config';
+import {
+  communitCarouselImages,
+  communityDirectors,
+  communityFAQ,
+  communityTestimony,
+} from './community.config';
+import {
+  industryCarouselImages,
+  industryDirectors,
+  industryFAQ,
+  industryTestimony,
+} from './industry.config';
 type Division =
   | {
-      division: 'projects' | 'research' | 'development' | 'media' | 'industry' | 'hackutd' | 'community'
+      division:
+        | 'projects'
+        | 'research'
+        | 'development'
+        | 'media'
+        | 'industry'
+        | 'hackutd'
+        | 'community';
     }
   | {
       division: 'education';
@@ -44,7 +72,7 @@ export type CarouselImage = {
   date: Date;
 };
 
-type ProjectLink = {
+export type ProjectLink = {
   type: 'github' | 'video';
   link: string;
 };
@@ -74,9 +102,9 @@ export function getDirectors(division: Division['division']): Director[] {
     case 'hackutd':
       return hackDirectors;
     case 'community':
-      return communityDirectors
+      return communityDirectors;
     case 'industry':
-        return industryDirectors;
+      return industryDirectors;
   }
 }
 
@@ -95,9 +123,9 @@ export function getTestimony(section: Division): Testimony[] {
     case 'hackutd':
       return hackTestimony;
     case 'community':
-      return communityTestimony
+      return communityTestimony;
     case 'industry':
-      return industryTestimony
+      return industryTestimony;
   }
 }
 
@@ -116,7 +144,7 @@ export function getFAQ(section: Division): Question[] {
     case 'hackutd':
       return hackFAQ;
     case 'community':
-      return communityFAQ
+      return communityFAQ;
     case 'industry':
       return industryFAQ;
   }
@@ -135,9 +163,9 @@ export function getCarouselImages(section: Division): CarouselImage[] {
     case 'media':
       return mediaCarousel;
     case 'hackutd':
-      return hackCarouselImages
+      return hackCarouselImages;
     case 'community':
-      return communitCarouselImages
+      return communitCarouselImages;
     case 'industry':
       return industryCarouselImages;
   }
