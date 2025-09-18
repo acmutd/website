@@ -30,9 +30,9 @@ export default function SponsorImageCarousel() {
     "/assets/sponsors/pics/paycom-sponsor.jpg",
     "/assets/sponsors/pics/a-guy.jpg",
     "/assets/sponsors/pics/sponsor-speech.jpg",
+    "/assets/sponsors/pics/people-staring2.jpg",
     "/assets/sponsors/pics/twilight-tunes.jpg",
     "/assets/sponsors/pics/people-staring1.jpg",
-    "/assets/sponsors/pics/people-staring2.jpg",
     "/assets/sponsors/pics/people-staring3.jpg",
   ]
 
