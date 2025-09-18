@@ -1,5 +1,6 @@
 'use client';
 import React from "react";
+import Image from "next/image";
 import SponsorImageCarousel from "@/components/Sponsor/SponsorImageCarousel";
 
 import { sponsors, sponsorFaqs } from "../../../config/sponsors.config";
@@ -26,10 +27,12 @@ function Sponsor() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full mb-4">
               {/* sponsors.filter(s => s.tier === 'gold').slice(0, -1).map((s) -> ( if odd number of sponsors */}
               {sponsors.filter(s => s.tier === 'gold').map((s) => (
-                <img
+                <Image
                   key={s.name}
                   src={s.logo}
                   alt={s.name}
+                  width={200}
+                  height={60}
                   className="h-12 w-full object-contain mx-auto"
                 />
               ))}
@@ -50,11 +53,13 @@ function Sponsor() {
             </span>
             <div className="flex justify-center items-center w-full">
               {sponsors.filter(s => s.tier === 'silver').map(s => (
-                <img
+                <Image
                   key={s.name}
                   src={s.logo}
                   alt={s.name}
-                  className="h-12 object-contain"
+                  width={200}
+                  height={60}
+                  className="h-12 w-full object-contain mx-auto"
                 />
               ))}
             </div>

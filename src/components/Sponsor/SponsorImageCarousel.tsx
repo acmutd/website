@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import "keen-slider/keen-slider.min.css"
 import { useKeenSlider } from "keen-slider/react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 export default function SponsorImageCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -55,9 +56,12 @@ export default function SponsorImageCarousel() {
       <div ref={sliderRef} className="keen-slider w-full">
         {images.map((src, idx) => (
           <div key={idx} className="keen-slider__slide flex justify-center border-2 border-gray-500 rounded-lg">
-            <img
+            <Image
               src={src}
               alt={`Slide ${idx + 1}`}
+              width={1980}
+              height={1080}
+              sizes="100vw"
               className="aspect-video object-cover cursor-pointer hover:brightness-75 transition-all"
               onClick={() => { setCurrent(idx); setLightboxOpen(true); }}
             />
@@ -102,29 +106,15 @@ export default function SponsorImageCarousel() {
           onClick={e => e.stopPropagation()}
         >
           <div className="relative overflow-hidden rounded-md">
-            <img
+            <Image
               src={images[current]}
               alt={`Sponsor full ${current + 1}`}
+              width={1200}
+              height={800}
+              sizes="90vw"
               style={{ maxHeight: '80vh', maxWidth: '90vw', height: 'auto', width: 'auto' }}
             />
           </div>
-          {/* Left/Right navigation in modal */}
-          <button
-            type="button"
-            className="absolute left-2 top-1/2 -translate-y-1/2 text-white bg-black/60 rounded-full p-2 hover:bg-black/80 focus:outline-none"
-            onClick={() => setCurrent((c) => (c - 1 + images.length) % images.length)}
-            aria-label="Previous image"
-          >
-            <ArrowLeft />
-          </button>
-          <button
-            type="button"
-            className="absolute right-2 top-1/2 -translate-y-1/2 text-white bg-black/60 rounded-full p-2 hover:bg-black/80 focus:outline-none"
-            onClick={() => setCurrent((c) => (c + 1) % images.length)}
-            aria-label="Next image"
-          >
-            <ArrowRight />
-          </button>
           <button
             type="button"
             className="absolute top-3 right-3 text-white bg-black/60 rounded-full px-3 py-2 hover:bg-black/80 focus:outline-none"
