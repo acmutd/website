@@ -75,13 +75,13 @@ interface OfficerImageWithFallbackProps {
   src: string;
   fallbackSrc: string;
   alt: string;
-  fill: boolean;
   className: string;
   style: React.CSSProperties;
+  isJCole: boolean;
 }
 
 const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
-  const { src, fallbackSrc, alt, ...rest } = props;
+  const { src, fallbackSrc, alt, isJCole, ...rest } = props;
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
@@ -92,6 +92,9 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
       onError={() => {
         setImgSrc(fallbackSrc);
       }}
+      width={isJCole ? 110 : 80}
+      height={isJCole ? 110 : 80}
+      sizes="(max-width: 768px) 80px, 110px"
     />
   );
 };
@@ -118,12 +121,14 @@ const OfficerPill = ({ officer }: PillProps) => (
       } `}
     >
       <OfficerImageWithFallback
-        fill
         style={{ objectFit: 'cover' }}
         src={officer.image}
         alt={officer.name}
         fallbackSrc="/assets/officer/OfficerImage.png"
-        className="rounded-full"
+        className={`rounded-full ${
+          officer.name === 'John Cole' ? `h-[110px] w-[110px]` : `h-[80px] w-[80px]`
+        } `}
+        isJCole={officer.name === 'John Cole'}
       />
     </div>
     <div className="ml-4 flex flex-col justify-center">
