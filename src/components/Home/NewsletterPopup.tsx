@@ -67,12 +67,13 @@ export function NewsletterPopup() {
         </div>
         <div className="flex justify-end mt-3 sm:mt-4">
           <Button
-            href=" https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0"
+            href="https://cdn.forms-content.sg-form.com/22d851f4-5f47-11eb-9b58-e2c4feadfaf0"
             text="join"
             bgStyle="acm"
             height="h-8 sm:h-10"
             textStyles="text-xs sm:text-sm"
             addtitionalStyles="px-4 sm:px-6"
+            external
           />
         </div>
       </div>

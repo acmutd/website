@@ -24,6 +24,7 @@ import { MediaHeader } from '@/components/Divisions/Media/MediaHeader';
 import { CommunityHeader } from '@/components/Divisions/Community/CommunityHeader';
 import { IndustryHeader } from '@/components/Divisions/Industry/IndustryHeader';
 import IndustrySponsors from '@/components/Divisions/Industry/IndustrySponsors';
+import DevProjects from '@/components/Divisions/Development/DevProjects';
 
 export function generateStaticParams() {
   const params = [
@@ -87,7 +88,8 @@ const parseDivisionSlug = (slug: string[]): DivisionProps | null => {
   return null;
 };
 
-export default function Page({ params }: { params: { slug: string[] } }) {
+export default async function Page(props: { params: Promise<{ slug: string[] }> }) {
+  const params = await props.params;
   const divisionProps = parseDivisionSlug(params.slug);
   if (!divisionProps) {
     return notFound();
@@ -113,6 +115,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
         {config.showWinningProjects && (
           <div className="flex justify-center px-4 md:px-0">
             <WinningProjects division={divisionProps.division as 'projects' | 'research'} />
+          </div>
+        )}
+
+        {divisionProps.division === 'development' && (
+          <div className="flex justify-center px-4 md:px-0">
+            <DevProjects />
           </div>
         )}
 

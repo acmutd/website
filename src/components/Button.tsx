@@ -8,6 +8,7 @@ export function Button({
   height = 'h-10 sm:h-[2.30rem]',
   textStyles = 'text-sm sm:text-base',
   addtitionalStyles = '',
+  external = false,
 }: {
   href: string;
   text: string;
@@ -16,10 +17,12 @@ export function Button({
   height?: string;
   textStyles?: string;
   addtitionalStyles?: string;
+  external?: boolean;
 }) {
   return (
     <Link
-      href={href}
+      href={external ? href : `${href}`}
+      target={external ? '_blank' : '_self'}
       className={`content z-20 flex ${height} items-center justify-center rounded-lg border border-primary/50 bg-gray-300/10 bg-${bgStyle}-gradient px-3 sm:px-4 py-2 font-bold transition delay-75 duration-200 ease-in-out hover:scale-105 sm:hover:scale-110 ${width} ${textStyles} ${addtitionalStyles}`}
     >
       {text}

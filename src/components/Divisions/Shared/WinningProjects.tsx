@@ -7,66 +7,120 @@ export default function WinningProjects({ division }: { division: 'projects' | '
   const projects = getWinningProjects(division);
 
   return (
-    <div id="winning-projects" className="pt-12 text-[#CACACA] px-4 md:px-8 py-8 md:py-16">
-      {projects.map((project, i) => (
-        <div className="mb-12 md:mb-16" key={i}>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">{project.placement}</h1>
-          <div className="h-[1px] w-[200px] md:w-[300px] bg-[#cacacab0] mb-6 md:mb-8" />
+    <div id="winning-projects" className="pt-12 text-primaryDark px-4 md:px-8 xl:pr-32 2xl:pr-40 py-8 md:py-16 space-y-12 md:space-y-20">
+      {projects.map((project, i) => {
+        const badgeStyle = getPlacementBadge(project.placement);
 
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8">
-            <div className="w-full md:min-w-[400px]">
-              <Image
-                src={project.image}
-                alt={project.name + ' Image'}
-                width={400}
-                height={400}
-                className="rounded-md object-cover w-full h-auto bg-slate-300 max-h-[300px]"
-              />
-            </div>
+        return (
+          <div
+            key={i}
+            className="group relative"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl border border-white/10 transition-all duration-500 group-hover:border-white/20 group-hover:shadow-2xl group-hover:shadow-white/10" />
 
-            <div className="flex flex-col justify-between">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6">{project.name}</h2>
-                <p className="text-[#CACACA] text-base md:text-lg mb-6 md:mb-8 max-w-3xl leading-relaxed">{project.desc}</p>
-
-                {project.links.length > 0 && (
-                  <div className="flex gap-4 mb-4 md:mb-6">
-                    {project.links.map((link, i) => (
-                      <Link
-                        href={link.link}
-                        target="_blank"
-                        key={i}
-                        className="hover:opacity-80 transition-opacity"
-                      >
-                        {IconMap[link.type]}
-                      </Link>
-                    ))}
-                  </div>
-                )}
+            <div className="relative p-6 md:p-10">
+              <div className="flex items-center mb-8">
+                <div className={`inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r ${badgeStyle.gradient} ${badgeStyle.glow} transform transition-all duration-300 group-hover:scale-105 shadow-lg`}>
+                  <span className={`text-lg md:text-xl font-bold ${badgeStyle.text} text-center`}>
+                    {project.placement}
+                  </span>
+                </div>
               </div>
 
-              <div className="mt-4">
-                <p className="text-base md:text-lg">
-                  <span>members: </span>
-                  {project.members.map((member, i) => (
-                    <span key={i} className="font-medium">
-                      {member}
-                      {i !== project.members.length - 1 ? ', ' : ''}
-                    </span>
-                  ))}
-                </p>
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                <div className="w-full lg:w-2/5 xl:w-1/3">
+                  <div className="relative overflow-hidden rounded-xl group-hover:shadow-2xl transition-all duration-500">
+                    <Image
+                      src={project.image}
+                      alt={project.name + ' Image'}
+                      width={400}
+                      height={300}
+                      className="w-full h-64 md:h-72 lg:h-80 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </div>
 
-                {project.manager && (
-                  <p className="text-base md:text-lg mt-1">
-                    <span>{division === 'projects' ? 'project lead ' : 'research lead '}</span>
-                    <span className="font-medium">{project.manager}</span>
-                  </p>
-                )}
+                <div className="flex-1 flex flex-col justify-between space-y-6">
+                  <div className="space-y-6">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight group-hover:text-white/90 transition-colors duration-300">
+                      {project.name}
+                    </h2>
+
+                    <p className="text-primaryDark/90 text-lg md:text-xl leading-relaxed max-w-4xl">
+                      {project.desc}
+                    </p>
+
+                    {project.links.length > 0 && (
+                      <div className="flex gap-3 flex-wrap">
+                        {project.links.map((link, linkIndex) => (
+                          <Link
+                            href={link.link}
+                            target="_blank"
+                            key={linkIndex}
+                            className="group/link inline-flex items-center justify-center w-10 h-10 md:w-11 md:h-11 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 hover:scale-105 transition-all duration-300 relative overflow-hidden"
+                          >
+                            <div className="relative z-10 flex items-center justify-center">
+                              {IconMap[link.type]}
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="space-y-3 pt-6 border-t border-white/10">
+                    <div className="text-base md:text-lg">
+                      <span className="text-primaryDark/70 font-medium">Members: </span>
+                      <span className="text-white font-medium">
+                        {project.members.join(', ')}
+                      </span>
+                    </div>
+
+                    {project.manager && (
+                      <div className="text-base md:text-lg">
+                        <span className="text-primaryDark/70 font-medium">
+                          {division === 'projects' ? 'Project Lead: ' : 'Research Lead: '}
+                        </span>
+                        <span className="text-white font-medium">{project.manager}</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
+
+
+function getPlacementBadge(placement: string) {
+  const placementLower = placement.toLowerCase();
+  if (placementLower.includes('1st') || placementLower.includes('first')) {
+    return {
+      gradient: 'from-yellow-400 to-yellow-600',
+      glow: 'shadow-yellow-500/25',
+      text: 'text-yellow-900'
+    };
+  } else if (placementLower.includes('2nd') || placementLower.includes('second')) {
+    return {
+      gradient: 'from-gray-300 to-gray-500',
+      glow: 'shadow-gray-400/25',
+      text: 'text-gray-900'
+    };
+  } else if (placementLower.includes('3rd') || placementLower.includes('third')) {
+    return {
+      gradient: 'from-orange-400 to-orange-600',
+      glow: 'shadow-orange-500/25',
+      text: 'text-orange-900'
+    };
+  }
+  return {
+    gradient: 'from-blue-400 to-blue-600',
+    glow: 'shadow-blue-500/25',
+    text: 'text-blue-900'
+  };
+};

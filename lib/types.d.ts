@@ -14,7 +14,7 @@ export type Division = {
 export type Link = {
   name: string;
   link: string;
-}
+};
 
 export type AboutPageData = {
   pageDescription: string;
@@ -103,4 +103,16 @@ export type Question = {
   question: string;
   answer: string;
   images?: string[];
+};
+
+export type ProjectLink = {
+  type: 'github' | 'site';
+  link: string;
+};
+
+export type DevProjects = {
+  title: string;
+  description: string;
+  links: ProjectLink[];
+  image: string;
 };
