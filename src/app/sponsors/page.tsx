@@ -2,6 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import SponsorImageCarousel from "@/components/Sponsor/SponsorImageCarousel";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import { sponsors, sponsorFaqs } from "../../../config/sponsors.config";
 
@@ -73,24 +79,26 @@ function Sponsor() {
       </div>
 
       {/* Sponsor FAQ Section */}
-      <h1 className="text-center text-3xl sm:text-4xl font-bold pb-12 sm:pb-20">
-        sponsor faq
-      </h1>
+      <div id="faq" className="pt-12 text-[#CACACA] w-full max-w-4xl items-center flex flex-col">
+        <h1 className="text-3xl md:text-4xl">frequently asked questions</h1>
+        <div className="mb-10 md:mb-20 h-[1px] w-40 bg-[#cacacab0]" />
 
-      <div className="flex flex-col gap-y-12 w-full max-w-5xl">
-        {sponsorFaqs.map((faq, idx) => (
-          <div
-            key={idx}
-            className="rounded-3xl border border-primary/50 bg-gray-600/10 px-4 py-6 sm:px-8 sm:py-8 md:px-12 md:py-10"
-          >
-            <h2 className="md:text-lg sm:text-xl font-bold mb-4">
-              Q: {faq.question}
-            </h2>
-            <p className="md:text-l sm:text-base text-gray-300">
-              {faq.answer}
-            </p>
-          </div>
-        ))}
+        <div className="flex flex-col gap-y-12 w-full max-w-5xl">
+          <Accordion type="multiple" className="w-full max-w-4xl text-[#CACACA]">
+            {sponsorFaqs.map((faq, i) => (
+              <AccordionItem value={`item-${i}`} key={i} className="border-b border-[#cacacab0] pb-4">
+                <AccordionTrigger className="flex items-start text-lg md:text-xl text-white hover:no-underline hover:text-[#CACACA] transition-colors">
+                  <span className="flex items-start text-left">
+                    {faq.question}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="pl-6">
+                  <p className="text-base text-[#CACACA] leading-relaxed mb-4">{faq.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
       </div>
     </div>
   );
