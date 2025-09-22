@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { sponsors } from "../../../config/sponsors.config";
 
-export default function SponsorGrid() {
+export default function SponsorsGrid() {
   // Gold
   const goldSponsors = sponsors.filter(s => s.tier === 'gold');
   const goldIsOdd = goldSponsors.length % 2 === 1;

@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/accordion";
 import { sponsorFaqs } from "../../../config/sponsors.config";
 
-export default function SponsorFAQ() {
+export default function SponsorsFAQ() {
   return (
     <div id="faq" className="pt-12 text-[#CACACA] w-full max-w-4xl items-center flex flex-col">
       <h1 className="text-3xl md:text-4xl mb-10 text-center">

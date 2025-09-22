@@ -11,7 +11,7 @@ import {
 
 import { sponsorImages } from "../../../config/sponsors.config";
 
-export default function SponsorImageCarousel() {
+export default function SponsorsImageCarousel() {
   const [api, setApi] = useState<CarouselApi>()
   const [currentSlide, setCurrentSlide] = useState(0)
 
