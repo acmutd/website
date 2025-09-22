@@ -43,22 +43,17 @@ export const sponsors = [
   },
   {
     name: 'CBRE',
-    tier: 'gold',
+    tier: 'silver',
     logo: '/assets/sponsors/logos/CBRE.png',
   },
   {
-    name: 'Goldman Sachs',
-    tier: 'gold',
-    logo: '/assets/sponsors/logos/goldmansachs.png',
-  },
-  {
-    name: 'G Research',
-    tier: 'gold',
+    name: 'G-Research',
+    tier: 'silver',
     logo: '/assets/sponsors/logos/gresearch.png',
   },
   {
-    name: 'Visa',
+    name: 'Nokia',
     tier: 'silver',
-    logo: '/assets/sponsors/logos/VISA.png',
+    logo: '/assets/sponsors/logos/nokia.png',
   },
 ];

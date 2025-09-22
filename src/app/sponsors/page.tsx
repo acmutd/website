@@ -30,45 +30,75 @@ function Sponsor() {
             <span className="mb-4 text-xs uppercase text-yellow-400 font-bold tracking-wide">
               gold
             </span>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full mb-4">
-              {/* sponsors.filter(s => s.tier === 'gold').slice(0, -1).map((s) -> ( if odd number of sponsors */}
-              {sponsors.filter(s => s.tier === 'gold').map((s) => (
-                <Image
-                  key={s.name}
-                  src={s.logo}
-                  alt={s.name}
-                  width={200}
-                  height={60}
-                  className="h-12 w-full object-contain mx-auto"
-                />
-              ))}
-            </div>
-            {/* Last sponsor is centered - ONLY INCLUDE IF ODD NUM OF SPONSORS
-            <div className="flex justify-center w-full mt-2">
-              <img
-                src={sponsors.filter(s => s.tier === 'gold').slice(-1)[0].logo}
-                alt={sponsors.filter(s => s.tier === 'gold').slice(-1)[0].name}
-                className="h-20 max-w-[140px] w-full object-contain mx-auto"
-              />
-            </div> */}
+            {(() => {
+              const goldSponsors = sponsors.filter(s => s.tier === 'gold');
+              const isOdd = goldSponsors.length % 2 === 1;
+
+              return (
+                <>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full">
+                    {(isOdd ? goldSponsors.slice(0, -1) : goldSponsors).map((s) => (
+                      <Image
+                        key={s.name}
+                        src={s.logo}
+                        alt={s.name}
+                        width={200}
+                        height={60}
+                        className="h-12 w-full object-contain mx-auto my-4"
+                      />
+                    ))}
+                  </div>
+                  {isOdd && goldSponsors.length > 0 && (
+                    <div className="flex justify-center w-full">
+                      <Image
+                        src={goldSponsors[goldSponsors.length - 1].logo}
+                        alt={goldSponsors[goldSponsors.length - 1].name}
+                        width={200}
+                        height={60}
+                        className="h-12 w-full object-contain mx-auto my-4"
+                      />
+                    </div>
+                  )}
+                </>
+              );
+            })()}
           </div>
           {/* Silver Sponsors */}
           <div className="relative bg-gray-300/20 rounded-xl p-6 w-full max-w-2xl flex flex-col items-center space-y-4 mb-12">
-            <span className="absolute top-4 left-1/2 -translate-x-1/2 text-xs uppercase text-gray-300 font-bold tracking-wide">
+            <span className="absolute top-4 text-xs uppercase text-gray-300 font-bold tracking-wide">
               silver
             </span>
-            <div className="flex justify-center items-center w-full">
-              {sponsors.filter(s => s.tier === 'silver').map(s => (
-                <Image
-                  key={s.name}
-                  src={s.logo}
-                  alt={s.name}
-                  width={200}
-                  height={60}
-                  className="h-12 w-full object-contain mx-auto"
-                />
-              ))}
-            </div>
+            {(() => {
+              const silverSponsors = sponsors.filter(s => s.tier === 'silver');
+              const isOdd = silverSponsors.length % 2 === 1;
+              return (
+                <>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full mb-4">
+                    {(isOdd ? silverSponsors.slice(0, -1) : silverSponsors).map((s) => (
+                      <Image
+                        key={s.name}
+                        src={s.logo}
+                        alt={s.name}
+                        width={200}
+                        height={60}
+                        className="h-12 w-full object-contain mx-auto my-4"
+                      />
+                    ))}
+                  </div>
+                  {isOdd && silverSponsors.length > 0 && (
+                    <div className="flex justify-center w-full mt-2">
+                      <Image
+                        src={silverSponsors[silverSponsors.length - 1].logo}
+                        alt={silverSponsors[silverSponsors.length - 1].name}
+                        width={200}
+                        height={60}
+                        className="h-12 max-w-[140px] w-full object-contain mx-auto"
+                      />
+                    </div>
+                  )}
+                </>
+              );
+            })()}
           </div>
         </div>
       </div>
