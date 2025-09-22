@@ -80,8 +80,9 @@ function Sponsor() {
 
       {/* Sponsor FAQ Section */}
       <div id="faq" className="pt-12 text-[#CACACA] w-full max-w-4xl items-center flex flex-col">
-        <h1 className="text-3xl md:text-4xl">frequently asked questions</h1>
-        <div className="mb-10 md:mb-20 h-[1px] w-40 bg-[#cacacab0]" />
+        <h1 className="text-3xl md:text-4xl mb-10 text-center">
+          <span className="underline underline-offset-8 decoration-1">frequently</span> asked questions
+        </h1>
 
         <div className="flex flex-col gap-y-12 w-full max-w-5xl">
           <Accordion type="multiple" className="w-full max-w-4xl text-[#CACACA]">

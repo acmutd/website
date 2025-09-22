@@ -13,8 +13,10 @@ export default function DivisionFAQ(props: DivisionProps) {
 
   return (
     <div id="faq" className="pt-12 text-[#CACACA] w-full max-w-4xl">
-      <h1 className="text-3xl md:text-4xl">frequently asked questions</h1>
-      <div className="mb-10 md:mb-20 h-[1px] w-40 bg-[#cacacab0]" />
+      <h1 className="text-3xl md:text-4xl mb-10">
+          <span className="underline underline-offset-8 decoration-1">frequently</span> asked questions
+        </h1>
+      {/* <div className="mb-10 md:mb-20 h-[1px] w-40 bg-[#cacacab0]" /> */}
 
       <Accordion type="multiple" className="w-full max-w-4xl text-[#CACACA]">
         {questions.map((faq, i) => (
