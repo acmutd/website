@@ -44,7 +44,7 @@ const IndustrySponsors: React.FC = () => {
                         className="flex items-center justify-center p-2 md:p-4 transition-transform hover:scale-105"
                       >
                         <Image
-                          src={`/assets/home/sponsors/${sponsor}.png`}
+                          src={`/assets/sponsors/logos/${sponsor}.png`}
                           alt={sponsor.toUpperCase()}
                           className="object-contain"
                           width={idx === 0 ? 300 : idx === 1 ? 250 : 200}

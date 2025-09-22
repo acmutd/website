@@ -43,7 +43,7 @@ const Sponsor: React.FC<SponsorProps> = ({ name, tier }) => {
     >
       <div className="relative z-10 transition-transform duration-500 group-hover:scale-110 group-hover:-translate-y-1">
         <Image
-          src={`/assets/home/sponsors/${name}.png`}
+          src={`/assets/sponsors/logos/${name}.png`}
           alt={name.toUpperCase()}
           className="object-contain drop-shadow-lg"
           width="200"

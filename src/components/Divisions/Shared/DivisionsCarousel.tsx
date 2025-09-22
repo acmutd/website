@@ -77,7 +77,7 @@ export default function DivisionsCarousel(props: DivisionProps) {
                       <Image
                         src={image.imageLink}
                         alt={image.title}
-                        className="h-full w-full object-cover rounded-lg hover:brightness-90 transition-all"
+                        className="h-full w-full object-cover rounded-lg hover:brightness-75 transition-all"
                         fill
                         priority={i === 0}
                       />
@@ -139,7 +139,7 @@ export default function DivisionsCarousel(props: DivisionProps) {
           </div>
           <button
             type="button"
-            className="absolute top-4 right-4 text-white bg-black/60 rounded-full p-2 hover:bg-black/80 focus:outline-none"
+            className="absolute top-3 right-3 text-white px-3 py-2 bg-black/60 rounded-full hover:bg-black/80 focus:outline-none"
             onClick={() => setLightboxOpen(false)}
             aria-label="Close full view"
           >
