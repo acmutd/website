@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 import Image from "next/image";
-import SponsorImageCarousel from "@/components/Sponsor/SponsorImageCarousel";
+import Link from "next/link";
 import {
   Accordion,
   AccordionContent,
@@ -9,6 +9,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
+import SponsorImageCarousel from "@/components/Sponsor/SponsorImageCarousel";
 import { sponsors, sponsorFaqs } from "../../../config/sponsors.config";
 
 function Sponsor() {
@@ -38,25 +39,28 @@ function Sponsor() {
                 <>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full">
                     {(isOdd ? goldSponsors.slice(0, -1) : goldSponsors).map((s) => (
-                      <Image
-                        key={s.name}
-                        src={s.logo}
-                        alt={s.name}
-                        width={200}
-                        height={60}
-                        className="h-12 w-full object-contain mx-auto my-4"
-                      />
+                      <Link key={s.name} href={s.link} target="_blank" rel="noopener noreferrer">
+                        <Image
+                          src={s.logo}
+                          alt={s.name}
+                          width={200}
+                          height={60}
+                          className="h-12 w-full object-contain mx-auto my-4 transition-transform hover:scale-105"
+                        />
+                      </Link>
                     ))}
                   </div>
                   {isOdd && goldSponsors.length > 0 && (
                     <div className="flex justify-center w-full">
-                      <Image
-                        src={goldSponsors[goldSponsors.length - 1].logo}
-                        alt={goldSponsors[goldSponsors.length - 1].name}
-                        width={200}
-                        height={60}
-                        className="h-12 w-full object-contain mx-auto my-4"
-                      />
+                      <Link href={goldSponsors[goldSponsors.length - 1].link} target="_blank" rel="noopener noreferrer">
+                        <Image
+                          src={goldSponsors[goldSponsors.length - 1].logo}
+                          alt={goldSponsors[goldSponsors.length - 1].name}
+                          width={200}
+                          height={60}
+                          className="h-12 w-full object-contain mx-auto my-4 transition-transform hover:scale-105"
+                        />
+                      </Link>
                     </div>
                   )}
                 </>
@@ -75,25 +79,28 @@ function Sponsor() {
                 <>
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-8 w-full mb-4">
                     {(isOdd ? silverSponsors.slice(0, -1) : silverSponsors).map((s) => (
-                      <Image
-                        key={s.name}
-                        src={s.logo}
-                        alt={s.name}
-                        width={200}
-                        height={60}
-                        className="h-12 w-full object-contain mx-auto my-4"
-                      />
+                      <Link key={s.name} href={s.link} target="_blank" rel="noopener noreferrer">
+                        <Image
+                          src={s.logo}
+                          alt={s.name}
+                          width={200}
+                          height={60}
+                          className="h-12 w-full object-contain mx-auto my-4 transition-transform hover:scale-105"
+                        />
+                      </Link>
                     ))}
                   </div>
                   {isOdd && silverSponsors.length > 0 && (
                     <div className="flex justify-center w-full mt-2">
-                      <Image
-                        src={silverSponsors[silverSponsors.length - 1].logo}
-                        alt={silverSponsors[silverSponsors.length - 1].name}
-                        width={200}
-                        height={60}
-                        className="h-12 max-w-[140px] w-full object-contain mx-auto"
-                      />
+                      <Link href={silverSponsors[silverSponsors.length - 1].link} target="_blank" rel="noopener noreferrer">
+                        <Image
+                          src={silverSponsors[silverSponsors.length - 1].logo}
+                          alt={silverSponsors[silverSponsors.length - 1].name}
+                          width={200}
+                          height={60}
+                          className="h-12 max-w-[140px] w-full object-contain mx-auto transition-transform hover:scale-105"
+                        />
+                      </Link>
                     </div>
                   )}
                 </>

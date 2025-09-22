@@ -40,20 +40,24 @@ export const sponsors = [
     name: 'Paycom',
     tier: 'gold',
     logo: '/assets/sponsors/logos/paycom.png',
+    link: 'https://www.paycom.com/about/',
   },
   {
     name: 'CBRE',
     tier: 'silver',
     logo: '/assets/sponsors/logos/CBRE.png',
+    link: 'https://www.cbre.com/about',
   },
   {
     name: 'G-Research',
     tier: 'silver',
     logo: '/assets/sponsors/logos/gresearch.png',
+    link: 'https://www.gresearch.com/about/about-us/',
   },
   {
     name: 'Nokia',
     tier: 'silver',
     logo: '/assets/sponsors/logos/nokia.png',
+    link: 'https://www.nokia.com/we-are-nokia/',
   },
 ];
