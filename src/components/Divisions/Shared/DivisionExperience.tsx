@@ -7,7 +7,6 @@ export default function DivisionExperience(props: DivisionProps) {
   return (
     <div id="experience" className="pt-12 text-[#CACACA]">
       <h1 className="text-3xl md:text-4xl mb-6 md:mb-8 underline underline-offset-8 decoration-1">experience</h1>
-      {/* <div className="h-[1px] w-40 bg-[#cacacab0] mb-6 md:mb-8" /> */}
 
       <div className="flex flex-col space-y-2 md:space-y-3">
         {quotes.map((exp, i) => (
