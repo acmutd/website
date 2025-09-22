@@ -9,12 +9,12 @@ export default function SponsorImageCarousel() {
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     slides: {
-      perView: 3,
+      perView: 2.5,
       spacing: 16,
     },
     breakpoints: {
       "(max-width: 1024px)": {
-        slides: { perView: 2, spacing: 12 },
+        slides: { perView: 1.8, spacing: 12 },
       },
       "(max-width: 768px)": {
         slides: { perView: 1, spacing: 8 },
