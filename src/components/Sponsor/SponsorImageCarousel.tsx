@@ -1,29 +1,16 @@
 import React, { useState } from "react"
-import "keen-slider/keen-slider.min.css"
-import { useKeenSlider } from "keen-slider/react"
 import { ArrowLeft, ArrowRight } from "lucide-react"
 import Image from "next/image"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel"
 
 export default function SponsorImageCarousel() {
+  const [api, setApi] = useState<CarouselApi>()
   const [currentSlide, setCurrentSlide] = useState(0)
-  const [sliderRef, instanceRef] = useKeenSlider({
-    loop: true,
-    slides: {
-      perView: 2.5,
-      spacing: 16,
-    },
-    breakpoints: {
-      "(max-width: 1024px)": {
-        slides: { perView: 1.8, spacing: 12 },
-      },
-      "(max-width: 768px)": {
-        slides: { perView: 1, spacing: 8 },
-      },
-    },
-    slideChanged(slider) {
-      setCurrentSlide(slider.track.details.rel)
-    },
-  })
 
   const images = [
     "/assets/sponsors/pics/state-farm.jpg",
@@ -39,7 +26,20 @@ export default function SponsorImageCarousel() {
   // Lightbox modal state
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [showModal, setShowModal] = useState(false)
-  const [current, setCurrent] = useState(0)
+  const [lightboxCurrent, setLightboxCurrent] = useState(0)
+
+  // Track current slide and count
+  React.useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCurrentSlide(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setCurrentSlide(api.selectedScrollSnap())
+    })
+  }, [api])
 
   // Fade in/out logic
   React.useEffect(() => {
@@ -53,21 +53,36 @@ export default function SponsorImageCarousel() {
 
   return (
     <div className="w-full flex flex-col items-center overflow-hidden">
-      <div ref={sliderRef} className="keen-slider w-full">
-        {images.map((src, idx) => (
-          <div key={idx} className="keen-slider__slide flex justify-center border-2 border-gray-500 rounded-lg">
-            <Image
-              src={src}
-              alt={`Slide ${idx + 1}`}
-              width={1980}
-              height={1080}
-              sizes="100vw"
-              className="aspect-video object-cover cursor-pointer hover:brightness-75 transition-all"
-              onClick={() => { setCurrent(idx); setLightboxOpen(true); }}
-            />
-          </div>
-        ))}
-      </div>
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+          slidesToScroll: 1,
+        }}
+        setApi={setApi}
+        className="w-full"
+      >
+        <CarouselContent className="-ml-6">
+          {images.map((src, idx) => (
+            <CarouselItem
+              key={idx}
+              className="pl-6 md:basis-1/3 lg:basis-1/3 basis-full"
+            >
+              <div className="border-2 border-gray-500 rounded-lg">
+                <Image
+                  src={src}
+                  alt={`Slide ${idx + 1}`}
+                  width={1980}
+                  height={1080}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 33vw"
+                  className="aspect-video object-cover cursor-pointer hover:brightness-75 transition-all w-full rounded-md"
+                  onClick={() => { setLightboxCurrent(idx); setLightboxOpen(true); }}
+                />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
 
       {/* Dots below carousel */}
       <div className="flex justify-center items-center gap-2 mt-4">
@@ -76,25 +91,26 @@ export default function SponsorImageCarousel() {
             key={idx}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === idx ? 'bg-white scale-110 shadow' : 'bg-white/40 hover:bg-white/70'}`}
             aria-label={`Go to slide ${idx + 1}`}
-            onClick={() => instanceRef.current?.moveToIdx(idx)}
+            onClick={() => api?.scrollTo(idx)}
           />
         ))}
       </div>
 
       <div className="flex gap-6 mt-8">
         <button
-          onClick={() => instanceRef.current?.prev()}
+          onClick={() => api?.scrollPrev()}
           className="p-2 rounded-full border text-white border-grey-300 hover:bg-gray-700/50"
         >
           <ArrowLeft />
         </button>
         <button
-          onClick={() => instanceRef.current?.next()}
+          onClick={() => api?.scrollNext()}
           className="p-2 rounded-full border text-white border-grey-300 hover:bg-gray-700/50"
         >
           <ArrowRight />
         </button>
       </div>
+
       {/* Lightbox modal */}
       <div
         className={`fixed inset-0 z-[100] flex items-center justify-center bg-black/80 transition-opacity duration-300 ${showModal ? (lightboxOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none') : 'opacity-0 pointer-events-none'}`}
@@ -107,8 +123,8 @@ export default function SponsorImageCarousel() {
         >
           <div className="relative overflow-hidden rounded-md">
             <Image
-              src={images[current]}
-              alt={`Sponsor full ${current + 1}`}
+              src={images[lightboxCurrent]}
+              alt={`Sponsor full ${lightboxCurrent + 1}`}
               width={1200}
               height={800}
               sizes="90vw"
