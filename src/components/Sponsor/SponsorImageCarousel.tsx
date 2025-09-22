@@ -8,20 +8,11 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel"
 
+import { sponsorImages } from "../../../config/sponsors.config";
+
 export default function SponsorImageCarousel() {
   const [api, setApi] = useState<CarouselApi>()
   const [currentSlide, setCurrentSlide] = useState(0)
-
-  const images = [
-    "/assets/sponsors/pics/state-farm.jpg",
-    "/assets/sponsors/pics/paycom-sponsor.jpg",
-    "/assets/sponsors/pics/a-guy.jpg",
-    "/assets/sponsors/pics/sponsor-speech.jpg",
-    "/assets/sponsors/pics/people-staring2.jpg",
-    "/assets/sponsors/pics/twilight-tunes.jpg",
-    "/assets/sponsors/pics/people-staring1.jpg",
-    "/assets/sponsors/pics/people-staring3.jpg",
-  ]
 
   // Lightbox modal state
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -63,7 +54,7 @@ export default function SponsorImageCarousel() {
         className="w-full"
       >
         <CarouselContent className="-ml-6">
-          {images.map((src, idx) => (
+          {sponsorImages.map((src, idx) => (
             <CarouselItem
               key={idx}
               className="pl-6 md:basis-1/3 lg:basis-1/3 basis-full"
@@ -86,7 +77,7 @@ export default function SponsorImageCarousel() {
 
       {/* Dots below carousel */}
       <div className="flex justify-center items-center gap-2 mt-4">
-        {images.map((_, idx) => (
+        {sponsorImages.map((_, idx) => (
           <button
             key={idx}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === idx ? 'bg-white scale-110 shadow' : 'bg-white/40 hover:bg-white/70'}`}
@@ -123,7 +114,7 @@ export default function SponsorImageCarousel() {
         >
           <div className="relative overflow-hidden rounded-md">
             <Image
-              src={images[lightboxCurrent]}
+              src={sponsorImages[lightboxCurrent]}
               alt={`Sponsor full ${lightboxCurrent + 1}`}
               width={1200}
               height={800}

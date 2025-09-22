@@ -25,12 +25,15 @@ export const sponsorFaqs = [
 ];
 
 export const sponsorImages = [
-  '/assets/sponsors/pics/pic1.jpg',
-  '/assets/sponsors/pics/pic2.jpg',
-  '/assets/sponsors/pics/pic3.jpg',
-  '/assets/sponsors/pics/pic4.jpg',
-  '/assets/sponsors/pics/pic5.jpg',
-];
+    "/assets/sponsors/pics/state-farm.jpg",
+    "/assets/sponsors/pics/paycom-sponsor.jpg",
+    "/assets/sponsors/pics/a-guy.jpg",
+    "/assets/sponsors/pics/sponsor-speech.jpg",
+    "/assets/sponsors/pics/people-staring2.jpg",
+    "/assets/sponsors/pics/twilight-tunes.jpg",
+    "/assets/sponsors/pics/people-staring1.jpg",
+    "/assets/sponsors/pics/people-staring3.jpg",
+  ]
 
 export const sponsors = [
   {
