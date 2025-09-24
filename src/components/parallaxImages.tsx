@@ -1,3 +1,4 @@
+'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { peechi, orb1, orb2, orb3, orb4, orb5, orb6, orb7 } from '../app/data';

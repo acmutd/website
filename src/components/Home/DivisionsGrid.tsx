@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { aboutPageData } from '../../../config/about.config';
 import HomeDivisions from './Divisions';
