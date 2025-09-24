@@ -7,7 +7,8 @@ type Params = {
   year: string | null;
 };
 
-export default function Events({ searchParams }: { searchParams: Params }) {
+export default async function Events(props: { searchParams: Promise<Params> }) {
+  const searchParams = await props.searchParams;
   const today = new Date();
   const month = parseInt(searchParams.month || today.getMonth().toString());
   const year = parseInt(searchParams.year || today.getFullYear().toString());

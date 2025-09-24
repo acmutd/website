@@ -24,7 +24,7 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
         </div>
       ) : (
         // This was only used for the Education division for Mentor, you could apply for Mentor and Mentee so there would be two apply buttons
-        <div className="mt-10 md:mt-20 flex flex-col md:flex-row items-center gap-y-3 md:gap-x-3">
+        (<div className="mt-10 md:mt-20 flex flex-col md:flex-row items-center gap-y-3 md:gap-x-3">
           {Object.entries(applicationUrl[division] as Record<string, string>).map(
             ([roleName, appUrl]) => (
               <Link href={appUrl} key={roleName}>
@@ -36,7 +36,7 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
               </Link>
             ),
           )}
-        </div>
+        </div>)
       )}
     </div>
   );

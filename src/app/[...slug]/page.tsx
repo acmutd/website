@@ -88,7 +88,8 @@ const parseDivisionSlug = (slug: string[]): DivisionProps | null => {
   return null;
 };
 
-export default function Page({ params }: { params: { slug: string[] } }) {
+export default async function Page(props: { params: Promise<{ slug: string[] }> }) {
+  const params = await props.params;
   const divisionProps = parseDivisionSlug(params.slug);
   if (!divisionProps) {
     return notFound();
