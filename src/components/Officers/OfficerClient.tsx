@@ -1,10 +1,9 @@
 'use client';
 
-import { useMemo, useState, type ChangeEvent } from 'react';
+import { useMemo, useState } from 'react';
 import Image from 'next/image';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent } from '@/components/ui/card';
 import { OfficerSections } from '../../../lib/types';
 import { type Officer } from '../../../config/officers.config';
 import { type DivisionInfo } from './constants';
@@ -36,26 +35,28 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
 };
 
 const OfficerCard = ({ officer }: { officer: Officer & { division?: string } }) => (
-  <Card className="group border-gray-600/50 bg-black/20 backdrop-blur-sm transition-colors duration-200 hover:border-gray-500/70 hover:bg-black/40">
-    <CardContent className="p-4">
+  <div className="group flex-shrink-0">
+    <div className="group-hover:bg-white/8 relative rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-200 group-hover:border-white/20 group-hover:shadow-lg group-hover:shadow-black/20">
       <div className="flex items-center space-x-4">
         <div className="relative h-16 w-16 flex-shrink-0 sm:h-20 sm:w-20">
           <OfficerImageWithFallback
             src={officer.image}
             alt={officer.name}
             fallbackSrc="/assets/officer/OfficerImage.png"
-            className="h-full w-full rounded-full object-cover ring-2 ring-gray-600/50 transition-colors duration-200 group-hover:ring-blue-400/50"
+            className="h-full w-full rounded-full object-cover ring-2 ring-white/20 transition-all duration-200 group-hover:ring-4 group-hover:ring-blue-400/60"
           />
         </div>
         <div className="min-w-0 flex-1">
-          <h3 className="truncate text-base font-medium text-white transition-colors duration-200 group-hover:text-blue-300">
+          <h3 className="truncate text-base font-semibold text-white transition-colors duration-200 group-hover:text-blue-300">
             {officer.name}
           </h3>
-          <p className="text-sm leading-tight text-gray-300">{officer.position}</p>
+          <p className="text-sm leading-tight text-gray-200/90 transition-colors duration-200 group-hover:text-gray-100">
+            {officer.position}
+          </p>
         </div>
       </div>
-    </CardContent>
-  </Card>
+    </div>
+  </div>
 );
 
 type OfficerClientProps = {
@@ -120,8 +121,8 @@ export default function OfficerClient({
 
       <Tabs defaultValue="all" className="w-full">
         <div className="mb-8">
-          <div className="overflow-x-auto pb-2">
-            <TabsList className="inline-flex h-auto w-max min-w-full rounded-lg bg-black/20 p-1 backdrop-blur-sm">
+          <div className="flex justify-center overflow-x-auto pb-2">
+            <TabsList className="inline-flex h-auto w-max gap-2 rounded-lg bg-black/20 p-1 backdrop-blur-sm">
               {allDivisions.map((division: DivisionInfo) => (
                 <TabsTrigger
                   key={division.key}
@@ -159,7 +160,7 @@ export default function OfficerClient({
                           <div className="mx-auto h-px w-32 bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
                         </div>
 
-                        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        <div className="mx-auto flex flex-wrap justify-center gap-3 gap-y-5 sm:gap-4 sm:gap-y-6 lg:gap-5 lg:gap-y-7">
                           {group.officers.map((officer: Officer) => (
                             <OfficerCard
                               key={`${group.division.key}-${officer.name}`}
@@ -168,10 +169,12 @@ export default function OfficerClient({
                           ))}
                         </div>
 
-                        <div className="text-center text-sm text-gray-400">
-                          {group.officers.length} officer{group.officers.length !== 1 ? 's' : ''} in{' '}
-                          {group.division.label}
-                        </div>
+                        {group.officers.length > 1 && (
+                          <div className="text-center text-sm text-gray-400">
+                            {group.officers.length} officer{group.officers.length !== 1 ? 's' : ''}{' '}
+                            in {group.division.label}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -200,7 +203,7 @@ export default function OfficerClient({
                     </div>
                   </div>
                 ) : (
-                  <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  <div className="mx-auto flex flex-wrap justify-center gap-3 gap-y-5 sm:gap-4 sm:gap-y-6 lg:gap-5 lg:gap-y-7">
                     {officers?.map((officer: Officer) => (
                       <OfficerCard key={officer.name} officer={officer} />
                     ))}
