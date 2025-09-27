@@ -36,7 +36,7 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
 
 const OfficerCard = ({ officer }: { officer: Officer & { division?: string } }) => (
   <div className="group flex-shrink-0">
-    <div className="group-hover:bg-white/8 relative rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-sm transition-all duration-200 group-hover:border-white/20 group-hover:shadow-lg group-hover:shadow-black/20">
+    <div className="relative rounded-xl p-4">
       <div className="flex items-center space-x-4">
         <div className="relative h-16 w-16 flex-shrink-0 sm:h-20 sm:w-20">
           <OfficerImageWithFallback
@@ -169,7 +169,7 @@ export default function OfficerClient({
                           ))}
                         </div>
 
-                        {group.officers.length > 1 && (
+                        {group.division.key !== 'advisor' && (
                           <div className="text-center text-sm text-gray-400">
                             {group.officers.length} officer{group.officers.length !== 1 ? 's' : ''}{' '}
                             in {group.division.label}
@@ -210,10 +210,12 @@ export default function OfficerClient({
                   </div>
                 )}
 
-                <div className="mt-8 text-center text-sm text-gray-400">
-                  {officers?.length || 0} officer{officers?.length !== 1 ? 's' : ''} in{' '}
-                  {division.label}
-                </div>
+                {division.key !== 'advisor' && (
+                  <div className="mt-8 text-center text-sm text-gray-400">
+                    {officers?.length || 0} officer{officers?.length !== 1 ? 's' : ''} in{' '}
+                    {division.label}
+                  </div>
+                )}
               </TabsContent>
             );
           }
