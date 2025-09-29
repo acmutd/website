@@ -35,6 +35,8 @@ type DivisionMetadata = {
   keywords: string[];
   slug: string;
   image: string;
+  imageWidth: number;
+  imageHeight: number;
 };
 
 const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
@@ -56,6 +58,8 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
         ],
         slug: 'education/tip',
         image: '/assets/about/education/education.png',
+        imageWidth: 669,
+        imageHeight: 180,
       };
     }
     if (props.sub === 'mentor') {
@@ -74,6 +78,8 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
         ],
         slug: 'education/mentor',
         image: '/assets/about/education/education.png',
+        imageWidth: 669,
+        imageHeight: 180,
       };
     }
   }
@@ -94,6 +100,8 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
       ],
       slug: 'projects',
       image: '/assets/about/projects/projects.png',
+      imageWidth: 630,
+      imageHeight: 188,
     },
     development: {
       title: 'Development Division - ACM UTD',
@@ -110,6 +118,8 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
       ],
       slug: 'development',
       image: '/assets/about/development/development.png',
+      imageWidth: 853,
+      imageHeight: 198,
     },
     research: {
       title: 'Research Division - ACM UTD',
@@ -126,6 +136,8 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
       ],
       slug: 'research',
       image: '/assets/about/research/research.png',
+      imageWidth: 630,
+      imageHeight: 183,
     },
     media: {
       title: 'Media Division - ACM UTD',
@@ -142,6 +154,8 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
       ],
       slug: 'media',
       image: '/assets/about/media/media.png',
+      imageWidth: 669,
+      imageHeight: 185,
     },
     hackutd: {
       title: 'HackUTD - ACM UTD',
@@ -158,6 +172,8 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
       ],
       slug: 'hackutd',
       image: '/assets/about/hackutd/hackutd.png',
+      imageWidth: 669,
+      imageHeight: 189,
     },
     community: {
       title: 'Community Division - ACM UTD',
@@ -174,6 +190,8 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
       ],
       slug: 'community',
       image: '/assets/about/community/community.png',
+      imageWidth: 697,
+      imageHeight: 191,
     },
     industry: {
       title: 'Industry Division - ACM UTD',
@@ -190,6 +208,8 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
       ],
       slug: 'industry',
       image: '/assets/about/industry/industry.png',
+      imageWidth: 282,
+      imageHeight: 94,
     },
   };
 
@@ -233,6 +253,8 @@ export const generateMetadata = async (props: {
       images: [
         {
           url: divisionInfo.image,
+          width: divisionInfo.imageWidth,
+          height: divisionInfo.imageHeight,
           alt: `${divisionInfo.title} - ACM UTD`,
         },
       ],
