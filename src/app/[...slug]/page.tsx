@@ -233,8 +233,6 @@ export const generateMetadata = async (props: {
       images: [
         {
           url: divisionInfo.image,
-          width: 1200,
-          height: 630,
           alt: `${divisionInfo.title} - ACM UTD`,
         },
       ],
