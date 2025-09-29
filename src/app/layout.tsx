@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: '/assets/chapter-logo.png',
-        width: 1200,
-        height: 630,
+        width: 405,
+        height: 114,
         alt: 'ACM UTD Logo',
       },
     ],
