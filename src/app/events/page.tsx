@@ -65,7 +65,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
     description: event.description,
   }));
 
-  const ogImageUrl = `/api/og/events${
+  const ogImageUrl = `${BASE_API_URL}/api/og/events${
     eventsForOg.length > 0 ? `?events=${encodeURIComponent(JSON.stringify(eventsForOg))}` : ''
   }`;
 
