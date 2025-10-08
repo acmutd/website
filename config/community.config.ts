@@ -29,7 +29,7 @@ export const communityOfficers: Officer[] = [
   {
     name: 'Joseph Botros',
     position: 'Events Officer',
-    image: '/assets/officer/JosephBotros.jpg',
+    image: '/assets/officer/JosephBotros.png',
   },
   {
     name: 'Varsha Shashishekar',
@@ -39,17 +39,17 @@ export const communityOfficers: Officer[] = [
   {
     name: 'Mayowa Akinyede',
     position: 'Events Officer',
-    image: '/assets/officer/MayowaAkinyede.jpg',
+    image: '/assets/officer/MayowaAkinyede.jpeg',
   },
   {
-    name: 'Ryan Edward',
+    name: 'Ryan Edwards',
     position: 'Events Officer',
-    image: '/assets/officer/RyanEdward.jpg',
+    image: '/assets/officer/RyanEdwards.jpeg',
   },
   {
-    name: 'Sudiksa Dineshkumar',
+    name: 'Sudikisa Dineshkumar',
     position: 'Events Officer',
-    image: '/assets/officer/SudkisaDineshkumar.jpg',
+    image: '/assets/officer/SudikisaDineshkumar.jpg',
   },
   {
     name: 'Syed Kazmi',
@@ -64,17 +64,17 @@ export const communityOfficers: Officer[] = [
   {
     name: 'Pratishtha Rao',
     position: 'Events Officer',
-    image: '/assets/officer/PratishthaRao.jpg',
+    image: '/assets/officer/PratishthaRao.png',
   },
   {
     name: 'Varun Bhupathiraju',
     position: 'Events Officer',
-    image: '/assets/officer/VarunBhupathiraju.jpg',
+    image: '/assets/officer/VarunBhupathiraju.jpeg',
   },
   {
     name: 'Shriya Kalyan',
     position: 'Archives Officer',
-    image: '/assets/officer/ShriyaKalyan.jpg',
+    image: '/assets/officer/ShriyaKalyan.png',
   },
   {
     name: 'Ayomide Tapere',
@@ -99,7 +99,7 @@ export const communityOfficers: Officer[] = [
   {
     name: 'Frabina Edwin',
     position: 'Archives Officer',
-    image: '/assets/officer/FrabinaEdwin.jpg',
+    image: '/assets/officer/FrabinaEdwin.png',
   },
   {
     name: 'Shanon Carter',
@@ -124,7 +124,7 @@ export const communityOfficers: Officer[] = [
   {
     name: 'Dhivyesh Prithiviraj',
     position: 'Outreach Officer',
-    image: '/assets/officer/DhivyeshPrithiviraj.jpg',
+    image: '/assets/officer/DhivyeshPrithviraj.jpg',
   },
   {
     name: 'Dana Ibrahim',
