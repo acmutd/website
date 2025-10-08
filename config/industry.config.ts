@@ -4,42 +4,57 @@ import { type Officer } from './officers.config';
 
 export const industryDirectors: Director[] = [
   {
-    name: 'Manasi Vipat',
+    name: 'Anika Guin',
     position: 'Director of Industry',
-    image: '/assets/officer/ManasiVipat.jpg',
+    image: '/assets/officer/industry/anika-guin.jpg',
+  },
+  {
+    name: 'Nihita Soma',
+    position: 'Director of Industry',
+    image: '/assets/officer/industry/nihita-soma.jpg',
   },
 ];
 
 export const industryOfficers: Officer[] = [
-   {
-    name: 'Manasi Vipat',
-    position: 'Director of Industry',
-    image: '/assets/officer/ManasiVipat.jpg'
-  },
-  {
-    name: 'Sushant Ganji',
-    position: 'Industry Officer',
-    image: '/assets/officer/SushantGanji.jpg',
-  },
   {
     name: 'Anika Guin',
-    position: 'Industry Officer',
-    image: '/assets/officer/AnikaGuin.png',
+    position: 'Director of Industry',
+    image: '/assets/officer/industry/anika-guin.jpg',
   },
   {
     name: 'Nihita Soma',
+    position: 'Director of Industry',
+    image: '/assets/officer/industry/nihita-soma.jpg',
+  },
+  {
+    name: 'Aarya Ravishankar',
     position: 'Industry Officer',
-    image: '/assets/officer/NihitaSoma.jpg',
+    image: '/assets/officer/industry/aarya-ravishankar.jpg',
+  },
+  {
+    name: 'Nidhi Parvathala',
+    position: 'Industry Officer',
+    image: '/assets/officer/industry/nidhi-parvathala.jpg',
+  },
+  {
+    name: 'Pratishtha Rao',
+    position: 'Industry Officer',
+    image: '/assets/officer/industry/pratishtha-rao.jpg',
+  },
+  {
+    name: 'Rishi Golla',
+    position: 'Industry Officer',
+    image: '/assets/officer/industry/rishi-golla.jpg',
   },
   {
     name: 'Soujanya Kamalapur',
     position: 'Industry Officer',
-    image: '/assets/officer/SoujanyaKamalapur.png',
+    image: '/assets/officer/industry/soujanya-kamalapur.jpg',
   },
   {
-    name: 'Shreya Ram',
+    name: 'Varun Bhupathiraju',
     position: 'Industry Officer',
-    image: '/assets/officer/ShreyaRam.png',
+    image: '/assets/officer/industry/varun-bhupathiraju.jpg',
   },
 ];
 
