@@ -4,32 +4,47 @@ import { type Officer } from './officers.config';
 
 export const industryDirectors: Director[] = [
   {
-    name: 'Manasi Vipat',
+    name: 'Anika Guin',
     position: 'Director of Industry',
-    image: '/assets/officer/ManasiVipat.jpg',
+    image: '/assets/officer/AnikaGuin.jpg',
+  },
+  {
+    name: 'Nihita Soma',
+    position: 'Director of Industry',
+    image: '/assets/officer/NihitaSoma.jpg',
   },
 ];
 
 export const industryOfficers: Officer[] = [
    {
-    name: 'Manasi Vipat',
-    position: 'Director of Industry',
-    image: '/assets/officer/ManasiVipat.jpg'
-  },
-  {
-    name: 'Sushant Ganji',
-    position: 'Industry Officer',
-    image: '/assets/officer/SushantGanji.jpg',
-  },
-  {
     name: 'Anika Guin',
-    position: 'Industry Officer',
-    image: '/assets/officer/AnikaGuin.png',
+    position: 'Director of Industry',
+    image: '/assets/officer/AnikaGuin.jpg',
   },
   {
     name: 'Nihita Soma',
-    position: 'Industry Officer',
+    position: 'Director of Industry',
     image: '/assets/officer/NihitaSoma.jpg',
+  },
+  {
+    name: 'Aarya Ravishankar',
+    position: 'Industry Officer',
+    image: '/assets/officer/AaryaRavishankar.JPG',
+  },
+  {
+    name: 'Nidhi Parvathala',
+    position: 'Industry Officer',
+    image: '/assets/officer/NidhiParvathala.jpg',
+  },
+  {
+    name: 'Pratishtha Rao',
+    position: 'Industry Officer',
+    image: '/assets/officer/PratishthaRao.jpg',
+  },
+  {
+    name: 'Rishi Golla',
+    position: 'Industry Officer',
+    image: '/assets/officer/RishiGolla.JPG',
   },
   {
     name: 'Soujanya Kamalapur',
@@ -37,9 +52,9 @@ export const industryOfficers: Officer[] = [
     image: '/assets/officer/SoujanyaKamalapur.png',
   },
   {
-    name: 'Shreya Ram',
+    name: 'Varun Bhupathiraju',
     position: 'Industry Officer',
-    image: '/assets/officer/ShreyaRam.png',
+    image: '/assets/officer/VarunBhupathiraju.jpg',
   },
 ];
 
