@@ -3,73 +3,109 @@ import { CarouselImage, Director } from './divisions.config';
 import { type Officer } from './officers.config';
 
 export const mediaDirectors: Director[] = [
-  {
+   {
     image: '/assets/officer/HibaMubeen.jpg',
     name: 'Hiba Mubeen',
-    position: 'Director of Media',
-  },
-  {
-    image: '/assets/officer/SusanZhang.jpg',
-    name: 'Susan Zhang',
-    position: 'Director of Media',
-  },
-]
-
-export const mediaOfficers: Officer[] = [
-  {
-    image: '/assets/officer/HibaMubeen.jpg',
-    name: 'Hiba Mubeen',
-    position: 'Director of Media',
-  },
-  {
-    image: '/assets/officer/SusanZhang.jpg',
-    name: 'Susan Zhang',
-    position: 'Director of Media',
-  },
-  {
-    image: '/assets/officer/CalebHernandez.jpg',
-    name: 'Caleb Hernandez',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/SandraLuo.jpg',
-    name: 'Sandra Luo',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/NandiniPaidesetty.jpg',
-    name: 'Nandini Paidesetty',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/AdrianAlvarez.jpg',
-    name: 'Adrian Alvarez',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/SanjithTamballa.jpg',
-    name: 'Sanjith Tamballa',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/MohamedIbrahim.png',
-    name: 'Mohamed Ibrahim',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/RajivMallisetty.jpg',
-    name: 'Rajiv Malisetty',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/AddieSubramanian.png',
-    name: 'Aadharshini Subramanian',
-    position: 'Media Officer',
+    position: 'Director of Marketing',
   },
   {
     image: '/assets/officer/SnehaMaram.jpg',
     name: 'Sneha Maram',
-    position: 'Media Officer',
+    position: 'Director of Design',
+  },
+]
+
+export const mediaOfficers: Officer[] = [
+  
+  {
+    image: '/assets/officer/HibaMubeen.jpg',
+    name: 'Hiba Mubeen',
+    position: 'Director of Marketing',
+  },
+  {
+    image: '/assets/officer/SnehaMaram.jpg',
+    name: 'Sneha Maram',
+    position: 'Director of Design',
+  },
+  {
+    image: '/assets/officer/AdrianAlvarez.jpg',
+    name: 'Adrian Alvarez',
+    position: 'Marketing Officer',
+  },
+  {
+    image: '/assets/officer/AlessioHaro.jpg',
+    name: 'Alessio Haro',
+    position: 'Design Officer',
+  },
+  {
+    image: '/assets/officer/AlishbaJafri.png',
+    name: 'Alishba Jafri',
+    position: 'Marketing Officer',
+  },
+  {
+    image: '/assets/officer/AnishPalankar.jpeg',
+    name: 'Anish Palankar',
+    position: 'Marketing Officer',
+  },
+  {
+    image: '/assets/officer/AnviSiddabhattuni.jpg',
+    name: 'Anvi Siddabhattuni',
+    position: 'Hybrid Officer',
+  },
+  {
+    image: '/assets/officer/BatrisiyaNablan.jpg',
+    name: 'Batrisiya Nablan',
+    position: 'Design Officer',
+  },
+  {
+    image: '/assets/officer/DaxDwelle.jpeg',
+    name: 'Dax Dwelle',
+    position: 'Marketing Officer',
+  },
+  {
+    image: '/assets/officer/DamianIzaguirre.jpeg',
+    name: 'Damian Izaguirre',
+    position: 'Design Officer',
+  },
+  {
+    image: '/assets/officer/EshitasriPunuganti.jpg',
+    name: 'Eshitasri Punuganti',
+    position: 'Marketing Officer',
+  },
+  {
+    image: '/assets/officer/MohamedIbrahim.png',
+    name: 'Mohamed Ibrahim',
+    position: 'Marketing Officer',
+  },
+  {
+    image: '/assets/officer/RohanCheruku.jpg',
+    name: 'Rohan Cheruku',
+    position: 'Design Officer',
+  },
+  {
+    image: '/assets/officer/SallyNguyen.jpg',
+    name: 'Sally Nguyen',
+    position: 'Hybrid Officer',
+  },
+  {
+    image: '/assets/officer/SandraLuo.jpg',
+    name: 'Sandra Luo',
+    position: 'Design Officer',
+  },
+  {
+    image: '/assets/officer/SanjithTamballa.jpg',
+    name: 'Sanjith Tamballa',
+    position: 'Design Officer',
+  },
+  {
+    image: '/assets/officer/VictoriaOkorafor.png',
+    name: 'Victoria Okorafor',
+    position: 'Design Officer',
+  },
+  {
+    image: '/assets/officer/SusanZhang.jpg',
+    name: 'Susan Zhang',
+    position: 'Advisor of Media',
   },
 ];
 

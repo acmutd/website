@@ -31,12 +31,12 @@ export const boardOfficers: Officer[] = [
   {
     name: 'Anika Guin',
     position: 'Director of Industry',
-    image: ''
+    image: '/assets/officer/AnikaGuin.jpg'
   },
    {
     name: 'Nihita Soma',
     position: 'Director of Industry',
-    image: ''
+    image: '/assets/officer/NihitaSoma.JPG'
   },
   ...projectDirectors,
   {
@@ -52,12 +52,12 @@ export const boardOfficers: Officer[] = [
   {
     image: '/assets/officer/HibaMubeen.jpg',
     name: 'Hiba Mubeen',
-    position: 'Director of Media',
+    position: 'Director of Marketing',
   },
   {
-    image: '',
+    image: '/assets/officer/SnehaMaram.jpg',
     name: 'Sneha Maram',
-    position: 'Director of Media',
+    position: 'Director of Design',
   },
     {
     image: '/assets/officer/EvanWright.png',
@@ -66,13 +66,13 @@ export const boardOfficers: Officer[] = [
   },
   ...educationDirectors,
   {
-    image: '',
+    image: '/assets/officer/VyshnavVijish.JPG',
     name: 'Vyshnav Vijish',
-    position: 'Director of Community',
+    position: 'Director of Outreach',
   },
   {
     image: '/assets/officer/MercedesXiong.jpg',
     name: 'Mercedes Xiong',
-    position: 'Director of Community',
+    position: 'Director of Campus',
   },
 ]
