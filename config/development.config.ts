@@ -64,12 +64,12 @@ export const developmentOfficers: Officer[] = [
     position: 'Core Developer',
   },
   {
-    image: '/assets/officer/JeydinPham.jpg',
+    image: '/assets/officer/JeydinPham.jpeg',
     name: 'Jeydin Pham',
     position: 'Core Developer',
   },
   {
-    image: '/assets/officer/LukeSultzer.jpg',
+    image: '/assets/officer/LukeSultzer.jpeg',
     name: 'Luke Sultzer',
     position: 'Core Developer',
   },
@@ -90,7 +90,7 @@ export const developmentOfficers: Officer[] = [
     position: 'BSG Developer',
   },
   {
-    image: '/assets/officer/OwenIsenhart.jpg',
+    image: '/assets/officer/OwenIsenhart.JPEG',
     name: 'Owen Isenhart',
     position: 'BSG Developer',
   },
@@ -100,8 +100,8 @@ export const developmentOfficers: Officer[] = [
     position: 'BSG Developer',
   },
   {
-    image: '/assets/officer/RonakChava.jpg',
-    name: 'Ronak Chava',
+    image: '/assets/officer/RonakChavva.jpg',
+    name: 'Ronak Chavva',
     position: 'BSG Developer',
   },
   {
@@ -121,7 +121,7 @@ export const developmentOfficers: Officer[] = [
     position: 'Org Portal Developer',
   },
   {
-    image: '/assets/officer/EthanScherwitz.jpg',
+    image: '/assets/officer/EthanScherwitz.JPG',
     name: 'Ethan Scherwitz',
     position: 'Org Portal Developer',
   },
@@ -172,13 +172,13 @@ export const developmentOfficers: Officer[] = [
     position: 'Nexus Developer',
   },
   {
-    image: '/assets/officer/TommyNguyen.jpg',
+    image: '/assets/officer/TommyNguyen.JPG',
     name: 'Tommy Nguyen',
     position: 'Nexus Designer',
   },
 
   {
-    image: '/assets/officer/AbisNaqvi.jpg',
+    image: '/assets/officer/AbisNaqvi.jpeg',
     name: 'Abis Naqvi',
     position: 'SAGE Developer',
   },
@@ -219,7 +219,7 @@ export const developmentOfficers: Officer[] = [
     position: 'Meteormate Developer',
   },
   {
-    image: '/assets/officer/RyanPolasky.jpg',
+    image: '/assets/officer/RyanPolasky.png',
     name: 'Ryan Polasky',
     position: 'Meteormate Developer',
   },
@@ -239,8 +239,8 @@ export const developmentOfficers: Officer[] = [
     position: 'Meteormate Developer',
   },
   {
-    image: '/assets/officer/ChrisTrans.jpg',
-    name: 'Chris Trans',
+    image: '/assets/officer/ChristopherTran.png',
+    name: 'Christopher Tran',
     position: 'Meteormate Designer',
   },
   {
