@@ -6,12 +6,12 @@ export const industryDirectors: Director[] = [
   {
     name: 'Anika Guin',
     position: 'Director of Industry',
-    image: '/assets/officer/AnikaGuin.jpg',
+    image: '/assets/officer/Anika_Guin.jpg',
   },
   {
     name: 'Nihita Soma',
     position: 'Director of Industry',
-    image: '/assets/officer/NihitaSoma.jpg',
+    image: '/assets/officer/Nihita_Soma.jpg',
   },
 ];
 
@@ -19,42 +19,42 @@ export const industryOfficers: Officer[] = [
    {
     name: 'Anika Guin',
     position: 'Director of Industry',
-    image: '/assets/officer/AnikaGuin.jpg',
+    image: '/assets/officer/Anika_Guin.jpg',
   },
   {
     name: 'Nihita Soma',
     position: 'Director of Industry',
-    image: '/assets/officer/NihitaSoma.jpg',
+    image: '/assets/officer/Nihita_Soma.jpg',
   },
   {
     name: 'Aarya Ravishankar',
     position: 'Industry Officer',
-    image: '/assets/officer/AaryaRavishankar.JPG',
+    image: '/assets/officer/Aarya_Ravishankar.JPG',
   },
   {
     name: 'Nidhi Parvathala',
     position: 'Industry Officer',
-    image: '/assets/officer/NidhiParvathala.jpg',
+    image: '/assets/officer/Nidhi_Parvathala.jpg',
   },
   {
     name: 'Pratishtha Rao',
     position: 'Industry Officer',
-    image: '/assets/officer/PratishthaRao.jpg',
+    image: '/assets/officer/Pratishtha_Rao.jpg',
   },
   {
     name: 'Rishi Golla',
     position: 'Industry Officer',
-    image: '/assets/officer/RishiGolla.JPG',
+    image: '/assets/officer/Rishi_Golla.JPG',
   },
   {
     name: 'Soujanya Kamalapur',
     position: 'Industry Officer',
-    image: '/assets/officer/SoujanyaKamalapur.png',
+    image: '/assets/officer/Soujanya_Kamalapur.png',
   },
   {
     name: 'Varun Bhupathiraju',
     position: 'Industry Officer',
-    image: '/assets/officer/VarunBhupathiraju.jpg',
+    image: '/assets/officer/Varun_Bhupathiraju.jpg',
   },
 ];
 
