@@ -131,7 +131,7 @@ export const developmentOfficers: Officer[] = [
     position: 'Org Portal Developer',
   },
   {
-    image: '/assets/officer/LerichOsay.jpg',
+    image: '/assets/officer/Lerich_Osay.jpg',
     name: 'Lerich Osay',
     position: 'Org Portal Developer',
   },
@@ -141,7 +141,7 @@ export const developmentOfficers: Officer[] = [
     position: 'Org Portal Developer',
   },
   {
-    image: '/assets/officer/SusanZhang.jpg',
+    image: '/assets/officer/Susan_Zhang.jpg',
     name: 'Susan Zhang',
     position: 'Org Portal Designer',
   },
@@ -244,7 +244,7 @@ export const developmentOfficers: Officer[] = [
     position: 'Meteormate Designer',
   },
   {
-    image: '/assets/officer/FrabinaEdwin.jpg',
+    image: '/assets/officer/Frabina_Edwin.png',
     name: 'Frabina Edwin',
     position: 'Meteormate Designer',
   },
