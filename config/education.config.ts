@@ -8,12 +8,12 @@ export const educationDirectors: Array<Director> = [
   {
     name: 'Sid Mylavarapu',
     position: 'Director of Mentor Program',
-    image: '',
+    image: '/assets/officer/Sid_Mylavarapu.jpg',
   },
   {
     name: 'Aashay Vishwakarma',
     position: 'Director of TIP',
-    image: '',
+    image: '/assets/officer/Aashay_Vishwakarma.jpg',
   },
 ];
 
