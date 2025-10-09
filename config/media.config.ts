@@ -4,7 +4,7 @@ import { type Officer } from './officers.config';
 
 export const mediaDirectors: Director[] = [
    {
-    image: '/assets/officer/HibaMubeen.jpg',
+    image: '/assets/officer/Hiba_Mubeen.jpg',
     name: 'Hiba Mubeen',
     position: 'Director of Marketing',
   },
@@ -18,12 +18,12 @@ export const mediaDirectors: Director[] = [
 export const mediaOfficers: Officer[] = [
   
   {
-    image: '/assets/officer/HibaMubeen.jpg',
+    image: '/assets/officer/Hiba_Mubeen.jpg',
     name: 'Hiba Mubeen',
     position: 'Director of Marketing',
   },
   {
-    image: '/assets/officer/SnehaMaram.jpg',
+    image: '/assets/officer/Sneha_Maram.jpg',
     name: 'Sneha Maram',
     position: 'Director of Design',
   },
@@ -33,77 +33,77 @@ export const mediaOfficers: Officer[] = [
     position: 'Marketing Officer',
   },
   {
-    image: '/assets/officer/AlessioHaro.jpg',
+    image: '/assets/officer/Alessio_Haro.jpg',
     name: 'Alessio Haro',
     position: 'Design Officer',
   },
   {
-    image: '/assets/officer/AlishbaJafri.png',
+    image: '/assets/officer/Alishba_Jafri.png',
     name: 'Alishba Jafri',
     position: 'Marketing Officer',
   },
   {
-    image: '/assets/officer/AnishPalankar.jpeg',
+    image: '/assets/officer/Anish_Palankar.jpeg',
     name: 'Anish Palankar',
     position: 'Marketing Officer',
   },
   {
-    image: '/assets/officer/AnviSiddabhattuni.jpg',
+    image: '/assets/officer/Anvi_Siddabhattuni.jpg',
     name: 'Anvi Siddabhattuni',
     position: 'Hybrid Officer',
   },
   {
-    image: '/assets/officer/BatrisiyaNablan.jpg',
+    image: '/assets/officer/Batrisiya_Nablan.jpg',
     name: 'Batrisiya Nablan',
     position: 'Design Officer',
   },
   {
-    image: '/assets/officer/DaxDwelle.jpeg',
+    image: '/assets/officer/Dax_Dwelle.jpeg',
     name: 'Dax Dwelle',
     position: 'Marketing Officer',
   },
   {
-    image: '/assets/officer/DamianIzaguirre.jpeg',
+    image: '/assets/officer/Damian_Izaguirre.jpeg',
     name: 'Damian Izaguirre',
     position: 'Design Officer',
   },
   {
-    image: '/assets/officer/EshitasriPunuganti.jpg',
+    image: '/assets/officer/Eshitasri_Punuganti.jpg',
     name: 'Eshitasri Punuganti',
     position: 'Marketing Officer',
   },
   {
-    image: '/assets/officer/MohamedIbrahim.png',
+    image: '/assets/officer/Mohamed_Ibrahim.png',
     name: 'Mohamed Ibrahim',
     position: 'Marketing Officer',
   },
   {
-    image: '/assets/officer/RohanCheruku.jpg',
+    image: '/assets/officer/Rohan_Cheruku.jpg',
     name: 'Rohan Cheruku',
     position: 'Design Officer',
   },
   {
-    image: '/assets/officer/SallyNguyen.jpg',
+    image: '/assets/officer/Sally_Nguyen.jpg',
     name: 'Sally Nguyen',
     position: 'Hybrid Officer',
   },
   {
-    image: '/assets/officer/SandraLuo.jpg',
+    image: '/assets/officer/Sandra_Luo.jpg',
     name: 'Sandra Luo',
     position: 'Design Officer',
   },
   {
-    image: '/assets/officer/SanjithTamballa.jpg',
+    image: '/assets/officer/Sanjith_Tamballa.jpg',
     name: 'Sanjith Tamballa',
     position: 'Design Officer',
   },
   {
-    image: '/assets/officer/VictoriaOkorafor.png',
+    image: '/assets/officer/Victoria_Okorafor.png',
     name: 'Victoria Okorafor',
     position: 'Design Officer',
   },
   {
-    image: '/assets/officer/SusanZhang.jpg',
+    image: '/assets/officer/Susan_Zhang.jpg',
     name: 'Susan Zhang',
     position: 'Advisor of Media',
   },
