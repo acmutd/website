@@ -17,6 +17,16 @@ export const hackDirectors: Director[] = [
 
 export const hackOfficers: Officer[] = [
   {
+    name: 'Adelaide Dunning',
+    position: 'Director of HackUTD',
+    image: '/assets/officer/Adelaide_Dunning.jpg',
+  },
+  {
+    name: 'Kelly Zhou',
+    position: 'Director of HackUTD',
+    image: '/assets/officer/Kelly_Zhou.jpg',
+  },
+  {
     name: 'Rayyan Waris',
     position: 'Tech Lead',
     image: '/assets/officer/Rayyan_Waris.jpg',
