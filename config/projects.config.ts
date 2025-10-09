@@ -5,12 +5,12 @@ export const projectDirectors: Array<Director> = [
   {
     name: 'Adarsh Goura',
     position: 'Projects Director',
-    image: '/assets/officer/AdarshGoura.jpeg',
+    image: '/assets/officer/Adarsh_Goura.jpeg',
   },
   {
     name: 'Kanchan Javalkar',
     position: 'Projects Director',
-    image: '/assets/officer/KanchanJavalkar.jpg',
+    image: '/assets/officer/Kanchan_Javalkar.jpg',
   },
 ];
 
@@ -55,62 +55,62 @@ export const projectsOfficers = [
     {
     name: 'Suhani Rana',
     position: 'Project Manager',
-    image: '/assets/officer/SuhaniRana.jpg',
+    image: '/assets/officer/Suhani_Rana.jpg',
   },
   {
     name: 'Nadeeba Atiqui',
     position: 'Project Manager',
-    image: '/assets/officer/NadeebaAtiqui.JPG',
+    image: '/assets/officer/Nadeeba_Atiqui.JPG',
   },
   {
     name: 'Abel Thomas',
     position: 'Project Manager',
-    image: '/assets/officer/AbelThomas.JPG',
+    image: '/assets/officer/Abel_Thomas.JPG',
   },
   {
     name: 'Shraddha Subash',
     position: 'Project Manager',
-    image: '/assets/officer/ShraddhaSubash.jpg',
+    image: '/assets/officer/Shraddha_Subash.jpg',
   },
   {
     name: 'Ethan Varghese',
     position: 'Project Manager',
-    image: '/assets/officer/EthanVarghese.jpg',
+    image: '/assets/officer/Ethan_Varghese.jpg',
   },
   {
     name: 'Shreya Ramani',
     position: 'Project Manager',
-    image: '/assets/officer/ShreyaRamani.JPG',
+    image: '/assets/officer/Shreya_Ramani.JPG',
   },
   {
     name: 'Noel Emmanuel',
     position: 'Project Manager',
-    image: '/assets/officer/NoelEmmanuel.JPG',
+    image: '/assets/officer/Noel_Emmanuel.JPG',
   },
   {
     name: 'Tammy Khurana',
     position: 'Project Manager',
-    image: '/assets/officer/TammyKhurana.png',
+    image: '/assets/officer/Tammy_Khurana.png',
   },
   {
     name: 'Ram Gudur',
     position: 'Project Manager',
-    image: '/assets/officer/RamGudur.jpeg',
+    image: '/assets/officer/Ram_Gudur.jpeg',
   },
   {
     name: 'Mohammed Mehrab',
     position: 'Project Manager',
-    image: '/assets/officer/MohammadMehrab.jpg',
+    image: '/assets/officer/Mohammad_Mehrab.jpg',
   },
   {
     name: 'Mathew Biji',
     position: 'Project Manager',
-    image: '/assets/officer/MathewBiji.jpg',
+    image: '/assets/officer/Mathew_Biji.jpg',
   },
     {
     name: 'Abis Naqvi',
     position: 'Projects Advisor',
-    image: '/assets/officer/AbisNaqvi.jpeg',
+    image: '/assets/officer/Abis_Naqvi.jpeg',
   },
   ],
 ];
