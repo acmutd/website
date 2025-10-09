@@ -12,121 +12,121 @@ export const developmentDirectors: Director[] = [
 
 export const developmentOfficers: Officer[] = [
   {
-    image: '/assets/officer/EvanWright.png',
+    image: '/assets/officer/Evan_Wright.png',
     name: 'Evan Wright',
     position: 'Director of Development',
   },
 
   {
-    image: '/assets/officer/AnirudhVayalali.jpeg',
+    image: '/assets/officer/Anirudh_Vayalali.jpeg',
     name: 'Anirudh Vayalali',
     position: 'Core Lead',
   },
   {
-    image: '/assets/officer/YashShah.jpg',
+    image: '/assets/officer/Yash_Shah.jpg',
     name: 'Yash Shah',
     position: 'BSG Lead',
   },
   {
-    image: '/assets/officer/ArinSood.png',
+    image: '/assets/officer/Arin_Sood.png',
     name: 'Arin Sood',
     position: 'Org Portal Lead',
   },
   {
-    image: '/assets/officer/PreritaBabarjung.jpg',
+    image: '/assets/officer/Prerita_Babarjung.jpg',
     name: 'Prerita Babarjung',
     position: 'Nexus Lead',
   },
   {
-    image: '/assets/officer/AlenJo.jpg',
+    image: '/assets/officer/Alen_Jo.jpg',
     name: 'Alen Jo',
     position: 'SAGE Lead',
   },
   {
-    image: '/assets/officer/VladislavKondratyev.png',
+    image: '/assets/officer/Vladislav_Kondratyev.png',
     name: 'Vladislav Kondratyev',
     position: 'Meteormate Lead',
   },
 
   {
-    image: '/assets/officer/GiangPham.jpg',
+    image: '/assets/officer/Giang_Pham.jpg',
     name: 'Giang Pham',
     position: 'Core Developer',
   },
   {
-    image: '/assets/officer/BhaveshMandalapu.jpg',
+    image: '/assets/officer/Bhavesh_Mandalapu.jpg',
     name: 'Bhavesh Mandalapu',
     position: 'Core Developer',
   },
   {
-    image: '/assets/officer/RubenOlano.jpg',
+    image: '/assets/officer/Ruben_Olano.jpg',
     name: 'Ruben Olano',
     position: 'Core Developer',
   },
   {
-    image: '/assets/officer/JeydinPham.jpeg',
+    image: '/assets/officer/Jeydin_Pham.jpeg',
     name: 'Jeydin Pham',
     position: 'Core Developer',
   },
   {
-    image: '/assets/officer/LukeSultzer.jpeg',
+    image: '/assets/officer/Luke_Sultzer.jpeg',
     name: 'Luke Sultzer',
     position: 'Core Developer',
   },
   {
-    image: '/assets/officer/VaishnaviJosyula.jpg',
+    image: '/assets/officer/Vaishnavi_Josyula.jpg',
     name: 'Vaishnavi Josyula',
     position: 'Core Developer',
   },
   {
-    image: '/assets/officer/BennettFeigenbaum.JPG',
+    image: '/assets/officer/Bennett_Feigenbaum.JPG',
     name: 'Bennett Feigenbaum',
     position: 'Core Designer',
   },
 
   {
-    image: '/assets/officer/DevSheth.jpg',
+    image: '/assets/officer/Dev_Sheth.jpg',
     name: 'Dev Sheth',
     position: 'BSG Developer',
   },
   {
-    image: '/assets/officer/OwenIsenhart.JPEG',
+    image: '/assets/officer/Owen_Isenhart.JPEG',
     name: 'Owen Isenhart',
     position: 'BSG Developer',
   },
   {
-    image: '/assets/officer/RiyanMaknojia.jpg',
+    image: '/assets/officer/Riyan_Maknojia.jpg',
     name: 'Riyan Maknojia',
     position: 'BSG Developer',
   },
   {
-    image: '/assets/officer/RonakChavva.jpg',
+    image: '/assets/officer/Ronak_Chavva.jpg',
     name: 'Ronak Chavva',
     position: 'BSG Developer',
   },
   {
-    image: '/assets/officer/SarahPark.jpg',
+    image: '/assets/officer/Sarah_Park.jpg',
     name: 'Sarah Park',
     position: 'BSG Developer',
   },
 
   {
-    image: '/assets/officer/AkshayNagarajan.png',
+    image: '/assets/officer/Akshay_Nagarajan.png',
     name: 'Akshay Nagarajan',
     position: 'Org Portal Developer',
   },
   {
-    image: '/assets/officer/AndrewDmitrievsky.jpeg',
+    image: '/assets/officer/Andrew_Dmitrievsky.jpeg',
     name: 'Andrew Dmitrievsky',
     position: 'Org Portal Developer',
   },
   {
-    image: '/assets/officer/EthanScherwitz.JPG',
+    image: '/assets/officer/Ethan_Scherwitz.JPG',
     name: 'Ethan Scherwitz',
     position: 'Org Portal Developer',
   },
   {
-    image: '/assets/officer/JasonLuu.jpg',
+    image: '/assets/officer/Jason_Luu.jpg',
     name: 'Jason Luu',
     position: 'Org Portal Developer',
   },
@@ -136,7 +136,7 @@ export const developmentOfficers: Officer[] = [
     position: 'Org Portal Developer',
   },
   {
-    image: '/assets/officer/NachiketPandit.jpg',
+    image: '/assets/officer/Nachiket_Pandit.jpg',
     name: 'Nachiket Pandit',
     position: 'Org Portal Developer',
   },
@@ -147,99 +147,99 @@ export const developmentOfficers: Officer[] = [
   },
 
   {
-    image: '/assets/officer/HumzaQureshi.jpg',
+    image: '/assets/officer/Humza_Qureshi.jpg',
     name: 'Humza Qureshi',
     position: 'Nexus Developer',
   },
   {
-    image: '/assets/officer/IndrajithThyagaraja.jpg',
+    image: '/assets/officer/Indrajith_Thyagaraja.jpg',
     name: 'Indrajith Thyagaraja',
     position: 'Nexus Developer',
   },
   {
-    image: '/assets/officer/NaomiNtuli.jpg',
+    image: '/assets/officer/Naomi_Ntuli.jpg',
     name: 'Naomi Ntuli',
     position: 'Nexus Developer',
   },
   {
-    image: '/assets/officer/SreevasanSivasubramanian.jpg',
+    image: '/assets/officer/Sreevasan_Sivasubramanian.jpg',
     name: 'Sreevasan Sivasubramanian',
     position: 'Nexus Developer',
   },
   {
-    image: '/assets/officer/ThomasLe.png',
+    image: '/assets/officer/Thomas_Le.png',
     name: 'Thomas Le',
     position: 'Nexus Developer',
   },
   {
-    image: '/assets/officer/TommyNguyen.JPG',
+    image: '/assets/officer/Tommy_Nguyen.JPG',
     name: 'Tommy Nguyen',
     position: 'Nexus Designer',
   },
 
   {
-    image: '/assets/officer/AbisNaqvi.jpeg',
+    image: '/assets/officer/Abis_Naqvi.jpeg',
     name: 'Abis Naqvi',
     position: 'SAGE Developer',
   },
   {
-    image: '/assets/officer/AndresGarciaSanchez.png',
+    image: '/assets/officer/Andres_Garcia_Sanchez.png',
     name: 'Andres Garcia Sanchez',
     position: 'SAGE Developer',
   },
   {
-    image: '/assets/officer/AnushaPatel.jpg',
+    image: '/assets/officer/Anusha_Patel.jpg',
     name: 'Anusha Patel',
     position: 'SAGE Developer',
   },
   {
-    image: '/assets/officer/JadenKuriakose.JPG',
+    image: '/assets/officer/Jaden_Kuriakose.JPG',
     name: 'Jaden Kuriakose',
     position: 'SAGE Developer',
   },
   {
-    image: '/assets/officer/SwayamArora.png',
+    image: '/assets/officer/Swayam_Arora.png',
     name: 'Swayam Arora',
     position: 'SAGE Developer',
   },
   {
-    image: '/assets/officer/OscarLay.jpg',
+    image: '/assets/officer/Oscar_Lay.jpg',
     name: 'Oscar Lay',
     position: 'SAGE Developer',
   },
   {
-    image: '/assets/officer/MercedesXiong.jpg',
+    image: '/assets/officer/Mercedes_Xiong.jpg',
     name: 'Mercedes Xiong',
     position: 'SAGE Designer',
   },
 
   {
-    image: '/assets/officer/MuaazAbed.jpg',
+    image: '/assets/officer/Muaaz_Abed.jpg',
     name: 'Muaaz Abed',
     position: 'Meteormate Developer',
   },
   {
-    image: '/assets/officer/RyanPolasky.png',
+    image: '/assets/officer/Ryan_Polasky.png',
     name: 'Ryan Polasky',
     position: 'Meteormate Developer',
   },
   {
-    image: '/assets/officer/NathanSujatno.jpg',
+    image: '/assets/officer/Nathan_Sujatno.jpg',
     name: 'Nathan Sujatno',
     position: 'Meteormate Developer',
   },
   {
-    image: '/assets/officer/JoelGurivireddy.jpg',
+    image: '/assets/officer/Joel_Gurivireddy.jpg',
     name: 'Joel Gurivireddy',
     position: 'Meteormate Developer',
   },
   {
-    image: '/assets/officer/AasthaSheth.jpg',
+    image: '/assets/officer/Aastha_Sheth.jpg',
     name: 'Aastha Sheth',
     position: 'Meteormate Developer',
   },
   {
-    image: '/assets/officer/ChristopherTran.png',
+    image: '/assets/officer/Christopher_Tran.png',
     name: 'Christopher Tran',
     position: 'Meteormate Designer',
   },

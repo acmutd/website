@@ -28,7 +28,7 @@ export const mediaOfficers: Officer[] = [
     position: 'Director of Design',
   },
   {
-    image: '/assets/officer/AdrianAlvarez.jpg',
+    image: '/assets/officer/Adrian_Alvarez.jpg',
     name: 'Adrian Alvarez',
     position: 'Marketing Officer',
   },
