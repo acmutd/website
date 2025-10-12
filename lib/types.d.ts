@@ -116,3 +116,15 @@ export type DevProjects = {
   links: ProjectLink[];
   image: string;
 };
+
+export type OfficerSections =
+  | 'advisor'
+  | 'board'
+  | 'media'
+  | 'research'
+  | 'development'
+  | 'projects'
+  | 'education'
+  | 'community'
+  | 'hackutd'
+  | 'industry';
