@@ -57,7 +57,7 @@ const Sponsor: React.FC<SponsorProps> = ({ name, tier }) => {
         />
       </div>
 
-      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 transform transition-all duration-500 group-hover:bottom-2">
+      <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 transform transition-all duration-500 group-hover:-bottom-1">
         <span
           className={`rounded-full px-3 py-1.5 text-xs font-medium ${styles.badge} shadow-md backdrop-blur-sm`}
         >
