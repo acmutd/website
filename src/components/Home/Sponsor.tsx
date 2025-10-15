@@ -49,7 +49,9 @@ const Sponsor: React.FC<SponsorProps> = ({ name, tier }) => {
         <Image
           src={`/assets/sponsors/logos/${name}.png`}
           alt={name.toUpperCase()}
-          className="object-contain drop-shadow-lg"
+          className={`object-contain drop-shadow-lg ${
+            name === 'northmark' ? 'hue-rotate-180 invert' : ''
+          }`}
           width="200"
           height="100"
         />

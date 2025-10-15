@@ -60,10 +60,10 @@ export const sponsors: Sponsor[] = [
     link: 'https://www.cbre.com/about',
   },
   {
-    name: 'G-Research',
+    name: 'NorthMark',
     tier: 'silver',
-    logo: '/assets/sponsors/logos/gresearch.png',
-    link: 'https://www.gresearch.com/about/about-us/',
+    logo: '/assets/sponsors/logos/northmark.png',
+    link: ' https://northmarkstrategies.com/',
   },
   {
     name: 'Nokia',
