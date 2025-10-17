@@ -26,23 +26,19 @@ export const communityOfficers: Officer[] = [
     name: 'Vyshnav Vijish',
     position: 'Director of Outreach',
   },
+
   {
-    image: '/assets/officer/Shanon_Carter.jpg',
-    name: 'Shanon Carter',
-    position: 'Outreach Advisor',
-  },
-  {
-    image: '/assets/officer/Anusha.jpg',
-    name: 'Anusha',
+    image: '/assets/officer/Anusha_Patel.jpeg',
+    name: 'Anusha Patel',
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/Suhani.jpg',
-    name: 'Suhani',
+    image: '/assets/officer/Suhani_Rana.JPG',
+    name: 'Suhani Rana',
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/Joseph_Botros.jpg',
+    image: '/assets/officer/Joseph_Botros.png',
     name: 'Joseph Botros',
     position: 'Events Officer',
   },
@@ -52,17 +48,17 @@ export const communityOfficers: Officer[] = [
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/Mayowa_Akinyede.jpg',
-    name: 'Mayowa Akinyede',
+    image: '/assets/officer/Mayo_Akinyede.jpeg',
+    name: 'Mayo Akinyede',
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/Ryan_Edward.jpg',
+    image: '/assets/officer/Ryan_Edwards.jpeg',
     name: 'Ryan Edward',
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/Sudiksa_Dineshkumar.jpg',
+    image: '/assets/officer/Sudiksha_Dineshkumar.JPG',
     name: 'Sudiksa Dineshkumar',
     position: 'Events Officer',
   },
@@ -87,7 +83,7 @@ export const communityOfficers: Officer[] = [
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/Shriya_Kalyan.jpg',
+    image: '/assets/officer/Shriya_Kalyan.png',
     name: 'Shriya Kalyan',
     position: 'Archives Officer',
   },
@@ -107,18 +103,18 @@ export const communityOfficers: Officer[] = [
     position: 'Archives Officer',
   },
   {
-    image: '/assets/officer/Kavyadharshini_Seenuvasan.jpg',
-    name: 'Kavyadharshini Seenuvasan',
+    image: '/assets/officer/Kavya_Seenuvasan.jpg',
+    name: 'Kavya Seenuvasan',
     position: 'Archives Officer',
   },
   {
-    image: '/assets/officer/Frabina_Edwin.jpg',
+    image: '/assets/officer/Frabina_Edwin.png',
     name: 'Frabina Edwin',
     position: 'Archives Officer',
   },
   {
-    image: '/assets/officer/Nidhi_Majoji.jpg',
-    name: 'Nidhi Majoji',
+    image: '/assets/officer/Nidhi_Majoju.jpg',
+    name: 'Nidhi Majoju',
     position: 'Outreach Officer',
   },
   {
@@ -152,7 +148,7 @@ export const communityOfficers: Officer[] = [
     position: 'Outreach Officer',
   },
   {
-    image: '/assets/officer/Shreya_Singaravel.jpg',
+    image: '/assets/officer/Shreya_Singeravel.JPG',
     name: 'Shreya Singaravel',
     position: 'Outreach Officer',
   },
@@ -165,6 +161,11 @@ export const communityOfficers: Officer[] = [
     image: '/assets/officer/Tvisha_Doshi.jpg',
     name: 'Tvisha Doshi',
     position: 'Outreach Officer',
+  },
+   {
+    image: '/assets/officer/Shannon_Carter.jpg',
+    name: 'Shannon Carter',
+    position: 'Outreach Advisor',
   },
 ];
 
