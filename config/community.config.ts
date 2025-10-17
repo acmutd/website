@@ -128,7 +128,7 @@ export const communityOfficers: Officer[] = [
     position: 'Outreach Officer',
   },
   {
-    image: '/assets/officer/Dhivyesh_Prithiviraj.JPG',
+    image: '/assets/officer/Dhivyesh_Prithviraj.JPG',
     name: 'Dhivyesh Prithiviraj',
     position: 'Outreach Officer',
   },
