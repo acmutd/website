@@ -164,7 +164,7 @@ export const hackOfficers: Officer[] = [
   {
     name: 'Dhivyesh Prithiviraj',
     position: 'Logistics Officer',
-    image: '/assets/officer/Dhivyesh_Prithiviraj.JPG',
+    image: '/assets/officer/Dhivyesh_Prithviraj.jpg',
   },
   {
     name: 'Daniel Kim',
