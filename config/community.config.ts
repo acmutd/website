@@ -22,7 +22,7 @@ export const communityOfficers: Officer[] = [
     position: 'Director of Campus',
   },
   {
-    image: '/assets/officer/Vyshnav_Vijish.jpg',
+    image: '/assets/officer/Vyshnav_Vijish.JPG',
     name: 'Vyshnav Vijish',
     position: 'Director of Outreach',
   },
@@ -63,7 +63,7 @@ export const communityOfficers: Officer[] = [
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/Syed_Kazmi.jpg',
+    image: '/assets/officer/Syed_Kazmi.JPG',
     name: 'Syed Kazmi',
     position: 'Events Officer',
   },
