@@ -3,14 +3,14 @@ import { CarouselImage, Director, Projects } from './divisions.config';
 
 export const projectDirectors: Array<Director> = [
   {
-    name: 'Abis Naqvi',
+    name: 'Adarsh Goura',
     position: 'Projects Director',
-    image: '/assets/officer/AbisNaqvi.JPG',
+    image: '/assets/officer/Adarsh_Goura.jpg',
   },
   {
     name: 'Kanchan Javalkar',
     position: 'Projects Director',
-    image: '/assets/officer/KanchanJavalkar.jpg',
+    image: '/assets/officer/Kanchan_Javalkar.jpg',
   },
 ];
 
@@ -53,65 +53,65 @@ export const projectsOfficers = [
   ...projectDirectors,
   ...[
     {
-      name: 'Nadeeba Atiqui',
-      position: 'Project Manager',
-      image: '/assets/officer/NadeebaAtiqui.JPG',
-    },
+    name: 'Suhani Rana',
+    position: 'Project Manager',
+    image: '/assets/officer/Suhani_Rana.jpg',
+  },
+  {
+    name: 'Nadeeba Atiqui',
+    position: 'Project Manager',
+    image: '/assets/officer/Nadeeba_Atiqui.JPG',
+  },
+  {
+    name: 'Abel Thomas',
+    position: 'Project Manager',
+    image: '/assets/officer/Abel_Thomas.JPG',
+  },
+  {
+    name: 'Shraddha Subash',
+    position: 'Project Manager',
+    image: '/assets/officer/Shraddha_Subash.jpg',
+  },
+  {
+    name: 'Ethan Varghese',
+    position: 'Project Manager',
+    image: '/assets/officer/Ethan_Varghese.jpg',
+  },
+  {
+    name: 'Shreya Ramani',
+    position: 'Project Manager',
+    image: '/assets/officer/Shreya_Ramani.JPG',
+  },
+  {
+    name: 'Noel Emmanuel',
+    position: 'Project Manager',
+    image: '/assets/officer/Noel_Emmanuel.JPG',
+  },
+  {
+    name: 'Tammy Khurana',
+    position: 'Project Manager',
+    image: '/assets/officer/Tammy_Khurana.png',
+  },
+  {
+    name: 'Ram Gudur',
+    position: 'Project Manager',
+    image: '/assets/officer/Ram_Gudur.jpeg',
+  },
+  {
+    name: 'Mohammed Mehrab',
+    position: 'Project Manager',
+    image: '/assets/officer/Mohammad_Mehrab.jpg',
+  },
+  {
+    name: 'Mathew Biji',
+    position: 'Project Manager',
+    image: '/assets/officer/Mathew_Biji.jpg',
+  },
     {
-      name: 'Abel Thomas',
-      position: 'Project Manager',
-      image: '/assets/officer/AbelThomas.JPG',
-    },
-    {
-      name: 'Avanthi Reddy',
-      position: 'Project Manager',
-      image: '/assets/officer/AvanthiReddy.JPG',
-    },
-    {
-      name: 'Shraddha Subash',
-      position: 'Project Manager',
-      image: '/assets/officer/ShraddhaSubash.jpg',
-    },
-    {
-      name: 'Lerich Osay',
-      position: 'Project Manager',
-      image: '/assets/officer/LerichOsay.JPG',
-    },
-    {
-      name: 'Ethan Varghese',
-      position: 'Project Manager',
-      image: '/assets/officer/EthanVarghese.jpg',
-    },
-    {
-      name: 'Shreya Ramani',
-      position: 'Project Manager',
-      image: '/assets/officer/ShreyaRamani.JPG',
-    },
-    {
-      name: 'Jason Luu',
-      position: 'Project Manager',
-      image: '/assets/officer/JasonLuu.JPG',
-    },
-    {
-      name: 'Noel Emmanuel',
-      position: 'Project Manager',
-      image: '/assets/officer/NoelEmmanuel.JPG',
-    },
-    {
-      name: 'Adarsh Goura',
-      position: 'Project Manager',
-      image: '/assets/officer/AdarshGoura.jpeg',
-    },
-    {
-      name: 'Tamanna Khurana',
-      position: 'Project Manager',
-      image: '/assets/officer/TammyKhurana.png',
-    },
-    {
-      name: 'Karina Batra',
-      position: 'Projects Advisor',
-      image: '/assets/officer/KarinaBatra.jpeg',
-    },
+    name: 'Abis Naqvi',
+    position: 'Projects Advisor',
+    image: '/assets/officer/Abis_Naqvi.jpeg',
+  },
   ],
 ];
 

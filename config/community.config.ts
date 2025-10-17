@@ -3,93 +3,169 @@ import { CarouselImage, Director } from './divisions.config';
 import { type Officer } from './officers.config';
 
 export const communityDirectors: Director[] = [
-  {
-    image: '/assets/officer/ShannonCarter.jpg',
-    name: 'Shannon Carter',
-    position: 'Co-Director of Community',
+ {
+    image: '/assets/officer/Mercedes_Xiong.jpg',
+    name: 'Mercedes Xiong',
+    position: 'Director of Campus',
   },
   {
-    image: '/assets/officer/MercedesXiong.jpg',
-    name: 'Mercedes Xiong',
-    position: 'Co-Director of Community',
+    image: '/assets/officer/Vyshnav_Vijish.jpg',
+    name: 'Vyshnav Vijish',
+    position: 'Director of Outreach',
   },
 ]
 
 export const communityOfficers: Officer[] = [
-  {
-    image: '/assets/officer/ShannonCarter.jpg',
-    name: 'Shannon Carter',
-    position: 'Co-Director of Community',
-  },
-  {
-    image: '/assets/officer/MercedesXiong.jpg',
+{
+    image: '/assets/officer/Mercedes_Xiong.jpg',
     name: 'Mercedes Xiong',
-    position: 'Co-Director of Community',
+    position: 'Director of Campus',
   },
   {
-    image: '/assets/officer/BradleyMixon.JPG',
-    name: 'Bradley Mixon',
-    position: 'Outreach Officer',
-  },
-  {
-    image: '/assets/officer/LoganDane.jpg',
-    name: 'Logan Dane',
-    position: 'Outreach Officer',
-  },
-  {
-    image: '/assets/officer/AnshNaikele.jpg',
-    name: 'Ansh Naikele',
-    position: 'Outreach Officer',
-  },
-  {
-    image: '/assets/officer/NidhiMajoju.jpg',
-    name: 'Nidhi Majoju',
-    position: 'Outreach Officer',
-  },
-  {
-    image: '/assets/officer/AdvayChandramouli.jpg',
-    name: 'Advay Chandramouli',
-    position: 'Outreach Officer',
-  },
-  {
-    image: '/assets/officer/AliGhorbani.jpg',
-    name: 'Ali Ghorbani',
-    position: 'Outreach Officer',
-  },
-  {
-    image: '/assets/officer/VyshnavVijish.jpg',
+    image: '/assets/officer/Vyshnav_Vijish.JPG',
     name: 'Vyshnav Vijish',
-    position: 'Outreach Officer',
+    position: 'Director of Outreach',
   },
+
   {
-    image: '/assets/officer/AnthonyAbubakar.jpg',
-    name: 'Anthony Abubakar',
-    position: 'Events Officer',
-  },
-  {
-    image: '/assets/officer/VivianNguyen.jpg',
-    name: 'Vivian Nguyen',
-    position: 'Events Officer',
-  },
-  {
-    image: '/assets/officer/AnushaPatel.jpg',
+    image: '/assets/officer/Anusha_Patel.jpeg',
     name: 'Anusha Patel',
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/ShriyaKalyan.jpg',
-    name: 'Shriya Kalyan',
-    position: 'Events Officer',
-  },
-  {
-    image: '/assets/officer/AyomideTapere.jpg',
-    name: 'Ayomide Tapere',
-    position: 'Events Officer',
-  },
-  {
-    image: '/assets/officer/SuhaniRana.jpg',
+    image: '/assets/officer/Suhani_Rana.jpg',
     name: 'Suhani Rana',
     position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Joseph_Botros.png',
+    name: 'Joseph Botros',
+    position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Varsha_Shashishekar.jpg',
+    name: 'Varsha Shashishekar',
+    position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Mayo_Akinyede.jpeg',
+    name: 'Mayo Akinyede',
+    position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Ryan_Edwards.jpeg',
+    name: 'Ryan Edward',
+    position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Sudiksha_Dineshkumar.JPG',
+    name: 'Sudiksa Dineshkumar',
+    position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Syed_Kazmi.JPG',
+    name: 'Syed Kazmi',
+    position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Mohammed_Gaggutur.jpg',
+    name: 'Mohammed Gaggutur',
+    position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Pratishtha_Rao.jpg',
+    name: 'Pratishtha Rao',
+    position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Varun_Bhupathiraju.jpeg',
+    name: 'Varun Bhupathiraju',
+    position: 'Events Officer',
+  },
+  {
+    image: '/assets/officer/Shriya_Kalyan.png',
+    name: 'Shriya Kalyan',
+    position: 'Archives Officer',
+  },
+  {
+    image: '/assets/officer/Ayomide_Tapere.jpg',
+    name: 'Ayomide Tapere',
+    position: 'Archives Officer',
+  },
+  {
+    image: '/assets/officer/Manaar_Quadri.jpg',
+    name: 'Manaar Quadri',
+    position: 'Archives Officer',
+  },
+  {
+    image: '/assets/officer/Sameeraa_Kandalgaonkar.JPG',
+    name: 'Sameeraa Kandalgaonkar',
+    position: 'Archives Officer',
+  },
+  {
+    image: '/assets/officer/Kavya_Seenuvasan.JPG',
+    name: 'Kavya Seenuvasan',
+    position: 'Archives Officer',
+  },
+  {
+    image: '/assets/officer/Frabina_Edwin.png',
+    name: 'Frabina Edwin',
+    position: 'Archives Officer',
+  },
+  {
+    image: '/assets/officer/Nidhi_Majoju.JPG',
+    name: 'Nidhi Majoju',
+    position: 'Outreach Officer',
+  },
+  {
+    image: '/assets/officer/Advay_Chandramouli.jpg',
+    name: 'Advay Chandramouli',
+    position: 'Outreach Officer',
+  },
+  {
+    image: '/assets/officer/Ali_Ghorbani.jpg',
+    name: 'Ali Ghorbani',
+    position: 'Outreach Officer',
+  },
+  {
+    image: '/assets/officer/Dhivyesh_Prithviraj.JPG',
+    name: 'Dhivyesh Prithiviraj',
+    position: 'Outreach Officer',
+  },
+  {
+    image: '/assets/officer/Dana_Ibrahim.JPG',
+    name: 'Dana Ibrahim',
+    position: 'Outreach Officer',
+  },
+  {
+    image: '/assets/officer/Gerardo_Martinez.JPG',
+    name: 'Gerardo Martinez',
+    position: 'Outreach Officer',
+  },
+  {
+    image: '/assets/officer/Hannah_Rauch.JPG',
+    name: 'Hannah Rauch',
+    position: 'Outreach Officer',
+  },
+  {
+    image: '/assets/officer/Shreya_Singeravel.JPG',
+    name: 'Shreya Singaravel',
+    position: 'Outreach Officer',
+  },
+  {
+    image: '/assets/officer/Tulasi_Janjanam.JPG',
+    name: 'Tulasi Janjanam',
+    position: 'Outreach Officer',
+  },
+  {
+    image: '/assets/officer/Tvisha_Doshi.JPG',
+    name: 'Tvisha Doshi',
+    position: 'Outreach Officer',
+  },
+   {
+    image: '/assets/officer/Shannon_Carter.jpg',
+    name: 'Shannon Carter',
+    position: 'Outreach Advisor',
   },
 ];
 
