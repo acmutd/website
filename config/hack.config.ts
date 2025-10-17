@@ -49,7 +49,7 @@ export const hackOfficers: Officer[] = [
   {
     name: 'Andrew Dmitrievsky',
     position: 'Tech Officer',
-    image: '/assets/officer/Andrew_Dmitrievsky.jpeg',
+    image: '/assets/officer/Andrew_Dmitrievsky.jpg',
   },
   {
     name: 'Abhiram Tadepalli',
@@ -164,7 +164,7 @@ export const hackOfficers: Officer[] = [
   {
     name: 'Dhivyesh Prithiviraj',
     position: 'Logistics Officer',
-    image: '/assets/officer/Dhivyesh_Prithiviraj.jpg',
+    image: '/assets/officer/Dhivyesh_Prithiviraj.JPG',
   },
   {
     name: 'Daniel Kim',

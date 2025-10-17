@@ -98,12 +98,12 @@ export const communityOfficers: Officer[] = [
     position: 'Archives Officer',
   },
   {
-    image: '/assets/officer/Sameeraa_Kandalgaonkar.jpg',
+    image: '/assets/officer/Sameeraa_Kandalgaonkar.JPG',
     name: 'Sameeraa Kandalgaonkar',
     position: 'Archives Officer',
   },
   {
-    image: '/assets/officer/Kavya_Seenuvasan.jpg',
+    image: '/assets/officer/Kavya_Seenuvasan.JPG',
     name: 'Kavya Seenuvasan',
     position: 'Archives Officer',
   },
@@ -113,7 +113,7 @@ export const communityOfficers: Officer[] = [
     position: 'Archives Officer',
   },
   {
-    image: '/assets/officer/Nidhi_Majoju.jpg',
+    image: '/assets/officer/Nidhi_Majoju.JPG',
     name: 'Nidhi Majoju',
     position: 'Outreach Officer',
   },
@@ -128,22 +128,22 @@ export const communityOfficers: Officer[] = [
     position: 'Outreach Officer',
   },
   {
-    image: '/assets/officer/Dhivyesh_Prithiviraj.jpg',
+    image: '/assets/officer/Dhivyesh_Prithiviraj.JPG',
     name: 'Dhivyesh Prithiviraj',
     position: 'Outreach Officer',
   },
   {
-    image: '/assets/officer/Dana_Ibrahim.jpg',
+    image: '/assets/officer/Dana_Ibrahim.JPG',
     name: 'Dana Ibrahim',
     position: 'Outreach Officer',
   },
   {
-    image: '/assets/officer/Gerardo_Martinez.jpg',
+    image: '/assets/officer/Gerardo_Martinez.JPG',
     name: 'Gerardo Martinez',
     position: 'Outreach Officer',
   },
   {
-    image: '/assets/officer/Hannah_Rauch.jpg',
+    image: '/assets/officer/Hannah_Rauch.JPG',
     name: 'Hannah Rauch',
     position: 'Outreach Officer',
   },
@@ -153,12 +153,12 @@ export const communityOfficers: Officer[] = [
     position: 'Outreach Officer',
   },
   {
-    image: '/assets/officer/Tulasi_Janjanam.jpg',
+    image: '/assets/officer/Tulasi_Janjanam.JPG',
     name: 'Tulasi Janjanam',
     position: 'Outreach Officer',
   },
   {
-    image: '/assets/officer/Tvisha_Doshi.jpg',
+    image: '/assets/officer/Tvisha_Doshi.JPG',
     name: 'Tvisha Doshi',
     position: 'Outreach Officer',
   },

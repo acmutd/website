@@ -116,7 +116,7 @@ export const developmentOfficers: Officer[] = [
     position: 'Org Portal Developer',
   },
   {
-    image: '/assets/officer/Andrew_Dmitrievsky.jpeg',
+    image: '/assets/officer/Andrew_Dmitrievsky.jpg',
     name: 'Andrew Dmitrievsky',
     position: 'Org Portal Developer',
   },
@@ -126,7 +126,7 @@ export const developmentOfficers: Officer[] = [
     position: 'Org Portal Developer',
   },
   {
-    image: '/assets/officer/Jason_Luu.jpg',
+    image: '/assets/officer/Jason_Luu.JPG',
     name: 'Jason Luu',
     position: 'Org Portal Developer',
   },
@@ -188,7 +188,7 @@ export const developmentOfficers: Officer[] = [
     position: 'SAGE Developer',
   },
   {
-    image: '/assets/officer/Anusha_Patel.jpg',
+    image: '/assets/officer/Anusha_Patel.jpeg',
     name: 'Anusha Patel',
     position: 'SAGE Developer',
   },
