@@ -5,7 +5,7 @@ export const projectDirectors: Array<Director> = [
   {
     name: 'Adarsh Goura',
     position: 'Projects Director',
-    image: '/assets/officer/Adarsh_Goura.jpeg',
+    image: '/assets/officer/Adarsh_Goura.jpg',
   },
   {
     name: 'Kanchan Javalkar',

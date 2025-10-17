@@ -16,7 +16,7 @@ export const boardOfficers: Officer[] = [
   {
     name: 'Adelaide Dunning',
     position: 'Director of HackUTD',
-    image: '/assets/officer/Addy_Dunning.jpg',
+    image: '/assets/officer/Adelaide_Dunning.jpg',
   },
   {
     name: 'Kelly Zhou',
@@ -60,7 +60,7 @@ export const boardOfficers: Officer[] = [
     position: 'Director of Design',
   },
     {
-    image: '/assets/officer/Evan_Wright.png',
+    image: '/assets/officer/Evan_Wright.jpg',
     name: 'Evan Wright',
     position: 'Director of Development',
   },

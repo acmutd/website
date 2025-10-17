@@ -4,7 +4,7 @@ import { type Officer } from './officers.config';
 
 export const developmentDirectors: Director[] = [
   {
-    image: '/assets/officer/EvanWright.png',
+    image: '/assets/officer/EvanWright.jpg',
     name: 'Evan Wright',
     position: 'Director of Development',
   },
@@ -12,7 +12,7 @@ export const developmentDirectors: Director[] = [
 
 export const developmentOfficers: Officer[] = [
   {
-    image: '/assets/officer/Evan_Wright.png',
+    image: '/assets/officer/Evan_Wright.jpg',
     name: 'Evan Wright',
     position: 'Director of Development',
   },
