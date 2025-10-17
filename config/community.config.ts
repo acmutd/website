@@ -33,7 +33,7 @@ export const communityOfficers: Officer[] = [
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/Suhani_Rana.JPG',
+    image: '/assets/officer/Suhani_Rana.jpg',
     name: 'Suhani Rana',
     position: 'Events Officer',
   },
@@ -78,7 +78,7 @@ export const communityOfficers: Officer[] = [
     position: 'Events Officer',
   },
   {
-    image: '/assets/officer/Varun_Bhupathiraju.jpg',
+    image: '/assets/officer/Varun_Bhupathiraju.jpeg',
     name: 'Varun Bhupathiraju',
     position: 'Events Officer',
   },
