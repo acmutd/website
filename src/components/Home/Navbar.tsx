@@ -28,7 +28,8 @@ const divisions = [
   { name: 'Projects', href: '/projects' },
   { name: 'Education - TIP', href: '/education/tip' },
   { name: 'Education - Mentor', href: '/education/mentor' },
-  { name: 'Community', href: '/community' },
+  { name: 'Community - Campus', href: '/community/campus' },
+  { name: 'Community - Outreach', href: '/community/outreach' },
   { name: 'HackUTD', href: '/hackutd' },
   { name: 'Industry', href: '/industry' },
 ];

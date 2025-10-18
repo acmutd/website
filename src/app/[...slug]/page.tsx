@@ -19,11 +19,13 @@ import {
   getDivisionConfig,
   validDivisions,
   educationSubs,
+  communitySubs,
   DivisionConfig,
   Division,
 } from '@/components/Divisions/Shared/divisionUtil';
 import { MediaHeader } from '@/components/Divisions/Media/MediaHeader';
-import { CommunityHeader } from '@/components/Divisions/Community/CommunityHeader';
+import { OutreachHeader } from '@/components/Divisions/Outreach/OutreachHeader';
+import { CampusHeader } from '@/components/Divisions/Campus/CampusHeader';
 import { IndustryHeader } from '@/components/Divisions/Industry/IndustryHeader';
 import IndustrySponsors from '@/components/Divisions/Industry/IndustrySponsors';
 import DevProjects from '@/components/Divisions/Development/DevProjects';
@@ -188,7 +190,7 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
         'community service',
         'volunteering',
       ],
-      slug: 'community',
+      slug: 'community/outreach',
       image: '/assets/about/community/community.png',
       imageWidth: 697,
       imageHeight: 191,
@@ -284,7 +286,8 @@ export function generateStaticParams() {
     { slug: ['education', 'mentor'] },
     { slug: ['media'] },
     { slug: ['hackutd'] },
-    { slug: ['community'] },
+  { slug: ['community', 'outreach'] },
+  { slug: ['community', 'campus'] },
     { slug: ['industry'] },
   ];
 
@@ -300,12 +303,17 @@ const headerComponents = {
   hackutd: HackHeader,
   education: () => notFound(),
   media: MediaHeader,
-  community: CommunityHeader,
   industry: IndustryHeader,
 };
 
 function Header(props: DivisionProps & { config: DivisionConfig }) {
   const { headerType } = props.config;
+
+  if (props.division === 'community' && 'sub' in props) {
+    if (props.sub === 'outreach') return <OutreachHeader />;
+    if (props.sub === 'campus') return <CampusHeader />;
+  }
+
   const HeaderComponent = headerComponents[headerType as keyof typeof headerComponents];
   return <HeaderComponent />;
 }
@@ -315,9 +323,9 @@ const parseDivisionSlug = (slug: string[]): DivisionProps | null => {
 
   const division = slug[0];
 
-  if (validDivisions.includes(division as any) && division !== 'education') {
+  if (validDivisions.includes(division as any) && division !== 'education' && division !== 'community') {
     if (slug.length === 1) {
-      return { division: division as Exclude<(typeof validDivisions)[number], 'education'> };
+      return { division: division as Exclude<(typeof validDivisions)[number], 'education' | 'community'> };
     }
     return null;
   }
@@ -330,6 +338,17 @@ const parseDivisionSlug = (slug: string[]): DivisionProps | null => {
     const sub = slug[1];
     if (educationSubs.includes(sub as any)) {
       return { division: 'education', sub: sub as (typeof educationSubs)[number] };
+    }
+  }
+
+  if (division === 'community') {
+    if (slug.length === 1) {
+      return null;
+    }
+
+    const sub = slug[1];
+    if (communitySubs.includes(sub as any)) {
+      return { division: 'community', sub: sub as (typeof communitySubs)[number] };
     }
   }
 
