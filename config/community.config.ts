@@ -128,26 +128,14 @@ export const communityImages: {
 export const communityTestimony: Record<SubDivision, Array<Testimony>> = {
   campus: [
     {
-      quote: 'Being a part of the Events team has been such an exciting adventure. There’s nothing more fulfilling than the ability to see the tangible impacts created as a result of your efforts.',
-      name: 'Ayomide Tapere',
-    },
-    {
-      quote: "Not only have I gotten the chance to meet so many wonderful people, but I’ve also gotten the opportunity to see all of our efforts have a positive impact on our community."
-    },
-    {
-      quote: "My favorite thing about events is that we get to help bring our organization and community together in a fun and exciting way that’s taught me so much about working on a team."
+      quote: 'ACM Campus has provided us with countless opportunities to connect with fellow students and create memorable experiences that enrich our college life!',
+      name: 'Jeydin Pham',
     }
   ],
   outreach: [
     {
-      quote: 'Being a part of the Events team has been such an exciting adventure. There’s nothing more fulfilling than the ability to see the tangible impacts created as a result of your efforts.',
-      name: 'Ayomide Tapere',
-    },
-    {
-      quote: "Not only have I gotten the chance to meet so many wonderful people, but I’ve also gotten the opportunity to see all of our efforts have a positive impact on our community."
-    },
-    {
-      quote: "My favorite thing about events is that we get to help bring our organization and community together in a fun and exciting way that’s taught me so much about working on a team."
+      quote: 'ACM Outreach is very cool!',
+      name: 'Jeydin Pham',
     }
   ],
 }
