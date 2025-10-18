@@ -178,18 +178,3 @@ export const communityFAQ: Record<SubDivision, Question[]> = {
     }
   ]
 };
-
-export const communityOutreachFAQ: Question[] = [
-  {
-    question: 'Where can I find upcoming events?',
-    answer: 'All events are displayed on the ACM Calendar and make sure to check out ACM’s Instagram and Discord for any updates regarding upcoming events!'
-  },
-  {
-    question: 'What are some events that Events has organized in the past?',
-    answer: 'We get to bring to life pretty much any event that involves bringing some fun to the community from our very first Peechi Games (inspired by Squid Games) to picnic nights with live music and so much more!'
-  },
-  {
-    question: 'How do I get involved with the Events Team?',
-    answer: 'At the moment, we’re currently not open for applications, but make sure to stay in touch by submitting any event ideas and be on the lookout for recruitment opportunities and upcoming events.'
-  }
-]
