@@ -36,6 +36,12 @@ import { mediaDirectors, mediaTestimony, mediaFAQ, mediaCarousel } from './media
 import {
   communitCarouselImages,
   communityDirectors,
+  communityOutreachCarouselImages,
+  communityOutreachFAQ,
+  communityOutreachTestimony,
+  communityCampusCarouselImages,
+  communityCampusFAQ,
+  communityCampusTestimony,
   communityFAQ,
   communityTestimony,
 } from './community.config';
@@ -123,7 +129,10 @@ export function getTestimony(section: Division): Testimony[] {
     case 'hackutd':
       return hackTestimony;
     case 'community':
-      return communityTestimony;
+      // section may have a sub if it's community; try to read it safely
+      // @ts-ignore
+      if ((section as any).sub === 'campus') return communityCampusTestimony;
+      return communityOutreachTestimony;
     case 'industry':
       return industryTestimony;
   }
@@ -144,7 +153,9 @@ export function getFAQ(section: Division): Question[] {
     case 'hackutd':
       return hackFAQ;
     case 'community':
-      return communityFAQ;
+      // @ts-ignore
+      if ((section as any).sub === 'campus') return communityCampusFAQ;
+      return communityOutreachFAQ;
     case 'industry':
       return industryFAQ;
   }
@@ -165,7 +176,9 @@ export function getCarouselImages(section: Division): CarouselImage[] {
     case 'hackutd':
       return hackCarouselImages;
     case 'community':
-      return communitCarouselImages;
+      // @ts-ignore
+      if ((section as any).sub === 'campus') return communityCampusCarouselImages;
+      return communityOutreachCarouselImages;
     case 'industry':
       return industryCarouselImages;
   }

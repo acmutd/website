@@ -93,7 +93,7 @@ export const communityOfficers: Officer[] = [
   },
 ];
 
-export const communitCarouselImages: CarouselImage[] = [
+export const communityOutreachCarouselImages: CarouselImage[] = [
   {
     imageLink: '/assets/community/notes_floats.png',
     title: 'Notes and Floats',
@@ -105,7 +105,7 @@ export const communitCarouselImages: CarouselImage[] = [
     title: 'Community'
   }
 ]
-export const communityTestimony: Testimony[] = [
+export const communityOutreachTestimony: Testimony[] = [
   {
     quote: 'Being a part of the Events team has been such an exciting adventure. There’s nothing more fulfilling than the ability to see the tangible impacts created as a result of your efforts.',
     name: 'Ayomide Tapere',
@@ -117,7 +117,7 @@ export const communityTestimony: Testimony[] = [
     quote: "My favorite thing about events is that we get to help bring our organization and community together in a fun and exciting way that’s taught me so much about working on a team."
   }
 ]
-export const communityFAQ: Question[] = [
+export const communityOutreachFAQ: Question[] = [
   {
     question: 'Where can I find upcoming events?',
     answer: 'All events are displayed on the ACM Calendar and make sure to check out ACM’s Instagram and Discord for any updates regarding upcoming events!'
@@ -131,3 +131,13 @@ export const communityFAQ: Question[] = [
     answer: 'At the moment, we’re currently not open for applications, but make sure to stay in touch by submitting any event ideas and be on the lookout for recruitment opportunities and upcoming events.'
   }
 ]
+
+// Campus-specific (currently reuse outreach data as sensible defaults)
+export const communityCampusCarouselImages: CarouselImage[] = communityOutreachCarouselImages;
+export const communityCampusTestimony: Testimony[] = communityOutreachTestimony;
+export const communityCampusFAQ: Question[] = communityOutreachFAQ;
+
+// Backwards-compatible aggregate exports used by older code paths
+export const communitCarouselImages = communityOutreachCarouselImages;
+export const communityTestimony = communityOutreachTestimony;
+export const communityFAQ = communityOutreachFAQ;

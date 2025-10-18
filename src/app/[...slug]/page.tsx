@@ -24,6 +24,7 @@ import {
 } from '@/components/Divisions/Shared/divisionUtil';
 import { MediaHeader } from '@/components/Divisions/Media/MediaHeader';
 import { CommunityHeader } from '@/components/Divisions/Community/CommunityHeader';
+import { CampusHeader } from '@/components/Divisions/Campus/CampusHeader';
 import { IndustryHeader } from '@/components/Divisions/Industry/IndustryHeader';
 import IndustrySponsors from '@/components/Divisions/Industry/IndustrySponsors';
 import DevProjects from '@/components/Divisions/Development/DevProjects';
@@ -188,7 +189,7 @@ const getDivisionMetadata = (props: DivisionProps): DivisionMetadata => {
         'community service',
         'volunteering',
       ],
-      slug: 'community',
+      slug: 'community/outreach',
       image: '/assets/about/community/community.png',
       imageWidth: 697,
       imageHeight: 191,
@@ -284,7 +285,8 @@ export function generateStaticParams() {
     { slug: ['education', 'mentor'] },
     { slug: ['media'] },
     { slug: ['hackutd'] },
-    { slug: ['community'] },
+  { slug: ['community', 'outreach'] },
+  { slug: ['community', 'campus'] },
     { slug: ['industry'] },
   ];
 
@@ -300,12 +302,17 @@ const headerComponents = {
   hackutd: HackHeader,
   education: () => notFound(),
   media: MediaHeader,
-  community: CommunityHeader,
   industry: IndustryHeader,
 };
 
 function Header(props: DivisionProps & { config: DivisionConfig }) {
   const { headerType } = props.config;
+
+  if (props.division === 'community' && 'sub' in props) {
+    if (props.sub === 'outreach') return <CommunityHeader />;
+    if (props.sub === 'campus') return <CampusHeader />;
+  }
+
   const HeaderComponent = headerComponents[headerType as keyof typeof headerComponents];
   return <HeaderComponent />;
 }

@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
-import { Division, EducationSub } from './divisionUtil';
+import { Division, EducationSub, CommunitySub } from './divisionUtil';
 import Image from 'next/image';
 import Link from 'next/link';
 
-type ExtendedDivisions = Exclude<Division, 'education'> | `education.${EducationSub}`;
+type ExtendedDivisions = Exclude<Division, 'education' | 'community'> | `education.${EducationSub}` | `community.${CommunitySub}`;
 
 type DivisionHeaderProps = {
   children: ReactNode;
@@ -46,12 +46,13 @@ export default function DivisionHeader({ children, division }: DivisionHeaderPro
 const applicationUrl: Record<ExtendedDivisions, string | Record<string, string>> = {
   'education.mentor': 'https://portal.acmutd.co/opportunities',
   'education.tip': 'https://portal.acmutd.co/opportunities',
+  'community.outreach': 'https://portal.acmutd.co/opportunities',
+  'community.campus': 'https://portal.acmutd.co/opportunities',
   projects: 'https://portal.acmutd.co/opportunities',
   research: 'https://portal.acmutd.co/opportunities',
   development: 'https://portal.acmutd.co/opportunities',
   media: 'https://portal.acmutd.co/opportunities',
   hackutd: 'https://portal.acmutd.co/opportunities',
-  community: 'https://portal.acmutd.co/opportunities',
   industry: 'https://portal.acmutd.co/opportunities',
 };
 
@@ -82,8 +83,11 @@ const images: Record<ExtendedDivisions, ReactNode> = {
   hackutd: (
     <Image src="/assets/about/hackutd/hackutd.png" alt="ACM HackUTD" width={272} height={80} />
   ),
-  community: (
-    <Image src="/assets/about/community/community.png" alt="ACM Media" width={272} height={80} />
+  'community.outreach': (
+    <Image src="/assets/about/community/community.png" alt="ACM Community Outreach" width={272} height={80} />
+  ),
+  'community.campus': (
+    <Image src="/assets/about/community/community.png" alt="ACM Community Campus" width={272} height={80} />
   ),
   industry: (
     <Image src="/assets/about/industry/industry.png" alt="ACM Industry" width={272} height={80} />
