@@ -84,10 +84,10 @@ const images: Record<ExtendedDivisions, ReactNode> = {
     <Image src="/assets/about/hackutd/hackutd.png" alt="ACM HackUTD" width={272} height={80} />
   ),
   'community.outreach': (
-    <Image src="/assets/about/community/community.png" alt="ACM Community Outreach" width={272} height={80} />
+    <Image src="/assets/about/community/community.png" alt="ACM Outreach" width={272} height={80} />
   ),
   'community.campus': (
-    <Image src="/assets/about/community/community.png" alt="ACM Community Campus" width={272} height={80} />
+    <Image src="/assets/about/community/community.png" alt="ACM Campus" width={272} height={80} />
   ),
   industry: (
     <Image src="/assets/about/industry/industry.png" alt="ACM Industry" width={272} height={80} />

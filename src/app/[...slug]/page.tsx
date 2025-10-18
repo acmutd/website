@@ -24,7 +24,6 @@ import {
   Division,
 } from '@/components/Divisions/Shared/divisionUtil';
 import { MediaHeader } from '@/components/Divisions/Media/MediaHeader';
-import { CommunityHeader } from '@/components/Divisions/Community/CommunityHeader';
 import { OutreachHeader } from '@/components/Divisions/Outreach/OutreachHeader';
 import { CampusHeader } from '@/components/Divisions/Campus/CampusHeader';
 import { IndustryHeader } from '@/components/Divisions/Industry/IndustryHeader';
