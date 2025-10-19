@@ -4,172 +4,249 @@ import { type Officer } from './officers.config';
 
 export const developmentDirectors: Director[] = [
   {
-    image: '/assets/officer/FarhanJamil.jpg',
-    name: 'Farhan Jamil',
+    image: '/assets/officer/EvanWright.jpg',
+    name: 'Evan Wright',
     position: 'Director of Development',
   },
 ];
 
 export const developmentOfficers: Officer[] = [
   {
-    image: '/assets/officer/FarhanJamil.jpg',
-    name: 'Farhan Jamil',
-    position: 'Director of Development',
-  },
-  {
-    image: '/assets/officer/ArihantSreenivasa.png',
-    name: 'Arihant Sreenivasa',
-    position: 'Director of Development',
-  },
-  {
-    image: '/assets/officer/AnirudhVayalali.jpeg',
-    name: 'Anirudh Vayalali',
-    position: 'Development Officer (PM for ACM Core)',
-  },
-  {
-    image: '/assets/officer/GiangPham.jpg',
-    name: 'Giang Pham',
-    position: 'Development Officer (ACM Core)',
-  },
-  {
-    image: '/assets/officer/BennettFeigenbaum.JPG',
-    name: 'Bennett Feigenbaum',
-    position: 'Development Officer (ACM Core)',
-  },
-  {
-    image: '/assets/officer/BhaveshMandalapu.jpg',
-    name: 'Bhavesh Mandalapu',
-    position: 'Development Officer (ACM Core)',
-  },
-  {
-    image: '/assets/officer/RubenOlano.jpg',
-    name: 'Ruben Olano',
-    position: 'Development Officer (ACM Core)',
-  },
-  {
-    image: '/assets/officer/YashShah.jpg',
-    name: 'Yash Shah',
-    position: 'Development Officer (PM for BSG)',
-  },
-  {
-    image: '/assets/officer/RonakChava.jpg',
-    name: 'Ronak Chava',
-    position: 'Development Officer (BSG)',
-  },
-  {
-    image: '/assets/officer/PreritaBabarjung.jpg',
-    name: 'Prerita Babarjung',
-    position: 'Development Officer (PM for Nexus)',
-  },
-  {
-    image: '/assets/officer/GiridharNair.jpg',
-    name: 'Giridhar Nair',
-    position: 'Development Officer (Nexus)',
-  },
-  {
-    image: '/assets/officer/NaomiNtuli.jpg',
-    name: 'Naomi Ntuli',
-    position: 'Development Officer (Nexus)',
-  },
-  {
-    image: '/assets/officer/HumzaQureshi.jpg',
-    name: 'Humza Qureshi',
-    position: 'Development Officer (Nexus)',
-  },
-  {
-    image: '/assets/officer/IndrajithThyagaraja.jpg',
-    name: 'Indrajith Thyagaraja',
-    position: 'Development Officer (Nexus)',
-  },
-  {
-    image: '/assets/officer/SreevasanSivasubramanian.jpg',
-    name: 'Sreevasan Sivasubramanian',
-    position: 'Development Officer (Nexus)',
-  },
-  {
-    image: '/assets/officer/ThomasLe.png',
-    name: 'Thomas Le',
-    position: 'Development Officer (Nexus)',
-  },
-  {
-    image: '/assets/officer/ArinSood.png',
-    name: 'Arin Sood',
-    position: 'Development Officer (PM for Org Portal)',
-  },
-  {
-    image: '/assets/officer/NachiketPandit.jpg',
-    name: 'Nachiket Pandit',
-    position: 'Development Officer (Org Portal)',
-  },
-  {
-    image: '/assets/officer/MiaSorolaYoshida.png',
-    name: 'Mia Sorola Yoshida',
-    position: 'Development Officer (Org Portal)',
-  },
-  {
-    image: '/assets/officer/AndrewDmitrievsky.jpeg',
-    name: 'Andrew Dmitrievsky',
-    position: 'Development Officer (Org Portal)',
-  },
-  {
-    image: '/assets/officer/AkshayNagarajan.png',
-    name: 'Akshay Nagarajan',
-    position: 'Development Officer (Org Portal)',
-  },
-  {
-    image: '/assets/officer/VeerShah.png',
-    name: 'Veer Shah',
-    position: 'Development Officer (Org Portal)',
-  },
-  {
-    image: '/assets/officer/SusanZhang.jpg',
-    name: 'Susan Zhang',
-    position: 'Development Officer (Org Portal)',
-  },
-  {
-    image: '/assets/officer/EvanWright.png',
+    image: '/assets/officer/Evan_Wright.jpg',
     name: 'Evan Wright',
-    position: 'Development Officer (PM for SAGE)',
+    position: 'Director of Development',
+  },
+
+  {
+    image: '/assets/officer/Anirudh_Vayalali.jpeg',
+    name: 'Anirudh Vayalali',
+    position: 'Core Lead',
   },
   {
-    image: '/assets/officer/VladislavKondratyev.png',
-    name: 'Vladislav Kondratyev',
-    position: 'Development Officer (SAGE)',
+    image: '/assets/officer/Yash_Shah.jpg',
+    name: 'Yash Shah',
+    position: 'BSG Lead',
   },
   {
-    image: '/assets/officer/AlenJo.jpg',
+    image: '/assets/officer/Arin_Sood.png',
+    name: 'Arin Sood',
+    position: 'Org Portal Lead',
+  },
+  {
+    image: '/assets/officer/Prerita_Babarjung.jpg',
+    name: 'Prerita Babarjung',
+    position: 'Nexus Lead',
+  },
+  {
+    image: '/assets/officer/Alen_Jo.jpg',
     name: 'Alen Jo',
-    position: 'Development Officer (SAGE)',
+    position: 'SAGE Lead',
   },
   {
-    image: '/assets/officer/SwayamArora.png',
-    name: 'Swayam Arora',
-    position: 'Development Officer (SAGE)',
+    image: '/assets/officer/Vladislav_Kondratyev.png',
+    name: 'Vladislav Kondratyev',
+    position: 'Meteormate Lead',
+  },
+
+  {
+    image: '/assets/officer/Giang_Pham.jpg',
+    name: 'Giang Pham',
+    position: 'Core Developer',
   },
   {
-    image: '/assets/officer/JadenKuriakose.JPG',
-    name: 'Jaden Kuriakose',
-    position: 'Development Officer (SAGE)',
+    image: '/assets/officer/Bhavesh_Mandalapu.jpg',
+    name: 'Bhavesh Mandalapu',
+    position: 'Core Developer',
   },
   {
-    image: '/assets/officer/AlexPham.jpg',
-    name: 'Alex Pham',
-    position: 'Development Officer (SAGE)',
+    image: '/assets/officer/Ruben_Olano.jpg',
+    name: 'Ruben Olano',
+    position: 'Core Developer',
   },
   {
-    image: '/assets/officer/AndresGarciaSanchez.png',
+    image: '/assets/officer/Jeydin_Pham.jpeg',
+    name: 'Jeydin Pham',
+    position: 'Core Developer',
+  },
+  {
+    image: '/assets/officer/Luke_Sultzer.jpeg',
+    name: 'Luke Sultzer',
+    position: 'Core Developer',
+  },
+  {
+    image: '/assets/officer/Vaishnavi_Josyula.jpg',
+    name: 'Vaishnavi Josyula',
+    position: 'Core Developer',
+  },
+  {
+    image: '/assets/officer/Bennett_Feigenbaum.JPG',
+    name: 'Bennett Feigenbaum',
+    position: 'Core Designer',
+  },
+
+  {
+    image: '/assets/officer/Dev_Sheth.jpg',
+    name: 'Dev Sheth',
+    position: 'BSG Developer',
+  },
+  {
+    image: '/assets/officer/Owen_Isenhart.JPEG',
+    name: 'Owen Isenhart',
+    position: 'BSG Developer',
+  },
+  {
+    image: '/assets/officer/Riyan_Maknojia.jpg',
+    name: 'Riyan Maknojia',
+    position: 'BSG Developer',
+  },
+  {
+    image: '/assets/officer/Ronak_Chavva.jpg',
+    name: 'Ronak Chavva',
+    position: 'BSG Developer',
+  },
+  {
+    image: '/assets/officer/Sarah_Park.jpg',
+    name: 'Sarah Park',
+    position: 'BSG Developer',
+  },
+
+  {
+    image: '/assets/officer/Akshay_Nagarajan.png',
+    name: 'Akshay Nagarajan',
+    position: 'Org Portal Developer',
+  },
+  {
+    image: '/assets/officer/Andrew_Dmitrievsky.jpg',
+    name: 'Andrew Dmitrievsky',
+    position: 'Org Portal Developer',
+  },
+  {
+    image: '/assets/officer/Ethan_Scherwitz.JPG',
+    name: 'Ethan Scherwitz',
+    position: 'Org Portal Developer',
+  },
+  {
+    image: '/assets/officer/Jason_Luu.JPG',
+    name: 'Jason Luu',
+    position: 'Org Portal Developer',
+  },
+  {
+    image: '/assets/officer/Lerich_Osay.jpg',
+    name: 'Lerich Osay',
+    position: 'Org Portal Developer',
+  },
+  {
+    image: '/assets/officer/Nachiket_Pandit.jpg',
+    name: 'Nachiket Pandit',
+    position: 'Org Portal Developer',
+  },
+  {
+    image: '/assets/officer/Susan_Zhang.jpg',
+    name: 'Susan Zhang',
+    position: 'Org Portal Designer',
+  },
+
+  {
+    image: '/assets/officer/Humza_Qureshi.jpg',
+    name: 'Humza Qureshi',
+    position: 'Nexus Developer',
+  },
+  {
+    image: '/assets/officer/Indrajith_Thyagaraja.jpg',
+    name: 'Indrajith Thyagaraja',
+    position: 'Nexus Developer',
+  },
+  {
+    image: '/assets/officer/Naomi_Ntuli.jpg',
+    name: 'Naomi Ntuli',
+    position: 'Nexus Developer',
+  },
+  {
+    image: '/assets/officer/Sreevasan_Sivasubramanian.jpg',
+    name: 'Sreevasan Sivasubramanian',
+    position: 'Nexus Developer',
+  },
+  {
+    image: '/assets/officer/Thomas_Le.png',
+    name: 'Thomas Le',
+    position: 'Nexus Developer',
+  },
+  {
+    image: '/assets/officer/Tommy_Nguyen.JPG',
+    name: 'Tommy Nguyen',
+    position: 'Nexus Designer',
+  },
+
+  {
+    image: '/assets/officer/Abis_Naqvi.jpeg',
+    name: 'Abis Naqvi',
+    position: 'SAGE Developer',
+  },
+  {
+    image: '/assets/officer/Andres_Garcia_Sanchez.png',
     name: 'Andres Garcia Sanchez',
-    position: 'Development Officer (SAGE)',
+    position: 'SAGE Developer',
   },
   {
-    image: '/assets/officer/MichaelZhao.png',
-    name: 'Michael Zhao',
-    position: 'Development Officer (SAGE)',
+    image: '/assets/officer/Anusha_Patel.jpeg',
+    name: 'Anusha Patel',
+    position: 'SAGE Developer',
   },
   {
-    image: '/assets/officer/JordanTan.jpg',
-    name: 'Jordan Tan',
-    position: 'Development Officer (SAGE)',
+    image: '/assets/officer/Jaden_Kuriakose.JPG',
+    name: 'Jaden Kuriakose',
+    position: 'SAGE Developer',
+  },
+  {
+    image: '/assets/officer/Swayam_Arora.png',
+    name: 'Swayam Arora',
+    position: 'SAGE Developer',
+  },
+  {
+    image: '/assets/officer/Oscar_Lay.jpg',
+    name: 'Oscar Lay',
+    position: 'SAGE Developer',
+  },
+  {
+    image: '/assets/officer/Mercedes_Xiong.jpg',
+    name: 'Mercedes Xiong',
+    position: 'SAGE Designer',
+  },
+
+  {
+    image: '/assets/officer/Muaaz_Abed.jpg',
+    name: 'Muaaz Abed',
+    position: 'Meteormate Developer',
+  },
+  {
+    image: '/assets/officer/Ryan_Polasky.png',
+    name: 'Ryan Polasky',
+    position: 'Meteormate Developer',
+  },
+  {
+    image: '/assets/officer/Nathan_Sujatno.jpg',
+    name: 'Nathan Sujatno',
+    position: 'Meteormate Developer',
+  },
+  {
+    image: '/assets/officer/Joel_Gurivireddy.jpg',
+    name: 'Joel Gurivireddy',
+    position: 'Meteormate Developer',
+  },
+  {
+    image: '/assets/officer/Aastha_Sheth.jpg',
+    name: 'Aastha Sheth',
+    position: 'Meteormate Developer',
+  },
+  {
+    image: '/assets/officer/Christopher_Tran.png',
+    name: 'Christopher Tran',
+    position: 'Meteormate Designer',
+  },
+  {
+    image: '/assets/officer/Frabina_Edwin.png',
+    name: 'Frabina Edwin',
+    position: 'Meteormate Designer',
   },
 ];
 
