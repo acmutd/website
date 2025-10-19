@@ -101,20 +101,20 @@ export const communityImages: {
 } = {
   campus: [
     {
+      date: new Date(2025, 0, 2),
+      imageLink: '/assets/community/campus/group_photo.JPG',
+      title: 'ACM Campus Officers'
+    },
+    {
+      imageLink: '/assets/community/campus/twilight_tunes.jpg',
+      title: 'Twilight Tunes',
+      date: new Date(2025, 10, 5),
+    },
+    {
       imageLink: '/assets/community/campus/notes_and_floats.png',
       title: 'Notes and Floats',
       date: new Date(2025, 1, 11),
     },
-    {
-      date: new Date(2025, 0, 2),
-      imageLink: '/assets/community/campus/group_photo.jpg',
-      title: 'Community'
-    },
-    {
-      imageLink: '/assets/community/campus/twilight_tunes.jpg',
-      title: 'Campus Event 1',
-      date: new Date(2025, 10, 5),
-    }
   ],
   outreach: [
     {
