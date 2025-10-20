@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { DivisionProps, isEducationDivision } from './divisionUtil';
+import { DivisionProps, isEducationDivision, isCommunityDivision } from './divisionUtil';
 import React, { useState, useEffect } from 'react';
 
 const mentorLinks = ['directors', 'experience', 'workshops', 'faq'];
@@ -19,7 +19,10 @@ const LINK_DICT = {
   },
   media: mediaLinks,
   hackutd: projectsLinks,
-  community: mediaLinks,
+  community: {
+    campus: mediaLinks,
+    outreach: mediaLinks,
+  },
   industry: mediaLinks,
 } as const;
 
@@ -49,10 +52,12 @@ export default function Navigator(props: DivisionProps) {
 
   let routeLinks: string[] = [];
 
-  if (isEducationDivision(props)) {
+  if (isEducationDivision(props) && props.sub) {
     routeLinks = LINK_DICT.education[props.sub];
-  } else {
-    routeLinks = LINK_DICT[props.division];
+  } else if (isCommunityDivision(props) && props.sub) {
+    routeLinks = LINK_DICT.community[props.sub];
+  } else if (!isEducationDivision(props) && !isCommunityDivision(props)) {
+    routeLinks = LINK_DICT[props.division] as string[];
   }
 
   const isVisible = !isScrolling || isHovered;
