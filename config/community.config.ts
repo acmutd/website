@@ -118,9 +118,19 @@ export const communityImages: {
   ],
   outreach: [
     {
-      imageLink: '/assets/community/outreach/group_photo.jpg',
-      title: 'Outreach (temp)',
+      imageLink: '/assets/community/outreach/nths_hack.JPG',
+      title: 'NTHS Hack 2025',
       date: new Date(2025, 1, 11),
+    },
+    {
+      imageLink: '/assets/community/outreach/mark_cuban_bootcamp.jpg',
+      title: 'Mark Cuban Foundation AI Bootcamp',
+      date: new Date(2025, 10, 5),
+    },
+    {
+      date: new Date(2025, 0, 2),
+      imageLink: '/assets/community/outreach/officers_photo.JPG',
+      title: 'ACM Outreach Officers'
     },
   ]
 }
@@ -170,7 +180,19 @@ export const communityFAQ: Record<SubDivision, Question[]> = {
   outreach: [
     {
       question: 'What is ACM Community Outreach?',
-      answer: 'ACM Community Outreach is a division of ACM that focuses on increasing STEM engagement in K-12 students, particularly in underserved schools. We organize various outreach events and programs to inspire and educate the next generation of technologists.'
+      answer: 'ACM Outreach is a subdivision of ACM community focused on reaching out to the local community around UTD by providing computer science focused learning materials and opportunities to K-12 students. To do this we offer workshops as well as our own High school level hackathon to K-12 students who are interested in pursuing computer science.'
+    },
+    {
+      question: 'How can I get involved with ACM Outreach?',
+      answer: 'Outreach offers current computer science students at UTD the opportunity to volunteer with us and mentor K-12 students in computer science through various opportunities such as the Mark Cuban Foundation’s AI bootcamp as well as the North Texas High School Hackathon.'
+    },
+    {
+      question: 'What is the North Texas High School Hackathon?',
+      answer: 'The North Texas High School Hackathon (or NTHS Hack for short) is a hackathon specifically catered to high school students who are interested in participating in a hackathon ahead of their college careers, featuring opportunities to gain experience, build their portfolio, and talk to professional companies all while having fun! In the past we’ve had over 100 participants and we’re aiming even higher this upcoming year!',
+    },
+    {
+      question: 'How can I become more involved in Outreach?',
+      answer: 'Keep an eye out for our announcements on the ACM discord and our personal instagram page for any volunteering opportunities and chances to mentor the next generation of computer science students!'
     }
   ]
 };
