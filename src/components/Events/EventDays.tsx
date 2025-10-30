@@ -71,14 +71,21 @@ const EventComponent = ({ event, day, month }: Props) => {
             <div className="space-y-1">
               <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-200">Date & Time</h3>
               <p className="text-xs sm:text-sm md:text-base text-gray-100">
-                {formatDate(localStartDate)}{" "}at{" "}
-                <span className="font-semibold">
-                  {localStartDate.toLocaleTimeString('en-US', {
-                    hour: 'numeric',
-                    minute: '2-digit',
-                    timeZoneName: 'short',
-                  })}
-                </span>
+                {formatDate(localStartDate)}
+                {event.isAllDay ? (
+                  <span className="font-semibold"> - All Day</span>
+                ) : (
+                  <>
+                    {" "}at{" "}
+                    <span className="font-semibold">
+                      {localStartDate.toLocaleTimeString('en-US', {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                        timeZoneName: 'short',
+                      })}
+                    </span>
+                  </>
+                )}
               </p>
             </div>
           )}
