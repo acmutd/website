@@ -59,10 +59,8 @@ export const aboutPageData: AboutPageData = {
       description:
         'acm community increases STEM engagement in K-12 students, focusing on underserved schools. It also organizes social events for all majors, fostering collaboration, creativity, and a vibrant campus atmosphere.',
       links: [
-        {
-          name: 'learn more',
-          link: '/community',
-        },
+        { name: 'campus', link: '/community/campus' },
+        { name: 'outreach', link: '/community/outreach' }
       ],
     },
     hackutd: {
