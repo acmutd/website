@@ -152,8 +152,16 @@ export const communityTestimony: Record<SubDivision, Array<Testimony>> = {
   ],
   outreach: [
     {
-      quote: 'ACM Outreach is very cool!',
-      name: 'Jeydin Pham',
+      quote: 'I loved being able to give back to the communities that have supported me through my early education. Outreach ACM has given me the opportunity to showcase my leadership, collaborate with passionate students at UTD, and make a direct impact on communities. My favorite part of outreach is planning the high school hackathon and making it a great event for students!',
+      name: 'Nidhi Majoju',
+    },
+    {
+      quote: 'Outreach has allowed me to network and engage with the STEM community around me! It\'s let me empower myself and strengthen my technical knowledge by giving back.',
+      name: 'Jerry Martinez',
+    },
+    {
+      quote: 'My experience with ACM Outreach has been about giving back  helping K–12 students explore the world of computing and realize that innovation starts with curiosity. As part of this journey, I helped organize NTHS Hack, Texas’s only K–12 hackathon, to inspire young minds to build, create, and dream through technology.',
+      name: 'Shreya Singaravel',
     }
   ],
 }
