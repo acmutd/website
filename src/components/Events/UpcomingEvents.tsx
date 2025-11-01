@@ -95,7 +95,7 @@ export default function UpcomingEvents() {
                 <div className="rounded-lg p-3 md:p-4 backdrop-blur-sm backdrop-filter">
                   <h2 className="text-base font-bold lowercase text-gray-900 md:text-xl">{event.title}</h2>
                   {event.start && (
-                    <EventTime dateString={event.start.toISOString()} location={event.location} />
+                    <EventTime dateString={event.start.toISOString()} location={event.location} isAllDay={event.isAllDay} />
                   )}
                 </div>
               </div>
@@ -109,14 +109,21 @@ export default function UpcomingEvents() {
                   <div className="space-y-1">
                     <h3 className="text-xs sm:text-sm md:text-base font-medium text-gray-200">Date & Time</h3>
                     <p className="text-xs sm:text-sm md:text-base text-gray-100">
-                      {formatDate(event.start)}{" "}at{" "}
-                      <span className="font-semibold">
-                        {event.start.toLocaleTimeString('en-US', {
-                          hour: 'numeric',
-                          minute: '2-digit',
-                          timeZoneName: 'short',
-                        })}
-                      </span>
+                      {formatDate(event.start)}{' '}
+                      {event.isAllDay ? (
+                        <span className="font-semibold">- All Day</span>
+                      ) : (
+                        <>
+                          at{' '}
+                          <span className="font-semibold">
+                            {event.start.toLocaleTimeString('en-US', {
+                              hour: 'numeric',
+                              minute: '2-digit',
+                              timeZoneName: 'short',
+                            })}
+                          </span>
+                        </>
+                      )}
                     </p>
                   </div>
                 )}
