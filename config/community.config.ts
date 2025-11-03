@@ -138,17 +138,13 @@ export const communityImages: {
 export const communityTestimony: Record<SubDivision, Array<Testimony>> = {
   campus: [
     {
-      quote: 'Being a part of the Campus team has been such an exciting adventure. There\'s nothing more fulfilling than the ability to see the tangible impacts created as a result of your efforts.',
-      name: 'Ayomide Tapere',
+      quote: 'Community Campus events helped me meet people who later became my project teammates and hackathon partners. It\'s an amazing way to make genuine connections while still growing as a developer.',
+      name: 'Mohammed Gaggutur',
     },
     {
-      quote: 'Not only have I gotten the chance to meet so many wonderful people, but I\'ve also gotten the opportunity to see all of our efforts have a positive impact on our community.',
+      quote: 'I used to think tech organizations were all about programming, but ACM Community Campus taught me that technology can build empathy, creativity, and belonging. Every event we host brings people together in ways I never expected.',
       name: '',
     },
-    {
-      quote: 'My favorite thing about Campus is that we get to help bring our organization and community together in a fun and exciting way that\'s taught me so much about working on a team.',
-      name: '',
-    }
   ],
   outreach: [
     {
