@@ -4,42 +4,57 @@ import { type Officer } from './officers.config';
 
 export const industryDirectors: Director[] = [
   {
-    name: 'Manasi Vipat',
+    name: 'Anika Guin',
     position: 'Director of Industry',
-    image: '/assets/officer/ManasiVipat.jpg',
+    image: '/assets/officer/Anika_Guin.jpg',
+  },
+  {
+    name: 'Nihita Soma',
+    position: 'Director of Industry',
+    image: '/assets/officer/Nihita_Soma.jpg',
   },
 ];
 
 export const industryOfficers: Officer[] = [
    {
-    name: 'Manasi Vipat',
-    position: 'Director of Industry',
-    image: '/assets/officer/ManasiVipat.jpg'
-  },
-  {
-    name: 'Sushant Ganji',
-    position: 'Industry Officer',
-    image: '/assets/officer/SushantGanji.jpg',
-  },
-  {
     name: 'Anika Guin',
-    position: 'Industry Officer',
-    image: '/assets/officer/AnikaGuin.png',
+    position: 'Director of Industry',
+    image: '/assets/officer/Anika_Guin.jpg',
   },
   {
     name: 'Nihita Soma',
+    position: 'Director of Industry',
+    image: '/assets/officer/Nihita_Soma.JPG',
+  },
+  {
+    name: 'Aarya Ravishankar',
     position: 'Industry Officer',
-    image: '/assets/officer/NihitaSoma.jpg',
+    image: '/assets/officer/Aarya_Ravishankar.JPG',
+  },
+  {
+    name: 'Nidhi Parvathala',
+    position: 'Industry Officer',
+    image: '/assets/officer/Nidhi_Parvathala.jpg',
+  },
+  {
+    name: 'Pratishtha Rao',
+    position: 'Industry Officer',
+    image: '/assets/officer/Pratishtha_Rao.jpg',
+  },
+  {
+    name: 'Rishi Golla',
+    position: 'Industry Officer',
+    image: '/assets/officer/Rishi_Golla.JPG',
   },
   {
     name: 'Soujanya Kamalapur',
     position: 'Industry Officer',
-    image: '/assets/officer/SoujanyaKamalapur.png',
+    image: '/assets/officer/Soujanya_Kamalapur.png',
   },
   {
-    name: 'Shreya Ram',
+    name: 'Varun Bhupathiraju',
     position: 'Industry Officer',
-    image: '/assets/officer/ShreyaRam.png',
+    image: '/assets/officer/Varun_Bhupathiraju.jpeg',
   },
 ];
 

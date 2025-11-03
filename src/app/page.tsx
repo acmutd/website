@@ -8,6 +8,7 @@ import WhyJoin from '@/components/Home/WhyJoin';
 import DivisionsGrid from '@/components/Home/DivisionsGrid';
 import ReadyToJoin from '@/components/Home/ReadyToJoin';
 import ScrollIndicator from '@/components/Home/ScrollIndicator';
+import Link from 'next/link';
 
 function Home() {
   const icons = Object.keys(homePageData.community);
@@ -26,14 +27,14 @@ function Home() {
               <h1 className="text-center text-3xl font-bold sm:text-4xl md:text-5xl lg:text-7xl">
                 association for computing machinery
               </h1>
-              <p className="text-center text-base sm:text-lg md:text-md lg:text-xl">
+              <p className="md:text-md text-center text-base sm:text-lg lg:text-xl">
                 we&apos;re a team of students with one goal: building a greater, more collaborative
                 computing community at The University of Texas at Dallas.
               </p>
               <div className="z-10 flex w-fit flex-row items-center justify-center gap-x-4 rounded-lg border border-primary/50 bg-gray-300/10 bg-acm-gradient px-4 py-3 sm:gap-x-6 sm:px-6 sm:py-4 md:px-8">
                 {icons.map((icon: string, idx: number) => {
                   return (
-                    <a href={iconLinks[idx]} key={idx}>
+                    <Link href={iconLinks[idx]} key={idx} target="_blank">
                       <Image
                         src={`/assets/home/icons/${icon}.png`}
                         alt=""
@@ -42,7 +43,7 @@ function Home() {
                         height={20}
                         style={{ width: 'auto', height: 'auto' }}
                       />
-                    </a>
+                    </Link>
                   );
                 })}
               </div>
@@ -50,7 +51,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 transform">
           <ScrollIndicator />
         </div>
       </div>

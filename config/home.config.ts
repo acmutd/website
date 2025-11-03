@@ -14,32 +14,33 @@ export const homePageData: HomePageData = {
   whyJoinCards: [
     {
       title: 'meet other developers',
-      description: 'connect with a community of students who are into coding, building, and tech'
+      description: 'connect with a community of students who are into coding, building, and tech',
     },
     {
       title: 'learn by doing',
-      description: 'workshops, coding events, and hackathons help you grow your skills outside the classroom'
+      description:
+        'workshops, coding events, and hackathons help you grow your skills outside the classroom',
     },
     {
       title: 'get career ready',
-      description: 'networking events and interview prep to set you up for success for internships'
+      description: 'networking events and interview prep to set you up for success for internships',
     },
     {
       title: 'research opportunities',
-      description: 'work with peers on real-world research in areas like AI, security, or systems'
+      description: 'work with peers on real-world research in areas like AI, security, or systems',
     },
     {
       title: 'mentorship access',
-      description: 'get advice from experienced students, alumni, and industry professionals'
+      description: 'get advice from experienced students, alumni, and industry professionals',
     },
     {
-      title: "make connections",
-      description: 'from social events to coding hangouts, be part of a welcoming community'
-    }
+      title: 'make connections',
+      description: 'from social events to coding hangouts, be part of a welcoming community',
+    },
   ],
   sponsors: {
     gold: ['paycom'],
-    silver: ['CBRE', 'gresearch', 'nokia'],
+    silver: ['CBRE', 'northmark', 'nokia', 'verizon'],
     bronze: [],
     custom: [],
   },

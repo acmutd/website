@@ -3,14 +3,14 @@ import type { CarouselImage, Director, Projects } from './divisions.config';
 
 export const researchDirectors: Array<Director> = [
   {
-    name: 'Oscar Lay',
-    position: 'Research Director',
-    image: '/assets/officer/OscarLay.jpg',
+    name: 'Sahas Sharma',
+    position: 'Director of Research',
+    image: '/assets/officer/Sahas_Sharma.jpg',
   },
   {
-    name: 'Sahas Sharma',
-    position: 'Research Director',
-    image: '/assets/officer/SahasSharma.jpg',
+    name: 'Purva Patel',
+    position: 'Director of Research',
+    image: '/assets/officer/Purva_Patel.jpg',
   },
 ];
 
@@ -82,41 +82,54 @@ export const researchWinners: Projects[] = [
 export const researchOfficers = [
   ...researchDirectors,
   {
-    name: 'Vaishnavi Pasumarthi',
+    name: 'Jagadeep Kalluri',
     position: 'Research Lead',
-    image: '/assets/officer/VaishnaviPasumarthi.jpg',
+    image: '/assets/officer/Jagadeep_Kalluri.jpg',
   },
-  { name: 'Priti See', position: 'Research Lead', image: '/assets/officer/PritiSee.jpg' },
-  { name: 'Purva Patel', position: 'Research Lead', image: '/assets/officer/PurvaPatel.jpg' },
   {
-    name: 'Sanskriti Aripineni',
+    name: 'Jordan Joelson',
     position: 'Research Lead',
-    image: '/assets/officer/SanskritiAripineni.jpg',
+    image: '/assets/officer/Jordan_Joelson.jpg',
   },
   {
     name: 'Anish Reddy Alle',
     position: 'Research Lead',
-    image: '/assets/officer/AnishAlle.jpg',
+    image: '/assets/officer/Anish_Alle.jpg',
   },
   {
-    name: 'Jagadeep Kalluri',
+    name: 'Alex Miller',
     position: 'Research Lead',
-    image: '/assets/officer/JagadeepKalluri.jpg',
+    image: '/assets/officer/Alex_Miller.jpg',
   },
   {
-    name: 'Arjun Krishnan',
+    name: 'Priti See',
     position: 'Research Lead',
-    image: '/assets/officer/ArjunKrishnan.jpg',
+    image: '/assets/officer/Priti_See.jpg',
+  },
+  {
+    name: 'Nathan Han',
+    position: 'Research Lead',
+    image: '/assets/officer/Nathan_Han.jpg',
+  },
+  {
+    name: 'Sai Chauhan',
+    position: 'Research Lead',
+    image: '/assets/officer/Sai_Chauhan.jpg',
+  },
+  {
+    name: 'Cheryl Wang',
+    position: 'Research Lead',
+    image: '/assets/officer/Cheryl_Wang.jpg',
   },
   {
     name: 'Aastha Sharma',
     position: 'Research Lead',
-    image: '/assets/officer/AasthaSharma.jpg',
+    image: '/assets/officer/Aastha_Sharma.jpg',
   },
   {
-    name: 'Tanmay Kulkarni',
+    name: 'Aditya Yanamala',
     position: 'Research Lead',
-    image: '/assets/officer/TanmayKulkarni.jpg',
+    image: '/assets/officer/Aditya_Yanamala.jpg',
   },
 ];
 
