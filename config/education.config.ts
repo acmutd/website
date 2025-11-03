@@ -95,10 +95,10 @@ export const educationFAQ: Record<SubDivision, Question[]> = {
     {
       question: 'What if I am a transfer student?',
       answer:
-        'It is up to the transfer student if they wish to be considered as an ‘underclassmen’ or ‘upperclassmen’',
+        'It is up to the transfer student if they wish to be considered as an ‘underclassmen\' or ‘upperclassmen\'',
     },
     {
-      question: 'Can I switch mentors if the relationship isn’t working out?',
+      question: 'Can I switch mentors if the relationship isn\'t working out?',
       answer:
         'Yes, absolutely. If for any reason it is not working out, please email us at education@acmutd.co',
     },

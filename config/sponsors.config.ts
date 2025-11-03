@@ -6,7 +6,7 @@ export const sponsorFaqs = [
   },
   {
     question: "What sponsorships opportunities are available?",
-    answer: "ACM UTD offers four tiers of sponsorships(Bronze, Silver, Gold, Platinum). Some of the perks include logo placement on ACM’s website, accessed by 100s of UTD students and visitors everyday; exclusive access to ACM member resumes; social media spotlights across all our platforms reaching about 2000+ followers; industry event participation that connect sponsors with top UTD students, kickoff speaking opportunities to promote your company to new members, and ACM promotions of open opportunities."
+    answer: "ACM UTD offers four tiers of sponsorships(Bronze, Silver, Gold, Platinum). Some of the perks include logo placement on ACM\'s website, accessed by 100s of UTD students and visitors everyday; exclusive access to ACM member resumes; social media spotlights across all our platforms reaching about 2000+ followers; industry event participation that connect sponsors with top UTD students, kickoff speaking opportunities to promote your company to new members, and ACM promotions of open opportunities."
   },
   {
     question: "How large is ACM UTD's reach?",

@@ -138,15 +138,15 @@ export const communityImages: {
 export const communityTestimony: Record<SubDivision, Array<Testimony>> = {
   campus: [
     {
-      quote: 'Being a part of the Campus team has been such an exciting adventure. There’s nothing more fulfilling than the ability to see the tangible impacts created as a result of your efforts.',
+      quote: 'Being a part of the Campus team has been such an exciting adventure. There\'s nothing more fulfilling than the ability to see the tangible impacts created as a result of your efforts.',
       name: 'Ayomide Tapere',
     },
     {
-      quote: 'Not only have I gotten the chance to meet so many wonderful people, but I’ve also gotten the opportunity to see all of our efforts have a positive impact on our community.',
+      quote: 'Not only have I gotten the chance to meet so many wonderful people, but I\'ve also gotten the opportunity to see all of our efforts have a positive impact on our community.',
       name: '',
     },
     {
-      quote: 'My favorite thing about Campus is that we get to help bring our organization and community together in a fun and exciting way that’s taught me so much about working on a team.',
+      quote: 'My favorite thing about Campus is that we get to help bring our organization and community together in a fun and exciting way that\'s taught me so much about working on a team.',
       name: '',
     }
   ],
@@ -160,7 +160,7 @@ export const communityTestimony: Record<SubDivision, Array<Testimony>> = {
       name: 'Jerry Martinez',
     },
     {
-      quote: 'My experience with ACM Outreach has been about giving back  helping K–12 students explore the world of computing and realize that innovation starts with curiosity. As part of this journey, I helped organize NTHS Hack, Texas’s only K–12 hackathon, to inspire young minds to build, create, and dream through technology.',
+      quote: 'My experience with ACM Outreach has been about giving back  helping K–12 students explore the world of computing and realize that innovation starts with curiosity. As part of this journey, I helped organize NTHS Hack, Texas\'s only K–12 hackathon, to inspire young minds to build, create, and dream through technology.',
       name: 'Shreya Singaravel',
     }
   ],
@@ -170,19 +170,19 @@ export const communityFAQ: Record<SubDivision, Question[]> = {
   campus: [
     {
       question: 'What is the application process like?',
-      answer: 'The first step is to apply! Applications will include a series of questions to get to know you a little bit more and give us some insight about what you’d like to bring to ACM Campus! After these applications, we’ll select a few candidates to interview before deciding _____. But remember! Events and Archives applications open at different times so make sure to apply to the team you’d like to be on!',
+      answer: 'The first step is to apply! Applications will include a series of questions to get to know you a little bit more and give us some insight about what you\'d like to bring to ACM Campus! After these applications, we\'ll select a few candidates to interview before deciding _____. But remember! Events and Archives applications open at different times so make sure to apply to the team you\'d like to be on!',
     },
     {
       question: 'How is ACM Campus structured?',
       answer: 'ACM Campus is made of two teams: Events and Archives. Events handles all of the social events like Twilight Tunes and Peechi Games while Archives is a team of designers and writers, in charge of creating a magazine every semester that covers all of the behind the scenes of ACM for alumni and sponsors.',
     },
     {
-      question: 'Do I need to have prior experience in event planning to join ACM Events?',
-      answer: 'Nope! What we’re really looking for are students',
+      question: 'Do I need to have prior experience in event planning to join ACM Campus?',
+      answer: 'Nope! What we\'re really looking for are students who are passionate about building community and bringing people together. We\'ll teach you everything you need to know about event planning along the way!',
     },
     {
-      question: 'What are some events that the Events team has hosted in the past?',
-      answer: 'We get to',
+      question: 'What are some events that the Campus team has hosted in the past?',
+      answer: 'Some events that the Campus team has hosted in the past include Peechi Games, Sugar Rush, Byte the Dust, and more! Each event is designed to bring the ACM community together in a fun and engaging way. We\'re always open to new ideas, so if you have a vision for an event, we\'d love to hear it!',
     }
   ],
   outreach: [
@@ -192,11 +192,11 @@ export const communityFAQ: Record<SubDivision, Question[]> = {
     },
     {
       question: 'How can I get involved with ACM Outreach?',
-      answer: 'Outreach offers current computer science students at UTD the opportunity to volunteer with us and mentor K-12 students in computer science through various opportunities such as the Mark Cuban Foundation’s AI bootcamp as well as the North Texas High School Hackathon.'
+      answer: 'Outreach offers current computer science students at UTD the opportunity to volunteer with us and mentor K-12 students in computer science through various opportunities such as the Mark Cuban Foundation\'s AI bootcamp as well as the North Texas High School Hackathon.'
     },
     {
       question: 'What is the North Texas High School Hackathon?',
-      answer: 'The North Texas High School Hackathon (or NTHS Hack for short) is a hackathon specifically catered to high school students who are interested in participating in a hackathon ahead of their college careers, featuring opportunities to gain experience, build their portfolio, and talk to professional companies all while having fun! In the past we’ve had over 100 participants and we’re aiming even higher this upcoming year!',
+      answer: 'The North Texas High School Hackathon (or NTHS Hack for short) is a hackathon specifically catered to high school students who are interested in participating in a hackathon ahead of their college careers, featuring opportunities to gain experience, build their portfolio, and talk to professional companies all while having fun! In the past we\'ve had over 100 participants and we\'re aiming even higher this upcoming year!',
     },
     {
       question: 'How can I become more involved in Outreach?',

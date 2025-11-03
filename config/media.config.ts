@@ -83,7 +83,7 @@ export const mediaTestimony: Testimony[] = [
     name: "Susan Zhang"
   },
   {
-    quote: 'I love how passionate Media is in its mission to broaden ACM UTD’s reach all across campus, and getting to capture all of the amazing events with our team is so fun!',
+    quote: 'I love how passionate Media is in its mission to broaden ACM UTD\'s reach all across campus, and getting to capture all of the amazing events with our team is so fun!',
     name: 'Hiba Mubeen'
   },
 

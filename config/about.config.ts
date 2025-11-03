@@ -30,7 +30,7 @@ export const aboutPageData: AboutPageData = {
     development: {
       section: 'development',
       description:
-        'acm development designs, builds, and maintains web applications that support ACM’s operations and member interactions. Projects like the Member Portal and UTD Grades ensure reliable and user-friendly platforms for the campus community.',
+        'acm development designs, builds, and maintains web applications that support ACM\'s operations and member interactions. Projects like the Member Portal and UTD Grades ensure reliable and user-friendly platforms for the campus community.',
       links: [
         { name: 'acm portal', link: 'https://github.com/acmutd/portal-next' },
         { name: 'utdgrades', link: 'https://github.com/acmutd/utd-grades' },
