@@ -7,9 +7,8 @@ export const sponsorFaqs: Question[] = [
       'ACM is the largest student-run tech organization on campus, driving innovation and industry engagement. We host HackUTD, the largest university hackathon in Texas, attracting 1,000+ participants and nationwide sponsor attention. We run technical and developmental workshops each semester, allowing companies to connect with the top motivated students. Our alumni have gone on to work at FAANG companies, launch startups, and contribute to open-source communities.',
   },
   {
-    question: 'What sponsorships opportunities are available?',
-    answer:
-      'ACM UTD offers four tiers of sponsorships(Bronze, Silver, Gold, Platinum). Some of the perks include logo placement on ACM’s website, accessed by 100s of UTD students and visitors everyday; exclusive access to ACM member resumes; social media spotlights across all our platforms reaching about 2000+ followers; industry event participation that connect sponsors with top UTD students, kickoff speaking opportunities to promote your company to new members, and ACM promotions of open opportunities.',
+    question: "What sponsorships opportunities are available?",
+    answer: "ACM UTD offers four tiers of sponsorships(Bronze, Silver, Gold, Platinum). Some of the perks include logo placement on ACM\'s website, accessed by 100s of UTD students and visitors everyday; exclusive access to ACM member resumes; social media spotlights across all our platforms reaching about 2000+ followers; industry event participation that connect sponsors with top UTD students, kickoff speaking opportunities to promote your company to new members, and ACM promotions of open opportunities."
   },
   {
     question: "How large is ACM UTD's reach?",

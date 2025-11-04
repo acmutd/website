@@ -141,7 +141,7 @@ export const projectImages: CarouselImage[] = [
 export const projectsWinners: Projects[] = [
   {
     name: 'SAGE',
-    desc: 'Have you ever asked your advisor a question only to wait weeks for a response? Many times, advisors get flooded with questions that have simple answers or problems that are easy to resolve. SAGE is an advisor chatbot that can answer your questions quickly and efficiently, so you don’t have to worry about it. On top of this, SAGE can view your profile to help you make decisions about future classes and even generate personalized degree plans. Take the stress out of the logistics and just ask SAGE for help with your inquiries and classes!',
+    desc: 'Have you ever asked your advisor a question only to wait weeks for a response? Many times, advisors get flooded with questions that have simple answers or problems that are easy to resolve. SAGE is an advisor chatbot that can answer your questions quickly and efficiently, so you don\'t have to worry about it. On top of this, SAGE can view your profile to help you make decisions about future classes and even generate personalized degree plans. Take the stress out of the logistics and just ask SAGE for help with your inquiries and classes!',
     image: '/assets/projects/SAGE.jpg',
     links: [
       { type: 'github', link: 'https://github.com/acm-projects/Sage' },
@@ -165,7 +165,7 @@ export const projectsWinners: Projects[] = [
   },
   {
     name: 'ShareSched',
-    desc: 'Have you ever wanted to compare schedules with a friend but found it too tedious to compare every little time, professor, and location? ShareSched is an app that allows you to upload a picture of a schedule and extract the key details from it. ShareSched can also find similarities in your schedule and your friend’s whether it’s location, professor, class section, or more! ScareSched is the app you need when schedule planning time comes up.',
+    desc: 'Have you ever wanted to compare schedules with a friend but found it too tedious to compare every little time, professor, and location? ShareSched is an app that allows you to upload a picture of a schedule and extract the key details from it. ShareSched can also find similarities in your schedule and your friend\'s whether it\'s location, professor, class section, or more! ScareSched is the app you need when schedule planning time comes up.',
     image: '/assets/divisions/shared/proj_image.png',
     members: ['Noel Emmanuel', 'Nadeeba Atiqui', 'Aldrin Roshan', 'Aizan Kalam'],
     manager: 'Karina Batra',

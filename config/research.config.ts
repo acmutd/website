@@ -39,7 +39,7 @@ export const researchFAQ: Array<Question> = [
   {
     question: "What if I'm not sure about a career in research?",
     answer:
-      'That’s perfectly fine! The skills you learn in ACM Research, such as analytical thinking, project management, and academic writing, are valuable in many career paths. This experience will help prepare you for whatever avenue in the technology industry you embark on. Who knows, you might even find a true passion in research!',
+      'That\'s perfectly fine! The skills you learn in ACM Research, such as analytical thinking, project management, and academic writing, are valuable in many career paths. This experience will help prepare you for whatever avenue in the technology industry you embark on. Who knows, you might even find a true passion in research!',
   },
   {
     question: 'How long does it typically take to complete a research project and publish a paper?',
