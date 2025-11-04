@@ -11,7 +11,7 @@ export const communityDirectors: Director[] = [
     position: 'Director of Campus',
   },
   {
-    image: '/assets/officer/Vyshnav_Vijish.jpg',
+    image: '/assets/officer/Vyshnav_Vijish.JPG',
     name: 'Vyshnav Vijish',
     position: 'Director of Outreach',
   },
