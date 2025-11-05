@@ -9,14 +9,14 @@ export const mediaDirectors: Director[] = [
     position: 'Director of Marketing',
   },
   {
-    image: '/assets/officer/SnehaMaram.jpg',
+    image: '/assets/officer/Sneha_Maram.jpg',
     name: 'Sneha Maram',
     position: 'Director of Design',
   },
 ]
 
 export const mediaOfficers: Officer[] = [
-  
+
   {
     image: '/assets/officer/Hiba_Mubeen.jpg',
     name: 'Hiba Mubeen',

@@ -11,7 +11,7 @@ export const industryDirectors: Director[] = [
   {
     name: 'Nihita Soma',
     position: 'Director of Industry',
-    image: '/assets/officer/Nihita_Soma.jpg',
+    image: '/assets/officer/Nihita_Soma.JPG',
   },
 ];
 
