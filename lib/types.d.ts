@@ -44,6 +44,7 @@ export type Event = {
   start?: Date;
   location?: string;
   description?: string;
+  isAllDay?: boolean;
 };
 
 export type WorkShopLink = { type: 'github' | 'video'; link: string };

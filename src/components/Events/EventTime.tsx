@@ -3,9 +3,10 @@
 type Props = {
   dateString: string;
   location?: string;
+  isAllDay?: boolean;
 };
 
-export default function UpcomingEventCard({ dateString, location }: Props) {
+export default function UpcomingEventCard({ dateString, location, isAllDay }: Props) {
   const date = new Date(dateString);
   return (
     <div className="text-black rounded-xl p-4">
@@ -26,12 +27,18 @@ export default function UpcomingEventCard({ dateString, location }: Props) {
               month: 'long',
               day: 'numeric',
             })}{' '}
-            at{' '}
-            {date?.toLocaleTimeString('en-US', {
-              hour: 'numeric',
-              minute: date.getMinutes() > 0 ? 'numeric' : undefined,
-              timeZoneName: 'short',
-            })}
+            {isAllDay ? (
+              <span className="font-semibold">- All Day</span>
+            ) : (
+              <>
+                at{' '}
+                {date?.toLocaleTimeString('en-US', {
+                  hour: 'numeric',
+                  minute: date.getMinutes() > 0 ? 'numeric' : undefined,
+                  timeZoneName: 'short',
+                })}
+              </>
+            )}
           </span>
         </div>
       </div>

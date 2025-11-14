@@ -22,6 +22,11 @@ type CalendarEvent = {
   location?: string;
   start?: {
     dateTime?: string;
+    date?: string;
+  };
+  end?: {
+    dateTime?: string;
+    date?: string;
   };
 };
 
@@ -37,7 +42,7 @@ export async function GET(request: Request) {
     const yearParam = url.searchParams.get('year');
     const monthParam = url.searchParams.get('month');
 
-    let apiUrl = `${endpoint}?key=${process.env.CALENDAR_API_KEY}`;
+    let apiUrl = `${endpoint}?key=${process.env.CALENDAR_API_KEY}&singleEvents=true&orderBy=startTime`;
 
     if (yearParam && monthParam) {
       const year = parseInt(yearParam, 10);
@@ -134,9 +139,39 @@ function parseItems(list: CalendarEvent[]): Event[] {
         toAdd.location = item.location;
       }
 
+      // Handle both timed events (dateTime) and full-day events (date)
       if (item.start?.dateTime) {
         toAdd.start = new Date(item.start.dateTime);
+        toAdd.isAllDay = false;
         res.push(toAdd);
+      } else if (item.start?.date) {
+        // For full-day events, create date at noon local time to avoid timezone shifts
+        const [startYear, startMonth, startDay] = item.start.date.split('-').map(Number);
+        const startDate = new Date(startYear, startMonth - 1, startDay, 12, 0, 0);
+
+        // Check if it's a multi-day event
+        if (item.end?.date) {
+          const [endYear, endMonth, endDay] = item.end.date.split('-').map(Number);
+          const endDate = new Date(endYear, endMonth - 1, endDay, 12, 0, 0);
+
+          // Create an event for each day in the range
+          const currentDate = new Date(startDate);
+          while (currentDate < endDate) {
+            const eventCopy: Event = {
+              ...toAdd,
+              id: `${item.id}-${currentDate.getFullYear()}-${currentDate.getMonth()}-${currentDate.getDate()}`,
+              start: new Date(currentDate),
+              isAllDay: true,
+            };
+            res.push(eventCopy);
+            currentDate.setDate(currentDate.getDate() + 1);
+          }
+        } else {
+          // Single-day event
+          toAdd.start = startDate;
+          toAdd.isAllDay = true;
+          res.push(toAdd);
+        }
       }
     } catch (err) {
       console.warn(`Failed to parse event: ${item.id}`, err);
