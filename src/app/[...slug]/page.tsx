@@ -29,6 +29,7 @@ import { CampusHeader } from '@/components/Divisions/Campus/CampusHeader';
 import { IndustryHeader } from '@/components/Divisions/Industry/IndustryHeader';
 import IndustrySponsors from '@/components/Divisions/Industry/IndustrySponsors';
 import DevProjects from '@/components/Divisions/Development/DevProjects';
+import DivisionVideos from '@/components/Divisions/Shared/DivisionVideos';
 
 type DivisionMetadata = {
   title: string;
@@ -369,6 +370,9 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
       className={`relative w-full ${config.bgImage} mt-10 bg-cover bg-center py-10 md:mt-0 md:py-20`}
     >
       <Navigator {...divisionProps} />
+
+      <DivisionVideos videos={config.videos} />
+
       <DivisionCarousel {...divisionProps} />
 
       <div className={config.containerClass}>
