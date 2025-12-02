@@ -11,7 +11,7 @@ type DivisionHeaderProps = {
 };
 export default function DivisionHeader({ children, division }: DivisionHeaderProps) {
   return (
-    <div className="pt-20 md:pt-40 font-sans w-full md:w-1/2">
+    <div className="pt-20 font-sans w-full md:w-1/2">
       {images[division]}
       <p className="pt-5 text-lg md:text-2xl text-[#CACACA]">{children}</p>
       {typeof applicationUrl[division] === 'string' ? (

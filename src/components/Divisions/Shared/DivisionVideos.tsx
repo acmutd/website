@@ -13,9 +13,7 @@ export default function DivisionVideos({ videos }: DivisionVideosProps) {
     <section className="w-full mt-20 mb-28">
       <div
         className="
-          grid grid-cols-1 md:grid-cols-2 
-          gap-12 max-w-6xl mx-auto 
-          px-4 md:px-0
+          w-full sm:max-w-4xl max-w-[calc(100vw-1rem)] mx-auto px-4 sm:px-0
         "
       >
         {videos.map((video, index) => (

@@ -87,7 +87,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
   },
   development: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/development/development-bg.png)]',
     headerType: 'development',
     videos: [
     {
@@ -99,7 +99,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
   },
   research: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/research/research-bg.png)]',
     headerType: 'research',
     showWinningProjects: true,
     videos: [
@@ -111,12 +111,12 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
   },
   education: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/education/education-bg.png)]',
     headerType: 'education',
 
     tip: {
       ...defaultConfig,
-      bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+      bgImage: 'bg-[url(/assets/about/education/education-bg.png)]',
       headerType: 'tip',
       showWorkshops: true,
       videos: [
@@ -141,18 +141,18 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
   },
   media: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/media/media-bg.png)]',
     headerType: 'media',
     videos: [
     {
-      src: "/assets/videos/Media.mp4",
-      thumbnail: "/assets/about.jpg",
+      src: "/assets/videos/MediaVideo.mp4",
+      thumbnail: "/assets/thumbnails/MediaThumbnail.png",
     }
   ]
   },
   hackutd: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/hackutd/hackutd-bg.png)]',
     headerType: 'hackutd',
     showWinningProjects: true,
     videos: [
@@ -164,15 +164,15 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
   },
   community: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/about-divisions-bg.png)]',
     headerType: 'community',
     outreach: {
       ...defaultConfig,
-      bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+      bgImage: 'bg-[url(/assets/about/about-divisions-bg.png)]',
       headerType: 'community',
        videos: [
     {
-      src: "/assets/videos/CommunityVideo.mp4",
+      src: "/assets/videos/OutreachVideo.mp4",
       thumbnail: "/assets/about.jpg",
     }
   ]
@@ -180,11 +180,11 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
     },
     campus: {
       ...defaultConfig,
-      bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+      bgImage: 'bg-[url(/assets/about/about-divisions-bg.png)]',
       headerType: 'community',
        videos: [
     {
-      src: "/assets/videos/CampusVideo.mp4",
+      src: "/assets/videos/CommunityVideo.mp4",
       thumbnail: "/assets/about.jpg",
     }
   ]
@@ -192,7 +192,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
   },
   industry: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/industry/industry-bg.png)]',
     headerType: 'industry',
      videos: [
     {

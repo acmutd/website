@@ -373,13 +373,13 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
 
       <DivisionVideos videos={config.videos} />
 
-      <DivisionCarousel {...divisionProps} />
-
       <div className={config.containerClass}>
         <div className="flex flex-col items-center justify-between gap-10 px-4 md:flex-row md:px-40">
           <Header {...divisionProps} config={config} />
           <DivisionOfficers division={divisionProps.division} />
         </div>
+
+        <DivisionCarousel {...divisionProps} />
 
         <div className="flex justify-center px-4 md:px-0">
           <DivisionExperience {...divisionProps} />
