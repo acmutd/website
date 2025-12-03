@@ -81,7 +81,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
     videos: [
     {
       src: "/assets/videos/ProjectsVideo.mp4",
-      thumbnail: "/assets/about.jpg",
+      thumbnail: "/assets/thumbnails/ProjectsThumbnail.png",
     }
   ]
   },
@@ -92,7 +92,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
     videos: [
     {
       src: "/assets/videos/DevelopmentVideo.mp4",
-      thumbnail: "/assets/about.jpg",
+      thumbnail: "/assets/thumbnails/DevelopmentThumbnail.png",
     }
   ]
     
@@ -105,7 +105,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
     videos: [
     {
       src: "/assets/videos/ResearchVideo.mp4",
-      thumbnail: "/assets/about.jpg",
+      thumbnail: "/assets/thumbnails/ResearchThumbnail.png",
     }
   ]
   },
@@ -122,7 +122,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
       videos: [
     {
       src: "/assets/videos/TIPVideo.mp4",
-      thumbnail: "/assets/about.jpg",
+      thumbnail: "/assets/thumbnails/EducationThumbnail.png",
     }
   ]
     },
@@ -134,7 +134,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
       videos: [
     {
       src: "/assets/videos/MentorVideo.mp4",
-      thumbnail: "/assets/about.jpg",
+      thumbnail: "/assets/thumbnails/EducationThumbnail.png",
     }
   ]
     },
@@ -158,7 +158,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
     videos: [
     {
       src: "/assets/videos/HackUTDVideo.mp4",
-      thumbnail: "/assets/about.jpg",
+      thumbnail: "/assets/thumbnails/HackUTDThumbnail.png",
     }
   ]
   },
@@ -173,7 +173,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
        videos: [
     {
       src: "/assets/videos/OutreachVideo.mp4",
-      thumbnail: "/assets/about.jpg",
+      thumbnail: "/assets/thumbnails/CommunityThumbnail.png",
     }
   ]
       
@@ -185,7 +185,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
        videos: [
     {
       src: "/assets/videos/CommunityVideo.mp4",
-      thumbnail: "/assets/about.jpg",
+      thumbnail: "/assets/thumbnails/CommunityThumbnail.png",
     }
   ]
     },
@@ -197,7 +197,7 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
      videos: [
     {
       src: "/assets/videos/IndustryVideo.mp4",
-      thumbnail: "/assets/about.jpg",
+      thumbnail: "/assets/thumbnails/IndustryThumbnail.png",
     }
   ]
   }
