@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoPlayer from './VideoPlayer';
+import VideoPlayer from '../VideoPlayer';
 
 
 function AboutHeader() {
@@ -11,7 +11,7 @@ function AboutHeader() {
 
          <div className="relative w-full max-w-2xl lg:max-w-2xl xl:max-w-4xl">
            <div className="relative overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-white/10 to-white/5 p-4 shadow-2xl backdrop-blur-sm ">
-             <VideoPlayer videoSrc="/assets/about/ExecVideo.mov" />
+             <VideoPlayer videoSrc="/assets/videos/ExecVideo.mov" thumbnailSrc= "/assets/about/about.jpg"/>
            </div>
          </div>
 

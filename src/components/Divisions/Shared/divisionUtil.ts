@@ -62,6 +62,7 @@ export type DivisionConfig = {
   showWorkshops?: boolean;
   centerExperience?: boolean;
   centerFAQ?: boolean;
+  videos?: { src: string; thumbnail: string }[];
 };
 
 // Default configuration that applies to all divisions
@@ -77,66 +78,128 @@ export const divisionConfigs: Record<Division, DivisionConfig | Record<Education
     bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
     headerType: 'project',
     showWinningProjects: true,
+    videos: [
+    {
+      src: "/assets/videos/ProjectsVideo.mp4",
+      thumbnail: "/assets/thumbnails/ProjectsThumbnail.png",
+    }
+  ]
   },
   development: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/development/development-bg.png)]',
     headerType: 'development',
+    videos: [
+    {
+      src: "/assets/videos/DevelopmentVideo.mp4",
+      thumbnail: "/assets/thumbnails/DevelopmentThumbnail.png",
+    }
+  ]
+    
   },
   research: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/research/research-bg.png)]',
     headerType: 'research',
     showWinningProjects: true,
+    videos: [
+    {
+      src: "/assets/videos/ResearchVideo.mp4",
+      thumbnail: "/assets/thumbnails/ResearchThumbnail.png",
+    }
+  ]
   },
   education: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/education/education-bg.png)]',
     headerType: 'education',
 
     tip: {
       ...defaultConfig,
-      bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+      bgImage: 'bg-[url(/assets/about/education/education-bg.png)]',
       headerType: 'tip',
       showWorkshops: true,
+      videos: [
+    {
+      src: "/assets/videos/TIPVideo.mp4",
+      thumbnail: "/assets/thumbnails/EducationThumbnail.png",
+    }
+  ]
     },
     mentor: {
       ...defaultConfig,
       bgImage: 'bg-[url(/assets/about/about-header-bg.png)]',
       headerType: 'mentor',
       showWorkshops: true,
+      videos: [
+    {
+      src: "/assets/videos/MentorVideo.mp4",
+      thumbnail: "/assets/thumbnails/EducationThumbnail.png",
+    }
+  ]
     },
   },
   media: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/media/media-bg.png)]',
     headerType: 'media',
+    videos: [
+    {
+      src: "/assets/videos/MediaVideo.mp4",
+      thumbnail: "/assets/thumbnails/MediaThumbnail.png",
+    }
+  ]
   },
   hackutd: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/hackutd/hackutd-bg.png)]',
     headerType: 'hackutd',
-    showWinningProjects: true
+    showWinningProjects: true,
+    videos: [
+    {
+      src: "/assets/videos/HackUTDVideo.mp4",
+      thumbnail: "/assets/thumbnails/HackUTDThumbnail.png",
+    }
+  ]
   },
   community: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/about-divisions-bg.png)]',
     headerType: 'community',
     outreach: {
       ...defaultConfig,
-      bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+      bgImage: 'bg-[url(/assets/about/about-divisions-bg.png)]',
       headerType: 'community',
+       videos: [
+    {
+      src: "/assets/videos/OutreachVideo.mp4",
+      thumbnail: "/assets/thumbnails/CommunityThumbnail.png",
+    }
+  ]
+      
     },
     campus: {
       ...defaultConfig,
-      bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+      bgImage: 'bg-[url(/assets/about/about-divisions-bg.png)]',
       headerType: 'community',
+       videos: [
+    {
+      src: "/assets/videos/CommunityVideo.mp4",
+      thumbnail: "/assets/thumbnails/CommunityThumbnail.png",
+    }
+  ]
     },
   },
   industry: {
     ...defaultConfig,
-    bgImage: 'bg-[url(/assets/projects/proj-bg.png)]',
+    bgImage: 'bg-[url(/assets/about/industry/industry-bg.png)]',
     headerType: 'industry',
+     videos: [
+    {
+      src: "/assets/videos/IndustryVideo.mp4",
+      thumbnail: "/assets/thumbnails/IndustryThumbnail.png",
+    }
+  ]
   }
 };
 

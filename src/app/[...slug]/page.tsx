@@ -29,6 +29,7 @@ import { CampusHeader } from '@/components/Divisions/Campus/CampusHeader';
 import { IndustryHeader } from '@/components/Divisions/Industry/IndustryHeader';
 import IndustrySponsors from '@/components/Divisions/Industry/IndustrySponsors';
 import DevProjects from '@/components/Divisions/Development/DevProjects';
+import DivisionVideos from '@/components/Divisions/Shared/DivisionVideos';
 
 type DivisionMetadata = {
   title: string;
@@ -369,13 +370,16 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
       className={`relative w-full ${config.bgImage} mt-10 bg-cover bg-center py-10 md:mt-0 md:py-20`}
     >
       <Navigator {...divisionProps} />
-      <DivisionCarousel {...divisionProps} />
+
+      <DivisionVideos videos={config.videos} />
 
       <div className={config.containerClass}>
         <div className="flex flex-col items-center justify-between gap-10 px-4 md:flex-row md:px-40">
           <Header {...divisionProps} config={config} />
           <DivisionOfficers division={divisionProps.division} />
         </div>
+
+        <DivisionCarousel {...divisionProps} />
 
         <div className="flex justify-center px-4 md:px-0">
           <DivisionExperience {...divisionProps} />
