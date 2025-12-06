@@ -1,4 +1,4 @@
-@import url('/fonts/gilroy/gilroy.css');
+@import url('../../public/fonts/gilroy/gilroy.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
