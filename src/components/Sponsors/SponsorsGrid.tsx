@@ -19,9 +19,7 @@ export default function SponsorsGrid() {
           src={sponsor.logo}
           alt={sponsor.name}
           fill
-          className={`object-contain ${
-            sponsor.name === 'NorthMark' ? 'hue-rotate-180 invert' : ''
-          }`}
+          className={`object-contain`}
         />
       </div>
     </Link>
