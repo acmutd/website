@@ -12,6 +12,10 @@ on:
         options:
           - 'true'
           - 'false'
+      storage_bucket:
+        description: 'Firebase Storage bucket name (leave empty for default)'
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -42,6 +46,7 @@ jobs:
         env:
           FIREBASE_CONFIG_PATH: firebase-config.json
           DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+          FIREBASE_STORAGE_BUCKET: ${{ github.event.inputs.storage_bucket || secrets.FIREBASE_STORAGE_BUCKET || '' }}
         run: node scripts/sync-firebase-images.js
 
       - name: Check for changes

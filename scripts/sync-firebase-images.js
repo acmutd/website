@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const firebaseConfigPath = process.env.FIREBASE_CONFIG_PATH || 'firebase-creds.json';
-const dryRun = process.env.DRY_RUN === 'true';  
+const dryRun = process.env.DRY_RUN === 'true';
 const outputDir = path.join(process.cwd(), 'public', 'assets', 'officer');
 
 // Initialize Firebase Admin SDK
@@ -11,9 +11,19 @@ const serviceAccount = JSON.parse(
   fs.readFileSync(firebaseConfigPath, 'utf8')
 );
 
+// Determine storage bucket
+let storageBucket = process.env.FIREBASE_STORAGE_BUCKET;
+if (!storageBucket) {
+  // Try common Firebase Storage bucket naming patterns
+  const projectId = serviceAccount.project_id;
+  // Newer Firebase projects use .firebasestorage.app
+  storageBucket = `${projectId}.firebasestorage.app`;
+  console.log(`ℹ️  No FIREBASE_STORAGE_BUCKET specified, trying: ${storageBucket}`);
+}
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET || `${serviceAccount.project_id}.appspot.com`,
+  storageBucket: storageBucket,
 });
 
 const bucket = admin.storage().bucket();
@@ -129,6 +139,22 @@ async function downloadImages() {
 
   } catch (error) {
     console.error('❌ Error during sync:', error);
+
+    // Provide helpful guidance for common errors
+    if (error.code === 404 && error.message?.includes('bucket does not exist')) {
+      console.error('\n⚠️  BUCKET NOT FOUND\n');
+      console.error('The Firebase Storage bucket could not be found.');
+      console.error(`Attempted bucket: ${storageBucket}\n`);
+      console.error('Common Firebase Storage bucket formats:');
+      console.error(`  - {project-id}.firebasestorage.app (newer projects)`);
+      console.error(`  - {project-id}.appspot.com (older projects)`);
+      console.error(`  - Custom bucket name\n`);
+      console.error('To fix this:');
+      console.error('1. Check your Firebase Console -> Storage to find the correct bucket name');
+      console.error('2. Set the FIREBASE_STORAGE_BUCKET environment variable or GitHub secret');
+      console.error('3. Or pass it as a workflow input when manually triggering the action\n');
+    }
+
     process.exit(1);
   }
 }
