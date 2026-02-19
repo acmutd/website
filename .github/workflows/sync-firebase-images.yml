@@ -34,12 +34,14 @@ jobs:
 
       - name: Create Firebase config
         run: |
-          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}" > firebase-config.json
+          cat <<'EOF' > firebase-config.json
+          ${{ secrets.FIREBASE_SERVICE_ACCOUNT_JSON }}
+          EOF
 
       - name: Run sync script
         env:
           FIREBASE_CONFIG_PATH: firebase-config.json
-          DRY_RUN: ${{ github.event.inputs.dry_run }}
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
         run: node scripts/sync-firebase-images.js
 
       - name: Check for changes
@@ -52,7 +54,7 @@ jobs:
           fi
 
       - name: Commit and push changes
-        if: steps.check-changes.outputs.has_changes == 'true' && github.event.inputs.dry_run == 'false'
+        if: steps.check-changes.outputs.has_changes == 'true' && (github.event.inputs.dry_run || 'false') == 'false'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -61,7 +63,7 @@ jobs:
           git push
 
       - name: Create Pull Request
-        if: steps.check-changes.outputs.has_changes == 'true' && github.event.inputs.dry_run == 'false'
+        if: steps.check-changes.outputs.has_changes == 'true' && (github.event.inputs.dry_run || 'false') == 'false'
         uses: peter-evans/create-pull-request@v5
         with:
           commit-message: 'chore: sync officer images from firebase'
@@ -83,7 +85,7 @@ jobs:
           echo "## Sync Summary" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.check-changes.outputs.has_changes }}" == "true" ]; then
             echo "✅ Images were updated" >> $GITHUB_STEP_SUMMARY
-            if [ "${{ github.event.inputs.dry_run }}" == "true" ]; then
+            if [ "${{ github.event.inputs.dry_run || 'false' }}" == "true" ]; then
               echo "📝 Dry run mode - no PR created" >> $GITHUB_STEP_SUMMARY
             else
               echo "📝 PR created successfully" >> $GITHUB_STEP_SUMMARY
