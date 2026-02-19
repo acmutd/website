@@ -34,7 +34,7 @@ jobs:
           node-version: '24'
 
       - name: Install dependencies
-        run: npm install firebase-admin
+        run: npm install firebase-admin @opentelemetry/api
 
       - name: Create Firebase config
         run: |
