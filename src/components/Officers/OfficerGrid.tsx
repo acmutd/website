@@ -124,7 +124,7 @@ const OfficerPill = ({ officer }: PillProps) => (
         style={{ objectFit: 'cover' }}
         src={officer.image}
         alt={officer.name}
-        fallbackSrc="/assets/officer/OfficerImage.png"
+        fallbackSrc="/assets/OfficerImage.png"
         className={`rounded-full ${
           officer.name === 'John Cole' ? `h-[110px] w-[110px]` : `h-[80px] w-[80px]`
         } `}

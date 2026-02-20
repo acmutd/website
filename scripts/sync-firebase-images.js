@@ -307,7 +307,7 @@ function getImagePathForEntry(entry, imagePathByUid) {
 
   // If photo URL is missing, use default fallback image
   if (!photoUrl || typeof photoUrl !== 'string' || photoUrl.trim() === '') {
-    return '/assets/officer/OfficerImage.png';
+    return '/assets/OfficerImage.png';
   }
 
   if (
@@ -329,7 +329,7 @@ function getImagePathForEntry(entry, imagePathByUid) {
     return `/assets/officer/${normalizedFirstName}_${normalizedLastName}${extension}`;
   }
 
-  return '/assets/officer/OfficerImage.png';
+  return '/assets/OfficerImage.png';
 }
 
 function buildOfficerConfigSource(divisionsMap) {
