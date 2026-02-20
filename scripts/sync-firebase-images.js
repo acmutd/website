@@ -23,6 +23,7 @@ const layoutDivisions = [
   'hackutd',
   'industry',
   'finance',
+  'board',
 ];
 
 // Initialize Firebase Admin SDK
@@ -88,26 +89,43 @@ function escapeSingleQuotes(value) {
   return String(value).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 }
 
-function collectDivisionsFromData(data) {
-  const divisionCandidates = [];
+function extractRolesFromOfficer(officerData) {
+  const roles = [];
 
-  if (Array.isArray(data?.divisions)) {
-    divisionCandidates.push(...data.divisions);
-  } else if (typeof data?.divisions === 'string') {
-    divisionCandidates.push(data.divisions);
+  if (!Array.isArray(officerData?.roles)) {
+    return roles;
   }
 
-  if (Array.isArray(data?.division)) {
-    divisionCandidates.push(...data.division);
-  } else if (typeof data?.division === 'string') {
-    divisionCandidates.push(data.division);
+  for (const role of officerData.roles) {
+    if (typeof role !== 'object' || role === null) {
+      continue;
+    }
+
+    const division = normalizeDivision(role.division);
+    if (!division) {
+      continue;
+    }
+
+    const title = typeof role.title === 'string' ? role.title.trim() : '';
+    const level = typeof role.level === 'number' ? role.level : 0;
+
+    if (title) {
+      roles.push({ division, title, level });
+    }
   }
 
-  const normalizedDivisions = divisionCandidates
-    .map(normalizeDivision)
-    .filter((division) => Boolean(division));
+  return roles;
+}
 
-  return [...new Set(normalizedDivisions)];
+function getBoardEligibleRole(roles) {
+  const boardRoles = roles.filter((role) => role.level >= 2);
+  if (boardRoles.length === 0) {
+    return null;
+  }
+
+  return boardRoles.reduce((best, current) =>
+    current.level > best.level ? current : best
+  );
 }
 
 function getOfficerUidFromData(data) {
@@ -312,6 +330,7 @@ function buildOfficerConfigSource(divisionsMap) {
   source.push('  name: string;');
   source.push('  position: string;');
   source.push('  image: string;');
+  source.push('  level?: number;');
   source.push('  socialLinks?: Record<string, string>;');
   source.push('};');
   source.push('');
@@ -327,6 +346,10 @@ function buildOfficerConfigSource(divisionsMap) {
       source.push(`    image: '${escapeSingleQuotes(officer.image)}',`);
       source.push(`    name: '${escapeSingleQuotes(officer.name)}',`);
       source.push(`    position: '${escapeSingleQuotes(officer.position)}',`);
+
+      if (typeof officer.level === 'number') {
+        source.push(`    level: ${officer.level},`);
+      }
 
       if (officer.socialLinks && Object.keys(officer.socialLinks).length > 0) {
         source.push('    socialLinks: {');
@@ -376,16 +399,15 @@ async function exportOfficersByDivision(officerEntries, imagePathByUid) {
       continue;
     }
 
-    const divisions = entry.forcedDivision
-      ? [entry.forcedDivision]
-      : collectDivisionsFromData(data);
+    const roles = extractRolesFromOfficer(data);
 
-    if (divisions.length === 0) {
-      console.warn(`⚠️  Officer ${uid} has no division/divisions field`);
+    if (roles.length === 0) {
+      console.warn(`⚠️  Officer ${uid} has no roles with valid divisions`);
       continue;
     }
 
-    for (const division of divisions) {
+    for (const role of roles) {
+      const division = role.division;
       if (!officersByDivision[division]) {
         continue;
       }
@@ -393,7 +415,30 @@ async function exportOfficersByDivision(officerEntries, imagePathByUid) {
       officersByDivision[division].push({
         image: getImagePathForEntry(entry, imagePathByUid),
         name: officerName,
-        position: getPositionForDivision(data, division),
+        position: role.title,
+        level: role.level,
+        socialLinks: getSocialLinks(data),
+      });
+    }
+  }
+
+  // Populate board with officers who have level 2-3 roles
+  for (const entry of officerEntries) {
+    const data = entry.data;
+    const officerName = getOfficerNameFromData(data);
+    if (!officerName) {
+      continue;
+    }
+
+    const roles = extractRolesFromOfficer(data);
+    const boardRole = getBoardEligibleRole(roles);
+
+    if (boardRole) {
+      officersByDivision.board.push({
+        image: getImagePathForEntry(entry, imagePathByUid),
+        name: officerName,
+        position: boardRole.title,
+        level: boardRole.level,
         socialLinks: getSocialLinks(data),
       });
     }
@@ -442,7 +487,7 @@ async function downloadImages() {
     console.log(`Dry run mode: ${dryRun}`);
 
     const db = admin.firestore();
-    const officerSnapshot = await db.collection('officers').get();
+    const officerSnapshot = await db.collection('officer').get();
     const officerEntries = extractOfficerEntries(officerSnapshot);
     const officerDataByUid = {};
 
