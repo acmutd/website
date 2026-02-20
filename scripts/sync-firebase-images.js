@@ -101,6 +101,11 @@ function extractRolesFromOfficer(officerData) {
       continue;
     }
 
+    // Only include roles where endDate is null (current roles)
+    if (role.endDate !== null && role.endDate !== undefined) {
+      continue;
+    }
+
     const division = normalizeDivision(role.division);
     if (!division) {
       continue;
@@ -300,6 +305,11 @@ function getImagePathForEntry(entry, imagePathByUid) {
   const lastName = entry.data?.lastName;
   const photoUrl = entry.data?.photo?.url;
 
+  // If photo URL is missing, use default fallback image
+  if (!photoUrl || typeof photoUrl !== 'string' || photoUrl.trim() === '') {
+    return '/assets/officer/OfficerImage.png';
+  }
+
   if (
     typeof firstName === 'string' &&
     firstName.trim() !== '' &&
@@ -308,12 +318,10 @@ function getImagePathForEntry(entry, imagePathByUid) {
   ) {
     let extension = '.jpg';
 
-    if (typeof photoUrl === 'string' && photoUrl.trim() !== '') {
-      const withoutQuery = photoUrl.split('?')[0];
-      const parsedExtension = path.extname(withoutQuery);
-      if (parsedExtension) {
-        extension = parsedExtension;
-      }
+    const withoutQuery = photoUrl.split('?')[0];
+    const parsedExtension = path.extname(withoutQuery);
+    if (parsedExtension) {
+      extension = parsedExtension;
     }
 
     const normalizedFirstName = firstName.trim().replace(/\s+/g, '_');
