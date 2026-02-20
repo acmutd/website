@@ -5,6 +5,25 @@ const path = require('path');
 const firebaseConfigPath = process.env.FIREBASE_CONFIG_PATH || 'firebase-creds.json';
 const dryRun = process.env.DRY_RUN === 'true';
 const outputDir = path.join(process.cwd(), 'public', 'assets', 'officer');
+const officersExportPath = path.join(
+  process.cwd(),
+  'config',
+  'officers.config.ts'
+);
+
+const layoutDivisions = [
+  'advisor',
+  'executive',
+  'media',
+  'research',
+  'development',
+  'projects',
+  'education',
+  'community',
+  'hackutd',
+  'industry',
+  'finance',
+];
 
 // Initialize Firebase Admin SDK
 const serviceAccount = JSON.parse(
@@ -28,30 +47,373 @@ admin.initializeApp({
 
 const bucket = admin.storage().bucket();
 
-async function getOfficerName(uid) {
-  try {
-    const db = admin.firestore();
-    const doc = await db.collection('officer').doc(uid).get();
+function toTitleCase(value) {
+  return value
+    .split(/[_\s-]+/)
+    .filter((part) => part.length > 0)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
 
-    if (!doc.exists) {
-      console.warn(`⚠️  Officer document not found for UID: ${uid}`);
-      return null;
-    }
-
-    const data = doc.data();
-    const firstName = data?.firstName;
-    const lastName = data?.lastName;
-
-    if (!firstName || !lastName) {
-      console.warn(`⚠️  Missing firstName or lastName for UID: ${uid}`);
-      return null;
-    }
-
-    return `${firstName}-${lastName}`;
-  } catch (error) {
-    console.error(`Error fetching officer data for UID ${uid}:`, error);
+function normalizeDivision(division) {
+  if (typeof division !== 'string') {
     return null;
   }
+
+  const value = division.trim().toLowerCase();
+  const divisionAliasMap = {
+    board: 'executive',
+    executive: 'executive',
+    hack: 'hackutd',
+    'hack utd': 'hackutd',
+    'hackutd': 'hackutd',
+    project: 'projects',
+    finance: 'industry',
+    communityoutreach: 'community',
+    communitycampus: 'community',
+  };
+
+  return divisionAliasMap[value] || value;
+}
+
+function getDivisionVarName(division) {
+  if (division === 'hackutd') {
+    return 'hackOfficers';
+  }
+
+  return `${division}Officers`;
+}
+
+function escapeSingleQuotes(value) {
+  return String(value).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+}
+
+function collectDivisionsFromData(data) {
+  const divisionCandidates = [];
+
+  if (Array.isArray(data?.divisions)) {
+    divisionCandidates.push(...data.divisions);
+  } else if (typeof data?.divisions === 'string') {
+    divisionCandidates.push(data.divisions);
+  }
+
+  if (Array.isArray(data?.division)) {
+    divisionCandidates.push(...data.division);
+  } else if (typeof data?.division === 'string') {
+    divisionCandidates.push(data.division);
+  }
+
+  const normalizedDivisions = divisionCandidates
+    .map(normalizeDivision)
+    .filter((division) => Boolean(division));
+
+  return [...new Set(normalizedDivisions)];
+}
+
+function getOfficerUidFromData(data) {
+  const uidCandidates = [data?.uid, data?.id, data?.userId];
+
+  for (const uid of uidCandidates) {
+    if (typeof uid === 'string' && uid.trim() !== '') {
+      return uid;
+    }
+  }
+
+  return null;
+}
+
+function looksLikeOfficerRecord(record) {
+  return (
+    record &&
+    typeof record === 'object' &&
+    !Array.isArray(record) &&
+    typeof record.firstName === 'string' &&
+    typeof record.lastName === 'string'
+  );
+}
+
+function extractOfficerEntries(snapshot) {
+  const entries = [];
+
+  for (const doc of snapshot.docs) {
+    const data = doc.data();
+
+    if (looksLikeOfficerRecord(data)) {
+      entries.push({
+        uid: doc.id,
+        data,
+        forcedDivision: null,
+      });
+    }
+
+    for (const [fieldKey, fieldValue] of Object.entries(data)) {
+      if (!Array.isArray(fieldValue)) {
+        continue;
+      }
+
+      const division = normalizeDivision(fieldKey);
+      if (!division) {
+        continue;
+      }
+
+      for (let index = 0; index < fieldValue.length; index += 1) {
+        const officerRecord = fieldValue[index];
+        if (!looksLikeOfficerRecord(officerRecord)) {
+          continue;
+        }
+
+        const embeddedUid = getOfficerUidFromData(officerRecord);
+        const syntheticUid = `${doc.id}:${division}:${index}`;
+
+        entries.push({
+          uid: embeddedUid || syntheticUid,
+          data: officerRecord,
+          forcedDivision: division,
+        });
+      }
+    }
+  }
+
+  return entries;
+}
+
+function getSocialLinks(data) {
+  if (
+    data?.socialLinks &&
+    typeof data.socialLinks === 'object' &&
+    !Array.isArray(data.socialLinks)
+  ) {
+    const socialLinks = {};
+
+    for (const [key, value] of Object.entries(data.socialLinks)) {
+      if (typeof value === 'string' && value.trim() !== '') {
+        socialLinks[key] = value;
+      }
+    }
+
+    return socialLinks;
+  }
+
+  const fallbackSocialLinks = {};
+  const keys = [
+    'github',
+    'linkedin',
+    'instagram',
+    'email',
+  ];
+
+  for (const key of keys) {
+    if (typeof data?.[key] === 'string' && data[key].trim() !== '') {
+      fallbackSocialLinks[key] = data[key];
+    }
+  }
+
+  return fallbackSocialLinks;
+}
+
+function getPositionForDivision(data, division) {
+  const maps = [data?.positions, data?.positionByDivision, data?.roles, data?.roleByDivision];
+
+  for (const mapCandidate of maps) {
+    if (
+      mapCandidate &&
+      typeof mapCandidate === 'object' &&
+      !Array.isArray(mapCandidate)
+    ) {
+      const directMatch = mapCandidate[division];
+      if (typeof directMatch === 'string' && directMatch.trim() !== '') {
+        return directMatch;
+      }
+
+      const altMatch = Object.entries(mapCandidate).find(
+        ([key, value]) => normalizeDivision(key) === division && typeof value === 'string' && value.trim() !== ''
+      );
+
+      if (altMatch) {
+        return altMatch[1];
+      }
+    }
+  }
+
+  if (typeof data?.position === 'string' && data.position.trim() !== '') {
+    return data.position;
+  }
+
+  if (typeof data?.title === 'string' && data.title.trim() !== '') {
+    return data.title;
+  }
+
+  if (typeof data?.role === 'string' && data.role.trim() !== '') {
+    return data.role;
+  }
+
+  const divisionTitle = toTitleCase(division);
+  return division === 'executive' ? 'Executive Officer' : `${divisionTitle} Officer`;
+}
+
+function getOfficerNameFromData(data) {
+  const firstName = data?.firstName;
+  const lastName = data?.lastName;
+
+  if (!firstName || !lastName) {
+    return null;
+  }
+
+  return `${firstName} ${lastName}`;
+}
+
+function getOfficerSlugFromData(data) {
+  const firstName = data?.firstName;
+  const lastName = data?.lastName;
+
+  if (!firstName || !lastName) {
+    return null;
+  }
+
+  return `${firstName}-${lastName}`;
+}
+
+function getImagePathForEntry(entry, imagePathByUid) {
+  if (imagePathByUid[entry.uid]) {
+    return imagePathByUid[entry.uid];
+  }
+
+  const firstName = entry.data?.firstName;
+  const lastName = entry.data?.lastName;
+  const photoUrl = entry.data?.photo?.url;
+
+  if (
+    typeof firstName === 'string' &&
+    firstName.trim() !== '' &&
+    typeof lastName === 'string' &&
+    lastName.trim() !== ''
+  ) {
+    let extension = '.jpg';
+
+    if (typeof photoUrl === 'string' && photoUrl.trim() !== '') {
+      const withoutQuery = photoUrl.split('?')[0];
+      const parsedExtension = path.extname(withoutQuery);
+      if (parsedExtension) {
+        extension = parsedExtension;
+      }
+    }
+
+    const normalizedFirstName = firstName.trim().replace(/\s+/g, '_');
+    const normalizedLastName = lastName.trim().replace(/\s+/g, '_');
+    return `/assets/officer/${normalizedFirstName}_${normalizedLastName}${extension}`;
+  }
+
+  return '/assets/officer/OfficerImage.png';
+}
+
+function buildOfficerConfigSource(divisionsMap) {
+  const source = [];
+  source.push('export type Officer = {');
+  source.push('  name: string;');
+  source.push('  position: string;');
+  source.push('  image: string;');
+  source.push('  socialLinks?: Record<string, string>;');
+  source.push('};');
+  source.push('');
+
+  for (const division of layoutDivisions) {
+    const varName = getDivisionVarName(division);
+    const officers = divisionsMap[division] || [];
+
+    source.push(`export const ${varName}: Officer[] = [`);
+
+    for (const officer of officers) {
+      source.push('  {');
+      source.push(`    image: '${escapeSingleQuotes(officer.image)}',`);
+      source.push(`    name: '${escapeSingleQuotes(officer.name)}',`);
+      source.push(`    position: '${escapeSingleQuotes(officer.position)}',`);
+
+      if (officer.socialLinks && Object.keys(officer.socialLinks).length > 0) {
+        source.push('    socialLinks: {');
+        for (const [key, value] of Object.entries(officer.socialLinks)) {
+          source.push(`      '${escapeSingleQuotes(key)}': '${escapeSingleQuotes(value)}',`);
+        }
+        source.push('    },');
+      }
+
+      source.push('  },');
+    }
+
+    source.push('];');
+    source.push('');
+  }
+
+  source.push('type Divisions =');
+  for (const division of layoutDivisions) {
+    source.push(`  | '${division}'`);
+  }
+  source.push(';');
+  source.push('');
+  source.push('export const divisionOfficerMap: Record<Divisions, Officer[]> = {');
+
+  for (const division of layoutDivisions) {
+    source.push(`  ${division}: ${getDivisionVarName(division)},`);
+  }
+
+  source.push('};');
+  source.push('');
+  return source.join('\n');
+}
+
+async function exportOfficersByDivision(officerEntries, imagePathByUid) {
+  const officersByDivision = {};
+
+  for (const division of layoutDivisions) {
+    officersByDivision[division] = [];
+  }
+
+  for (const entry of officerEntries) {
+    const uid = entry.uid;
+    const data = entry.data;
+    const officerName = getOfficerNameFromData(data);
+    if (!officerName) {
+      console.warn(`⚠️  Skipping officer ${uid} due to missing firstName/lastName`);
+      continue;
+    }
+
+    const divisions = entry.forcedDivision
+      ? [entry.forcedDivision]
+      : collectDivisionsFromData(data);
+
+    if (divisions.length === 0) {
+      console.warn(`⚠️  Officer ${uid} has no division/divisions field`);
+      continue;
+    }
+
+    for (const division of divisions) {
+      if (!officersByDivision[division]) {
+        continue;
+      }
+
+      officersByDivision[division].push({
+        image: getImagePathForEntry(entry, imagePathByUid),
+        name: officerName,
+        position: getPositionForDivision(data, division),
+        socialLinks: getSocialLinks(data),
+      });
+    }
+  }
+
+  for (const division of layoutDivisions) {
+    officersByDivision[division].sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  const source = buildOfficerConfigSource(officersByDivision);
+
+  if (dryRun) {
+    console.log(
+      `[DRY RUN] Would write officer export to ${officersExportPath} with ${officerEntries.length} officers`
+    );
+    return;
+  }
+
+  fs.writeFileSync(officersExportPath, source);
+  console.log(`✓ Exported officers to TypeScript config: ${officersExportPath}`);
 }
 
 async function clearOutputDirectory() {
@@ -76,7 +438,19 @@ async function downloadImages() {
   try {
     console.log('Starting Firebase image sync...');
     console.log(`Output directory: ${outputDir}`);
+    console.log(`Officers export path: ${officersExportPath}`);
     console.log(`Dry run mode: ${dryRun}`);
+
+    const db = admin.firestore();
+    const officerSnapshot = await db.collection('officers').get();
+    const officerEntries = extractOfficerEntries(officerSnapshot);
+    const officerDataByUid = {};
+
+    for (const entry of officerEntries) {
+      if (!officerDataByUid[entry.uid] && looksLikeOfficerRecord(entry.data)) {
+        officerDataByUid[entry.uid] = entry.data;
+      }
+    }
 
     // Ensure output directory exists
     if (!fs.existsSync(outputDir)) {
@@ -98,10 +472,13 @@ async function downloadImages() {
 
     if (files.length === 0) {
       console.log('No files found in Firebase Storage under officers/ prefix');
+      console.log('Exporting officers by division from Firestore...');
+      await exportOfficersByDivision(officerEntries, {});
       process.exit(0);
     }
 
     console.log(`Found ${files.length} files in Firebase Storage`);
+    const imagePathByUid = {};
 
     // Download each file
     for (const file of files) {
@@ -114,13 +491,15 @@ async function downloadImages() {
       const fileExtension = path.extname(fileName);
       const uid = path.basename(fileName, fileExtension);
 
-      // Get officer name from Firestore
-      const officerName = await getOfficerName(uid);
+      const officerData = officerDataByUid[uid];
+      const officerSlug = officerData ? getOfficerSlugFromData(officerData) : null;
+      const officerName = officerSlug;
       const renamedFile = officerName
         ? `${officerName}${fileExtension}`
         : fileName;
 
       const localPath = path.join(outputDir, renamedFile);
+      imagePathByUid[uid] = `/assets/officer/${renamedFile}`;
 
       console.log(`Downloading: ${file.name} -> ${localPath}`);
 
@@ -133,6 +512,9 @@ async function downloadImages() {
         console.log(`[DRY RUN] Would download: ${file.name} as ${renamedFile}`);
       }
     }
+
+    console.log('Exporting officers by division from Firestore...');
+    await exportOfficersByDivision(officerEntries, imagePathByUid);
 
     console.log('✅ Sync completed successfully!');
     process.exit(0);
