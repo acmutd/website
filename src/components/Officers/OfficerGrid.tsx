@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Github, Instagram, Linkedin } from 'lucide-react';
-import { type ReactNode } from 'react';
+import { type CSSProperties, type ReactNode } from 'react';
 import { useState } from 'react';
 import { divisionOfficerMap, type Officer } from '../../../config/officers.config';
 
@@ -71,7 +71,7 @@ interface OfficerImageWithFallbackProps {
   fallbackSrc: string;
   alt: string;
   className: string;
-  style: React.CSSProperties;
+  style: CSSProperties;
   isJCole: boolean;
 }
 
@@ -97,9 +97,10 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
 const OfficerGrid = (props: GridProps) => {
   const officers = divisionOfficerMap[props.type];
   return (
-    <div className="flex flex-col p-10 lg:px-[11.5rem] lg:pb-32">
-      <div className="text-[#cacaca]">{titleMap[props.type]}</div>
-      <div className="flex flex-wrap justify-center gap-8 pt-8">
+    <div className="mb-14 flex flex-col">
+      <div className="mb-6 flex justify-center text-[#cacaca]">{titleMap[props.type]}</div>
+      <div className="mx-auto h-px w-32 bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
+      <div className="flex flex-wrap justify-center gap-4 pt-8 lg:gap-5">
         {officers.map((officer) => (
           <OfficerPill key={officer.name} officer={officer} />
         ))}
@@ -165,48 +166,56 @@ function getSocialIconLinks(socialLinks?: Record<string, string>) {
 
 const OfficerPill = ({ officer }: PillProps) => {
   const socialIconLinks = getSocialIconLinks(officer.socialLinks);
+  const isJCole = officer.name === 'John Cole';
 
   return (
-    <div className="m-2 flex rounded-lg p-2 text-[#cacaca]">
+    <div className="group m-1 w-full max-w-[22rem] rounded-xl border border-white/10 bg-white/5 p-4 text-[#cacaca] backdrop-blur-sm transition-colors duration-200 hover:border-blue-400/40 sm:m-2">
       <div
-        className={`relative ${
-          officer.name === 'John Cole' ? `h-[110px] w-[110px]` : `h-[80px] w-[80px]`
-        } `}
+        className="flex items-start"
       >
-        <OfficerImageWithFallback
-          style={{ objectFit: 'cover' }}
-          src={officer.image}
-          alt={officer.name}
-          fallbackSrc="/assets/OfficerImage.png"
-          className={`rounded-full ${
-            officer.name === 'John Cole' ? `h-[110px] w-[110px]` : `h-[80px] w-[80px]`
-          } `}
-          isJCole={officer.name === 'John Cole'}
-        />
-      </div>
-      <div className="ml-4 flex flex-col items-start justify-center">
-        <h1 className="text-xl font-semibold">{officer.name}</h1>
-        <p className="text-sm">{officer.position}</p>
-        {socialIconLinks.length > 0 ? (
-          <div className="mt-2 flex items-center justify-start gap-3 pl-0.5">
-            {socialIconLinks.map((socialLink) => {
-              const Icon = socialLink.icon;
-
-              return (
-                <a
-                  key={socialLink.key}
-                  href={socialLink.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={socialLink.label}
-                  className="transition-opacity hover:opacity-80"
-                >
-                  <Icon size={18} />
-                </a>
-              );
-            })}
+        <div className={`relative ${isJCole ? 'h-[110px] w-[110px]' : 'h-[80px] w-[80px]'} flex-shrink-0`}>
+          <OfficerImageWithFallback
+            style={{ objectFit: 'cover' }}
+            src={officer.image}
+            alt={officer.name}
+            fallbackSrc="/assets/OfficerImage.png"
+            className={`rounded-full ring-2 ring-white/20 transition-all duration-200 group-hover:ring-4 group-hover:ring-blue-400/60 ${
+              isJCole ? 'h-[110px] w-[110px]' : 'h-[80px] w-[80px]'
+            }`}
+            isJCole={isJCole}
+          />
+        </div>
+        <div className="ml-4 flex min-h-[92px] flex-1 flex-col justify-between">
+          <div>
+            <h1 className="line-clamp-2 text-lg font-semibold text-white transition-colors duration-200 group-hover:text-blue-300">
+              {officer.name}
+            </h1>
+            <p className="mt-0.5 line-clamp-2 text-sm leading-tight text-gray-200/90">{officer.position}</p>
           </div>
-        ) : null}
+
+          <div className="mt-3 min-h-[24px]">
+            {socialIconLinks.length > 0 ? (
+              <div className="flex items-center justify-start gap-3 pl-0.5">
+                {socialIconLinks.map((socialLink) => {
+                  const Icon = socialLink.icon;
+
+                  return (
+                    <a
+                      key={socialLink.key}
+                      href={socialLink.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={socialLink.label}
+                      className="text-gray-300 transition-colors hover:text-white"
+                    >
+                      <Icon size={18} />
+                    </a>
+                  );
+                })}
+              </div>
+            ) : null}
+          </div>
+        </div>
       </div>
     </div>
   );
