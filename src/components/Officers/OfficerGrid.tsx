@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Github, Instagram, Linkedin } from 'lucide-react';
 import { type ReactNode } from 'react';
 import { useState } from 'react';
-import { divisionOfficerMap } from '../../../config/officers.config';
+import { divisionOfficerMap, type Officer } from '../../../config/officers.config';
 
 type Layout =
   | 'advisor'
@@ -20,13 +20,6 @@ type Layout =
 
 type GridProps = {
   type: Layout;
-};
-
-type Officer = {
-  name: string;
-  position: string;
-  image: string;
-  socialLinks?: Record<string, string>;
 };
 
 type PillProps = {
@@ -170,49 +163,53 @@ function getSocialIconLinks(socialLinks?: Record<string, string>) {
   ].filter((link) => link.href);
 }
 
-const OfficerPill = ({ officer }: PillProps) => (
-  <div className="m-2 flex rounded-lg p-2 text-[#cacaca]">
-    <div
-      className={`relative ${
-        officer.name === 'John Cole' ? `h-[110px] w-[110px]` : `h-[80px] w-[80px]`
-      } `}
-    >
-      <OfficerImageWithFallback
-        style={{ objectFit: 'cover' }}
-        src={officer.image}
-        alt={officer.name}
-        fallbackSrc="/assets/OfficerImage.png"
-        className={`rounded-full ${
+const OfficerPill = ({ officer }: PillProps) => {
+  const socialIconLinks = getSocialIconLinks(officer.socialLinks);
+
+  return (
+    <div className="m-2 flex rounded-lg p-2 text-[#cacaca]">
+      <div
+        className={`relative ${
           officer.name === 'John Cole' ? `h-[110px] w-[110px]` : `h-[80px] w-[80px]`
         } `}
-        isJCole={officer.name === 'John Cole'}
-      />
-    </div>
-    <div className="ml-4 flex flex-col justify-center">
-      <h1 className="text-xl font-semibold">{officer.name}</h1>
-      <p className="text-sm">{officer.position}</p>
-      {getSocialIconLinks(officer.socialLinks).length > 0 ? (
-        <div className="mt-2 flex items-center gap-3">
-          {getSocialIconLinks(officer.socialLinks).map((socialLink) => {
-            const Icon = socialLink.icon;
+      >
+        <OfficerImageWithFallback
+          style={{ objectFit: 'cover' }}
+          src={officer.image}
+          alt={officer.name}
+          fallbackSrc="/assets/OfficerImage.png"
+          className={`rounded-full ${
+            officer.name === 'John Cole' ? `h-[110px] w-[110px]` : `h-[80px] w-[80px]`
+          } `}
+          isJCole={officer.name === 'John Cole'}
+        />
+      </div>
+      <div className="ml-4 flex flex-col items-start justify-center">
+        <h1 className="text-xl font-semibold">{officer.name}</h1>
+        <p className="text-sm">{officer.position}</p>
+        {socialIconLinks.length > 0 ? (
+          <div className="mt-2 flex items-center justify-start gap-3 pl-0.5">
+            {socialIconLinks.map((socialLink) => {
+              const Icon = socialLink.icon;
 
-            return (
-              <a
-                key={socialLink.key}
-                href={socialLink.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={socialLink.label}
-                className="transition-opacity hover:opacity-80"
-              >
-                <Icon size={18} />
-              </a>
-            );
-          })}
-        </div>
-      ) : null}
+              return (
+                <a
+                  key={socialLink.key}
+                  href={socialLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={socialLink.label}
+                  className="transition-opacity hover:opacity-80"
+                >
+                  <Icon size={18} />
+                </a>
+              );
+            })}
+          </div>
+        ) : null}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default OfficerGrid;
