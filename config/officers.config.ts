@@ -12,6 +12,7 @@ export type Officer = {
   name: string;
   position: string;
   image: string;
+  socialLinks?: Record<string, string>;
 };
 
 export type ExportedOfficer = {
@@ -43,7 +44,7 @@ export const divisionOfficerMap: Record<Divisions, Officer[]> = {
     {
       image: '/assets/officer/JohnCole.png',
       name: 'John Cole',
-      position: 'ACM Faculty Advisor',
+      position: 'ACM Faculty Sponsor',
     },
   ],
   executive: boardOfficers,

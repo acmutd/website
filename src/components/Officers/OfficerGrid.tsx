@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { Github, Instagram, Linkedin } from 'lucide-react';
 import { type ReactNode } from 'react';
 import { useState } from 'react';
 import { divisionOfficerMap } from '../../../config/officers.config';
@@ -25,6 +26,7 @@ type Officer = {
   name: string;
   position: string;
   image: string;
+  socialLinks?: Record<string, string>;
 };
 
 type PillProps = {
@@ -113,6 +115,61 @@ const OfficerGrid = (props: GridProps) => {
   );
 };
 
+function getSocialIconLinks(socialLinks?: Record<string, string>) {
+  if (!socialLinks) {
+    return [];
+  }
+
+  const links = {
+    linkedin: '',
+    github: '',
+    instagram: '',
+  };
+
+  for (const [key, value] of Object.entries(socialLinks)) {
+    if (typeof value !== 'string' || value.trim() === '') {
+      continue;
+    }
+
+    const normalizedKey = key.trim().toLowerCase();
+
+    if (normalizedKey === 'linkedin' || normalizedKey === 'linkedinurl') {
+      links.linkedin = value;
+      continue;
+    }
+
+    if (normalizedKey === 'github' || normalizedKey === 'githuburl') {
+      links.github = value;
+      continue;
+    }
+
+    if (normalizedKey === 'instagram' || normalizedKey === 'instagramurl') {
+      links.instagram = value;
+    }
+  }
+
+  return [
+    {
+      key: 'linkedin',
+      href: links.linkedin,
+      icon: Linkedin,
+      label: 'LinkedIn',
+    },
+    {
+      key: 'github',
+      href: links.github,
+      icon: Github,
+      label: 'GitHub',
+    },
+    {
+      key: 'instagram',
+      href: links.instagram,
+      icon: Instagram,
+      label: 'Instagram',
+    },
+  ].filter((link) => link.href);
+}
+
 const OfficerPill = ({ officer }: PillProps) => (
   <div className="m-2 flex rounded-lg p-2 text-[#cacaca]">
     <div
@@ -134,6 +191,26 @@ const OfficerPill = ({ officer }: PillProps) => (
     <div className="ml-4 flex flex-col justify-center">
       <h1 className="text-xl font-semibold">{officer.name}</h1>
       <p className="text-sm">{officer.position}</p>
+      {getSocialIconLinks(officer.socialLinks).length > 0 ? (
+        <div className="mt-2 flex items-center gap-3">
+          {getSocialIconLinks(officer.socialLinks).map((socialLink) => {
+            const Icon = socialLink.icon;
+
+            return (
+              <a
+                key={socialLink.key}
+                href={socialLink.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={socialLink.label}
+                className="transition-opacity hover:opacity-80"
+              >
+                <Icon size={18} />
+              </a>
+            );
+          })}
+        </div>
+      ) : null}
     </div>
   </div>
 );
