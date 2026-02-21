@@ -26,6 +26,12 @@ const layoutDivisions = [
   'board',
 ];
 
+const permanentAdvisorOfficer = {
+  image: '/assets/JohnCole.png',
+  name: 'John Cole',
+  position: 'ACM Faculty Advisor',
+};
+
 // Initialize Firebase Admin SDK
 const serviceAccount = JSON.parse(
   fs.readFileSync(firebaseConfigPath, 'utf8')
@@ -477,6 +483,8 @@ async function exportOfficersByDivision(officerEntries, imagePathByUid) {
       });
     }
   }
+
+  officersByDivision.advisor = [permanentAdvisorOfficer];
 
   // Populate board with officers who have level 2-3 roles
   for (const entry of officerEntries) {
