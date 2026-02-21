@@ -296,6 +296,54 @@ function getOfficerSlugFromData(data) {
   return `${firstName}-${lastName}`;
 }
 
+function getExtensionFromContentType(contentType) {
+  if (typeof contentType !== 'string') {
+    return null;
+  }
+
+  const normalizedType = contentType.toLowerCase();
+  const extensionByType = {
+    'image/jpeg': '.jpg',
+    'image/jpg': '.jpg',
+    'image/png': '.png',
+    'image/webp': '.webp',
+    'image/gif': '.gif',
+    'image/heic': '.heic',
+    'image/heif': '.heif',
+    'image/avif': '.avif',
+  };
+
+  return extensionByType[normalizedType] || null;
+}
+
+async function resolveFileExtension(file, fileName) {
+  const extensionFromName = path.extname(fileName);
+  if (extensionFromName) {
+    return extensionFromName;
+  }
+
+  const extensionFromCachedMetadata = getExtensionFromContentType(
+    file?.metadata?.contentType
+  );
+  if (extensionFromCachedMetadata) {
+    return extensionFromCachedMetadata;
+  }
+
+  try {
+    const [metadata] = await file.getMetadata();
+    const extensionFromMetadata = getExtensionFromContentType(metadata?.contentType);
+    if (extensionFromMetadata) {
+      return extensionFromMetadata;
+    }
+  } catch {
+    console.warn(
+      `⚠️  Could not read metadata for ${file.name}; defaulting extension to .jpg`
+    );
+  }
+
+  return '.jpg';
+}
+
 function getImagePathForEntry(entry, imagePathByUid) {
   if (imagePathByUid[entry.uid]) {
     return imagePathByUid[entry.uid];
@@ -541,15 +589,16 @@ async function downloadImages() {
       if (fileName === '') continue;
 
       // Extract UID from filename (remove extension)
-      const fileExtension = path.extname(fileName);
-      const uid = path.basename(fileName, fileExtension);
+      const originalExtension = path.extname(fileName);
+      const uid = path.basename(fileName, originalExtension);
+      const resolvedExtension = await resolveFileExtension(file, fileName);
 
       const officerData = officerDataByUid[uid];
       const officerSlug = officerData ? getOfficerSlugFromData(officerData) : null;
       const officerName = officerSlug;
       const renamedFile = officerName
-        ? `${officerName}${fileExtension}`
-        : fileName;
+        ? `${officerName}${resolvedExtension}`
+        : (originalExtension ? fileName : `${fileName}${resolvedExtension}`);
 
       const localPath = path.join(outputDir, renamedFile);
       imagePathByUid[uid] = `/assets/officer/${renamedFile}`;
