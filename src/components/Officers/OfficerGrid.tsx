@@ -100,7 +100,7 @@ const OfficerGrid = (props: GridProps) => {
     <div className="mb-14 flex flex-col">
       <div className="mb-6 flex justify-center text-[#cacaca]">{titleMap[props.type]}</div>
       <div className="mx-auto h-px w-32 bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
-      <div className="flex flex-col items-center gap-3 pt-8">
+      <div className="grid grid-cols-1 gap-3 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {officers.map((officer) => (
           <OfficerPill key={officer.name} officer={officer} />
         ))}
@@ -169,7 +169,7 @@ const OfficerPill = ({ officer }: PillProps) => {
   const isJCole = officer.name === 'John Cole';
 
   return (
-    <div className="group w-full max-w-3xl rounded-xl bg-white/5 p-4 text-[#cacaca] backdrop-blur-sm transition-colors duration-200">
+    <div className="group h-full w-full rounded-xl bg-white/5 p-4 text-[#cacaca] backdrop-blur-sm transition-colors duration-200">
       <div
         className="flex items-start"
       >
