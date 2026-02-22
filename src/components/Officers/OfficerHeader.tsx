@@ -19,7 +19,7 @@ const OfficerHeader = () => {
         <div className="relative lg:flex-shrink-0">
           <div className="relative rounded-3xl border border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-4 shadow-2xl backdrop-blur-sm md:p-6">
             <Image
-              src="/assets/3DPeechi.png"
+              src="/assets/officer-peechi.png"
               alt="Peechi"
               width={300}
               height={300}
