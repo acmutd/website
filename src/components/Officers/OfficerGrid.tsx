@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Github, Instagram, Linkedin } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { type CSSProperties, type ReactNode } from 'react';
 import { useState } from 'react';
 import { divisionOfficerMap, type Officer } from '../../../config/officers.config';
@@ -117,7 +117,6 @@ function getSocialIconLinks(socialLinks?: Record<string, string>) {
   const links = {
     linkedin: '',
     github: '',
-    instagram: '',
   };
 
   for (const [key, value] of Object.entries(socialLinks)) {
@@ -137,9 +136,6 @@ function getSocialIconLinks(socialLinks?: Record<string, string>) {
       continue;
     }
 
-    if (normalizedKey === 'instagram' || normalizedKey === 'instagramurl') {
-      links.instagram = value;
-    }
   }
 
   return [
@@ -154,12 +150,6 @@ function getSocialIconLinks(socialLinks?: Record<string, string>) {
       href: links.github,
       icon: Github,
       label: 'GitHub',
-    },
-    {
-      key: 'instagram',
-      href: links.instagram,
-      icon: Instagram,
-      label: 'Instagram',
     },
   ].filter((link) => link.href);
 }
@@ -183,7 +173,7 @@ const OfficerPill = ({ officer }: PillProps) => {
             isJCole={isJCole}
           />
         </div>
-        <div className="ml-4 flex min-h-[92px] flex-1 flex-col justify-between">
+        <div className="ml-4 flex min-h-[92px] flex-1 flex-col">
           <div>
             <h1 className="line-clamp-2 text-lg font-semibold text-white">
               {officer.name}
@@ -191,9 +181,9 @@ const OfficerPill = ({ officer }: PillProps) => {
             <p className="mt-0.5 line-clamp-2 text-sm leading-tight text-gray-200/90">{officer.position}</p>
           </div>
 
-          <div className="mt-3 min-h-[24px]">
+          <div className="mt-1.5 min-h-[24px]">
             {socialIconLinks.length > 0 ? (
-              <div className="flex items-center justify-start gap-3 pl-0.5">
+              <div className="flex items-center justify-start gap-3">
                 {socialIconLinks.map((socialLink) => {
                   const Icon = socialLink.icon;
 
