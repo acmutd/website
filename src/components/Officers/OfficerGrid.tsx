@@ -120,7 +120,7 @@ const OfficerGrid = (props: GridProps) => {
           <OfficerPill key={officer.name} officer={officer} />
         ))}
       </div>
-      <p className="mt-6 text-center text-lg font-medium text-gray-400">{officerCountText}</p>
+      <p className="mt-6 text-center text-sm font-medium text-gray-400">{officerCountText}</p>
     </div>
   );
 };
