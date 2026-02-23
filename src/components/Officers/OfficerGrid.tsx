@@ -119,6 +119,7 @@ const OfficerGrid = (props: GridProps) => {
     return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
   });
   const officerCountText = `${officers.length} ${officers.length === 1 ? 'officer' : 'officers'} in ${divisionNameMap[props.type]}`;
+  const shouldShowOfficerCount = props.type !== 'advisor';
 
   return (
     <div className="mb-14 flex flex-col">
@@ -129,7 +130,9 @@ const OfficerGrid = (props: GridProps) => {
           <OfficerPill key={officer.name} officer={officer} />
         ))}
       </div>
-      <p className="mt-6 text-center text-sm font-medium text-gray-400">{officerCountText}</p>
+      {shouldShowOfficerCount ? (
+        <p className="mt-2 text-center text-sm font-medium text-gray-400">{officerCountText}</p>
+      ) : null}
     </div>
   );
 };
