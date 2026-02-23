@@ -100,7 +100,7 @@ const OfficerGrid = (props: GridProps) => {
     <div className="mb-14 flex flex-col">
       <div className="mb-6 flex justify-center text-[#cacaca]">{titleMap[props.type]}</div>
       <div className="mx-auto h-px w-32 bg-gradient-to-r from-transparent via-gray-500 to-transparent"></div>
-      <div className="grid grid-cols-1 gap-3 pt-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="flex flex-wrap justify-center gap-8 pt-8">
         {officers.map((officer) => (
           <OfficerPill key={officer.name} officer={officer} />
         ))}
@@ -169,17 +169,15 @@ const OfficerPill = ({ officer }: PillProps) => {
   const isJCole = officer.name === 'John Cole';
 
   return (
-    <div className="group h-full w-full rounded-xl bg-white/5 p-4 text-[#cacaca] backdrop-blur-sm transition-colors duration-200">
-      <div
-        className="flex items-start"
-      >
+    <div className="m-2 flex p-2 text-[#cacaca]">
+      <div className="flex items-start">
         <div className={`relative ${isJCole ? 'h-[110px] w-[110px]' : 'h-[80px] w-[80px]'} flex-shrink-0`}>
           <OfficerImageWithFallback
             style={{ objectFit: 'cover' }}
             src={officer.image}
             alt={officer.name}
             fallbackSrc="/assets/OfficerImage.png"
-            className={`rounded-full ring-2 ring-white/20 transition-all duration-200 group-hover:ring-4 group-hover:ring-blue-400/60 ${
+            className={`rounded-full ${
               isJCole ? 'h-[110px] w-[110px]' : 'h-[80px] w-[80px]'
             }`}
             isJCole={isJCole}
@@ -187,7 +185,7 @@ const OfficerPill = ({ officer }: PillProps) => {
         </div>
         <div className="ml-4 flex min-h-[92px] flex-1 flex-col justify-between">
           <div>
-            <h1 className="line-clamp-2 text-lg font-semibold text-white transition-colors duration-200 group-hover:text-blue-300">
+            <h1 className="line-clamp-2 text-lg font-semibold text-white">
               {officer.name}
             </h1>
             <p className="mt-0.5 line-clamp-2 text-sm leading-tight text-gray-200/90">{officer.position}</p>
