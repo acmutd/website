@@ -67,20 +67,7 @@ function normalizeDivision(division) {
     return null;
   }
 
-  const value = division.trim().toLowerCase();
-  const divisionAliasMap = {
-    board: 'executive',
-    executive: 'executive',
-    hack: 'hackutd',
-    'hack utd': 'hackutd',
-    'hackutd': 'hackutd',
-    project: 'projects',
-    finance: 'industry',
-    communityoutreach: 'community',
-    communitycampus: 'community',
-  };
-
-  return divisionAliasMap[value] || value;
+  return division.trim().toLowerCase();
 }
 
 function getDivisionVarName(division) {
