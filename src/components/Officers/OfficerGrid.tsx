@@ -108,7 +108,16 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
 };
 
 const OfficerGrid = (props: GridProps) => {
-  const officers = divisionOfficerMap[props.type];
+  const officers = [...divisionOfficerMap[props.type]].sort((a, b) => {
+    const levelA = typeof a.level === 'number' ? a.level : 0;
+    const levelB = typeof b.level === 'number' ? b.level : 0;
+
+    if (levelA !== levelB) {
+      return levelB - levelA;
+    }
+
+    return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+  });
   const officerCountText = `${officers.length} ${officers.length === 1 ? 'officer' : 'officers'} in ${divisionNameMap[props.type]}`;
 
   return (

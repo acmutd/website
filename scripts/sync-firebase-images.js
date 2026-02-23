@@ -508,8 +508,17 @@ async function exportOfficersByDivision(officerEntries, imagePathByUid) {
     }
   }
 
-  for (const division of layoutDivisions) {
-    officersByDivision[division].sort((a, b) => a.name.localeCompare(b.name));
+    for (const division of layoutDivisions) {
+      officersByDivision[division].sort((a, b) => {
+        const levelA = typeof a.level === 'number' ? a.level : 0;
+        const levelB = typeof b.level === 'number' ? b.level : 0;
+
+        if (levelA !== levelB) {
+          return levelB - levelA;
+        }
+
+        return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+      });
   }
 
   const source = buildOfficerConfigSource(officersByDivision);
