@@ -66,6 +66,19 @@ const titleMap: Record<Layout, ReactNode> = {
   ),
 };
 
+const divisionNameMap: Record<Layout, string> = {
+  advisor: 'Advisor',
+  board: 'Board',
+  media: 'Media',
+  research: 'Research',
+  development: 'Development',
+  projects: 'Projects',
+  education: 'Education',
+  community: 'Community',
+  hackutd: 'HackUTD',
+  industry: 'Industry',
+};
+
 interface OfficerImageWithFallbackProps {
   src: string;
   fallbackSrc: string;
@@ -96,6 +109,8 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
 
 const OfficerGrid = (props: GridProps) => {
   const officers = divisionOfficerMap[props.type];
+  const officerCountText = `${officers.length} ${officers.length === 1 ? 'officer' : 'officers'} in ${divisionNameMap[props.type]}`;
+
   return (
     <div className="mb-14 flex flex-col">
       <div className="mb-6 flex justify-center text-[#cacaca]">{titleMap[props.type]}</div>
@@ -105,6 +120,7 @@ const OfficerGrid = (props: GridProps) => {
           <OfficerPill key={officer.name} officer={officer} />
         ))}
       </div>
+      <p className="mt-6 text-center text-lg font-medium text-gray-400">{officerCountText}</p>
     </div>
   );
 };
