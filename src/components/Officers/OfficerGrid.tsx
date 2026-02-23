@@ -199,7 +199,7 @@ const OfficerPill = ({ officer }: PillProps) => {
 
           <div className="mt-1.5 min-h-[24px]">
             {socialIconLinks.length > 0 ? (
-              <div className="flex items-center justify-start gap-3">
+              <div className="flex items-center justify-start gap-3 ml-1">
                 {socialIconLinks.map((socialLink) => {
                   const Icon = socialLink.icon;
 
