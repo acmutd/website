@@ -66,19 +66,6 @@ const titleMap: Record<Layout, ReactNode> = {
   ),
 };
 
-const divisionNameMap: Record<Layout, string> = {
-  advisor: 'Advisor',
-  board: 'Board',
-  media: 'Media',
-  research: 'Research',
-  development: 'Development',
-  projects: 'Projects',
-  education: 'Education',
-  community: 'Community',
-  hackutd: 'HackUTD',
-  industry: 'Industry',
-};
-
 interface OfficerImageWithFallbackProps {
   src: string;
   fallbackSrc: string;
@@ -118,8 +105,6 @@ const OfficerGrid = (props: GridProps) => {
 
     return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
   });
-  const officerCountText = `${officers.length} ${officers.length === 1 ? 'officer' : 'officers'} in ${divisionNameMap[props.type]}`;
-  const shouldShowOfficerCount = props.type !== 'advisor';
 
   return (
     <div className="mb-14 flex flex-col">
@@ -130,9 +115,6 @@ const OfficerGrid = (props: GridProps) => {
           <OfficerPill key={officer.name} officer={officer} />
         ))}
       </div>
-      {shouldShowOfficerCount ? (
-        <p className="mt-2 text-center text-sm font-medium text-gray-400">{officerCountText}</p>
-      ) : null}
     </div>
   );
 };
