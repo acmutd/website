@@ -82,7 +82,12 @@ function escapeSingleQuotes(value) {
 }
 
 function parseRoleLevel(role) {
-  const candidates = [role?.level, role?.permissionLevel];
+  const candidates = [
+    role?.level,
+    role?.permissionLevel,
+    role?.permission_level,
+    role?.permission,
+  ];
 
   for (const candidate of candidates) {
     if (typeof candidate === 'number' && Number.isFinite(candidate)) {
@@ -98,6 +103,38 @@ function parseRoleLevel(role) {
   }
 
   return 0;
+}
+
+function parseRoleTitle(role) {
+  const candidates = [role?.title, role?.position, role?.role, role?.name];
+
+  for (const candidate of candidates) {
+    if (typeof candidate === 'string' && candidate.trim() !== '') {
+      return candidate.trim();
+    }
+  }
+
+  return '';
+}
+
+function extractFallbackRolesFromEntry(entry) {
+  const division = normalizeDivision(entry?.forcedDivision || entry?.data?.division);
+  if (!division) {
+    return [];
+  }
+
+  const title = parseRoleTitle(entry?.data);
+  if (!title) {
+    return [];
+  }
+
+  return [
+    {
+      division,
+      title,
+      level: parseRoleLevel(entry?.data),
+    },
+  ];
 }
 
 function extractRolesFromOfficer(officerData) {
@@ -122,7 +159,7 @@ function extractRolesFromOfficer(officerData) {
       continue;
     }
 
-    const title = typeof role.title === 'string' ? role.title.trim() : '';
+    const title = parseRoleTitle(role);
     const level = parseRoleLevel(role);
 
     if (title) {
@@ -466,7 +503,8 @@ async function exportOfficersByDivision(officerEntries, imagePathByUid) {
       continue;
     }
 
-    const roles = extractRolesFromOfficer(data);
+    const extractedRoles = extractRolesFromOfficer(data);
+    const roles = extractedRoles.length > 0 ? extractedRoles : extractFallbackRolesFromEntry(entry);
 
     if (roles.length === 0) {
       console.warn(`⚠️  Officer ${uid} has no roles with valid divisions`);
@@ -499,7 +537,8 @@ async function exportOfficersByDivision(officerEntries, imagePathByUid) {
       continue;
     }
 
-    const roles = extractRolesFromOfficer(data);
+    const extractedRoles = extractRolesFromOfficer(data);
+    const roles = extractedRoles.length > 0 ? extractedRoles : extractFallbackRolesFromEntry(entry);
     const boardRole = getBoardEligibleRole(roles);
 
     if (boardRole) {
