@@ -22,7 +22,6 @@ const layoutDivisions = [
   'community',
   'hackutd',
   'industry',
-  'finance',
   'board',
 ];
 
@@ -82,6 +81,25 @@ function escapeSingleQuotes(value) {
   return String(value).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 }
 
+function parseRoleLevel(role) {
+  const candidates = [role?.level, role?.permissionLevel];
+
+  for (const candidate of candidates) {
+    if (typeof candidate === 'number' && Number.isFinite(candidate)) {
+      return candidate;
+    }
+
+    if (typeof candidate === 'string' && candidate.trim() !== '') {
+      const parsed = Number(candidate);
+      if (Number.isFinite(parsed)) {
+        return parsed;
+      }
+    }
+  }
+
+  return 0;
+}
+
 function extractRolesFromOfficer(officerData) {
   const roles = [];
 
@@ -105,7 +123,7 @@ function extractRolesFromOfficer(officerData) {
     }
 
     const title = typeof role.title === 'string' ? role.title.trim() : '';
-    const level = typeof role.level === 'number' ? role.level : 0;
+    const level = parseRoleLevel(role);
 
     if (title) {
       roles.push({ division, title, level });
