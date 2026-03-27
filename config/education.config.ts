@@ -1,6 +1,5 @@
 import { Question, Testimony } from '../lib/types';
-import { CarouselImage, Director } from './divisions.config';
-import { Officer } from './officers.config';
+import { CarouselImage } from './divisions.config';
 
 type SubDivision = 'tip' | 'mentor';
 

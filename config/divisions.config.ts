@@ -148,7 +148,7 @@ export function getCarouselImages(section: Division): CarouselImage[] {
   }
 }
 
-export type WinningProjectSelector = 'projects' | 'research' | 'hackutd';
+type WinningProjectSelector = 'projects' | 'research' | 'hackutd';
 
 
 export function getWinningProjects(selector: WinningProjectSelector): Projects[] {

@@ -1,5 +1,5 @@
 import type { Question, Testimony } from '../lib/types';
-import type { CarouselImage, Director, Projects } from './divisions.config';
+import type { CarouselImage, Projects } from './divisions.config';
 
 export const researchTestimony: Testimony[] = [
   {

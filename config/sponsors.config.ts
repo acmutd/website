@@ -38,7 +38,7 @@ export const sponsorImages = [
   '/assets/sponsors/pics/people-staring3.jpg',
 ];
 
-export type Sponsor = {
+type Sponsor = {
   name: string;
   tier: 'gold' | 'silver' | 'bronze' | 'custom';
   logo: string;
