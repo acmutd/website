@@ -95,16 +95,7 @@ const OfficerImageWithFallback = (props: OfficerImageWithFallbackProps) => {
 };
 
 const OfficerGrid = (props: GridProps) => {
-  const officers = [...divisionOfficerMap[props.type]].sort((a, b) => {
-    const levelA = typeof a.level === 'number' ? a.level : 0;
-    const levelB = typeof b.level === 'number' ? b.level : 0;
-
-    if (levelA !== levelB) {
-      return levelB - levelA;
-    }
-
-    return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
-  });
+  const officers = divisionOfficerMap[props.type];
 
   return (
     <div className="mb-14 flex flex-col">
