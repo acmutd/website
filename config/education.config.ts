@@ -4,19 +4,6 @@ import { Officer } from './officers.config';
 
 type SubDivision = 'tip' | 'mentor';
 
-export const educationDirectors: Array<Director> = [
-  {
-    name: 'Sid Mylavarapu',
-    position: 'Director of Mentor Program',
-    image: '/assets/officer/Sid_Mylavarapu.jpg',
-  },
-  {
-    name: 'Aashay Vishwakarma',
-    position: 'Director of TIP',
-    image: '/assets/officer/Aashay_Vishwakarma.jpg',
-  },
-];
-
 export const educationTestimony: Record<SubDivision, Array<Testimony>> = {
   mentor: [
     {
@@ -104,75 +91,6 @@ export const educationFAQ: Record<SubDivision, Question[]> = {
     },
   ],
 };
-
-export const educationOfficers: Officer[] = [
-  ...educationDirectors,
-  {
-    name: 'Ayush Shivhare',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/Ayush_Shivhare.jpg',
-  },
-  {
-    name: 'Hannah Van',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/Hannah_Van.jpg',
-  },
-  {
-    name: 'Aiman Ahsan',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/Aiman_Ahsan.jpg',
-  },
-  {
-    name: 'Tanishq Akasapu',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/Tanishq_Akasapu.jpg',
-  },
-  {
-    name: 'Neeharika Dasaraju',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/Neeharika_Dasaraju.jpg',
-  },
-  {
-    name: 'Roha Fatima',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/Roha_Fatima.jpg',
-  },
-  {
-    name: 'Ram Gudur',
-    position: 'TIP Officer',
-    image: '/assets/officer/Ram_Gudur.jpeg',
-  },
-  {
-    name: 'Lalith Vennapusa',
-    position: 'TIP Officer',
-    image: '/assets/officer/Lalith_Vennapusa.png',
-  },
-  {
-    name: 'Zeke Stephens',
-    position: 'TIP Officer',
-    image: '/assets/officer/Zeke_Stephens.jpg',
-  },
-  {
-    name: 'Sahaj Dahal',
-    position: 'TIP Officer',
-    image: '/assets/officer/Sahaj_Dahal.jpg',
-  },
-  {
-    name: 'Ayro Escobar',
-    position: 'TIP Officer',
-    image: '/assets/officer/Ayro_Escobar.png',
-  },
-  {
-    name: 'Bopin Sai Kodali',
-    position: 'TIP Officer',
-    image: '/assets/officer/Bopin_Sai_Kodali.jpg',
-  },
-  {
-    name: 'Rodolfo Gonzalez',
-    position: 'TIP Officer',
-    image: '/assets/officer/Rodolfo_Gonzalez.jpg',
-  },
-];
 
 export const educationImages: {
   mentor: CarouselImage[];

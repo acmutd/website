@@ -1,25 +1,21 @@
 import { Question, Testimony } from '../lib/types';
 import {
   developmentCarouselImages,
-  developmentDirectors,
   developmentFAQ,
   developmentTestimony,
 } from './development.config';
 import {
-  educationDirectors,
   educationFAQ,
   educationImages,
   educationTestimony,
 } from './education.config';
 import {
-  hackDirectors,
   hackTestimony,
   hackFAQ,
   hackWinners,
   hackCarouselImages,
 } from './hack.config';
 import {
-  projectDirectors,
   projectImages,
   projectsFAQ,
   projectsTestimony,
@@ -27,21 +23,18 @@ import {
 } from './projects.config';
 import {
   researchCarousel,
-  researchDirectors,
   researchFAQ,
   researchTestimony,
   researchWinners,
 } from './research.config';
-import { mediaDirectors, mediaTestimony, mediaFAQ, mediaCarousel } from './media.config';
+import { mediaTestimony, mediaFAQ, mediaCarousel } from './media.config';
 import {
-  communityDirectors,
   communityImages,
   communityTestimony,
   communityFAQ,
 } from './community.config';
 import {
   industryCarouselImages,
-  industryDirectors,
   industryFAQ,
   industryTestimony,
 } from './industry.config';
@@ -91,27 +84,6 @@ export type Projects = {
   links: ProjectLink[];
   manager?: string;
 };
-
-export function getDirectors(division: Division['division']): Director[] {
-  switch (division) {
-    case 'projects':
-      return projectDirectors;
-    case 'research':
-      return researchDirectors;
-    case 'development':
-      return developmentDirectors;
-    case 'education':
-      return educationDirectors;
-    case 'media':
-      return mediaDirectors;
-    case 'hackutd':
-      return hackDirectors;
-    case 'community':
-      return communityDirectors;
-    case 'industry':
-      return industryDirectors;
-  }
-}
 
 export function getTestimony(section: Division): Testimony[] {
   switch (section.division) {
