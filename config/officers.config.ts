@@ -753,21 +753,9 @@ export const educationOfficers: Officer[] = [
     level: 2,
   },
   {
-    image: '/assets/officer/Aiman-Ahsan.jpg',
-    name: 'Aiman Ahsan',
-    position: 'Mentor Program Officer',
-    level: 1,
-  },
-  {
     image: '/assets/officer/Ajay-Alluri.jpg',
     name: 'Ajay Alluri',
     position: 'TIP Lead',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Ayush-Shivhare.jpg',
-    name: 'Ayush Shivhare',
-    position: 'Mentor Program Officer',
     level: 1,
   },
   {
@@ -777,21 +765,24 @@ export const educationOfficers: Officer[] = [
     level: 1,
   },
   {
-    image: '/assets/officer/Lalith-Vennapusa.jpg',
-    name: 'Lalith Vennapusa',
-    position: 'TIP Officer',
-    level: 1,
-  },
-  {
     image: '/assets/officer/Nadeeba-Atiqui.jpg',
     name: 'Nadeeba Atiqui',
     position: 'TIP Lead',
     level: 1,
   },
   {
-    image: '/assets/officer/Neeharika-Dasaraju.jpg',
-    name: 'Neeharika Dasaraju',
-    position: 'Mentor Program Officer',
+    image: '/assets/officer/Zeke-Stephens.jpg',
+    name: 'Zeke Stephens',
+    position: 'TIP Lead',
+    level: 1,
+    socialLinks: {
+      'personalEmail': 'zeke@zekestephens.com',
+    },
+  },
+  {
+    image: '/assets/officer/Lalith-Vennapusa.jpg',
+    name: 'Lalith Vennapusa',
+    position: 'TIP Officer',
     level: 1,
   },
   {
@@ -816,6 +807,24 @@ export const educationOfficers: Officer[] = [
     },
   },
   {
+    image: '/assets/officer/Aiman-Ahsan.jpg',
+    name: 'Aiman Ahsan',
+    position: 'Mentor Program Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Ayush-Shivhare.jpg',
+    name: 'Ayush Shivhare',
+    position: 'Mentor Program Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Neeharika-Dasaraju.jpg',
+    name: 'Neeharika Dasaraju',
+    position: 'Mentor Program Officer',
+    level: 1,
+  },
+  {
     image: '/assets/officer/Roha-Fatima.jpg',
     name: 'Roha Fatima',
     position: 'Mentor Program Officer',
@@ -826,15 +835,6 @@ export const educationOfficers: Officer[] = [
     name: 'Tanishq Akasapu',
     position: 'Mentor Program Officer',
     level: 1,
-  },
-  {
-    image: '/assets/officer/Zeke-Stephens.jpg',
-    name: 'Zeke Stephens',
-    position: 'TIP Lead',
-    level: 1,
-    socialLinks: {
-      'personalEmail': 'zeke@zekestephens.com',
-    },
   },
 ];
 
