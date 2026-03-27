@@ -1489,7 +1489,7 @@ export const boardOfficers: Officer[] = [
   {
     image: '/assets/officer/Hannah-Van.jpg',
     name: 'Hannah Van',
-    position: 'Education Director (Mentor Program)',
+    position: 'Education Director',
     level: 2,
   },
   {
