@@ -1,9 +1,3 @@
-// About page types
-export type DivisionLink = {
-  name: string;
-  link: string;
-};
-
 export type Division = {
   section: string;
   description: string;
@@ -89,10 +83,6 @@ export type FooterLink = {
 };
 
 export type Division = 'projects' | 'research' | 'education' | 'development';
-export type ExtendedDivisions = Exclude<
-  Division | 'education.mentor' | 'education.tip',
-  'education'
->;
 
 export type Testimony = {
   quote: string;
