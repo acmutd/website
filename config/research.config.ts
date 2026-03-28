@@ -1,18 +1,5 @@
 import type { Question, Testimony } from '../lib/types';
-import type { CarouselImage, Director, Projects } from './divisions.config';
-
-export const researchDirectors: Array<Director> = [
-  {
-    name: 'Oscar Lay',
-    position: 'Research Director',
-    image: '/assets/officer/OscarLay.jpg',
-  },
-  {
-    name: 'Sahas Sharma',
-    position: 'Research Director',
-    image: '/assets/officer/SahasSharma.jpg',
-  },
-];
+import type { CarouselImage, Projects } from './divisions.config';
 
 export const researchTestimony: Testimony[] = [
   {
@@ -39,7 +26,7 @@ export const researchFAQ: Array<Question> = [
   {
     question: "What if I'm not sure about a career in research?",
     answer:
-      'That’s perfectly fine! The skills you learn in ACM Research, such as analytical thinking, project management, and academic writing, are valuable in many career paths. This experience will help prepare you for whatever avenue in the technology industry you embark on. Who knows, you might even find a true passion in research!',
+      'That\'s perfectly fine! The skills you learn in ACM Research, such as analytical thinking, project management, and academic writing, are valuable in many career paths. This experience will help prepare you for whatever avenue in the technology industry you embark on. Who knows, you might even find a true passion in research!',
   },
   {
     question: 'How long does it typically take to complete a research project and publish a paper?',
@@ -70,53 +57,12 @@ export const researchWinners: Projects[] = [
   },
   {
     name: 'Fingertip Fluency',
-    placement: 'Best Research Project Award',
+    placement: 'S24 First Place',
     desc: 'The research project achieved its goal of advancing American Sign Language (ASL) fingerspelling and exploring its intricate nuances. With the comprehensive dataset provided by Google, we successfully developed cutting-edge machine learning models, utilizing state-of-the-art, novel architectures. Our innovative approach not only accurately interpreted the dynamic hand movements in ASL and deciphered their meanings but also surpassed the top-performing paper by an impressive 7%. By leveraging advanced models like SignExplainer and PoseNet, we set a new benchmark in the field.',
     manager: 'Oscar Lay',
     members: ['Leon Zhang', 'Sahas Sharma', 'Maunika Achanta', 'Sohan Vidiyala'],
     image: '/assets/research/FingerTip.webp',
     links: [],
-  },
-];
-
-export const researchOfficers = [
-  ...researchDirectors,
-  {
-    name: 'Vaishnavi Pasumarthi',
-    position: 'Research Lead',
-    image: '/assets/officer/VaishnaviPasumarthi.jpg',
-  },
-  { name: 'Priti See', position: 'Research Lead', image: '/assets/officer/PritiSee.jpg' },
-  { name: 'Purva Patel', position: 'Research Lead', image: '/assets/officer/PurvaPatel.jpg' },
-  {
-    name: 'Sanskriti Aripineni',
-    position: 'Research Lead',
-    image: '/assets/officer/SanskritiAripineni.jpg',
-  },
-  {
-    name: 'Anish Reddy Alle',
-    position: 'Research Lead',
-    image: '/assets/officer/AnishAlle.jpg',
-  },
-  {
-    name: 'Jagadeep Kalluri',
-    position: 'Research Lead',
-    image: '/assets/officer/JagadeepKalluri.jpg',
-  },
-  {
-    name: 'Arjun Krishnan',
-    position: 'Research Lead',
-    image: '/assets/officer/ArjunKrishnan.jpg',
-  },
-  {
-    name: 'Aastha Sharma',
-    position: 'Research Lead',
-    image: '/assets/officer/AasthaSharma.jpg',
-  },
-  {
-    name: 'Tanmay Kulkarni',
-    position: 'Research Lead',
-    image: '/assets/officer/TanmayKulkarni.jpg',
   },
 ];
 

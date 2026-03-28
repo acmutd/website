@@ -4,7 +4,7 @@ import React from 'react';
 
 function Apply() {
   return (
-    <div className="h-fit w-full bg-[url(/assets/apply/apply-bg.png)] bg-cover bg-center py-10 sm:py-16 md:py-20">
+    <div className="h-fit w-full bg-[url(/assets/apply/apply-bg.png)] bg-cover bg-center py-20 sm:py-16">
       <ApplyHeader />
       <ApplyPrograms />
     </div>

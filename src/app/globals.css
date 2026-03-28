@@ -1,4 +1,4 @@
-@import url('/fonts/gilroy/gilroy.css');
+@import url('../../public/fonts/gilroy/gilroy.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,7 +16,7 @@ html, body {
 
 .background-container {
   position: relative; /* Create a positioning context for the pseudo-element */
-  overflow: hidden; /* Ensure the pseudo-element doesn’t overflow */
+  overflow: hidden; /* Ensure the pseudo-element doesn\'t overflow */
 }
 
 .background-container::before {

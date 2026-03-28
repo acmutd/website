@@ -1,25 +1,21 @@
 import { Question, Testimony } from '../lib/types';
 import {
   developmentCarouselImages,
-  developmentDirectors,
   developmentFAQ,
   developmentTestimony,
 } from './development.config';
 import {
-  educationDirectors,
   educationFAQ,
   educationImages,
   educationTestimony,
 } from './education.config';
 import {
-  hackDirectors,
   hackTestimony,
   hackFAQ,
   hackWinners,
   hackCarouselImages,
 } from './hack.config';
 import {
-  projectDirectors,
   projectImages,
   projectsFAQ,
   projectsTestimony,
@@ -27,39 +23,41 @@ import {
 } from './projects.config';
 import {
   researchCarousel,
-  researchDirectors,
   researchFAQ,
   researchTestimony,
   researchWinners,
 } from './research.config';
-import { mediaDirectors, mediaTestimony, mediaFAQ, mediaCarousel } from './media.config';
+import { mediaTestimony, mediaFAQ, mediaCarousel } from './media.config';
 import {
-  communitCarouselImages,
-  communityDirectors,
-  communityFAQ,
+  communityImages,
   communityTestimony,
+  communityFAQ,
 } from './community.config';
 import {
   industryCarouselImages,
-  industryDirectors,
   industryFAQ,
   industryTestimony,
 } from './industry.config';
+
 type Division =
   | {
-      division:
-        | 'projects'
-        | 'research'
-        | 'development'
-        | 'media'
-        | 'industry'
-        | 'hackutd'
-        | 'community';
-    }
+    division:
+    | 'projects'
+    | 'research'
+    | 'development'
+    | 'media'
+    | 'industry'
+    | 'hackutd';
+  }
   | {
-      division: 'education';
-      sub: 'tip' | 'mentor';
-    };
+    division: 'education';
+    sub?: 'tip' | 'mentor';
+  }
+  | {
+    division: 'community';
+    sub?: 'campus' | 'outreach';
+  };
+
 export type Director = {
   name: string;
   position: string;
@@ -87,27 +85,6 @@ export type Projects = {
   manager?: string;
 };
 
-export function getDirectors(division: Division['division']): Director[] {
-  switch (division) {
-    case 'projects':
-      return projectDirectors;
-    case 'research':
-      return researchDirectors;
-    case 'development':
-      return developmentDirectors;
-    case 'education':
-      return educationDirectors;
-    case 'media':
-      return mediaDirectors;
-    case 'hackutd':
-      return hackDirectors;
-    case 'community':
-      return communityDirectors;
-    case 'industry':
-      return industryDirectors;
-  }
-}
-
 export function getTestimony(section: Division): Testimony[] {
   switch (section.division) {
     case 'projects':
@@ -115,7 +92,7 @@ export function getTestimony(section: Division): Testimony[] {
     case 'research':
       return researchTestimony;
     case 'education':
-      return educationTestimony[section.sub];
+      return section.sub ? educationTestimony[section.sub] : [];
     case 'development':
       return developmentTestimony;
     case 'media':
@@ -123,7 +100,7 @@ export function getTestimony(section: Division): Testimony[] {
     case 'hackutd':
       return hackTestimony;
     case 'community':
-      return communityTestimony;
+      return section.sub ? communityTestimony[section.sub] : [];
     case 'industry':
       return industryTestimony;
   }
@@ -132,7 +109,7 @@ export function getTestimony(section: Division): Testimony[] {
 export function getFAQ(section: Division): Question[] {
   switch (section.division) {
     case 'education':
-      return educationFAQ[section.sub];
+      return section.sub ? educationFAQ[section.sub] : [];
     case 'projects':
       return projectsFAQ;
     case 'research':
@@ -144,7 +121,7 @@ export function getFAQ(section: Division): Question[] {
     case 'hackutd':
       return hackFAQ;
     case 'community':
-      return communityFAQ;
+      return section.sub ? communityFAQ[section.sub] : [];
     case 'industry':
       return industryFAQ;
   }
@@ -153,7 +130,7 @@ export function getFAQ(section: Division): Question[] {
 export function getCarouselImages(section: Division): CarouselImage[] {
   switch (section.division) {
     case 'education':
-      return educationImages[section.sub];
+      return section.sub ? educationImages[section.sub] : [];
     case 'projects':
       return projectImages;
     case 'research':
@@ -165,13 +142,14 @@ export function getCarouselImages(section: Division): CarouselImage[] {
     case 'hackutd':
       return hackCarouselImages;
     case 'community':
-      return communitCarouselImages;
+      return section.sub ? communityImages[section.sub] : [];
     case 'industry':
       return industryCarouselImages;
   }
 }
 
 type WinningProjectSelector = 'projects' | 'research' | 'hackutd';
+
 
 export function getWinningProjects(selector: WinningProjectSelector): Projects[] {
   switch (selector) {

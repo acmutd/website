@@ -8,20 +8,22 @@ type Props = {
 
 export default function QuoteMarks(props: Props) {
   return (
-    <div className="relative mx-2 my-4 md:m-5 flex flex-col min-h-[100px] md:h-[150px] w-full max-w-[60rem]">
+    <div className="relative mx-2 my-2 flex flex-col w-full max-w-[60rem] py-6 md:py-8">
+      {/* opening quote */}
       <Image
         src="/assets/divisions/shared/ACM Website Quote Left.png"
-        className="left-2 md:left-0 top-0 w-6 h-6 md:w-[55px] md:h-[55px]"
-        width="55"
-        height="55"
+        className="absolute left-2 md:left-0 top-0 w-6 h-6 md:w-10 md:h-10 opacity-60"
+        width={40}
+        height={40}
         alt="Quote Left"
       />
-      <div className="mx-auto w-full max-w-[42rem] px-8 md:px-16 font-bold">{props.children}</div>
+      <div className="mx-auto w-full max-w-[42rem] px-8 md:px-16 leading-relaxed">{props.children}</div>
+      {/* closing quote */}
       <Image
         src="/assets/divisions/shared/ACM Website Quote Left.png"
-        className="bottom-0 right-2 md:right-0 rotate-180 w-6 h-6 md:w-[55px] md:h-[55px] self-end"
-        width="55"
-        height="55"
+        className="absolute bottom-0 right-2 md:right-0 rotate-180 w-6 h-6 md:w-10 md:h-10 opacity-60"
+        width={40}
+        height={40}
         alt="Quote Right"
       />
     </div>

@@ -1,21 +1,7 @@
 import { Question, Testimony } from '../lib/types';
-import { CarouselImage, Director } from './divisions.config';
-import { Officer } from './officers.config';
+import { CarouselImage } from './divisions.config';
 
 type SubDivision = 'tip' | 'mentor';
-
-export const educationDirectors: Array<Director> = [
-  {
-    name: 'Farman Ali',
-    position: 'Director of Education',
-    image: '/assets/officer/FarmanAli.jpg',
-  },
-  {
-    name: 'Agastya Bose',
-    position: 'Director of Education',
-    image: '/assets/officer/AgastyaBose.jpg',
-  },
-];
 
 export const educationTestimony: Record<SubDivision, Array<Testimony>> = {
   mentor: [
@@ -95,69 +81,15 @@ export const educationFAQ: Record<SubDivision, Question[]> = {
     {
       question: 'What if I am a transfer student?',
       answer:
-        'It is up to the transfer student if they wish to be considered as an ‘underclassmen’ or ‘upperclassmen’',
+        'It is up to the transfer student if they wish to be considered as an ‘underclassmen\' or ‘upperclassmen\'',
     },
     {
-      question: 'Can I switch mentors if the relationship isn’t working out?',
+      question: 'Can I switch mentors if the relationship isn\'t working out?',
       answer:
         'Yes, absolutely. If for any reason it is not working out, please email us at education@acmutd.co',
     },
   ],
 };
-
-export const educationOfficers: Officer[] = [
-  ...educationDirectors,
-  {
-    name: 'Michael Zhao',
-    position: 'TIP Lead',
-    image: '/assets/officer/MichaelZhao.png',
-  },
-  {
-    name: 'Caleb Kim',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/CalebKim.jpg',
-  },
-  {
-    name: 'Adarsh Goura',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/AdarshGoura.jpeg',
-  },
-  {
-    name: 'Ayush Shivhare',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/AyushShivhare.jpg',
-  },
-  {
-    name: 'Sid Mylavarapu',
-    position: 'Mentor Program Officer',
-    image: '/assets/officer/SidMylavarapu.jpg',
-  },
-  {
-    name: 'Ram Gudur',
-    position: 'TIP Lead',
-    image: '/assets/officer/RamGudur.png',
-  },
-  {
-    name: 'Lalith Vennapusa',
-    position: 'TIP Lead',
-    image: '/assets/officer/LalithVennapusa.png',
-  },
-  {
-    name: 'Noel Emmanuel',
-    position: 'TIP Lead',
-    image: '/assets/officer/NoelEmmanuel.jpg',
-  },
-  {
-    name: 'Solomon Pierce',
-    position: 'TIP Lead',
-    image: '/assets/officer/SolomonPierce.jpg',
-  },
-  {
-    name: 'Aashay Vishwakarma',
-    position: 'TIP Lead',
-    image: '/assets/officer/AashayVishwakarma.jpg',
-  },
-];
 
 export const educationImages: {
   mentor: CarouselImage[];

@@ -1,77 +1,5 @@
 import { Question, Testimony } from '../lib/types';
-import { CarouselImage, Director } from './divisions.config';
-import { type Officer } from './officers.config';
-
-export const mediaDirectors: Director[] = [
-  {
-    image: '/assets/officer/HibaMubeen.jpg',
-    name: 'Hiba Mubeen',
-    position: 'Director of Media',
-  },
-  {
-    image: '/assets/officer/SusanZhang.jpg',
-    name: 'Susan Zhang',
-    position: 'Director of Media',
-  },
-]
-
-export const mediaOfficers: Officer[] = [
-  {
-    image: '/assets/officer/HibaMubeen.jpg',
-    name: 'Hiba Mubeen',
-    position: 'Director of Media',
-  },
-  {
-    image: '/assets/officer/SusanZhang.jpg',
-    name: 'Susan Zhang',
-    position: 'Director of Media',
-  },
-  {
-    image: '/assets/officer/CalebHernandez.jpg',
-    name: 'Caleb Hernandez',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/SandraLuo.jpg',
-    name: 'Sandra Luo',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/NandiniPaidesetty.jpg',
-    name: 'Nandini Paidesetty',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/AdrianAlvarez.jpg',
-    name: 'Adrian Alvarez',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/SanjithTamballa.jpg',
-    name: 'Sanjith Tamballa',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/MohamedIbrahim.png',
-    name: 'Mohamed Ibrahim',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/RajivMallisetty.jpg',
-    name: 'Rajiv Malisetty',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/AddieSubramanian.png',
-    name: 'Aadharshini Subramanian',
-    position: 'Media Officer',
-  },
-  {
-    image: '/assets/officer/SnehaMaram.jpg',
-    name: 'Sneha Maram',
-    position: 'Media Officer',
-  },
-];
+import { CarouselImage } from './divisions.config';
 
 export const mediaTestimony: Testimony[] = [
   {
@@ -83,7 +11,7 @@ export const mediaTestimony: Testimony[] = [
     name: "Susan Zhang"
   },
   {
-    quote: 'I love how passionate Media is in its mission to broaden ACM UTD’s reach all across campus, and getting to capture all of the amazing events with our team is so fun!',
+    quote: 'I love how passionate Media is in its mission to broaden ACM UTD\'s reach all across campus, and getting to capture all of the amazing events with our team is so fun!',
     name: 'Hiba Mubeen'
   },
 
