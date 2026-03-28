@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
 import QueryProvider from '@/components/QueryProvider';
+import LenisProvider from '@/components/LenisProvider';
 
 export const metadata: Metadata = {
   title: {
@@ -72,13 +73,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en">
       <body className="bg-background">
-        <QueryProvider>
-          <Navbar />
-          {children}
-          <Footer />
-        </QueryProvider>
+        <LenisProvider>
+          <QueryProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </QueryProvider>
+        </LenisProvider>
       </body>
     </html>
   );
