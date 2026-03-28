@@ -51,7 +51,7 @@ const navigation: NavigationItem[] = [
           { name: 'Education - TIP', href: '/education/tip' },
           { name: 'Education - Mentor', href: '/education/mentor' },
           { name: 'Community - Campus', href: '/community/campus' },
-  { name: 'Community - Outreach', href: '/community/outreach' },
+          { name: 'Community - Outreach', href: '/community/outreach' },
           { name: 'HackUTD', href: '/hackutd' },
           { name: 'Industry', href: '/industry' },
         ],
@@ -95,9 +95,8 @@ export default function Navbar() {
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div
-              className={`relative flex items-center justify-between transition-all duration-300 ${
-                top ? 'h-16' : 'h-14'
-              }`}
+              className={`relative flex items-center justify-between transition-all duration-300 ${top ? 'h-16' : 'h-14'
+                }`}
             >
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <Disclosure.Button className="group relative inline-flex items-center justify-center rounded-lg p-2 text-primary transition-all duration-200 hover:scale-105 hover:bg-gradient-to-r hover:from-primary/10 hover:to-primary/5 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 focus:ring-offset-black/50">
@@ -123,9 +122,8 @@ export default function Navbar() {
                 >
                   <div className="relative">
                     <Image
-                      className={`w-auto transition-all duration-200 group-hover:brightness-110 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] ${
-                        top ? 'h-10' : 'h-8'
-                      }`}
+                      className={`w-auto transition-all duration-200 group-hover:brightness-110 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] ${top ? 'h-10' : 'h-8'
+                        }`}
                       src="/assets/chapter-logo.png"
                       alt="ACM Logo"
                       width={405}
