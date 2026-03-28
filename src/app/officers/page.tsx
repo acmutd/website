@@ -1,47 +1,25 @@
 import OfficerGrid from '@/components/Officers/OfficerGrid';
 import OfficerHeader from '@/components/Officers/OfficerHeader';
-import Image from 'next/image';
 
 function Apply() {
   return (
-    <div className="relative h-full w-full bg-[url(/assets/officer/officer-bg.png)] bg-cover py-20">
-      <div className="absolute right-20 top-28 hidden h-[105rem] w-0 flex-shrink-0 text-center text-[0.625rem] font-bold leading-[99.99%] tracking-[-0.01875rem] text-[#8A8A8A] md:block">
-        <p>
-          0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0
-          0 1 0 0 1 0 0 1 1 1 1 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1 0 0 0 1
-          0 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 0 0
-          0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 1 0 0 1 0 0 1 1 1 1 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 0
-          0 0 1 1 0 1 0 1 0 1 0 0 0 1 0 1 0 0 1 1
-        </p>
-        <p>
-          0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0
-          0 1 0 0 1 0 0 1 1 1 1 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1 0 0 0 1
-          0 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 0 0
-          0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 1 0 0 1 0 0 1 1 1 1 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 0
-          0 0 1 1 0 1 0 1 0 1 0 0 0 1 0 1 0 0 1 1
-        </p>
-        <p>
-          0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 1 0
-          0 1 0 0 1 0 0 1 1 1 1 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 1 0 0 0 1
-          0 1 0 0 1 1 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1 0 0 0 0 1 1 0 1 0 0 1 1 0 1 0 0 1 0 0 0 0
-          0 0 1 0 1 0 0 0 0 0 1 0 1 0 0 1 0 0 1 0 0 1 1 1 1 0 1 0 0 1 0 1 0 0 1 0 0 0 1 0 1 0 1 0 0
-          0 0 1 1 0 1 0 1 0 1 0 0 0 1 0 1 0 0 1 1
-        </p>
+    <div className="relative min-h-screen w-full">
+      <div className="fixed inset-0 bg-[url(/assets/officer-bg.png)] bg-cover bg-center bg-no-repeat" />
+      <div className="relative z-10 pb-20">
+        <OfficerHeader />
+        <div className="container mx-auto px-4 py-10 lg:px-8 lg:py-14">
+          <OfficerGrid type="board" />
+          <OfficerGrid type="media" />
+          <OfficerGrid type="research" />
+          <OfficerGrid type="development" />
+          <OfficerGrid type="projects" />
+          <OfficerGrid type="education" />
+          <OfficerGrid type="community" />
+          <OfficerGrid type="hackutd" />
+          <OfficerGrid type="industry" />
+          <OfficerGrid type="advisor" />
+        </div>
       </div>
-      <div className="absolute right-24 top-72 hidden md:block">
-        <Image src="/assets/officer/divisions.png" alt="Division" width={40} height={463} />
-      </div>
-      <OfficerHeader />
-      <OfficerGrid type="board" />
-      <OfficerGrid type="media" />
-      <OfficerGrid type="research" />
-      <OfficerGrid type="development" />
-      <OfficerGrid type="projects" />
-      <OfficerGrid type="education" />
-      <OfficerGrid type="community" />
-      <OfficerGrid type="hackutd" />
-      <OfficerGrid type="industry" />
-      <OfficerGrid type="advisor" />
     </div>
   );
 }
