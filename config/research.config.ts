@@ -3,9 +3,9 @@ import type { CarouselImage, Director, Projects } from './divisions.config';
 
 export const researchDirectors: Array<Director> = [
   {
-    name: 'Sahas Sharma',
+    name: 'Priti See',
     position: 'Director of Research',
-    image: '/assets/officer/Sahas_Sharma.jpg',
+    image: '/assets/officer/Priti_See.jpg',
   },
   {
     name: 'Purva Patel',
@@ -60,11 +60,38 @@ export const researchFAQ: Array<Question> = [
 
 export const researchWinners: Projects[] = [
   {
+    name: 'Qryptik',
+    placement: 'F25 First Place',
+    desc: 'Description: Qryptik explores a novel frontier in cybersecurity by developing a next-generation post-quantum encryption (PQE) method designed to withstand attacks from quantum computers while remaining efficient enough to run on low-power devices like smartphones. As quantum computing threatens to break traditional encryption standards such as RSA and AES within days, the need for robust, scalable, and efficient cryptographic systems is more urgent than ever. Participants will explore the intersection of quantum resilience, machine learning, neural networks (CNNs), and cryptographic design, working hands-on with secure key generation, lattice-based systems (RLCE), matrix manipulation, and model compression techniques for low-compute environments.',
+    manager: 'Sai Chauhan',
+    members: ['Lakshmi Siri Appalaneni', 'Avery Brown', 'Maryam Maalin', 'Sreenivasa Sobhirala'],
+    image: '/assets/research/research-symposium-s25-poster.jpg',
+    links: [],
+  },
+  {
+    name: 'Adveyes',
+    placement: 'F25 Second Place',
+    desc: 'Attention Deficit/Hyperactive Disorder (ADHD) is often diagnosed based on observed behavioral outcomes alone. Stemming from a desire for less subjectivity between diagnoses, techniques such as eye-tracking (and saccade-detection/saliency models) have been proven to be able to classify ADHD individuals. However, these techniques often require expensive hardware, which in turn requires the participant to come in person or risk forgoing a diagnosis due to costs. With the CDC declaring an increase of 1 million diagnoses in the past 4 years, resources are at an all time low, while demand is at a high. We propose the application of webcams instead of high end devices to explore the avenue of remote diagnostics and promote accessibility to people without access to such resources.',
+    manager: 'Anish Reddy Alle',
+    members: ['Zoë Bryant', 'Ayman Mohammad', 'Gabrielle Le', 'Adam Khazem'],
+    image: '/assets/research/FingerTip.webp',
+    links: [],
+  },
+    {
     name: 'Helix',
     placement: 'S25 First Place',
     desc: 'Helix set out to predict the biological impact of missense mutations on protein growth by integrating structural bioinformatics with interpretable machine learning. Using the ThermoMutDB dataset of over 13,000 mutations we engineered a rich feature space to capture physiochemical, evolutionary, and 3D structural characteristics. With this dataset we developed a custom voting ensemble that utilized random forests, gradient boosting and SVM classifiers, which outperformed Siamese Neural Networks by 23% in classifying stabilizing vs destabilizing mutations. Our approach generalized well over a diverse set of protein families and also improved the interpretability of a reliable and faster mutation based discovery model.',
     manager: 'Priti See',
     members: ['Cheryl Wang', 'Nathan Han', 'Kaamil Kaka', 'Arya Velayutham', 'Divya Narayan'],
+    image: '/assets/research/research-symposium-s25-poster.jpg',
+    links: [],
+  },
+  {
+    name: 'NeuroVision',
+    placement: 'F24 First Place',
+    desc: 'This research project aims to transform the analysis of EEG signals, significantly improving the diagnosis and management of epilepsy, a condition affecting 65 million people worldwide. By leveraging state-of-the-art deep learning techniques, including CNNs and transformers, we will develop models that greatly enhance the accuracy and efficiency of detecting abnormal EEG patterns. Our approach involves utilizing extensive datasets and advanced neural architectures, programmed in Python with PyTorch, to push the boundaries of what\'s possible in neurological care. Through this work, we aspire to set new standards in the field, contributing to better patient outcomes and a deeper understanding of neurological disorders.',
+    manager: 'Sahas Sharma',
+    members: ['Purva Patel', 'Priti See', 'Aditya Reddy Yanamala', 'Shayaan Zari', 'Rebecca Bender Jutzi'],
     image: '/assets/research/research-symposium-s25-poster.jpg',
     links: [],
   },
