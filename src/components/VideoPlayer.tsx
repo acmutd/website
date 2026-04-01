@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import React, { useRef, useState } from "react";
 
 
@@ -55,17 +56,19 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({videoSrc, thumbnailSrc}) => {
    <>
      <div
         className="group relative w-full h-full aspect-video rounded-3xl bg-amber-600/10 backdrop-blur-xl cursor-pointer overflow-hidden"
-       
+
        onClick={handleVideoClick}
      >
-       <img
-           src={thumbnailSrc}
-           alt="Video thumbnail"
-           className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-80"
+       <Image
+         src={thumbnailSrc}
+         alt="Video thumbnail"
+         fill
+         sizes="100vw"
+         className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-80"
        />
        <video
          className="absolute inset-0 w-full h-full object-cover group-hover:opacity-70 duration-300"
-         src={thumbnailSrc} 
+         src={thumbnailSrc}
        />
        <div className="absolute inset-0 flex group-hover:scale-125 duration-300 items-center justify-center text-white text-5xl">
          ▶

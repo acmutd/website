@@ -12,7 +12,7 @@ function ApplyPrograms() {
             <ApplyProgramCard
               title={data.programName}
               division={data.division}
-              image={`/assets/apply/programs/${data.programImage}.png`}
+              image={`/assets/apply/programs/${data.programImage}.jpg`}
               link={data.link}
               key={index}
             />

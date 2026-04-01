@@ -1,18 +1,5 @@
 import { Question, Testimony } from '../lib/types';
-import { CarouselImage, Director, Projects } from './divisions.config';
-
-export const projectDirectors: Array<Director> = [
-  {
-    name: 'Adarsh Goura',
-    position: 'Projects Director',
-    image: '/assets/officer/Adarsh_Goura.jpg',
-  },
-  {
-    name: 'Kanchan Javalkar',
-    position: 'Projects Director',
-    image: '/assets/officer/Kanchan_Javalkar.jpg',
-  },
-];
+import { CarouselImage, Projects } from './divisions.config';
 
 export const projectsTestimony: Testimony[] = [
   { quote: 'It helped me land my first internship!' },
@@ -47,72 +34,6 @@ export const projectsFAQ: Array<Question> = [
     answer:
       "The minimum time commitment is the 1.5 hours required for each weekly build night. Beyond this, you and your team may need extra time to complete your project so it's up to you to schedule the time amongst yourselves.",
   },
-];
-
-export const projectsOfficers = [
-  ...projectDirectors,
-  ...[
-    {
-    name: 'Suhani Rana',
-    position: 'Project Manager',
-    image: '/assets/officer/Suhani_Rana.jpg',
-  },
-  {
-    name: 'Nadeeba Atiqui',
-    position: 'Project Manager',
-    image: '/assets/officer/Nadeeba_Atiqui.JPG',
-  },
-  {
-    name: 'Abel Thomas',
-    position: 'Project Manager',
-    image: '/assets/officer/Abel_Thomas.JPG',
-  },
-  {
-    name: 'Shraddha Subash',
-    position: 'Project Manager',
-    image: '/assets/officer/Shraddha_Subash.jpg',
-  },
-  {
-    name: 'Ethan Varghese',
-    position: 'Project Manager',
-    image: '/assets/officer/Ethan_Varghese.jpg',
-  },
-  {
-    name: 'Shreya Ramani',
-    position: 'Project Manager',
-    image: '/assets/officer/Shreya_Ramani.JPG',
-  },
-  {
-    name: 'Noel Emmanuel',
-    position: 'Project Manager',
-    image: '/assets/officer/Noel_Emmanuel.JPG',
-  },
-  {
-    name: 'Tammy Khurana',
-    position: 'Project Manager',
-    image: '/assets/officer/Tammy_Khurana.png',
-  },
-  {
-    name: 'Ram Gudur',
-    position: 'Project Manager',
-    image: '/assets/officer/Ram_Gudur.jpeg',
-  },
-  {
-    name: 'Mohammed Mehrab',
-    position: 'Project Manager',
-    image: '/assets/officer/Mohammad_Mehrab.jpg',
-  },
-  {
-    name: 'Mathew Biji',
-    position: 'Project Manager',
-    image: '/assets/officer/Mathew_Biji.jpg',
-  },
-    {
-    name: 'Abis Naqvi',
-    position: 'Projects Advisor',
-    image: '/assets/officer/Abis_Naqvi.jpeg',
-  },
-  ],
 ];
 
 export const projectImages: CarouselImage[] = [
