@@ -145,7 +145,7 @@ export const projectsWinners: Projects[] = [
     image: '/assets/projects/SAGE.jpg',
     links: [
       { type: 'github', link: 'https://github.com/acm-projects/DevDiary' },
-      { type: 'video', link: 'TODO' },
+      // { type: 'video', link: 'TODO' },
     ],
     members: ['Tyler Le', 'Jonathan Lewis', 'Phuc Trinh', 'Maryam Al-Naami'],
     manager: 'Tammy Khurana',
@@ -157,11 +157,22 @@ export const projectsWinners: Projects[] = [
     image: '/assets/projects/SAGE.jpg',
     links: [
       { type: 'github', link: 'https://github.com/acm-projects/Foundry' },
-      { type: 'video', link: 'TODO' },
+      // { type: 'video', link: 'TODO' },
     ],
     members: ['Akilan Sathish', 'Efrain Arevalo', 'Enaya Jawed', 'Luana Marques'],
     manager: 'Ethan Varghese',
     placement: 'F25 Design Award Winner',
+  },
+    {
+    name: 'HackLab',
+    desc: 'HackLab is a platform that empowers developers to bring their software ideas to life through meaningful collaboration. Developers can pitch their own project ideas, join exciting projects proposed by others, and connect with like-minded contributors who share their vision. By fostering organic team formation and providing hands-on opportunities, HackLab enables users to showcase their skills and build impressive portfolios. This community-driven environment accelerates practical software engineering experience, making real-world collaboration both accessible and rewarding.',
+    image: '/assets/projects/presentationnight-s25-winners.jp',
+    links: [
+      { type: 'github', link: 'https://github.com/acm-projects/HackLab' },
+    ],
+    members: ['Aastha Sheth', 'Luke Sultzer', 'Owen Isenhart', 'Ethan Scherwitz'],
+    manager: 'Ethan Varghese',
+    placement: 'S25 1st place',
   },
   {
     name: 'SAGE',
