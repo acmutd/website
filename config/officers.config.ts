@@ -1454,6 +1454,7 @@ export const industryOfficers: Officer[] = [
 ];
 
 export const boardOfficers: Officer[] = [
+  // Executive
   {
     image: '/assets/officer/Elijah-Walker.jpg',
     name: 'Elijah Walker',
@@ -1486,81 +1487,20 @@ export const boardOfficers: Officer[] = [
       'personalEmail': 'mxiong935@gmail.com',
     },
   },
-  {
-    image: '/assets/officer/Aashay-Vishwakarma.jpg',
-    name: 'Aashay Vishwakarma',
-    position: 'Education Director (TIP)',
-    level: 2,
-    socialLinks: {
-      'linkedin': 'https://linkedin.com/in/https://www.linkedin.com/in/aashayvishwakarma/',
-      'github': 'https://github.com/aashayvishwakarma',
-      'instagram': 'https://instagram.com/aashayvishwakarma',
-      'personalEmail': 'aashay.vkarma@gmail.com',
-    },
-  },
-  {
-    image: '/assets/officer/Aatish-Bommisetty.jpg',
-    name: 'Aatish Bommisetty',
-    position: 'Finance Director',
-    level: 2,
-  },
-  {
-    image: '/assets/officer/Adarsh-Goura.jpg',
-    name: 'Adarsh Goura',
-    position: 'Projects Director',
-    level: 2,
-  },
-  {
-    image: '/assets/officer/Alan-Roybal.jpg',
-    name: 'Alan Roybal',
-    position: 'HackUTD Director',
-    level: 2,
-  },
-  {
-    image: '/assets/officer/Anika-Guin.jpg',
-    name: 'Anika Guin',
-    position: 'Industry Director',
-    level: 2,
-  },
-  {
-    image: '/assets/officer/Anirudh-Vayalali.jpg',
-    name: 'Anirudh Vayalali',
-    position: 'Development Director',
-    level: 2,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/anirudh-vayalali',
-      'github': 'https://github.com/axdyv',
-      'instagram': 'https://instagram.com/andy.v33',
-      'personalEmail': 'anirudhvayalali@gmail.com',
-    },
-  },
-  {
-    image: '/assets/officer/Anusha-Patel.png',
-    name: 'Anusha Patel',
-    position: 'Community Director (Campus)',
-    level: 2,
-    socialLinks: {
-      'linkedin': 'https://linkedin.com/in/https://www.linkedin.com/in/anushapatel6571/',
-    },
-  },
+  // Media
   {
     image: '/assets/officer/Anvi-Sidda.jpg',
     name: 'Anvi Sidda',
-    position: 'Media Director (Marketing)',
+    position: 'Media Director',
     level: 2,
   },
   {
-    image: '/assets/officer/Hannah-Van.jpg',
-    name: 'Hannah Van',
-    position: 'Education Director (MP)',
+    image: '/assets/officer/Sneha-Maram.jpg',
+    name: 'Sneha Maram',
+    position: 'Media Director',
     level: 2,
   },
-  {
-    image: '/assets/officer/Nihita-Soma.jpg',
-    name: 'Nihita Soma',
-    position: 'Industry Director',
-    level: 2,
-  },
+  // Research
   {
     image: '/assets/officer/Priti-See.jpg',
     name: 'Priti See',
@@ -1578,10 +1518,35 @@ export const boardOfficers: Officer[] = [
       'personalEmail': 'purva.patel@utdallas.edu',
     },
   },
+  // Development
   {
-    image: '/assets/officer/Sneha-Maram.jpg',
-    name: 'Sneha Maram',
-    position: 'Media Director (Design)',
+    image: '/assets/officer/Anirudh-Vayalali.jpg',
+    name: 'Anirudh Vayalali',
+    position: 'Development Director',
+    level: 2,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/anirudh-vayalali',
+      'github': 'https://github.com/axdyv',
+      'instagram': 'https://instagram.com/andy.v33',
+      'personalEmail': 'anirudhvayalali@gmail.com',
+    },
+  },
+  {
+    image: '/assets/officer/Yash-Shah.jpg',
+    name: 'Yash Shah',
+    position: 'Development Director',
+    level: 2,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/yash-shah-15a704280/',
+      'github': 'https://github.com/git-yash',
+      'personalEmail': 'yashmittalshah@gmail.com',
+    },
+  },
+  // Projects
+  {
+    image: '/assets/officer/Adarsh-Goura.jpg',
+    name: 'Adarsh Goura',
+    position: 'Projects Director',
     level: 2,
   },
   {
@@ -1595,6 +1560,51 @@ export const boardOfficers: Officer[] = [
       'personalEmail': 'suhanirana19@gmail.com',
     },
   },
+  // Education
+  {
+    image: '/assets/officer/Aashay-Vishwakarma.jpg',
+    name: 'Aashay Vishwakarma',
+    position: 'Education Director',
+    level: 2,
+    socialLinks: {
+      'linkedin': 'https://linkedin.com/in/https://www.linkedin.com/in/aashayvishwakarma/',
+      'github': 'https://github.com/aashayvishwakarma',
+      'instagram': 'https://instagram.com/aashayvishwakarma',
+      'personalEmail': 'aashay.vkarma@gmail.com',
+    },
+  },
+  {
+    image: '/assets/officer/Hannah-Van.jpg',
+    name: 'Hannah Van',
+    position: 'Education Director',
+    level: 2,
+  },
+  // Community
+  {
+    image: '/assets/officer/Anusha-Patel.png',
+    name: 'Anusha Patel',
+    position: 'Community Director',
+    level: 2,
+    socialLinks: {
+      'linkedin': 'https://linkedin.com/in/https://www.linkedin.com/in/anushapatel6571/',
+    },
+  },
+  {
+    image: '/assets/officer/Vyshnav-Vijish.jpg',
+    name: 'Vyshnav Vijish',
+    position: 'Community Director',
+    level: 2,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/vyshnav-vijish-aba4b9269/',
+    },
+  },
+  // HackUTD
+  {
+    image: '/assets/officer/Alan-Roybal.jpg',
+    name: 'Alan Roybal',
+    position: 'HackUTD Director',
+    level: 2,
+  },
   {
     image: '/assets/officer/Veer-Shah.jpg',
     name: 'Veer Shah',
@@ -1605,25 +1615,25 @@ export const boardOfficers: Officer[] = [
       'github': 'https://github.com/veermshah',
     },
   },
+  // Industry
   {
-    image: '/assets/officer/Vyshnav-Vijish.jpg',
-    name: 'Vyshnav Vijish',
-    position: 'Community Director (Outreach)',
+    image: '/assets/officer/Anika-Guin.jpg',
+    name: 'Anika Guin',
+    position: 'Industry Director',
     level: 2,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/vyshnav-vijish-aba4b9269/',
-    },
   },
   {
-    image: '/assets/officer/Yash-Shah.jpg',
-    name: 'Yash Shah',
-    position: 'Development Director',
+    image: '/assets/officer/Nihita-Soma.jpg',
+    name: 'Nihita Soma',
+    position: 'Industry Director',
     level: 2,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/yash-shah-15a704280/',
-      'github': 'https://github.com/git-yash',
-      'personalEmail': 'yashmittalshah@gmail.com',
-    },
+  },
+  // Finance
+  {
+    image: '/assets/officer/Aatish-Bommisetty.jpg',
+    name: 'Aatish Bommisetty',
+    position: 'Finance Director',
+    level: 2,
   },
 ];
 
