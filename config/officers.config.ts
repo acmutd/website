@@ -1280,6 +1280,17 @@ export const hackOfficers: Officer[] = [
     level: 1,
   },
   {
+    image: '/assets/officer/Dev-Sheth.jpg',
+    name: 'Dev Sheth',
+    position: 'Experience Coordinator',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/devsheth22/',
+      'github': 'https://github.com/devsheth05',
+      'personalEmail': 'sheth.dev02@gmail.com',
+    },
+  },
+  {
     image: '/assets/officer/Keane-Ferdinand.jpg',
     name: 'Keane Ferdinand',
     position: 'Experience Coordinator',
