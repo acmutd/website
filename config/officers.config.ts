@@ -1178,12 +1178,6 @@ export const hackOfficers: Officer[] = [
     level: 1,
   },
   {
-    image: '/assets/officer/Swayam-Arora.jpg',
-    name: 'Swayam Arora',
-    position: 'Tech Coordinator',
-    level: 1,
-  },
-  {
     image: '/assets/officer/Tharun-Sevvel.jpg',
     name: 'Tharun Sevvel',
     position: 'Tech Coordinator',
@@ -1300,6 +1294,12 @@ export const hackOfficers: Officer[] = [
       'github': 'https://github.com/BobFett3185',
       'personalEmail': 'keaneferdinand82@gmail.com',
     },
+  },
+  {
+    image: '/assets/officer/Swayam-Arora.jpg',
+    name: 'Swayam Arora',
+    position: 'Experience Coordinator',
+    level: 1,
   },
   {
     image: '/assets/officer/Tien-Phan.jpg',
