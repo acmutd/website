@@ -61,6 +61,41 @@ export const projectImages: CarouselImage[] = [
 
 export const projectsWinners: Projects[] = [
   {
+    name: 'DevDiary',
+    desc: 'Dev Diary is a personal markdown-based logging platform built for developers to document bugs, errors, and setup processes across coding projects. It helps you keep track of technical challenges in an organized, personalized way, paired with an AI assistant. With a centralized memory bank and a chatbot that guides you through documentation, error fixes, and helpful tools, creating personal projects feels a little less overwhelming (especially for new developers) while also making the process more reflective and focused on learning.',
+    image: '/assets/projects/SAGE.jpg',
+    links: [
+      { type: 'github', link: 'https://github.com/acm-projects/DevDiary' },
+      // { type: 'video', link: 'TODO' },
+    ],
+    members: ['Tyler Le', 'Jonathan Lewis', 'Phuc Trinh', 'Maryam Al-Naami'],
+    manager: 'Tammy Khurana',
+    placement: 'F25 1st Place',
+  },
+  {
+    name: 'Foundry',
+    desc: 'Foundry is a visual infrastructure builder that transforms AWS deployment from complex configurations into simple drag-and-drop design. Teams build production-ready applications by visually connecting databases, servers, and storage without any cloud expertise—just drag, connect, and deploy. With real-time collaboration, automatic GitHub CI/CD, and transparent cost tracking, Foundry eliminates the AWS learning curve so developers can focus on building applications, not wrestling with infrastructure.',
+    image: '/assets/projects/SAGE.jpg',
+    links: [
+      { type: 'github', link: 'https://github.com/acm-projects/Foundry' },
+      // { type: 'video', link: 'TODO' },
+    ],
+    members: ['Akilan Sathish', 'Efrain Arevalo', 'Enaya Jawed', 'Luana Marques'],
+    manager: 'Ethan Varghese',
+    placement: 'F25 Design Award Winner',
+  },
+    {
+    name: 'HackLab',
+    desc: 'HackLab is a platform that empowers developers to bring their software ideas to life through meaningful collaboration. Developers can pitch their own project ideas, join exciting projects proposed by others, and connect with like-minded contributors who share their vision. By fostering organic team formation and providing hands-on opportunities, HackLab enables users to showcase their skills and build impressive portfolios. This community-driven environment accelerates practical software engineering experience, making real-world collaboration both accessible and rewarding.',
+    image: '/assets/projects/presentationnight-s25-winners.jp',
+    links: [
+      { type: 'github', link: 'https://github.com/acm-projects/HackLab' },
+    ],
+    members: ['Aastha Sheth', 'Luke Sultzer', 'Owen Isenhart', 'Ethan Scherwitz'],
+    manager: 'Ethan Varghese',
+    placement: 'S25 1st place',
+  },
+  {
     name: 'SAGE',
     desc: 'Have you ever asked your advisor a question only to wait weeks for a response? Many times, advisors get flooded with questions that have simple answers or problems that are easy to resolve. SAGE is an advisor chatbot that can answer your questions quickly and efficiently, so you don\'t have to worry about it. On top of this, SAGE can view your profile to help you make decisions about future classes and even generate personalized degree plans. Take the stress out of the logistics and just ask SAGE for help with your inquiries and classes!',
     image: '/assets/projects/SAGE.jpg',
@@ -84,16 +119,16 @@ export const projectsWinners: Projects[] = [
     ],
     placement: 'S24 2nd Place',
   },
-  {
-    name: 'ShareSched',
-    desc: 'Have you ever wanted to compare schedules with a friend but found it too tedious to compare every little time, professor, and location? ShareSched is an app that allows you to upload a picture of a schedule and extract the key details from it. ShareSched can also find similarities in your schedule and your friend\'s whether it\'s location, professor, class section, or more! ScareSched is the app you need when schedule planning time comes up.',
-    image: '/assets/divisions/shared/proj_image.png',
-    members: ['Noel Emmanuel', 'Nadeeba Atiqui', 'Aldrin Roshan', 'Aizan Kalam'],
-    manager: 'Karina Batra',
-    links: [
-      { type: 'github', link: 'https://github.com/acm-projects/ShareSched' },
-      { type: 'video', link: 'https://www.youtube.com/live/Ltv7Q3NVoFE?feature=shared&t=4162' },
-    ],
-    placement: 'F23 1st Place',
-  },
+  // {
+  //   name: 'ShareSched',
+  //   desc: 'Have you ever wanted to compare schedules with a friend but found it too tedious to compare every little time, professor, and location? ShareSched is an app that allows you to upload a picture of a schedule and extract the key details from it. ShareSched can also find similarities in your schedule and your friend\'s whether it\'s location, professor, class section, or more! ScareSched is the app you need when schedule planning time comes up.',
+  //   image: '/assets/divisions/shared/proj_image.png',
+  //   members: ['Noel Emmanuel', 'Nadeeba Atiqui', 'Aldrin Roshan', 'Aizan Kalam'],
+  //   manager: 'Karina Batra',
+  //   links: [
+  //     { type: 'github', link: 'https://github.com/acm-projects/ShareSched' },
+  //     { type: 'video', link: 'https://www.youtube.com/live/Ltv7Q3NVoFE?feature=shared&t=4162' },
+  //   ],
+  //   placement: 'F23 1st Place',
+  // },
 ];
