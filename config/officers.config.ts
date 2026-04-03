@@ -49,6 +49,7 @@ export const executiveOfficers: Officer[] = [
   },
 ];
 
+// Media: Directors → Marketing Officers → Hybrid Officer → Design Officers
 export const mediaOfficers: Officer[] = [
   {
     image: '/assets/officer/Anvi-Sidda.jpg',
@@ -62,6 +63,7 @@ export const mediaOfficers: Officer[] = [
     position: 'Media Director (Design)',
     level: 2,
   },
+  // Marketing Officers
   {
     image: '/assets/officer/Akshat-Chauhan.jpg',
     name: 'Akshat Chauhan',
@@ -75,6 +77,55 @@ export const mediaOfficers: Officer[] = [
     level: 1,
   },
   {
+    image: '/assets/officer/Anish-Palankar.jpg',
+    name: 'Anish Palankar',
+    position: 'Marketing Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Dax-Dwelle.jpg',
+    name: 'Dax Dwelle',
+    position: 'Marketing Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Jacob-Stephen.jpg',
+    name: 'Jacob Stephen',
+    position: 'Marketing Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Prabhas-Gade.jpg',
+    name: 'Prabhas Gade',
+    position: 'Marketing Officer',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://linkedin.com/in/prabhasgade',
+      'github': 'https://github.com/PrabhasG550',
+      'instagram': 'https://instagram.com/Prabhasgade',
+    },
+  },
+  {
+    image: '/assets/officer/Rasika-Chaudhari.jpg',
+    name: 'Rasika Chaudhari',
+    position: 'Marketing Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Sai Varun-Mallela.jpg',
+    name: 'Sai Varun Mallela',
+    position: 'Marketing Officer',
+    level: 1,
+  },
+  // Hybrid Officer
+  {
+    image: '/assets/officer/Eshi-Punuganti.jpg',
+    name: 'Eshi Punuganti',
+    position: 'Hybrid Officer',
+    level: 1,
+  },
+  // Design Officers
+  {
     image: '/assets/officer/Batrisyia-Nablan.jpg',
     name: 'Batrisyia Nablan',
     position: 'Design Officer',
@@ -87,44 +138,9 @@ export const mediaOfficers: Officer[] = [
     level: 1,
   },
   {
-    image: '/assets/officer/Dax-Dwelle.jpg',
-    name: 'Dax Dwelle',
-    position: 'Marketing Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Eshi-Punuganti.jpg',
-    name: 'Eshi Punuganti',
-    position: 'Hybrid Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/OfficerImage.png',
-    name: 'Prabhas Gade',
-    position: 'Marketing Officer',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://linkedin.com/in/prabhasgade',
-      'github': 'https://github.com/PrabhasG550',
-      'instagram': 'https://instagram.com/Prabhasgade',
-    },
-  },
-  {
-    image: '/assets/OfficerImage.png',
-    name: 'Rasika Chaudhari',
-    position: 'Marketing Officer',
-    level: 1,
-  },
-  {
     image: '/assets/officer/Rohan-Cheruku.jpg',
     name: 'Rohan Cheruku',
     position: 'Design Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Sai Varun-Mallela.jpg',
-    name: 'Sai Varun Mallela',
-    position: 'Marketing Officer',
     level: 1,
   },
   {
@@ -142,6 +158,12 @@ export const mediaOfficers: Officer[] = [
       'linkedin': 'https://www.linkedin.com/in/susan-zh4ng/',
       'personalEmail': 'Susan.Zhang901@gmail.com',
     },
+  },
+  {
+    image: '/assets/officer/Victoria-Okorafor.jpg',
+    name: 'Victoria Okorafor',
+    position: 'Design Officer',
+    level: 1,
   },
 ];
 
@@ -251,6 +273,8 @@ export const researchOfficers: Officer[] = [
   },
 ];
 
+// Development: Directors → then each team (Lead first, then Officers)
+// Teams: ACM Core, MeteorMate, SAGE, Org Portal, BSG, Nexus
 export const developmentOfficers: Officer[] = [
   // Directors
   {
@@ -276,8 +300,7 @@ export const developmentOfficers: Officer[] = [
       'personalEmail': 'yashmittalshah@gmail.com',
     },
   },
-
-  // ACM Core
+  // ACM Core team: Lead → Officers
   {
     image: '/assets/officer/Luke-Sultzer.jpg',
     name: 'Luke Sultzer',
@@ -355,99 +378,7 @@ export const developmentOfficers: Officer[] = [
       'personalEmail': 'vaishu.josyula@gmail.com',
     },
   },
-
-  // SAGE
-  {
-    image: '/assets/officer/Alen-Jo.jpg',
-    name: 'Alen Jo',
-    position: 'SAGE Lead',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Andres Garcia-Sanchez.jpg',
-    name: 'Andres Garcia Sanchez',
-    position: 'Sage Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Anusha-Patel.png',
-    name: 'Anusha Patel',
-    position: 'SAGE Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Bao-Nguyen.jpg',
-    name: 'Bao Nguyen',
-    position: 'SAGE Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Krish-Joshi.jpg',
-    name: 'Krish Joshi',
-    position: 'SAGE Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Oscar-Lay.jpg',
-    name: 'Oscar Lay',
-    position: 'SAGE Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Swayam-Arora.jpg',
-    name: 'Swayam Arora',
-    position: 'SAGE Officer',
-    level: 1,
-  },
-
-  // Org Portal
-  {
-    image: '/assets/officer/Arin-Sood.jpg',
-    name: 'Arin Sood',
-    position: 'Org Portal Lead',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Arnav-Vedula.jpg',
-    name: 'Arnav Vedula',
-    position: 'Org Portal Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Avery-Brown.jpg',
-    name: 'Avery Brown',
-    position: 'Org Portal Officer',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/averybrown808/',
-      'github': 'https://github.com/rubytanuki',
-      'personalEmail': 'aebrown808@gmail.com',
-    },
-  },
-  {
-    image: '/assets/officer/Ethan-Scherwitz.jpg',
-    name: 'Ethan Scherwitz',
-    position: 'Org Portal Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Nachiket-Pandit.jpg',
-    name: 'Nachiket Pandit',
-    position: 'Org Portal Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Susan-Zhang.jpg',
-    name: 'Susan Zhang',
-    position: 'Org Portal Officer',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/susan-zh4ng/',
-      'personalEmail': 'Susan.Zhang901@gmail.com',
-    },
-  },
-
-  // MeteorMate
+  // MeteorMate team: Co-Leads → Officers
   {
     image: '/assets/officer/Ryan-Polasky.jpg',
     name: 'Ryan Polasky',
@@ -504,7 +435,7 @@ export const developmentOfficers: Officer[] = [
     },
   },
   {
-    image: '/assets/OfficerImage.png',
+    image: '/assets/officer/Joel-Gurivireddy.jpg',
     name: 'Joel Gurivireddy',
     position: 'MeteorMate Officer',
     level: 1,
@@ -521,8 +452,99 @@ export const developmentOfficers: Officer[] = [
     position: 'MeteorMate Officer',
     level: 1,
   },
-
-  // BSG
+  // SAGE team: Lead → Officers
+  {
+    image: '/assets/officer/Alen-Jo.jpg',
+    name: 'Alen Jo',
+    position: 'SAGE Lead',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Andres Garcia-Sanchez.jpg',
+    name: 'Andres Garcia Sanchez',
+    position: 'SAGE Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Anusha-Patel.png',
+    name: 'Anusha Patel',
+    position: 'SAGE Officer',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://linkedin.com/in/https://www.linkedin.com/in/anushapatel6571/',
+    },
+  },
+  {
+    image: '/assets/officer/Bao-Nguyen.jpg',
+    name: 'Bao Nguyen',
+    position: 'SAGE Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Krish-Joshi.jpg',
+    name: 'Krish Joshi',
+    position: 'SAGE Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Oscar-Lay.jpg',
+    name: 'Oscar Lay',
+    position: 'SAGE Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Swayam-Arora.jpg',
+    name: 'Swayam Arora',
+    position: 'SAGE Officer',
+    level: 1,
+  },
+  // Org Portal team: Lead → Officers
+  {
+    image: '/assets/officer/Arin-Sood.jpg',
+    name: 'Arin Sood',
+    position: 'Org Portal Lead',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Arnav-Vedula.jpg',
+    name: 'Arnav Vedula',
+    position: 'Org Portal Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Avery-Brown.jpg',
+    name: 'Avery Brown',
+    position: 'Org Portal Officer',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/averybrown808/',
+      'github': 'https://github.com/rubytanuki',
+      'personalEmail': 'aebrown808@gmail.com',
+    },
+  },
+  {
+    image: '/assets/officer/Ethan-Scherwitz.jpg',
+    name: 'Ethan Scherwitz',
+    position: 'Org Portal Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Nachiket-Pandit.jpg',
+    name: 'Nachiket Pandit',
+    position: 'Org Portal Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Susan-Zhang.jpg',
+    name: 'Susan Zhang',
+    position: 'Org Portal Officer',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/susan-zh4ng/',
+      'personalEmail': 'Susan.Zhang901@gmail.com',
+    },
+  },
+  // BSG team: Lead → Officers
   {
     image: '/assets/officer/Ronak-Chavva.jpg',
     name: 'Ronak Chavva',
@@ -579,8 +601,7 @@ export const developmentOfficers: Officer[] = [
       'personalEmail': 'vihan.yerubandi@gmail.com',
     },
   },
-
-  // Nexus
+  // Nexus team: Lead → Officers
   {
     image: '/assets/officer/Prerita-Babarjung.jpg',
     name: 'Prerita Babarjung',
@@ -733,7 +754,9 @@ export const projectsOfficers: Officer[] = [
   },
 ];
 
+// Education: Directors → Mentor Program Officers → TIP Officers (Leads first, then Officers)
 export const educationOfficers: Officer[] = [
+  // Directors
   {
     image: '/assets/officer/Aashay-Vishwakarma.jpg',
     name: 'Aashay Vishwakarma',
@@ -749,63 +772,10 @@ export const educationOfficers: Officer[] = [
   {
     image: '/assets/officer/Hannah-Van.jpg',
     name: 'Hannah Van',
-    position: 'Education Director (Mentor Program)',
+    position: 'Education Director (MP)',
     level: 2,
   },
-  {
-    image: '/assets/officer/Ajay-Alluri.jpg',
-    name: 'Ajay Alluri',
-    position: 'TIP Lead',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Bopin-Sai.jpg',
-    name: 'Bopin Sai',
-    position: 'TIP Lead',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Nadeeba-Atiqui.jpg',
-    name: 'Nadeeba Atiqui',
-    position: 'TIP Lead',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Zeke-Stephens.jpg',
-    name: 'Zeke Stephens',
-    position: 'TIP Lead',
-    level: 1,
-    socialLinks: {
-      'personalEmail': 'zeke@zekestephens.com',
-    },
-  },
-  {
-    image: '/assets/officer/Lalith-Vennapusa.jpg',
-    name: 'Lalith Vennapusa',
-    position: 'TIP Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Ram-Gudur.jpg',
-    name: 'Ram Gudur',
-    position: 'TIP Officer',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/ramgudur',
-      'personalEmail': 'ramgudur27@gmail.com',
-    },
-  },
-  {
-    image: '/assets/officer/Rodolfo-Gonzalez.jpg',
-    name: 'Rodolfo Gonzalez',
-    position: 'TIP Officer',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/rjgx/',
-      'github': 'https://github.com/rudyg16',
-      'personalEmail': 'rudygon822@gmail.com',
-    },
-  },
+  // Mentor Program Officers
   {
     image: '/assets/officer/Aiman-Ahsan.jpg',
     name: 'Aiman Ahsan',
@@ -836,14 +806,74 @@ export const educationOfficers: Officer[] = [
     position: 'Mentor Program Officer',
     level: 1,
   },
+  // TIP: Leads → Officers
+  {
+    image: '/assets/officer/Ajay-Alluri.jpg',
+    name: 'Ajay Alluri',
+    position: 'TIP Lead',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Bopin-Sai.jpg',
+    name: 'Bopin Sai',
+    position: 'TIP Lead',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Lalith-Vennapusa.jpg',
+    name: 'Lalith Vennapusa',
+    position: 'TIP Lead',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Nadeeba-Atiqui.jpg',
+    name: 'Nadeeba Atiqui',
+    position: 'TIP Lead',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Ram-Gudur.jpg',
+    name: 'Ram Gudur',
+    position: 'TIP Lead',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/ramgudur',
+      'personalEmail': 'ramgudur27@gmail.com',
+    },
+  },
+  {
+    image: '/assets/officer/Rodolfo-Gonzalez.jpg',
+    name: 'Rodolfo Gonzalez',
+    position: 'TIP Lead',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/rjgx/',
+      'github': 'https://github.com/rudyg16',
+      'personalEmail': 'rudygon822@gmail.com',
+    },
+  },
+  {
+    image: '/assets/officer/Zeke-Stephens.jpg',
+    name: 'Zeke Stephens',
+    position: 'TIP Lead',
+    level: 1,
+    socialLinks: {
+      'personalEmail': 'zeke@zekestephens.com',
+    },
+  },
 ];
 
+// Community: Directors → Campus Officers → Events Officers → Outreach Officers → Archives Officers
 export const communityOfficers: Officer[] = [
+  // Directors
   {
     image: '/assets/officer/Anusha-Patel.png',
     name: 'Anusha Patel',
     position: 'Community Director (Campus)',
     level: 2,
+    socialLinks: {
+      'linkedin': 'https://linkedin.com/in/https://www.linkedin.com/in/anushapatel6571/',
+    },
   },
   {
     image: '/assets/officer/Vyshnav-Vijish.jpg',
@@ -854,6 +884,93 @@ export const communityOfficers: Officer[] = [
       'linkedin': 'https://www.linkedin.com/in/vyshnav-vijish-aba4b9269/',
     },
   },
+  // Events Officers
+  {
+    image: '/assets/officer/Amritha-Kasturi.jpg',
+    name: 'Amritha Kasturi',
+    position: 'Events Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Joseph-Botros.jpg',
+    name: 'Joseph Botros',
+    position: 'Events Officer',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://linkedin.com/in/j-botros',
+      'personalEmail': 'josephbotros04@gmail.com',
+    },
+  },
+  {
+    image: '/assets/officer/Mayowa-Akinyede.jpg',
+    name: 'Mayowa Akinyede',
+    position: 'Events Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Mohammed-Gaggutur.jpg',
+    name: 'Mohammed Gaggutur',
+    position: 'Events Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Pratishtha-Rao.jpg',
+    name: 'Pratishtha Rao',
+    position: 'Events Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Ryan-Edward.jpg',
+    name: 'Ryan Edward',
+    position: 'Events Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Sam-Pokharel.jpg',
+    name: 'Sam Pokharel',
+    position: 'Events Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Sudiksa-Dineshkumar.jpg',
+    name: 'Sudiksa Dineshkumar',
+    position: 'Events Officer',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/sudiksadineshkumardatascience/',
+      'personalEmail': 'sudiksad23@gmail.com',
+    },
+  },
+  {
+    image: '/assets/officer/Suhani-Rana.jpg',
+    name: 'Suhani Rana',
+    position: 'Events Officer',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/rsuhani',
+      'github': 'https://github.com/srana3',
+      'personalEmail': 'suhanirana19@gmail.com',
+    },
+  },
+  {
+    image: '/assets/officer/Syed-Kazmi.jpg',
+    name: 'Syed Kazmi',
+    position: 'Events Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Varsha-Shashishekar.jpg',
+    name: 'Varsha Shashishekar',
+    position: 'Events Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Varun-Bhupathiraju.jpg',
+    name: 'Varun Bhupathiraju',
+    position: 'Events Officer',
+    level: 1,
+  },
+  // Outreach Officers
   {
     image: '/assets/officer/Advay-Chandramouli.jpg',
     name: 'Advay Chandramouli',
@@ -872,32 +989,10 @@ export const communityOfficers: Officer[] = [
     level: 1,
   },
   {
-    image: '/assets/officer/Amritha-Kasturi.jpg',
-    name: 'Amritha Kasturi',
-    position: 'Events Officer',
-    level: 1,
-  },
-  {
     image: '/assets/officer/Dana-Ibrahim.jpg',
     name: 'Dana Ibrahim',
     position: 'Outreach Officer',
     level: 1,
-  },
-  {
-    image: '/assets/OfficerImage.png',
-    name: 'Emmalyn Ramirez',
-    position: 'Archives Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Frabina-Edwin.jpg',
-    name: 'Frabina Edwin',
-    position: 'Archives Lead',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/frabinaedwin/',
-      'personalEmail': 'Frabina2016@gmail.com',
-    },
   },
   {
     image: '/assets/officer/Gerardo-Martinez.jpg',
@@ -919,37 +1014,59 @@ export const communityOfficers: Officer[] = [
     },
   },
   {
-    image: '/assets/officer/Joseph-Botros.jpg',
-    name: 'Joseph Botros',
-    position: 'Events Officer',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://linkedin.com/in/j-botros',
-      'personalEmail': 'josephbotros04@gmail.com',
-    },
-  },
-  {
     image: '/assets/officer/Kaushik-Shivakumar.jpg',
     name: 'Kaushik Shivakumar',
     position: 'Outreach Officer',
     level: 1,
   },
   {
-    image: '/assets/officer/Kavyadharshini-Seenuvasan.jpg',
-    name: 'Kavyadharshini Seenuvasan',
+    image: '/assets/officer/Nidhi-Majoju.jpg',
+    name: 'Nidhi Majoju',
+    position: 'Outreach Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Shreya-Singaravel.jpg',
+    name: 'Shreya Singaravel',
+    position: 'Outreach Officer',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Tulasi-Janjanam.jpg',
+    name: 'Tulasi Janjanam',
+    position: 'Outreach Officer',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/tulasi-janjanam123/',
+    },
+  },
+  {
+    image: '/assets/officer/Tvisha-Doshi.jpg',
+    name: 'Tvisha Doshi',
+    position: 'Outreach Officer',
+    level: 1,
+  },
+  // Archives: Lead → Officers
+  {
+    image: '/assets/officer/Frabina-Edwin.jpg',
+    name: 'Frabina Edwin',
+    position: 'Archives Lead',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/frabinaedwin/',
+      'personalEmail': 'Frabina2016@gmail.com',
+    },
+  },
+  {
+    image: '/assets/officer/Emmalyn-Ramirez.jpg',
+    name: 'Emmalyn Ramirez',
     position: 'Archives Officer',
     level: 1,
   },
   {
-    image: '/assets/officer/Mayowa-Akinyede.jpg',
-    name: 'Mayowa Akinyede',
-    position: 'Events Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Mohammed-Gaggutur.jpg',
-    name: 'Mohammed Gaggutur',
-    position: 'Events Officer',
+    image: '/assets/officer/Kavyadharshini-Seenuvasan.jpg',
+    name: 'Kavyadharshini Seenuvasan',
+    position: 'Archives Officer',
     level: 1,
   },
   {
@@ -961,30 +1078,6 @@ export const communityOfficers: Officer[] = [
       'linkedin': 'https://www.linkedin.com/in/b%C3%ADch-ng%E1%BB%8Dc-tr%E1%BA%A7n-ngu%E1%BB%B5-36753b362?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
       'personalEmail': 'btrannguy@gmail.com',
     },
-  },
-  {
-    image: '/assets/officer/Nidhi-Majoju.jpg',
-    name: 'Nidhi Majoju',
-    position: 'Outreach Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Pratishtha-Rao.jpg',
-    name: 'Pratishtha Rao',
-    position: 'Events Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Ryan-Edward.jpg',
-    name: 'Ryan Edward',
-    position: 'Events Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Sam-Pokharel.jpg',
-    name: 'Sam Pokharel',
-    position: 'Events Officer',
-    level: 1,
   },
   {
     image: '/assets/officer/Sameeraa-Kandalgaonkar.jpg',
@@ -1010,79 +1103,15 @@ export const communityOfficers: Officer[] = [
     level: 1,
   },
   {
-    image: '/assets/officer/Shreya-Singaravel.jpg',
-    name: 'Shreya Singaravel',
-    position: 'Outreach Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Sudiksa-Dineshkumar.jpg',
-    name: 'Sudiksa Dineshkumar',
-    position: 'Events Officer',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/sudiksadineshkumardatascience/',
-      'personalEmail': 'sudiksad23@gmail.com',
-    },
-  },
-  {
-    image: '/assets/officer/Suhani-Rana.jpg',
-    name: 'Suhani Rana',
-    position: 'Outreach Coordinator',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/rsuhani',
-      'github': 'https://github.com/srana3',
-      'personalEmail': 'suhanirana19@gmail.com',
-    },
-  },
-  {
-    image: '/assets/officer/Syed-Kazmi.jpg',
-    name: 'Syed Kazmi',
-    position: 'Events Officer',
-    level: 1,
-  },
-  {
     image: '/assets/officer/Tammy-Khurana.jpg',
     name: 'Tammy Khurana',
     position: 'Archives Officer',
     level: 1,
   },
-  {
-    image: '/assets/OfficerImage.png',
-    name: 'Tulasi Janjanam',
-    position: 'Outreach Officer',
-    level: 1,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/tulasi-janjanam123/',
-    },
-  },
-  {
-    image: '/assets/officer/Tvisha-Doshi.jpg',
-    name: 'Tvisha Doshi',
-    position: 'Outreach Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Varsha-Shashishekar.jpg',
-    name: 'Varsha Shashishekar',
-    position: 'Events Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Varun-Bhupathiraju.jpg',
-    name: 'Varun Bhupathiraju',
-    position: 'Events Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Zoya-Syed.jpg',
-    name: 'Zoya Syed',
-    position: 'Archives Officer',
-    level: 1,
-  },
 ];
 
+// HackUTD: Directors → each team (Lead first, then Coordinators)
+// Teams: Tech, Marketing, Experience, Logistics, Finance, Industry
 export const hackOfficers: Officer[] = [
   // Directors
   {
@@ -1101,8 +1130,7 @@ export const hackOfficers: Officer[] = [
       'github': 'https://github.com/veermshah',
     },
   },
-
-  // Tech
+  // Tech team: Lead → Coordinators
   {
     image: '/assets/officer/Caleb-Bae.jpg',
     name: 'Caleb Bae',
@@ -1123,7 +1151,7 @@ export const hackOfficers: Officer[] = [
   {
     image: '/assets/officer/Arnav-Vedula.jpg',
     name: 'Arnav Vedula',
-    position: 'Technology Coordinator',
+    position: 'Tech Coordinator',
     level: 1,
   },
   {
@@ -1161,8 +1189,7 @@ export const hackOfficers: Officer[] = [
     position: 'Tech Coordinator',
     level: 1,
   },
-
-  // Marketing
+  // Marketing team: Lead → Coordinators
   {
     image: '/assets/officer/Dhivyesh-Prithiviraj.jpg',
     name: 'Dhivyesh Prithiviraj',
@@ -1198,6 +1225,12 @@ export const hackOfficers: Officer[] = [
     },
   },
   {
+    image: '/assets/officer/Karan-Jatoth.jpg',
+    name: 'Karan Jatoth',
+    position: 'Marketing Coordinator',
+    level: 1,
+  },
+  {
     image: '/assets/officer/Lisa-Lupeitu\'u.jpg',
     name: 'Lisa Lupeitu\'u',
     position: 'Marketing Coordinator',
@@ -1206,12 +1239,6 @@ export const hackOfficers: Officer[] = [
   {
     image: '/assets/officer/Santiago-Islas.jpg',
     name: 'Santiago Islas',
-    position: 'Marketing Coordinator',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Sarah-Khan.jpg',
-    name: 'Sarah Khan',
     position: 'Marketing Coordinator',
     level: 1,
   },
@@ -1233,56 +1260,17 @@ export const hackOfficers: Officer[] = [
     position: 'Marketing Coordinator',
     level: 1,
   },
-
-  // Industry
-  {
-    image: '/assets/officer/Sachi-Hansalia.jpg',
-    name: 'Sachi Hansalia',
-    position: 'Industry Lead',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Ishita-Saran.jpg',
-    name: 'Ishita Saran',
-    position: 'Industry Coordinator',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Kavin-Sankar.jpg',
-    name: 'Kavin Sankar',
-    position: 'Industry Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Monish-Mehta.jpg',
-    name: 'Monish Mehta',
-    position: 'Industry Coordinator',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Nandini-Paidesetty.jpg',
-    name: 'Nandini Paidesetty',
-    position: 'Industry Coordinator',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Sahas-Sharma.jpg',
-    name: 'Sahas Sharma',
-    position: 'Industry Coordinator',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Sheryl-Gerald.jpg',
-    name: 'Sheryl Gerald',
-    position: 'Industry Coordinator',
-    level: 1,
-  },
-
-  // Experience
+  // Experience team: Lead → Coordinators
   {
     image: '/assets/officer/Liana-Forster.jpg',
     name: 'Liana Forster',
     position: 'Experience Lead',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Adhya-Waikar.jpg',
+    name: 'Adhya Waikar',
+    position: 'Experience Coordinator',
     level: 1,
   },
   {
@@ -1292,9 +1280,20 @@ export const hackOfficers: Officer[] = [
     level: 1,
   },
   {
+    image: '/assets/officer/Dev-Sheth.jpg',
+    name: 'Dev Sheth',
+    position: 'Experience Coordinator',
+    level: 1,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/devsheth22/',
+      'github': 'https://github.com/devsheth05',
+      'personalEmail': 'sheth.dev02@gmail.com',
+    },
+  },
+  {
     image: '/assets/officer/Keane-Ferdinand.jpg',
     name: 'Keane Ferdinand',
-    position: 'Experience Officer',
+    position: 'Experience Coordinator',
     level: 1,
     socialLinks: {
       'linkedin': 'https://www.linkedin.com/in/keane-ferdinand-548844310/',
@@ -1308,8 +1307,7 @@ export const hackOfficers: Officer[] = [
     position: 'Experience Coordinator',
     level: 1,
   },
-
-  // Logistics
+  // Logistics team: Lead → Coordinators
   {
     image: '/assets/officer/Sofia-Thomas.jpg',
     name: 'Sofia Thomas',
@@ -1346,8 +1344,7 @@ export const hackOfficers: Officer[] = [
     position: 'Logistics Coordinator',
     level: 1,
   },
-
-  // Finance
+  // Finance team: Lead → Coordinators
   {
     image: '/assets/officer/Aatish-Bommisetty.jpg',
     name: 'Aatish Bommisetty',
@@ -1360,12 +1357,67 @@ export const hackOfficers: Officer[] = [
     position: 'Finance Coordinator',
     level: 1,
   },
+  {
+    image: '/assets/officer/Krishna-Yadav.jpg',
+    name: 'Krishna Yadav',
+    position: 'Finance Coordinator',
+    level: 1,
+  },
+  // Industry team: Lead → Coordinators
+  {
+    image: '/assets/officer/Sachi-Hansalia.jpg',
+    name: 'Sachi Hansalia',
+    position: 'Industry Lead',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Ishita-Saran.jpg',
+    name: 'Ishita Saran',
+    position: 'Industry Coordinator',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Kavin-Sankar.jpg',
+    name: 'Kavin Sankar',
+    position: 'Industry Coordinator',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Monish-Mehta.jpg',
+    name: 'Monish Mehta',
+    position: 'Industry Coordinator',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Nandini-Paidesetty.jpg',
+    name: 'Nandini Paidesetty',
+    position: 'Industry Coordinator',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Sahas-Sharma.jpg',
+    name: 'Sahas Sharma',
+    position: 'Industry Coordinator',
+    level: 1,
+  },
+  {
+    image: '/assets/officer/Sheryl-Gerald.jpg',
+    name: 'Sheryl Gerald',
+    position: 'Industry Coordinator',
+    level: 1,
+  },
 ];
 
 export const industryOfficers: Officer[] = [
   {
     image: '/assets/officer/Anika-Guin.jpg',
     name: 'Anika Guin',
+    position: 'Industry Director',
+    level: 2,
+  },
+  {
+    image: '/assets/officer/Nihita-Soma.jpg',
+    name: 'Nihita Soma',
     position: 'Industry Director',
     level: 2,
   },
@@ -1379,12 +1431,6 @@ export const industryOfficers: Officer[] = [
     image: '/assets/officer/Nidhi-Parvathala.jpg',
     name: 'Nidhi Parvathala',
     position: 'Industry Officer',
-    level: 1,
-  },
-  {
-    image: '/assets/officer/Nihita-Soma.jpg',
-    name: 'Nihita Soma',
-    position: 'Industry Director',
     level: 1,
   },
   {
@@ -1419,6 +1465,7 @@ export const industryOfficers: Officer[] = [
 ];
 
 export const boardOfficers: Officer[] = [
+  // Executive
   {
     image: '/assets/officer/Elijah-Walker.jpg',
     name: 'Elijah Walker',
@@ -1451,6 +1498,38 @@ export const boardOfficers: Officer[] = [
       'personalEmail': 'mxiong935@gmail.com',
     },
   },
+  // Media
+  {
+    image: '/assets/officer/Anvi-Sidda.jpg',
+    name: 'Anvi Sidda',
+    position: 'Media Director',
+    level: 2,
+  },
+  {
+    image: '/assets/officer/Sneha-Maram.jpg',
+    name: 'Sneha Maram',
+    position: 'Media Director',
+    level: 2,
+  },
+  // Research
+  {
+    image: '/assets/officer/Priti-See.jpg',
+    name: 'Priti See',
+    position: 'Research Director',
+    level: 2,
+  },
+  {
+    image: '/assets/officer/Purva-Patel.jpg',
+    name: 'Purva Patel',
+    position: 'Research Director',
+    level: 2,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/purvajpatel/',
+      'github': 'http://github.com/purvajpatel/',
+      'personalEmail': 'purva.patel@utdallas.edu',
+    },
+  },
+  // Development
   {
     image: '/assets/officer/Anirudh-Vayalali.jpg',
     name: 'Anirudh Vayalali',
@@ -1474,6 +1553,25 @@ export const boardOfficers: Officer[] = [
       'personalEmail': 'yashmittalshah@gmail.com',
     },
   },
+  // Projects
+  {
+    image: '/assets/officer/Adarsh-Goura.jpg',
+    name: 'Adarsh Goura',
+    position: 'Projects Director',
+    level: 2,
+  },
+  {
+    image: '/assets/officer/Suhani-Rana.jpg',
+    name: 'Suhani Rana',
+    position: 'Projects Director',
+    level: 2,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/rsuhani',
+      'github': 'https://github.com/srana3',
+      'personalEmail': 'suhanirana19@gmail.com',
+    },
+  },
+  // Education
   {
     image: '/assets/officer/Aashay-Vishwakarma.jpg',
     name: 'Aashay Vishwakarma',
@@ -1492,6 +1590,26 @@ export const boardOfficers: Officer[] = [
     position: 'Education Director',
     level: 2,
   },
+  // Community
+  {
+    image: '/assets/officer/Anusha-Patel.png',
+    name: 'Anusha Patel',
+    position: 'Community Director',
+    level: 2,
+    socialLinks: {
+      'linkedin': 'https://linkedin.com/in/https://www.linkedin.com/in/anushapatel6571/',
+    },
+  },
+  {
+    image: '/assets/officer/Vyshnav-Vijish.jpg',
+    name: 'Vyshnav Vijish',
+    position: 'Community Director',
+    level: 2,
+    socialLinks: {
+      'linkedin': 'https://www.linkedin.com/in/vyshnav-vijish-aba4b9269/',
+    },
+  },
+  // HackUTD
   {
     image: '/assets/officer/Alan-Roybal.jpg',
     name: 'Alan Roybal',
@@ -1508,6 +1626,7 @@ export const boardOfficers: Officer[] = [
       'github': 'https://github.com/veermshah',
     },
   },
+  // Industry
   {
     image: '/assets/officer/Anika-Guin.jpg',
     name: 'Anika Guin',
@@ -1515,66 +1634,12 @@ export const boardOfficers: Officer[] = [
     level: 2,
   },
   {
-    image: '/assets/officer/Anusha-Patel.png',
-    name: 'Anusha Patel',
-    position: 'Community Director',
+    image: '/assets/officer/Nihita-Soma.jpg',
+    name: 'Nihita Soma',
+    position: 'Industry Director',
     level: 2,
   },
-  {
-    image: '/assets/officer/Vyshnav-Vijish.jpg',
-    name: 'Vyshnav Vijish',
-    position: 'Community Director',
-    level: 2,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/vyshnav-vijish-aba4b9269/',
-    },
-  },
-  {
-    image: '/assets/officer/Anvi-Sidda.jpg',
-    name: 'Anvi Sidda',
-    position: 'Media Director',
-    level: 2,
-  },
-  {
-    image: '/assets/officer/Sneha-Maram.jpg',
-    name: 'Sneha Maram',
-    position: 'Media Director',
-    level: 2,
-  },
-  {
-    image: '/assets/officer/Adarsh-Goura.jpg',
-    name: 'Adarsh Goura',
-    position: 'Projects Director',
-    level: 2,
-  },
-  {
-    image: '/assets/officer/Suhani-Rana.jpg',
-    name: 'Suhani Rana',
-    position: 'Projects Director',
-    level: 2,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/rsuhani',
-      'github': 'https://github.com/srana3',
-      'personalEmail': 'suhanirana19@gmail.com',
-    },
-  },
-  {
-    image: '/assets/officer/Priti-See.jpg',
-    name: 'Priti See',
-    position: 'Research Director',
-    level: 2,
-  },
-  {
-    image: '/assets/officer/Purva-Patel.jpg',
-    name: 'Purva Patel',
-    position: 'Research Director',
-    level: 2,
-    socialLinks: {
-      'linkedin': 'https://www.linkedin.com/in/purvajpatel/',
-      'github': 'http://github.com/purvajpatel/',
-      'personalEmail': 'purva.patel@utdallas.edu',
-    },
-  },
+  // Finance
   {
     image: '/assets/officer/Aatish-Bommisetty.jpg',
     name: 'Aatish Bommisetty',
@@ -1595,7 +1660,7 @@ type Divisions =
   | 'hackutd'
   | 'industry'
   | 'board'
-  ;
+;
 
 export const divisionOfficerMap: Record<Divisions, Officer[]> = {
   advisor: advisorOfficers,
