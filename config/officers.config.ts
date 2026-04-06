@@ -1191,12 +1191,6 @@ export const hackOfficers: Officer[] = [
     level: 1,
   },
   {
-    image: '/assets/officer/Andrea-Alvidres.jpg',
-    name: 'Andrea Alvidres',
-    position: 'Marketing Coordinator',
-    level: 1,
-  },
-  {
     image: '/assets/officer/Ann-Jayan.jpg',
     name: 'Ann Jayan',
     position: 'Marketing Coordinator',
