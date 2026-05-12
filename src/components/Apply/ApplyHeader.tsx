@@ -21,7 +21,7 @@ function ApplyHeader() {
                 className="text-primary underline transition-colors hover:text-primaryDark"
                 target="_blank"
               >
-                portal.acmutd.co/opportunities
+                https://www.org-portal.com/club/ACM
               </a>
             </p>
           </div>
