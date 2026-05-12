@@ -15,13 +15,13 @@ function ApplyHeader() {
               an officer!
               <br />
               <br />
-              all open applications can be found in our member portal at{' '}
+              all open applications can be found in our organization page on Org Portal at{' '}
               <a
-                href="https://portal.acmutd.co/opportunities"
+                href="https://www.org-portal.com/club/ACM"
                 className="text-primary underline transition-colors hover:text-primaryDark"
                 target="_blank"
               >
-                portal.acmutd.co/opportunities
+                https://www.org-portal.com/club/ACM
               </a>
             </p>
           </div>
