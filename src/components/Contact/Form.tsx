@@ -9,6 +9,12 @@ export default function Form() {
     <div className="flex min-h-[700px] w-full flex-col gap-y-8 rounded-2xl border border-primary/50 bg-gray-300/10 p-12 text-primary md:w-1/2 md:rounded-2xl">
       <p className="text-2xl font-bold lg:text-3xl">connect with us!</p>
       <div className="my-auto flex h-3/5 flex-col gap-y-8">
+        <Link href={homePageData.community.linktree}>
+          <div className="flex cursor-pointer items-center gap-x-3 gap-y-1">
+            <Image src="/assets/contact/linktree.png" width={50} height={50} alt="Linktree" />
+            <label className="cursor-pointer text-2xl font-semibold lg:text-3xl">Linktree</label>
+          </div>
+        </Link>
         <Link href={homePageData.community.linkedin} passHref>
           <div className="flex cursor-pointer items-center gap-x-3 gap-y-1">
             <Image src="/assets/contact/linkedin.png" width={50} height={50} alt="LinkedIn" />

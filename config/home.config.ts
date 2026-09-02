@@ -5,6 +5,7 @@ export const homePageData: HomePageData = {
   orgStatement:
     "we're a team of students with one goal: building a greater, more collaborative computing community at The University of Texas at Dallas.",
   community: {
+    linktree: 'https://linktr.ee/ACMUTD',
     linkedin: 'https://www.linkedin.com/company/acmutd',
     instagram: 'https://www.instagram.com/acmutd/',
     discord: 'https://discord.gg/ttB9HuaKsA',
