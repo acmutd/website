@@ -58,6 +58,7 @@ export type HomePageData = {
 type SponsorType = 'gold' | 'silver' | 'bronze' | 'custom';
 
 export type CommunityIconsData = {
+  linktree: string;
   linkedin: string;
   instagram: string;
   discord: string;
