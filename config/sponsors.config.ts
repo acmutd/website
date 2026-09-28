@@ -47,22 +47,16 @@ type Sponsor = {
 
 export const sponsors: Sponsor[] = [
   {
-    name: 'Paycom',
-    tier: 'gold',
-    logo: '/assets/sponsors/logos/paycom.png',
-    link: 'https://www.paycom.com/about/',
-  },
-  {
     name: 'CBRE',
-    tier: 'silver',
+    tier: 'gold',
     logo: '/assets/sponsors/logos/CBRE.png',
     link: 'https://www.cbre.com/about',
   },
   {
-    name: 'Nokia',
+    name: 'Fidelity',
     tier: 'silver',
-    logo: '/assets/sponsors/logos/nokia.png',
-    link: 'https://www.nokia.com/we-are-nokia/',
+    logo: '/assets/sponsors/logos/Fidelity.png',
+    link: 'https://www.fidelity.com/about-fidelity/our-company',
   },
   {
     name: 'Verizon',
