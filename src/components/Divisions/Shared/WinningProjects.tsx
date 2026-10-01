@@ -1,14 +1,23 @@
+'use client';
+
+import { useState } from 'react';
 import { IconMap } from '@/components/Events/WorkshopIcons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getWinningProjects } from '../../../../config/divisions.config';
 
+const INITIAL_DISPLAY_COUNT = 2;
+
 export default function WinningProjects({ division }: { division: 'projects' | 'research' | 'hackutd' }) {
   const projects = getWinningProjects(division);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const visibleProjects = isExpanded ? projects : projects.slice(0, INITIAL_DISPLAY_COUNT);
+  const hasMoreProjects = projects.length > INITIAL_DISPLAY_COUNT;
 
   return (
     <div id="winning-projects" className="pt-12 text-primaryDark px-4 md:px-8 xl:pr-32 2xl:pr-40 py-8 md:py-16 space-y-12 md:space-y-20">
-      {projects.map((project, i) => {
+      {visibleProjects.map((project, i) => {
         const badgeStyle = getPlacementBadge(project.placement);
 
         return (
@@ -92,6 +101,17 @@ export default function WinningProjects({ division }: { division: 'projects' | '
           </div>
         );
       })}
+
+      {hasMoreProjects && (
+        <div className="flex justify-start pt-8 md:pt-12">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className={`bg-${division}-gradient px-4 md:px-5 py-2 text-lg md:text-xl text-white rounded-lg border border-primary/50 bg-gray-300/10 transition-all duration-300 hover:opacity-80`}
+          >
+            {isExpanded ? 'show less' : 'show all'}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
